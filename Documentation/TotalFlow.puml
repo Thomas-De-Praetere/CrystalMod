@@ -1,0 +1,143 @@
+@startuml
+
+hide methods
+hide fields
+hide circle
+
+
+[Crystal Ore] as CO #lightpink
+[Crushed Crystal] as CCr
+[Crystal Slurry] as CS
+[Water] as W #lightpink
+
+[Crystal] as C
+
+[Red Mixture] as RM
+[Purple Mixture] as PM
+[Crystaline Mixture] as CM
+
+[Red Crystal] as RC
+[Blue Crystal] as BC
+[Green Crystal] as GC
+
+[Heavy Oil] as HO #lightgreen
+[Light Oil] as LO #lightgreen
+[Gas] as G #lightgreen
+[Iron Ore] as FE #lightgreen
+[Copper Ore] as CU #lightgreen
+[Stone] as S #lightgreen
+
+
+package "Chemical Plant" #lightyellow {
+[Sludge from Crushed Crystal] as SCS #lightblue
+}
+
+package Crusher #lightyellow {
+[Crush Crystal Ore] as Cr #lightblue
+}
+
+package Centrifuge #lightyellow {
+[Crystalise] as CCF #lightblue
+}
+
+
+package Energizer #lightyellow {
+[Neutralize] as NR #lightblue
+[Neutralize] as NG #lightblue
+[Neutralize] as NB #lightblue
+}
+[Magenta Crystal] as MC
+[Yellow Crystal] as YC
+[Cyan Crystal] as CC
+
+
+package Splitter #lightyellow {
+[Split Green] as SG #lightblue
+[Split Red] as SR #lightblue
+[Split Blue] as SB #lightblue
+}
+
+package Splitter #lightyellow {
+[Split Magenta] as SM #lightblue
+[Split Yellow] as SY #lightblue
+[Split Cyan] as SC #lightblue
+}
+
+
+package "Chemical Plant" #lightyellow {
+[Red Mix] as CPR #lightblue
+[Purple Mix] as CPB #lightblue
+[Full Mix] as CPG #lightblue
+}
+
+package Refiner #lightyellow {
+[Heavy Oil Processing] as HOP #lightblue
+[Light Oil Processing] as LOP #lightblue
+[Gas Processing] as GP #lightblue
+}
+
+CO --> Cr
+Cr --> CCr
+CCr --> SCS
+W --> SCS
+SCS --> CS
+CS --> CCF
+CCF --> C : 75%
+CCF --> CCr : 25%
+
+
+C --> SG
+SG --> GC
+SG --> MC
+
+C --> SR
+SR --> RC
+SR --> CC
+
+C --> SB
+SB --> BC
+SB --> YC
+
+YC --> SY
+SY --> RC
+SY --> GC
+
+CC --> SC
+SC --> GC
+SC --> BC
+
+MC --> SM
+SM --> BC
+SM --> RC
+
+
+
+W --> CPR
+RC --> CPR
+CPR --> RM
+
+RM --> CPB
+BC --> CPB
+CPB --> PM
+
+PM --> CPG
+GC --> CPG
+CPG --> CM
+
+RM --> HOP
+HOP --> HO
+
+PM --> LOP
+LOP --> LO
+
+CM --> GP
+GP --> G
+
+RC --> NR
+GC --> NG
+BC --> NB
+
+NR --> CU
+NG --> S
+NB --> FE
+@enduml

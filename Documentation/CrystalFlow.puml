@@ -11,7 +11,7 @@ hide circle
 
 [Crystal] as C #lightgreen
 
-package Sludger #lightyellow {
+package "Chemical Plant" #lightyellow {
 [Sludge from Crushed Crystal] as SCS #lightblue
 }
 
