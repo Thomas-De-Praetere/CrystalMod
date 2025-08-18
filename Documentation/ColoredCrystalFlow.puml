@@ -7,31 +7,27 @@ hide circle
 [Crystal] as C #lightpink
 
 package Splitter #lightyellow {
-[Split Green] as SG #lightblue
-[Split Red] as SR #lightblue
-[Split Blue] as SB #lightblue
-}
-
-package Splitter  #lightyellow {
-[Split Magenta] as SM #lightblue
-[Split Yellow] as SY #lightblue
-[Split Cyan] as SC #lightblue
-[Magenta Crystal] as MC
-[Yellow Crystal] as YC
-[Cyan Crystal] as CC
-
 package "Green Split Flow" {
+[Split Green] as SG #lightblue
+[Split Magenta] as SM #lightblue
+[Magenta Crystal] as MC
 [Red Crystal] as RC1
 [Green Crystal] as GC1
 [Blue Crystal] as BC1
 }
 package "Red Split Flow" {
+[Split Red] as SR #lightblue
+[Split Cyan] as SC #lightblue
+[Cyan Crystal] as CC
 [Red Crystal] as RC2
 [Green Crystal] as GC2
 [Blue Crystal] as BC2
 
 }
 package "Blue Split Flow" {
+[Split Blue] as SB #lightblue
+[Split Yellow] as SY #lightblue
+[Yellow Crystal] as YC
 [Red Crystal] as RC3
 [Green Crystal] as GC3
 [Blue Crystal] as BC3
