@@ -6,57 +6,77 @@ hide circle
 
 [Crystal] as C #lightpink
 
-[Magenta Crystal] as MC
-[Yellow Crystal] as YC
-[Cyan Crystal] as CC
-
-
 package Splitter #lightyellow {
 [Split Green] as SG #lightblue
 [Split Red] as SR #lightblue
 [Split Blue] as SB #lightblue
 }
 
-package Splitter as S1 #lightyellow {
+package Splitter  #lightyellow {
 [Split Magenta] as SM #lightblue
 [Split Yellow] as SY #lightblue
 [Split Cyan] as SC #lightblue
+[Magenta Crystal] as MC
+[Yellow Crystal] as YC
+[Cyan Crystal] as CC
+
+package "Green Split Flow" {
+[Red Crystal] as RC1
+[Green Crystal] as GC1
+[Blue Crystal] as BC1
+}
+package "Red Split Flow" {
+[Red Crystal] as RC2
+[Green Crystal] as GC2
+[Blue Crystal] as BC2
+
+}
+package "Blue Split Flow" {
+[Red Crystal] as RC3
+[Green Crystal] as GC3
+[Blue Crystal] as BC3
+}
 }
 
 [Red Crystal] as RC #lightgreen
 [Green Crystal] as GC #lightgreen
 [Blue Crystal] as BC #lightgreen
 
-[Red Crystal] as RC1 #lightgreen
-[Green Crystal] as GC1 #lightgreen
-[Blue Crystal] as BC1 #lightgreen
-
-[Red Crystal] as RC2 #lightgreen
-[Green Crystal] as GC2 #lightgreen
-[Blue Crystal] as BC2 #lightgreen
 
 C --> SG
 SG --> GC1
 SG --> MC
 
 C --> SR
-SR --> RC1
+SR --> RC2
 SR --> CC
 
 C --> SB
-SB --> BC1
+SB --> BC3
 SB --> YC
 
 YC --> SY
-SY --> RC
-SY --> GC2
+SY --> RC3
+SY --> GC3
 
 CC --> SC
-SC --> GC
+SC --> GC2
 SC --> BC2
 
 MC --> SM
-SM --> BC
-SM --> RC2
+SM --> BC1
+SM --> RC1
+
+RC1 --> RC
+RC2 --> RC
+RC3 --> RC
+
+GC1 --> GC
+GC2 --> GC
+GC3 --> GC
+
+BC1 --> BC
+BC2 --> BC
+BC3 --> BC
 
 @enduml
