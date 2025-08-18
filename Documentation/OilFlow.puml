@@ -23,10 +23,10 @@ package "Chemical Plant" #lightyellow {
 [Full Mix] as CPG #lightblue
 }
 
-package Refiner #lightyellow {
-[Heavy Oil Processing] as HOP #lightblue
-[Light Oil Processing] as LOP #lightblue
-[Gas Processing] as GP #lightblue
+package Energizer #lightyellow {
+[Denaturize] as HOP #lightblue
+[Denaturize] as LOP #lightblue
+[Denaturize] as GP #lightblue
 }
 
 

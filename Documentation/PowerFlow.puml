@@ -4,5 +4,40 @@ hide methods
 hide fields
 hide circle
 
+[Crystal] as C #lightpink
+
+package Energizer #lightyellow {
+[Neutralize] as NR #lightblue
+[Neutralize] as NG #lightblue
+[Neutralize] as NB #lightblue
+}
+
+package Energizer #lightyellow {
+[Denaturize] as HOP #lightblue
+[Denaturize] as LOP #lightblue
+[Denaturize] as GP #lightblue
+}
+
+package Energizer #lightyellow {
+[Extract] as DE #lightblue
+}
+
+package Splitter #lightyellow {
+[Split Green] as SG #lightblue
+[Split Magenta] as SM #lightblue
+[Split Red] as SR #lightblue
+[Split Cyan] as SC #lightblue
+[Split Blue] as SB #lightblue
+[Split Yellow] as SY #lightblue
+}
+[Crushed Crystal] as CCr
+[Energy] as E #lightgreen
+
+C --> DE
+DE --> CCr
+Energizer --> E
+Splitter --> E
+Energizer <-- E
+Splitter <-- E
 
 @enduml
