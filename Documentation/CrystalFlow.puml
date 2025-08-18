@@ -1,0 +1,39 @@
+@startuml
+
+hide methods
+hide fields
+hide circle
+
+[Crystal Ore] as CO #lightpink
+[Crushed Crystal] as CCr
+[Crystal Slurry] as CS
+[Water] as W #lightpink
+
+[Crystal] as C #lightgreen
+
+package Sludger #lightyellow {
+[Sludge from Crushed Crystal] as SCS #lightblue
+}
+
+package Crusher #lightyellow {
+[Crush Crystal Ore] as Cr #lightblue
+}
+
+package Centrifuge #lightyellow {
+[Crystalise] as CCF #lightblue
+}
+
+
+CO --> Cr
+Cr --> CCr
+CCr --> SCS
+W --> SCS
+SCS --> CS
+CS --> CCF
+CCF --> C : 75%
+CCF --> CCr : 25%
+
+
+
+
+@enduml

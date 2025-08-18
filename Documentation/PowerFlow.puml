@@ -1,0 +1,63 @@
+@startuml
+
+hide methods
+hide fields
+hide circle
+
+[Crystal Ore] as CO
+[Crushed Crystal] as CCr
+[Crystal Slurry] as CS
+[Water] as W
+[Unstable Crystal] as UC
+[Iron Ore] as IO
+[Copper Ore] as CU
+[Stone] as S
+[Crystal] as C
+[Mineral Oil] as MO
+[Crystal Fragment] as CM
+[Crystaline Mixture] as CiM
+
+package Sludger {
+[Sludge from Crushed Crystal] as SCS
+[Mixture from Crystal] as MFC
+}
+package Crusher {
+[Crush Crystal Ore] as Cr
+[Crush Fragment] as M
+[Crush Crystal] as CrCr
+}
+package Centrifuge {
+[Crystalise] as CCF
+[Dry] as D
+}
+package Refiner {
+[Refine Crystal Sludge] as RCS
+}
+
+
+CO --> Cr
+Cr --> CCr
+CCr --> SCS
+W --> SCS
+SCS --> CS
+CS --> CCF
+CCF --> C : 70%
+CCF --> UC : 5%
+CCF --> S : 25%
+UC --> IO : decay
+UC --> CU : decay
+UC --> M
+M --> CCr
+
+C --> CrCr
+CrCr --> CM
+CM --> MFC
+W --> MFC
+MFC --> CiM
+CiM --> RCS
+RCS --> MO
+
+CS --> D
+D --> UC
+
+@enduml

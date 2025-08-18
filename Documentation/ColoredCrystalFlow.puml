@@ -1,0 +1,62 @@
+@startuml
+
+hide methods
+hide fields
+hide circle
+
+[Crystal] as C #lightpink
+
+[Magenta Crystal] as MC
+[Yellow Crystal] as YC
+[Cyan Crystal] as CC
+
+
+package Splitter #lightyellow {
+[Split Green] as SG #lightblue
+[Split Red] as SR #lightblue
+[Split Blue] as SB #lightblue
+}
+
+package Splitter as S1 #lightyellow {
+[Split Magenta] as SM #lightblue
+[Split Yellow] as SY #lightblue
+[Split Cyan] as SC #lightblue
+}
+
+[Red Crystal] as RC #lightgreen
+[Green Crystal] as GC #lightgreen
+[Blue Crystal] as BC #lightgreen
+
+[Red Crystal] as RC1 #lightgreen
+[Green Crystal] as GC1 #lightgreen
+[Blue Crystal] as BC1 #lightgreen
+
+[Red Crystal] as RC2 #lightgreen
+[Green Crystal] as GC2 #lightgreen
+[Blue Crystal] as BC2 #lightgreen
+
+C --> SG
+SG --> GC1
+SG --> MC
+
+C --> SR
+SR --> RC1
+SR --> CC
+
+C --> SB
+SB --> BC1
+SB --> YC
+
+YC --> SY
+SY --> RC
+SY --> GC2
+
+CC --> SC
+SC --> GC
+SC --> BC2
+
+MC --> SM
+SM --> BC
+SM --> RC2
+
+@enduml

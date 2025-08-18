@@ -1,0 +1,29 @@
+@startuml
+
+hide methods
+hide fields
+hide circle
+
+[Red Crystal] as RC #lightpink
+[Green Crystal] as GC #lightpink
+[Blue Crystal] as BC #lightpink
+
+[Iron Ore] as FE #lightgreen
+[Copper Ore] as CU #lightgreen
+[Stone] as S #lightgreen
+
+package Energizer #lightyellow {
+[Neutralize] as NR #lightblue
+[Neutralize] as NG #lightblue
+[Neutralize] as NB #lightblue
+}
+
+RC --> NR
+GC --> NG
+BC --> NB
+
+NR --> CU
+NG --> S
+NB --> FE
+
+@enduml

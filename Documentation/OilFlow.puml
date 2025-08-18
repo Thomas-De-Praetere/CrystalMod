@@ -1,0 +1,53 @@
+@startuml
+
+hide methods
+hide fields
+hide circle
+
+[Water] as W #lightpink
+[Red Mixture] as RM
+[Purple Mixture] as PM
+[Crystaline Mixture] as CM
+
+[Red Crystal] as RC #lightpink
+[Blue Crystal] as BC #lightpink
+[Green Crystal] as GC #lightpink
+
+[Heavy Oil] as HO #lightgreen
+[Light Oil] as LO #lightgreen
+[Gas] as G #lightgreen
+
+package "Chemical Plant" #lightyellow {
+[Red Mix] as CPR #lightblue
+[Purple Mix] as CPB #lightblue
+[Full Mix] as CPG #lightblue
+}
+
+package Refiner #lightyellow {
+[Heavy Oil Processing] as HOP #lightblue
+[Light Oil Processing] as LOP #lightblue
+[Gas Processing] as GP #lightblue
+}
+
+
+W --> CPR
+RC --> CPR
+CPR --> RM
+
+RM --> CPB
+BC --> CPB
+CPB --> PM
+
+PM --> CPG
+GC --> CPG
+CPG --> CM
+
+RM --> HOP
+HOP --> HO
+
+PM --> LOP
+LOP --> LO
+
+CM --> GP
+GP --> G
+@enduml
