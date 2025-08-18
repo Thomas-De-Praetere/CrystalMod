@@ -5,6 +5,8 @@ hide fields
 hide circle
 
 [Crystal] as C #lightpink
+[Crushed Crystal] as CCr
+[Energy] as E #lightgreen
 
 package Energizer #lightyellow {
 [Neutralize] as NR #lightblue
@@ -30,8 +32,6 @@ package Splitter #lightyellow {
 [Split Blue] as SB #lightblue
 [Split Yellow] as SY #lightblue
 }
-[Crushed Crystal] as CCr
-[Energy] as E #lightgreen
 
 C --> DE
 DE --> CCr

@@ -4,14 +4,16 @@ hide methods
 hide fields
 hide circle
 
-[Water] as W #lightpink
-[Red Mixture] as RM
-[Purple Mixture] as PM
-[Crystaline Mixture] as CM
+[Ice] as I #lightpink
+[Water] as W
 
 [Red Crystal] as RC #lightpink
 [Blue Crystal] as BC #lightpink
 [Green Crystal] as GC #lightpink
+
+[Red Mixture] as RM
+[Purple Mixture] as PM
+[Crystaline Mixture] as CM
 
 [Heavy Oil] as HO #lightgreen
 [Light Oil] as LO #lightgreen
@@ -21,6 +23,7 @@ package "Chemical Plant" #lightyellow {
 [Red Mix] as CPR #lightblue
 [Purple Mix] as CPB #lightblue
 [Full Mix] as CPG #lightblue
+[Melt] as Me #lightblue
 }
 
 package Energizer #lightyellow {
@@ -29,7 +32,8 @@ package Energizer #lightyellow {
 [Denaturize] as GP #lightblue
 }
 
-
+I --> Me
+Me --> W
 W --> CPR
 RC --> CPR
 CPR --> RM

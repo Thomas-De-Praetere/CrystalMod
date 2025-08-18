@@ -6,6 +6,10 @@ hide circle
 
 [Crystal] as C #lightpink
 
+[Red Crystal] as RC #lightgreen
+[Green Crystal] as GC #lightgreen
+[Blue Crystal] as BC #lightgreen
+
 package Splitter #lightyellow {
 package "Green Split Flow" {
 [Split Green] as SG #lightblue
@@ -34,9 +38,7 @@ package "Blue Split Flow" {
 }
 }
 
-[Red Crystal] as RC #lightgreen
-[Green Crystal] as GC #lightgreen
-[Blue Crystal] as BC #lightgreen
+
 
 
 C --> SG

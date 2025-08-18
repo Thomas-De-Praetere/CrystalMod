@@ -4,48 +4,31 @@ hide methods
 hide fields
 hide circle
 
-
 [Crystal Ore] as CO #lightpink
 [Crushed Crystal] as CCr
 [Crystal Slurry] as CS
-[Water] as W #lightpink
+[Ice] as I #lightpink
+[Water] as W
 
 [Crystal] as C
+
+[Red Crystal] as RC #lightgreen
+[Green Crystal] as GC #lightgreen
+[Blue Crystal] as BC #lightgreen
 
 [Red Mixture] as RM
 [Purple Mixture] as PM
 [Crystaline Mixture] as CM
 
-[Red Crystal] as RC
-[Blue Crystal] as BC
-[Green Crystal] as GC
-
 [Heavy Oil] as HO #lightgreen
 [Light Oil] as LO #lightgreen
 [Gas] as G #lightgreen
+
 [Iron Ore] as FE #lightgreen
 [Copper Ore] as CU #lightgreen
 [Stone] as S #lightgreen
 
-
-package "Chemical Plant" #lightyellow {
-[Sludge from Crushed Crystal] as SCS #lightblue
-}
-
-package Crusher #lightyellow {
-[Crush Crystal Ore] as Cr #lightblue
-}
-
-package Centrifuge #lightyellow {
-[Crystalise] as CCF #lightblue
-}
-
-
-package Energizer #lightyellow {
-[Neutralize] as NR #lightblue
-[Neutralize] as NG #lightblue
-[Neutralize] as NB #lightblue
-}
+[Energy] as E #teal
 
 package Splitter #lightyellow {
 package "Green Split Flow" {
@@ -74,30 +57,50 @@ package "Blue Split Flow" {
 [Blue Crystal] as BC3
 }
 }
+package Energizer #lightyellow {
+[Neutralize] as NR #lightblue
+[Neutralize] as NG #lightblue
+[Neutralize] as NB #lightblue
+}
+package "Chemical Plant" #lightyellow {
+[Sludge from Crushed Crystal] as SCS #lightblue
+[Melt] as Me #lightblue
+}
 
+package Crusher #lightyellow {
+[Crush Crystal Ore] as Cr #lightblue
+}
 
+package Crystalizer #lightyellow {
+[Crystalise] as CCF #lightblue
+}
 package "Chemical Plant" #lightyellow {
 [Red Mix] as CPR #lightblue
 [Purple Mix] as CPB #lightblue
 [Full Mix] as CPG #lightblue
+[Melt] as Me #lightblue
 }
 
-package Refiner #lightyellow {
-[Heavy Oil Processing] as HOP #lightblue
-[Light Oil Processing] as LOP #lightblue
-[Gas Processing] as GP #lightblue
+package Energizer #lightyellow {
+[Denaturize] as HOP #lightblue
+[Denaturize] as LOP #lightblue
+[Denaturize] as GP #lightblue
+}
+package "Chemical Plant" #lightyellow {
+[Red Mix] as CPR #lightblue
+[Purple Mix] as CPB #lightblue
+[Full Mix] as CPG #lightblue
+[Melt] as Me #lightblue
 }
 
-CO --> Cr
-Cr --> CCr
-CCr --> SCS
-W --> SCS
-SCS --> CS
-CS --> CCF
-CCF --> C : 75%
-CCF --> CCr : 25%
-
-
+package Energizer #lightyellow {
+[Denaturize] as HOP #lightblue
+[Denaturize] as LOP #lightblue
+[Denaturize] as GP #lightblue
+}
+package Energizer #lightyellow {
+[Extract] as DE #lightblue
+}
 C --> SG
 SG --> GC1
 SG --> MC
@@ -133,8 +136,23 @@ GC3 --> GC
 BC1 --> BC
 BC2 --> BC
 BC3 --> BC
+RC --> NR
+GC --> NG
+BC --> NB
 
-
+NR --> CU
+NG --> S
+NB --> FE
+CO --> Cr
+Cr --> CCr
+CCr --> SCS
+I --> Me
+Me --> W
+W --> SCS
+SCS --> CS
+CS --> CCF
+CCF --> C : 75% with quality
+CCF --> CCr : 25%
 
 W --> CPR
 RC --> CPR
@@ -157,11 +175,11 @@ LOP --> LO
 CM --> GP
 GP --> G
 
-RC --> NR
-GC --> NG
-BC --> NB
+C --> DE
+DE --> CCr
+Energizer --> E
+Splitter --> E
+Energizer <-- E
+Splitter <-- E
 
-NR --> CU
-NG --> S
-NB --> FE
 @enduml

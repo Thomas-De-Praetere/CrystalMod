@@ -7,19 +7,21 @@ hide circle
 [Crystal Ore] as CO #lightpink
 [Crushed Crystal] as CCr
 [Crystal Slurry] as CS
-[Water] as W #lightpink
+[Ice] as I #lightpink
+[Water] as W
 
 [Crystal] as C #lightgreen
 
 package "Chemical Plant" #lightyellow {
 [Sludge from Crushed Crystal] as SCS #lightblue
+[Melt] as Me #lightblue
 }
 
 package Crusher #lightyellow {
 [Crush Crystal Ore] as Cr #lightblue
 }
 
-package Centrifuge #lightyellow {
+package Crystalizer #lightyellow {
 [Crystalise] as CCF #lightblue
 }
 
@@ -27,10 +29,12 @@ package Centrifuge #lightyellow {
 CO --> Cr
 Cr --> CCr
 CCr --> SCS
+I --> Me
+Me --> W
 W --> SCS
 SCS --> CS
 CS --> CCF
-CCF --> C : 75%
+CCF --> C : 75% with quality
 CCF --> CCr : 25%
 
 
