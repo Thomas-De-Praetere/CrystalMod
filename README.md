@@ -17,18 +17,82 @@ However, whenever you create ores or oils, the crystal needs to release it's pow
 The energizer works as a battery that needs to release its energy to be able to work.
 So the main goal of this planet is to spend your energy.
 
-Spending energy can be done in 2 ways: allowing enemies to seep from the power grids or using it to create quality items.
+Energy can be used by enemies to allow them to grow.
+
+Most enemies are laser resistant therefore using laser turrets on them can be an early game way of losing energy.
+In the late game, you will want to balance because the crystaline energisers will tak up a lot of energy.
+
+### Powered Crystals
+
+We intend to put power into crystals to power them even more. This process has some side effects.
+Powering a crystal asks for a power spike.
+If the network cannot deliver, the ingredients are lost and the process fails.
+If the process succeeds, a power surge is put in the network damaging everything connected to the network.
+This will force the player to smartly go about which network are connected to what.
+
+There will be 3 levels of powered crystals each requiring larger and larger amounts of power.
+Level 2 creation will cause an explosion in addition to the power surge.
+Level 3 creation will cause a small nuclear explosion.
+The intention is that the player needs to recreate parts of his base when doing that just so actual object creation
+is needed to keep the base working.
+
+To make it easier to collect energy, we will introduce mega batteries.
+They allow us to read the stats of the network and especially how many power is saved.
+Mega batteries are an excellent target for flyers and if they are destroyed, guess what explosion.
+
+### Util
+
+* Electric power poles that do not automatically connect to the grid to easy grid separation. 
+* Electric power poles that have a single connection do to power a single object.
+* Powered floors, the power only flows where the floor is. Visual way of splitting power networks.
+
+## Science
+
+Science uses powered crystals and has levels with the type of powered crystal that is used.
 
 ## Enemies
-Enemies spawn resources that can be mined when killed.
+Enemies spawn resources that can be mined when killed. All enemies are of crystaline nature and power hungry so they are 
+100% resistant to energy weapons but very susceptible to explosive damage.
+
+Enemies give tinny bits of ore when killed to push the player to setup elaborate defenses to grow pentapods
+and kill them.
+
+### Small enemies
+
 There are only small enemies that spawn. They have no intention to 
 destroy your base, they try to attach to your power poles and extract energy from your base.
 Other enemies will try to attach to attached enemies to create some sort of network.
-The enemies will use energy to evolve to larger and more sturdy enemies.
-The larger they become, the more rich the ore patch gets when they are killed.
-The bigger enemies will also try to defend the network they are building so it becomes harder for you to destroy them.
-If you kill the biggest enemy, the ore patch they spawn will contain quality crystal ore.
 
-It is still a debate whether shutting of the power will kill enemies or not.
+The network is predefined and enemies tend to walk across those paths to clear them and attach to power nearby.
+This will allow the player to predict which paths they need to cover for ore and penta spawning control.
+The nodes where pentapods can spawn are also predetermined.
+
+The enemies will use energy to evolve to larger and more sturdy enemies.
+In general, all power will be redirected to a penta node, to start the creation of that enemy.
+The paths to the penta location will also become more defended with biters evolving to conduits and some evolving to walls.
+
+Destroying the connection will send all biters in attack mode.
+
+Letting the pentapod spawn, will kill the entire connection and cause a small explosion.
+
+### Big enemies
+
+Big enemies are some sort of crystaline pentapod that does not try to go for the nearest enegry source, but for the largest one.
+When the big enemy is killed, it spawns a circular rich ore patch allowing for better ores and a reason to let them grow.
+
+### Flyers
+
+Flyers are generic attackers flying towards the biggest power source to seep it and damage it.
+They do not spawn ore when killed and are susceptible to laser but not to explosion.
+
+### Weapons
+
+Short range artillery and multiple hits lasers.
+#### Artillery
+Short range arty is there to allow us to hurl powered crystals towards the enemy exploding on impact.
+Cluster, mini-nuke and clustered mini-nuke variants will be available.
+Artillery is similar to flame throwers as in a small arc in a certain direction (which seems smartest for things that do explosions.)
+#### Lasers
+Crystal powered laser turret that targets up to 5 enemies. great against flyers.
 ## Goal
 The main goal is to balance energy for feeding enemies to have access to ores and energy to power the powerhungry processes.
