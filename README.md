@@ -3,11 +3,12 @@
 Mod to add crystal based planet to factorio.
 
 In the Documentation folder you can find the creation of the base resources.
-The main goal of the planet is to use energy management and to facilitate quality by adding machines that guarantee quality items instead of leaving it up to chance.
+The main goal of the planet is to use energy management and to add new ways of using and creating power.
+The main result should be better laser turrets, more explosive rounds, smaller power plants and smaller power equipment.
 
 ## Energy and Resources
 
-There are 2 main resources, Ice and Crystal Ore. Ice can be found as patches around the planet.
+There are 2 main resources, Ice and Crystal Ore. Ice can be found in rocks around the planet and can be shot down from passing ice astroids.
 Crystal Ore is found as patches spawned by killed enemies.
 
 For Crystal Ore, you will be able to mine them and crystalise them into crystals.
@@ -17,11 +18,6 @@ The energizer works as a battery that needs to release its energy to be able to 
 So the main goal of this planet is to spend your energy.
 
 Spending energy can be done in 2 ways: allowing enemies to seep from the power grids or using it to create quality items.
-
-## Quality
-The main unlock of this planet is a machine that can create guaranteed quality items according to the quality distribution in exchange for tons of energy.
-A 1000 items become 90 uncommon, 9 rare and 1 epic. 
-The buildings that are created will also require crystals of a certain quality to be able to be created.
 
 ## Enemies
 Enemies spawn resources that can be mined when killed.
@@ -35,4 +31,4 @@ If you kill the biggest enemy, the ore patch they spawn will contain quality cry
 
 It is still a debate whether shutting of the power will kill enemies or not.
 ## Goal
-The main goal is to balance energy for quality and energy for feeding enemies to have access to ores.
+The main goal is to balance energy for feeding enemies to have access to ores and energy to power the powerhungry processes.

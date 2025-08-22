@@ -25,6 +25,10 @@ package Crystalizer #lightyellow {
 [Crystalise] as CCF #lightblue
 }
 
+package Evaporator #lightyellow {
+[Evaporate] as Eva #lightblue
+}
+
 
 CO --> Cr
 Cr --> CCr
@@ -34,6 +38,9 @@ Me --> W
 W --> SCS
 SCS --> CS
 CS --> CCF
+CS --> Eva
+W --> Eva
+Eva --> Gone
 CCF --> C : 75% with quality
 CCF --> CCr : 25%
 

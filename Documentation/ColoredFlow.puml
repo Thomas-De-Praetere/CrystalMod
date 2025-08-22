@@ -9,6 +9,7 @@ hide circle
 [Red Crystal] as RC #lightgreen
 [Green Crystal] as GC #lightgreen
 [Blue Crystal] as BC #lightgreen
+[Crushed Crystal] as CCr #lightgreen
 
 package Splitter #lightyellow {
 package "Green Split Flow" {
@@ -38,6 +39,11 @@ package "Blue Split Flow" {
 }
 }
 
+package Crusher #lightyellow {
+[Crush Red Crystal] as CrR #lightblue
+[Crush Green Crystal] as CrG #lightblue
+[Crush Blue Crystal] as CrB #lightblue
+}
 
 
 
@@ -76,5 +82,14 @@ GC3 --> GC
 BC1 --> BC
 BC2 --> BC
 BC3 --> BC
+
+BC --> CrB
+CrB --> CCr
+
+RC --> CrR
+CrR --> CCr
+
+GC --> CrG
+CrG --> CCr
 
 @enduml
