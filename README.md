@@ -57,6 +57,9 @@ Enemies spawn resources that can be mined when killed. All enemies are of crysta
 Enemies give tinny bits of ore when killed to push the player to setup elaborate defenses to grow pentapods
 and kill them.
 
+As enemies generate crystals and water is abundant on all planets, so it would be nice to be able to generate eggs for them 
+to transport to other planets and allow them to infest the planet.
+
 ### Small enemies
 
 There are only small enemies that spawn. They have no intention to 
@@ -91,7 +94,10 @@ Short range artillery and multiple hits lasers.
 #### Artillery
 Short range arty is there to allow us to hurl powered crystals towards the enemy exploding on impact.
 Cluster, mini-nuke and clustered mini-nuke variants will be available.
-Artillery is similar to flame throwers as in a small arc in a certain direction (which seems smartest for things that do explosions.)
+Artillery is similar to flamethrowers as in a small arc in a certain direction (which seems smartest for things that do explosions.)
+
+When creating the crystals for ammunition we could break a stable crystal into unstable parts which are then used to create the ammo.
+However, unstable crystals decay and when they do, they go boom.
 #### Lasers
 Crystal powered laser turret that targets up to 5 enemies. great against flyers.
 ## Goal
