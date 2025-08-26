@@ -95,6 +95,7 @@ Short range artillery and multiple hits lasers.
 Short range arty is there to allow us to hurl powered crystals towards the enemy exploding on impact.
 Cluster, mini-nuke and clustered mini-nuke variants will be available.
 Artillery is similar to flamethrowers as in a small arc in a certain direction (which seems smartest for things that do explosions.)
+There should also be a short range artillery piece to hold in your hand
 
 When creating the crystals for ammunition we could break a stable crystal into unstable parts which are then used to create the ammo.
 However, unstable crystals decay and when they do, they go boom.

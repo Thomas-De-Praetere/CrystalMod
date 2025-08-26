@@ -4,8 +4,6 @@ hide methods
 hide fields
 hide circle
 
-[Crystal] as C #lightpink
-[Crushed Crystal] as CCr
 [Energy] as E #lightgreen
 
 package Energizer #lightyellow {
@@ -33,11 +31,7 @@ package Splitter #lightyellow {
 [Split Yellow] as SY #lightblue
 }
 
-C --> DE
-DE --> CCr
 Energizer --> E
 Splitter --> E
-Energizer <-- E
-Splitter <-- E
 
 @enduml

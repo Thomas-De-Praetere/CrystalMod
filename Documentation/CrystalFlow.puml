@@ -11,6 +11,7 @@ hide circle
 [Water] as W
 
 [Crystal] as C #lightgreen
+[Carbon] as Ca #lightgreen
 
 package "Chemical Plant" #lightyellow {
 [Sludge from Crushed Crystal] as SCS #lightblue
@@ -25,8 +26,9 @@ package Crystalizer #lightyellow {
 [Crystalise] as CCF #lightblue
 }
 
-package Evaporator #lightyellow {
-[Evaporate] as Eva #lightblue
+package Energizer #lightyellow {
+[Neutralize] as NCr #lightblue
+[Extract] as DE #lightblue
 }
 
 
@@ -38,11 +40,12 @@ Me --> W
 W --> SCS
 SCS --> CS
 CS --> CCF
-CS --> Eva
-W --> Eva
-Eva --> Gone
-CCF --> C : 75% with quality
+CCr --> NCr
+NCr  --> Ca
+CCF --> C : 75%
 CCF --> CCr : 25%
+C --> DE
+DE --> CCr
 
 
 
