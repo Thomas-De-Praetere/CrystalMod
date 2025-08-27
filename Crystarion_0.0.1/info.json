@@ -1,0 +1,8 @@
+{
+  "name": "Crystarion",
+  "version": "0.0.1",
+  "title": "Crystarion",
+  "author": "Thomas De Praetere",
+  "description": "Adds a new planet called Crystarion where you will need to handle power crystals and enemies to come out victorious.",
+  "factorio_version": "2.0.39"
+}

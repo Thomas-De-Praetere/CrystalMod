@@ -1,4 +1,4 @@
-# CrystalMod
+# Crystarion
 ## Description
 Mod to add crystal based planet to factorio.
 
