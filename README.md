@@ -9,9 +9,9 @@ The main result should be better laser turrets, more explosive rounds, smaller p
 ## Energy and Resources
 
 There are 2 main resources, Ice and Crystal Ore. Ice can be found in rocks around the planet and can be shot down from passing ice astroids.
-Crystal Ore is found as patches spawned by killed enemies.
+Crystal Ore is found as drops spawned by killed enemies and in rocks scattered around.
 
-For Crystal Ore, you will be able to mine them and crystalise them into crystals.
+For Crystal Ore, you will be able to pick them up and crystalise them into crystals.
 These crystals are your power source and your way to create oil and ore products.
 However, whenever you create ores or oils, the crystal needs to release it's power.
 The energizer works as a battery that needs to release its energy to be able to work.
@@ -21,6 +21,8 @@ Energy can be used by enemies to allow them to grow.
 
 Most enemies are laser resistant therefore using laser turrets on them can be an early game way of losing energy.
 In the late game, you will want to balance because the crystaline energisers will tak up a lot of energy.
+
+The main "miner" will be a collector similar to the space station which picks up things around it from the ground.
 
 ### Powered Crystals
 
