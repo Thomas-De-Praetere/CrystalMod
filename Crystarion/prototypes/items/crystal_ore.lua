@@ -1,0 +1,1 @@
+local crystal_ore = table.deepcopy(data.raw["item"]["iron-ore"])
