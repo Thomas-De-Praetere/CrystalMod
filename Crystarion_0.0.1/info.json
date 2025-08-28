@@ -4,5 +4,24 @@
   "title": "Crystarion",
   "author": "Thomas De Praetere",
   "description": "Adds a new planet called Crystarion where you will need to handle power crystals and enemies to come out victorious.",
-  "factorio_version": "2.0.39"
+  "factorio_version": "2.0",
+  "homepage": "https://github.com/Thomas-De-Praetere/CrystalMod",
+  "dependencies": [
+    "space-age >= 2.0.28",
+    "PlanetsLib >= 1.1.21"
+  ],
+  "quality_required": false,
+  "rail_bridges_required": false,
+  "space_travel_required": true,
+  "spoiling_required": true,
+  "freezing_required": false,
+  "segmented_units_required": false,
+  "expansion_shaders_required": false,
+  "package": {
+    "gallery": [
+      "gallery/**.jpg"
+    ],
+    "readme": "README.md",
+    "sync_portal_details": true
+  }
 }
