@@ -11,41 +11,32 @@ hide circle
 [Water] as W
 
 [Crystal] as C #lightgreen
-[Carbon] as Ca #lightgreen
 
-package "Chemical Plant" #lightyellow {
+package "Chemical Plant x1" #lightyellow {
 [Sludge from Crushed Crystal] as SCS #lightblue
 [Melt] as Me #lightblue
 }
 
-package Crusher #lightyellow {
+package "Crusher x60" #lightyellow {
 [Crush Crystal Ore] as Cr #lightblue
 }
 
-package Crystalizer #lightyellow {
+package "Crystalizer x10" #lightyellow {
 [Crystalise] as CCF #lightblue
 }
 
-package Energizer #lightyellow {
-[Neutralize] as NCr #lightblue
-[Extract] as DE #lightblue
-}
 
+CO --> Cr : 1
+Cr --> CCr : 1
+CCr --> SCS : 60
+I --> Me : 1
+Me --> W : 20
+W --> SCS : 20
+SCS --> CS : 20
+CS --> CCF : 2
+CCF --> C : 75% 2
+CCF --> CCr : 25% 1
 
-CO --> Cr
-Cr --> CCr
-CCr --> SCS
-I --> Me
-Me --> W
-W --> SCS
-SCS --> CS
-CS --> CCF
-CCr --> NCr
-NCr  --> Ca
-CCF --> C : 75%
-CCF --> CCr : 25%
-C --> DE
-DE --> CCr
 
 
 

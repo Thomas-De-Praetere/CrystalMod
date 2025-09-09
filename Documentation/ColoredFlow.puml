@@ -47,49 +47,49 @@ package Crusher #lightyellow {
 
 
 
-C --> SG
-SG --> GC1
-SG --> MC
+C --> SG  : 1
+SG --> GC1 : 1
+SG --> MC : 1
 
-C --> SR
-SR --> RC2
-SR --> CC
+C --> SR : 1
+SR --> RC2 : 1
+SR --> CC : 1
 
-C --> SB
-SB --> BC3
-SB --> YC
+C --> SB : 1
+SB --> BC3 : 1
+SB --> YC : 1
 
-YC --> SY
-SY --> RC3
-SY --> GC3
+YC --> SY : 1
+SY --> RC3 : 1
+SY --> GC3 : 1
 
-CC --> SC
-SC --> GC2
-SC --> BC2
+CC --> SC : 1
+SC --> GC2 : 1
+SC --> BC2 : 1
 
-MC --> SM
-SM --> BC1
-SM --> RC1
+MC --> SM : 1
+SM --> BC1 : 1
+SM --> RC1 : 1
 
-RC1 --> RC
-RC2 --> RC
-RC3 --> RC
+RC1 --> RC : 1
+RC2 --> RC : 1
+RC3 --> RC : 1
 
-GC1 --> GC
-GC2 --> GC
-GC3 --> GC
+GC1 --> GC : 1
+GC2 --> GC : 1
+GC3 --> GC : 1
 
-BC1 --> BC
-BC2 --> BC
-BC3 --> BC
+BC1 --> BC : 1
+BC2 --> BC : 1
+BC3 --> BC : 1
 
-BC --> CrB
-CrB --> CCr
+BC --> CrB : 1
+CrB --> CCr : 1
 
-RC --> CrR
-CrR --> CCr
+RC --> CrR : 1
+CrR --> CCr : 1
 
-GC --> CrG
-CrG --> CCr
+GC --> CrG : 1
+CrG --> CCr : 1
 
 @enduml

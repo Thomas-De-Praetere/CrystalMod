@@ -7,23 +7,28 @@ hide circle
 [Red Crystal] as RC #lightpink
 [Green Crystal] as GC #lightpink
 [Blue Crystal] as BC #lightpink
+[Crystal] as C #lightpink
 
 [Iron Ore] as FE #lightgreen
 [Copper Ore] as CU #lightgreen
 [Stone] as S #lightgreen
+[Carbon] as Ca #lightgreen
 
 package Energizer #lightyellow {
 [Neutralize] as NR #lightblue
 [Neutralize] as NG #lightblue
 [Neutralize] as NB #lightblue
+[Neutralize] as NC #lightblue
 }
 
-RC --> NR
-GC --> NG
-BC --> NB
+RC --> NR : 1
+GC --> NG : 1
+BC --> NB : 1
+C --> NC : 1
 
-NR --> CU
-NG --> S
-NB --> FE
+NR --> CU : 1
+NG --> S : 1
+NB --> FE : 1
+NC --> Ca : 3
 
 @enduml

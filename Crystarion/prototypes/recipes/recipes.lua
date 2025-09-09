@@ -22,11 +22,11 @@ local sludge_from_crushed_crystal = {
     category = "chemistry",
     main_product = "crystarion-crystal-slurry",
     ingredients = {
-        { type = "fluid", name = "water", amount = 100 },
-        { type = "item", name = "crystarion-crushed-crystal", amount = 100 }
+        { type = "fluid", name = "water",                      amount = 20 },
+        { type = "item",  name = "crystarion-crushed-crystal", amount = 60 }
     },
     results = {
-        { type = "fluid", name = "crystarion-crystal-slurry", amount = 100 }
+        { type = "fluid", name = "crystarion-crystal-slurry", amount = 20 }
     },
     energy_required = 1
 }
@@ -49,40 +49,14 @@ local crystalise = {
     category = "crystarion-crystalizer-category",
     main_product = "crystarion-crystal",
     ingredients = {
-        { type = "fluid", name = "crystarion-crystal-slurry", amount = 100 }
+        { type = "fluid", name = "crystarion-crystal-slurry", amount = 2 }
 
     },
     results = {
-        { type = "item", name = "crystarion-crystal", amount = 75 },
-        { type = "item", name = "crystarion-crushed-crystal", amount = 25 }
-    },
-    energy_required = 1
-}
-local neutralise = {
-    type = "recipe",
-    name = "crystarion-neutralise",
-    category = "crystarion-energiser-category",
-    main_product = "carbon",
-    ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 10 }
-    },
-    results = {
-        { type = "item", name = "carbon", amount = 5 }
-    },
-    energy_required = 1
-}
-local extract = {
-    type = "recipe",
-    name = "crystarion-extract",
-    category = "crystarion-energiser-category",
-    main_product = "crystarion-crushed-crystal",
-    ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 100 }
-    },
-    results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 50 }
+        { type = "item", name = "crystarion-crystal",         amount = 2, probability = 0.75 },
+        { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.25 }
     },
     energy_required = 1
 }
 
-data:extend({ sludge_from_crushed_crystal, crush_crystal_ore, crystalise, neutralise, extract })
+data:extend({ sludge_from_crushed_crystal, crush_crystal_ore, crystalise })
