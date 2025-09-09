@@ -50,7 +50,6 @@ local crystalise = {
     main_product = "crystarion-crystal",
     ingredients = {
         { type = "fluid", name = "crystarion-crystal-slurry", amount = 16 }
-
     },
     results = {
         { type = "item", name = "crystarion-crystal",         amount = 8, probability = 0.75 },
