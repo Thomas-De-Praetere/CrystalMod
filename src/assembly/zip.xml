@@ -12,7 +12,7 @@
         <!-- Include the 'src' folder -->
         <fileSet>
             <directory>Crystarion</directory>
-            <outputDirectory>src</outputDirectory>
+            <outputDirectory>Crystarion</outputDirectory>
             <includes>
                 <include>*/</include>
             </includes>

@@ -12,30 +12,30 @@ hide circle
 
 [Crystal] as C #lightgreen
 
-package "Chemical Plant x1" #lightyellow {
-[Sludge from Crushed Crystal] as SCS #lightblue
-[Melt] as Me #lightblue
+package "Chemical Plant x2" #lightyellow {
+[Sludge from Crushed Crystal 1s] as SCS #lightblue
+[Melt 1s] as Me #lightblue
 }
 
-package "Crusher x60" #lightyellow {
-[Crush Crystal Ore] as Cr #lightblue
+package "Crusher x30" #lightyellow {
+[Crush Crystal Ore 1s] as Cr #lightblue
 }
 
 package "Crystalizer x10" #lightyellow {
-[Crystalise] as CCF #lightblue
+[Crystalise 4s] as CCF #lightblue
 }
 
 
-CO --> Cr : 1
-Cr --> CCr : 1
-CCr --> SCS : 60
-I --> Me : 1
-Me --> W : 20
-W --> SCS : 20
-SCS --> CS : 20
-CS --> CCF : 2
-CCF --> C : 75% 2
-CCF --> CCr : 25% 1
+CO --> Cr : 1[1]
+Cr --> CCr : 1[1]
+CCr --> SCS : 15[15]
+I --> Me : 1[1]
+Me --> W : 20[20]
+W --> SCS : 20[20]
+SCS --> CS : 20[20]
+CS --> CCF : 16[4]
+CCF --> C : 75% 8[1.5]
+CCF --> CCr : 25% 2[0.125]
 
 
 
