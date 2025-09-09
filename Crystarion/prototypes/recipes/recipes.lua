@@ -64,7 +64,7 @@ local neutralise = {
     category = "crystarion-energiser-category",
     main_product = "carbon",
     ingredients = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 10 }
+        { type = "item", name = "crystarion-crystal", amount = 10 }
     },
     results = {
         { type = "item", name = "carbon", amount = 5 }
