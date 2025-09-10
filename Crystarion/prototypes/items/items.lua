@@ -6,8 +6,7 @@ crushed_crystal.pictures =
 {
     { size = 64, filename = "__Crystarion__/graphics/items/crushed_crystal.png",   scale = 0.5, mipmap_count = 4 },
     { size = 64, filename = "__Crystarion__/graphics/items/crushed_crystal_1.png", scale = 0.5, mipmap_count = 4 },
-    { size = 64, filename = "__Crystarion__/graphics/items/crushed_crystal_2.png", scale = 0.5, mipmap_count = 4 },
-    { size = 64, filename = "__Crystarion__/graphics/items/crushed_crystal_3.png", scale = 0.5, mipmap_count = 4 }
+    { size = 64, filename = "__Crystarion__/graphics/items/crushed_crystal_2.png", scale = 0.5, mipmap_count = 4 }
 }
 
 local crystal = table.deepcopy(data.raw["item"]["iron-plate"])
