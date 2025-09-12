@@ -61,21 +61,22 @@ local split_green = {
     type = "recipe",
     name = "crystarion-split-green",
     category = "crystarion-energiser-category",
-    main_product = "crystarion-crystal",
+    main_product = "crystarion-crystal-green",
     ingredients = {
-        { type = "fluid", name = "crystarion-crystal", amount = 1 }
+        { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
         { type = "item", name = "crystarion-crystal-green", amount = 1 },
         { type = "item", name = "crystarion-crystal-magenta", amount = 1 },
     },
-    energy_required = 4
+    energy_required = 1
 }
 local split_magenta = {
     type = "recipe",
     name = "crystarion-split-magenta",
     category = "crystarion-energiser-category",
-    main_product = "crystarion-crystal-magenta",
+    main_product = "crystarion-crystal-blue",
+    icon = "__Crystarion__/graphics/items/crystal-magenta.png",
     ingredients = {
         { type = "item", name = "crystarion-crystal-magenta", amount = 1 }
     },
@@ -83,13 +84,13 @@ local split_magenta = {
         { type = "item", name = "crystarion-crystal-blue", amount = 1, },
         { type = "item", name = "crystarion-crystal-red", amount = 1, }
     },
-    energy_required = 4
+    energy_required = 1
 }
 local split_red = {
     type = "recipe",
     name = "crystarion-split-red",
     category = "crystarion-energiser-category",
-    main_product = "crystarion-crystal",
+    main_product = "crystarion-crystal-red",
     ingredients = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
@@ -97,13 +98,14 @@ local split_red = {
         { type = "item", name = "crystarion-crystal-red", amount = 1 },
         { type = "item", name = "crystarion-crystal-cyan", amount = 1 }
     },
-    energy_required = 4
+    energy_required = 1
 }
 local split_cyan = {
     type = "recipe",
     name = "crystarion-split-cyan",
     category = "crystarion-energiser-category",
-    main_product = "crystarion-crystal-cyan",
+    main_product = "crystarion-crystal-green",
+    icon = "__Crystarion__/graphics/items/crystal-cyan.png",
     ingredients = {
         { type = "item", name = "crystarion-crystal-cyan", amount = 1 }
     },
@@ -111,13 +113,13 @@ local split_cyan = {
         { type = "item", name = "crystarion-crystal-green", amount = 1, },
         { type = "item", name = "crystarion-crystal-blue", amount = 1, }
     },
-    energy_required = 4
+    energy_required = 1
 }
 local split_blue = {
     type = "recipe",
     name = "crystarion-split-blue",
     category = "crystarion-energiser-category",
-    main_product = "crystarion-crystal",
+    main_product = "crystarion-crystal-blue",
     ingredients = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
@@ -125,13 +127,14 @@ local split_blue = {
         { type = "item", name = "crystarion-crystal-blue", amount = 1 },
         { type = "item", name = "crystarion-crystal-yellow", amount = 1 }
     },
-    energy_required = 4
+    energy_required = 1
 }
 local split_yellow = {
     type = "recipe",
     name = "crystarion-split-yellow",
     category = "crystarion-energiser-category",
-    main_product = "crystarion-crystal-yellow",
+    main_product = "crystarion-crystal-green",
+    icon = "__Crystarion__/graphics/items/crystal-yellow.png",
     ingredients = {
         { type = "item", name = "crystarion-crystal-yellow", amount = 1 }
     },
@@ -139,19 +142,19 @@ local split_yellow = {
         { type = "item", name = "crystarion-crystal-green", amount = 1, },
         { type = "item", name = "crystarion-crystal-red", amount = 1, }
     },
-    energy_required = 4
+    energy_required = 1
 }
 
 local crush_crystal_red = {
     type = "recipe",
     name = "crystarion-crush-crystal-red",
     category = "crystarion-crusher-category",
-    main_product = "crystarion-crystal-red",
+    main_product = "crystarion-crushed-crystal",
     ingredients = {
-        { type = "item", name = "crystarion-crystal-red", amount = 1 }
+        { type = "item", name = "crystarion-crystal-red", amount = 3 }
     },
     results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 1 }
+        { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.5 }
     },
     energy_required = 1
 }
@@ -159,12 +162,12 @@ local crush_crystal_green = {
     type = "recipe",
     name = "crystarion-crush-crystal-green",
     category = "crystarion-crusher-category",
-    main_product = "crystarion-crystal-green",
+    main_product = "crystarion-crushed-crystal",
     ingredients = {
-        { type = "item", name = "crystarion-crystal-green", amount = 1 }
+        { type = "item", name = "crystarion-crystal-green", amount = 3 }
     },
     results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 1 }
+        { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.5 }
     },
     energy_required = 1
 }
@@ -172,12 +175,12 @@ local crush_crystal_blue = {
     type = "recipe",
     name = "crystarion-crush-crystal-blue",
     category = "crystarion-crusher-category",
-    main_product = "crystarion-crystal-blue",
+    main_product = "crystarion-crushed-crystal",
     ingredients = {
-        { type = "item", name = "crystarion-crystal-blue", amount = 1 }
+        { type = "item", name = "crystarion-crystal-blue", amount = 3 }
     },
     results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 1 }
+        { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.5 }
     },
     energy_required = 1
 }
