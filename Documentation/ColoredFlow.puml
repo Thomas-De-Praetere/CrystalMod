@@ -11,7 +11,7 @@ hide circle
 [Blue Crystal] as BC #lightgreen
 [Crushed Crystal] as CCr #lightgreen
 
-package Splitter #lightyellow {
+package Energizer #lightyellow {
 package "Green Split Flow" {
 [Split Green] as SG #lightblue
 [Split Magenta] as SM #lightblue
