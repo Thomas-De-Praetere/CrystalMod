@@ -191,6 +191,59 @@ local crush_crystal_blue = {
     energy_required = 1
 }
 
+local neutralize_red = {
+    type = "recipe",
+    name = "crystarion-neutralize-red",
+    category = "crystarion-energizer-category",
+    main_product = "copper-ore",
+    ingredients = {
+        { type = "item", name = "crystarion-crystal-red", amount = 1 }
+    },
+    results = {
+        { type = "item", name = "copper-ore", amount = 1 }
+    },
+    energy_required = 1
+}
+local neutralize_green = {
+    type = "recipe",
+    name = "crystarion-neutralize-green",
+    category = "crystarion-energizer-category",
+    main_product = "stone",
+    ingredients = {
+        { type = "item", name = "crystarion-crystal-green", amount = 1 }
+    },
+    results = {
+        { type = "item", name = "stone", amount = 1 }
+    },
+    energy_required = 1
+}
+local neutralize_blue = {
+    type = "recipe",
+    name = "crystarion-neutralize-blue",
+    category = "crystarion-energizer-category",
+    main_product = "iron-ore",
+    ingredients = {
+        { type = "item", name = "crystarion-crystal-blue", amount = 1 }
+    },
+    results = {
+        { type = "item", name = "iron-ore", amount = 1 }
+    },
+    energy_required = 1
+}
+local neutralize_crystal = {
+    type = "recipe",
+    name = "crystarion-neutralize-crystal",
+    category = "crystarion-energizer-category",
+    main_product = "carbon",
+    ingredients = {
+        { type = "item", name = "crystarion-crystal-crystal", amount = 1 }
+    },
+    results = {
+        { type = "item", name = "carbon", amount = 3 }
+    },
+    energy_required = 1
+}
+
 data:extend({
     sludge_from_crushed_crystal,
     crush_crystal_ore,
@@ -203,5 +256,9 @@ data:extend({
     split_yellow,
     crush_crystal_red,
     crush_crystal_green,
-    crush_crystal_blue
+    crush_crystal_blue,
+    neutralize_red,
+    neutralize_green,
+    neutralize_blue,
+    neutralize_crystal
 })
