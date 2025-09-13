@@ -11,7 +11,11 @@ hide circle
 [Blue Crystal] as BC #lightpink
 [Green Crystal] as GC #lightpink
 
-[Red Mixture] as RM
+//TODO create a crystal to sludge recipe and mix the chemicals.
+
+[Red Sludge] as RM
+[Green Sludge] as GS
+[Blue Sludge] as BS
 [Purple Mixture] as PM
 [Crystaline Mixture] as CM
 
