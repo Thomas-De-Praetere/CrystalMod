@@ -6,6 +6,19 @@ In the Documentation folder you can find the creation of the base resources.
 The main goal of the planet is to use energy management and to add new ways of using and creating power.
 The main result should be better laser turrets, more explosive rounds, smaller power plants and smaller power equipment.
 
+## Todo
+* Design start phase
+  * Perhaps have rocks spread over the surface containing red green blue and normal crystals.d
+  * or a sift method to sift out crystals from crystal ore
+  * Have a recipe to handecraft the deenergize step. This should damage the player, but it should be enough to build your own deenergizer and have access to ores
+* Later game: have fancier versions of the machines that cost more fancy crystals
+* To energize crystals, we already thought of having power surges etc.
+  * Let it attract flyers (let all energy creating things attract flyers)
+  * Make it similar to nuclear reactorss that one damage makes boom
+  * If not enough energy in the system, fail
+  * Damage all in the connected network based on their stored energy.
+
+
 ## Energy and Resources
 
 There are 2 main resources, Ice and Crystal Ore. Ice can be found in rocks around the planet and can be shot down from passing ice astroids.
