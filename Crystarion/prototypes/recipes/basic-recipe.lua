@@ -4,8 +4,8 @@ local sludge_from_crushed_crystal = {
     category = "crystarion-crystalizer-category",
     main_product = "crystarion-crystal-slurry",
     ingredients = {
-        { type = "fluid", name = "water",                      amount = 20 },
-        { type = "item",  name = "crystarion-crushed-crystal", amount = 15 }
+        { type = "fluid", name = "water", amount = 20 },
+        { type = "item", name = "crystarion-crushed-crystal", amount = 15 }
     },
     results = {
         { type = "fluid", name = "crystarion-crystal-slurry", amount = 20 }
@@ -34,15 +34,29 @@ local crystalise = {
         { type = "fluid", name = "crystarion-crystal-slurry", amount = 16 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal",         amount = 8, probability = 0.75 },
+        { type = "item", name = "crystarion-crystal", amount = 8, probability = 0.75 },
         { type = "item", name = "crystarion-crushed-crystal", amount = 2, probability = 0.25 }
     },
     energy_required = 4
 }
-
+local battery = {
+    type = "recipe",
+    name = "crystarion-battery",
+    main_product = "battery",
+    ingredients = {
+        { type = "item", name = "crystarion-crystal", amount = 1 },
+        { type = "item", name = "iron-plate", amount = 1 },
+        { type = "item", name = "copper-plate", amount = 1 }
+    },
+    results = {
+        { type = "item", name = "battery", amount = 1 }
+    },
+    energy_required = 4
+}
 
 data:extend({
     sludge_from_crushed_crystal,
     crush_crystal_ore,
-    crystalise
+    crystalise,
+    battery
 })

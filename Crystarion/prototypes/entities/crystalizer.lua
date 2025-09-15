@@ -7,4 +7,22 @@ local crystalizer_item = table.deepcopy(data.raw["item"]["chemical-plant"])
 crystalizer_item.name = "crystarion-crystalizer"
 crystalizer_item.place_result = "crystarion-crystalizer"
 
-data:extend({ crystalizer, crystalizer_item })
+local crystalizer_recipe = {
+    type = "recipe",
+    name = "crystarion-crystalizer",
+    main_product = "crystarion-crystalizer",
+    ingredients = {
+        { type = "item", name = "iron-plate", amount = 3 },
+        { type = "item", name = "iron-gear-wheel", amount = 3 },
+        { type = "item", name = "copper-cable", amount = 2 },
+        { type = "item", name = "electronic-circuit", amount = 3 },
+        { type = "item", name = "battery", amount = 2 },
+        { type = "item", name = "pipe", amount = 5 }
+    },
+    results = {
+        { type = "item", name = "crystarion-crystalizer", amount = 1 }
+    },
+    energy_required = 5
+}
+
+data:extend({ crystalizer, crystalizer_item, crystalizer_recipe })
