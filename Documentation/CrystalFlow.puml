@@ -13,7 +13,6 @@ hide circle
 [Crystal] as C #lightgreen
 
 package "Chemical Plant x2" #lightyellow {
-[Sludge from Crushed Crystal 1s] as SCS #lightblue
 [Melt 1s] as Me #lightblue
 }
 
@@ -22,6 +21,7 @@ package "Crusher x30" #lightyellow {
 }
 
 package "Crystalizer x10" #lightyellow {
+[Sludge from Crushed Crystal 1s] as SCS #lightblue
 [Crystalise 4s] as CCF #lightblue
 }
 

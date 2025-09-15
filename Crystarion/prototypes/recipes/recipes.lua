@@ -19,7 +19,7 @@ data:extend({ crusher_category, crystalizer_category, energiser_category })
 local sludge_from_crushed_crystal = {
     type = "recipe",
     name = "crystarion-sludge-from-crushed-crystal",
-    category = "chemistry",
+    category = "crystarion-crystalizer-category",
     main_product = "crystarion-crystal-slurry",
     ingredients = {
         { type = "fluid", name = "water", amount = 20 },

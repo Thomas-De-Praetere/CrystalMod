@@ -11,24 +11,29 @@ hide circle
 [Blue Crystal] as BC #lightpink
 [Green Crystal] as GC #lightpink
 
-//TODO create a crystal to sludge recipe and mix the chemicals.
-
-[Red Sludge] as RM
+[Red Sludge] as RS
 [Green Sludge] as GS
 [Blue Sludge] as BS
+
 [Purple Mixture] as PM
-[Crystaline Mixture] as CM
+[Yellow Mixture] as YM
 
 [Heavy Oil] as HO #lightgreen
 [Light Oil] as LO #lightgreen
 [Gas] as G #lightgreen
 
+package "Crystalizer" #lightyellow {
+[Sludge from Red Crystal] as SfR #lightblue
+[Sludge from Blue Crystal]as SfB #lightblue
+[Sludge from Green Crystal]as SfG #lightblue
+}
+
 package "Chemical Plant" #lightyellow {
-[Red Mix] as CPR #lightblue
 [Purple Mix] as CPB #lightblue
-[Full Mix] as CPG #lightblue
+[Yellow Mix] as CPY #lightblue
 [Melt] as Me #lightblue
 }
+
 
 package Energizer #lightyellow {
 [Denaturize] as HOP #lightblue
@@ -36,26 +41,34 @@ package Energizer #lightyellow {
 [Denaturize] as GP #lightblue
 }
 
-I --> Me
-Me --> W
-W --> CPR
-RC --> CPR
-CPR --> RM
+I --> Me : 1
+Me --> W : 20
 
-RM --> CPB
-BC --> CPB
-CPB --> PM
+RC --> SfR : 5
+W --> SfR : 20
+SfR --> RS : 20
 
-PM --> CPG
-GC --> CPG
-CPG --> CM
+BC --> SfB : 10
+W --> SfB : 20
+SfB  --> BS : 20
 
-RM --> HOP
-HOP --> HO
+GC --> SfG : 10
+W --> SfG : 20
+SfG --> GS : 20
 
-PM --> LOP
-LOP --> LO
+RS --> CPB : 5
+BS --> CPB : 5
+CPB --> PM : 5
+PM --> GP : 20
+GP --> G : 20
 
-CM --> GP
-GP --> G
+RS --> HOP : 20
+HOP --> HO : 20
+
+GS --> CPY : 5
+RS --> CPY : 5
+CPY --> YM : 5
+YM --> LOP : 20
+LOP --> LO : 20
+
 @enduml
