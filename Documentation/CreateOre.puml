@@ -12,7 +12,7 @@ hide circle
 [Iron Ore] as FE #lightgreen
 [Copper Ore] as CU #lightgreen
 [Stone] as S #lightgreen
-[Carbon] as Ca #lightgreen
+[Coal] as Ca #lightgreen
 
 package Energizer #lightyellow {
 [Neutralize] as NR #lightblue

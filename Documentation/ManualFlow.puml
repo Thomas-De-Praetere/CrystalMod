@@ -4,5 +4,42 @@ hide methods
 hide fields
 hide circle
 
+[Rock] as R #lightpink
 
+[Crystal] as C
+[Red Crystal] as RC
+[Green Crystal] as GC
+[Blue Crystal] as BC
+[Crushed Crystal] as CCr #lightgreen
+
+[Iron Ore] as FE #lightgreen
+[Copper Ore] as CU #lightgreen
+[Stone] as S #lightgreen
+[Coal] as Ca #lightgreen
+
+[Mine] as MR #lightblue
+[Destabilize] as DC #lightblue
+[Destabilize] as DRC #lightblue
+[Destabilize] as DGC #lightblue
+[Destabilize] as DBC #lightblue
+
+
+R --> MR
+MR --> C : 5
+MR --> RC : 10
+MR --> GC : 10
+MR --> BC : 25
+MR --> CCr : 50
+
+C --> DC : 1
+DC --> Ca : 3 take 5 dmg
+
+RC --> DRC : 1
+DRC --> CU : 1 take 5 dmg
+
+BC --> DBC : 1
+DBC --> FE : 1 take 5 dmg
+
+GC --> DGC : 1
+DGC --> S : 1 take 5 dmg
 @enduml
