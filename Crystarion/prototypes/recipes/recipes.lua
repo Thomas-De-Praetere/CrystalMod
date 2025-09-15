@@ -22,8 +22,8 @@ local sludge_from_crushed_crystal = {
     category = "crystarion-crystalizer-category",
     main_product = "crystarion-crystal-slurry",
     ingredients = {
-        { type = "fluid", name = "water", amount = 20 },
-        { type = "item", name = "crystarion-crushed-crystal", amount = 15 }
+        { type = "fluid", name = "water",                      amount = 20 },
+        { type = "item",  name = "crystarion-crushed-crystal", amount = 15 }
     },
     results = {
         { type = "fluid", name = "crystarion-crystal-slurry", amount = 20 }
@@ -52,11 +52,12 @@ local crystalise = {
         { type = "fluid", name = "crystarion-crystal-slurry", amount = 16 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal", amount = 8, probability = 0.75 },
+        { type = "item", name = "crystarion-crystal",         amount = 8, probability = 0.75 },
         { type = "item", name = "crystarion-crushed-crystal", amount = 2, probability = 0.25 }
     },
     energy_required = 4
 }
+
 local split_green = {
     type = "recipe",
     name = "crystarion-split-green",
@@ -67,7 +68,7 @@ local split_green = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal-green", amount = 1 },
+        { type = "item", name = "crystarion-crystal-green",   amount = 1 },
         { type = "item", name = "crystarion-crystal-magenta", amount = 1 },
     },
     energy_required = 1
@@ -83,7 +84,7 @@ local split_magenta = {
     },
     results = {
         { type = "item", name = "crystarion-crystal-blue", amount = 1, },
-        { type = "item", name = "crystarion-crystal-red", amount = 1, }
+        { type = "item", name = "crystarion-crystal-red",  amount = 1, }
     },
     energy_required = 1
 }
@@ -97,7 +98,7 @@ local split_red = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal-red", amount = 1 },
+        { type = "item", name = "crystarion-crystal-red",  amount = 1 },
         { type = "item", name = "crystarion-crystal-cyan", amount = 1 }
     },
     energy_required = 1
@@ -113,7 +114,7 @@ local split_cyan = {
     },
     results = {
         { type = "item", name = "crystarion-crystal-green", amount = 1, },
-        { type = "item", name = "crystarion-crystal-blue", amount = 1, }
+        { type = "item", name = "crystarion-crystal-blue",  amount = 1, }
     },
     energy_required = 1
 }
@@ -127,7 +128,7 @@ local split_blue = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal-blue", amount = 1 },
+        { type = "item", name = "crystarion-crystal-blue",   amount = 1 },
         { type = "item", name = "crystarion-crystal-yellow", amount = 1 }
     },
     energy_required = 1
@@ -143,106 +144,134 @@ local split_yellow = {
     },
     results = {
         { type = "item", name = "crystarion-crystal-green", amount = 1, },
-        { type = "item", name = "crystarion-crystal-red", amount = 1, }
+        { type = "item", name = "crystarion-crystal-red",   amount = 1, }
     },
     energy_required = 1
 }
 
-local crush_crystal_red = {
-    type = "recipe",
-    name = "crystarion-crush-crystal-red",
-    category = "crystarion-crusher-category",
-    main_product = "crystarion-crushed-crystal",
-    icon = "__Crystarion__/graphics/items/recipe-crush-red.png",
-    ingredients = {
-        { type = "item", name = "crystarion-crystal-red", amount = 3 }
-    },
-    results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.5 }
-    },
-    energy_required = 1
-}
-local crush_crystal_green = {
-    type = "recipe",
-    name = "crystarion-crush-crystal-green",
-    category = "crystarion-crusher-category",
-    main_product = "crystarion-crushed-crystal",
-    icon = "__Crystarion__/graphics/items/recipe-crush-green.png",
-    ingredients = {
-        { type = "item", name = "crystarion-crystal-green", amount = 3 }
-    },
-    results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.5 }
-    },
-    energy_required = 1
-}
-local crush_crystal_blue = {
-    type = "recipe",
-    name = "crystarion-crush-crystal-blue",
-    category = "crystarion-crusher-category",
-    main_product = "crystarion-crushed-crystal",
-    icon = "__Crystarion__/graphics/items/recipe-crush-blue.png",
-    ingredients = {
-        { type = "item", name = "crystarion-crystal-blue", amount = 3 }
-    },
-    results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.5 }
-    },
-    energy_required = 1
-}
+function crush_crystal_color(color)
+    return {
+        type = "recipe",
+        name = "crystarion-crush-crystal-" .. color,
+        category = "crystarion-crusher-category",
+        main_product = "crystarion-crushed-crystal",
+        icon = "__Crystarion__/graphics/items/recipe-crush-" .. color .. ".png",
+        ingredients = {
+            { type = "item", name = "crystarion-crystal-" .. color, amount = 3 }
+        },
+        results = {
+            { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.5 }
+        },
+        energy_required = 1
+    }
+end
 
-local neutralize_red = {
-    type = "recipe",
-    name = "crystarion-neutralize-red",
-    category = "crystarion-energiser-category",
-    main_product = "copper-ore",
-    ingredients = {
-        { type = "item", name = "crystarion-crystal-red", amount = 1 }
-    },
-    results = {
-        { type = "item", name = "copper-ore", amount = 1 }
-    },
-    energy_required = 1
-}
-local neutralize_green = {
-    type = "recipe",
-    name = "crystarion-neutralize-green",
-    category = "crystarion-energiser-category",
-    main_product = "stone",
-    ingredients = {
-        { type = "item", name = "crystarion-crystal-green", amount = 1 }
-    },
-    results = {
-        { type = "item", name = "stone", amount = 1 }
-    },
-    energy_required = 1
-}
-local neutralize_blue = {
-    type = "recipe",
-    name = "crystarion-neutralize-blue",
-    category = "crystarion-energiser-category",
-    main_product = "iron-ore",
-    ingredients = {
-        { type = "item", name = "crystarion-crystal-blue", amount = 1 }
-    },
-    results = {
-        { type = "item", name = "iron-ore", amount = 1 }
-    },
-    energy_required = 1
-}
+local crush_crystal_red = crush_crystal_color("red")
+local crush_crystal_green = crush_crystal_color("green")
+local crush_crystal_blue = crush_crystal_color("blue")
+
+function neutralize_color(color, result)
+    return {
+        type = "recipe",
+        name = "crystarion-neutralize-" .. color,
+        category = "crystarion-energiser-category",
+        main_product = result,
+        ingredients = {
+            { type = "item", name = "crystarion-crystal-" .. color, amount = 1 }
+        },
+        results = {
+            { type = "item", name = result, amount = 1 }
+        },
+        energy_required = 1
+    }
+end
+
+local neutralize_red = neutralize_color("red", "copper-ore")
+local neutralize_green = neutralize_color("green", "stone")
+local neutralize_blue = neutralize_color("blue", "iron-ore")
+
 local neutralize_crystal = {
     type = "recipe",
     name = "crystarion-neutralize-crystal",
     category = "crystarion-energiser-category",
-    main_product = "carbon",
+    main_product = "coal",
     ingredients = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
-        { type = "item", name = "carbon", amount = 3 }
+        { type = "item", name = "coal", amount = 3 }
     },
     energy_required = 3
 }
+function slurry_from_color(name, in_amount, out_amount)
+    return {
+        type = "recipe",
+        name = "crystarion-slurry-from-" .. name .. "-crystal",
+        category = "crystarion-crystalizer-category",
+        main_product = "crystarion-" .. name .. "-slurry",
+        ingredients = {
+            { type = "item",  name = "crystarion-crystal-" .. name, amount = in_amount },
+            { type = "fluid", name = "water",                       amount = 20 }
+        },
+        results = {
+            { type = "fluid", name = "crystarion-" .. name .. "-slurry", amount = out_amount }
+        },
+        energy_required = 1
+    }
+end
+
+local red_slurry = slurry_from_color("red", 5, 20)
+local green_slurry = slurry_from_color("green", 10, 20)
+local blue_slurry = slurry_from_color("blue", 10, 20)
+
+local mix_yellow = {
+    type = "recipe",
+    name = "crystarion-mix-yellow",
+    category = "chemistry",
+    main_product = "crystarion-yellow-mixture",
+    ingredients = {
+        { type = "fluid", name = "crystarion-green-slurry", amount = 5 },
+        { type = "fluid", name = "crystarion-red-slurry",   amount = 5 }
+    },
+    results = {
+        { type = "fluid", name = "crystarion-yellow-mixture", amount = 5 }
+    },
+    energy_required = 1
+}
+local mix_purple = {
+    type = "recipe",
+    name = "crystarion-mix-purple",
+    category = "chemistry",
+    main_product = "crystarion-purple-mixture",
+    ingredients = {
+        { type = "fluid", name = "crystarion-blue-slurry", amount = 5 },
+        { type = "fluid", name = "crystarion-red-slurry",  amount = 5 }
+    },
+    results = {
+        { type = "fluid", name = "crystarion-purple-mixture", amount = 5 }
+    },
+    energy_required = 1
+}
+function denaturize(name, input, output)
+    return {
+        type = "recipe",
+        name = "crystarion-denaturize-" .. name,
+        category = "crystarion-energiser-category",
+        main_product = output,
+        ingredients = {
+            { type = "fluid", name = input, amount = 20 },
+        },
+        results = {
+            { type = "fluid", name = output, amount = 20 }
+        },
+        energy_required = 1
+    }
+end
+
+local denaturize_yellow = denaturize("yellow", "crystarion-yellow-mixture", "light-oil")
+local denaturize_purple = denaturize("purple", "crystarion-purple-mixture", "petroleum-gas")
+local denaturize_red = denaturize("red", "crystarion-red-slurry", "heavy-oil")
+local denaturize_green = denaturize("green", "crystarion-green-slurry", "lubricant")
 
 data:extend({
     sludge_from_crushed_crystal,
@@ -260,5 +289,14 @@ data:extend({
     neutralize_red,
     neutralize_green,
     neutralize_blue,
-    neutralize_crystal
+    neutralize_crystal,
+    red_slurry,
+    green_slurry,
+    blue_slurry,
+    mix_yellow,
+    mix_purple,
+    denaturize_yellow,
+    denaturize_purple,
+    denaturize_red,
+    denaturize_green
 })

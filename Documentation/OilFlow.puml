@@ -21,6 +21,7 @@ hide circle
 [Heavy Oil] as HO #lightgreen
 [Light Oil] as LO #lightgreen
 [Gas] as G #lightgreen
+[Lubricant] as L #lightgreen
 
 package "Crystalizer" #lightyellow {
 [Sludge from Red Crystal] as SfR #lightblue
@@ -39,6 +40,7 @@ package Energizer #lightyellow {
 [Denaturize] as HOP #lightblue
 [Denaturize] as LOP #lightblue
 [Denaturize] as GP #lightblue
+[Denaturize] as LP #lightblue
 }
 
 I --> Me : 1
@@ -70,5 +72,8 @@ RS --> CPY : 5
 CPY --> YM : 5
 YM --> LOP : 20
 LOP --> LO : 20
+
+GS --> LP : 20
+LP --> L : 20
 
 @enduml
