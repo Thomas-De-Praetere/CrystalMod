@@ -3,6 +3,7 @@ crusher.crafting_categories = { "crystarion-crusher-category" }
 crusher.name = "crystarion-crusher"
 crusher.crafting_speed = 1.0
 crusher.minable = { mining_time = 0.2, result = "crystarion-crusher" }
+crusher.surface_conditions = {}
 
 local crusher_item = table.deepcopy(data.raw["item"]["crusher"])
 crusher_item.name = "crystarion-crusher"
