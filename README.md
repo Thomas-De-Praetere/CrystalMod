@@ -7,10 +7,8 @@ The main goal of the planet is to use energy management and to add new ways of u
 The main result should be better laser turrets, more explosive rounds, smaller power plants and smaller power equipment.
 
 ## Todo
-* Design start phase
-  * Perhaps have rocks spread over the surface containing red green blue and normal crystals.d
-  * or a sift method to sift out crystals from crystal ore
-  * Have a recipe to handecraft the deenergize step. This should damage the player, but it should be enough to build your own deenergizer and have access to ores
+* To step away from compound entities and trying to replicate energy:
+  * Let the recipes create an energy fluid that can only be burned in a dedicated burner
 * Later game: have fancier versions of the machines that cost more fancy crystals
 * To energize crystals, we already thought of having power surges etc.
   * Let it attract flyers (let all energy creating things attract flyers)
