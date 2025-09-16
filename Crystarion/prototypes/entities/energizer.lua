@@ -2,6 +2,7 @@ local energiser = table.deepcopy(data.raw["assembling-machine"]["assembling-mach
 energiser.crafting_categories = { "crystarion-energiser-category" }
 energiser.name = "crystarion-energiser"
 energiser.crafting_speed = 1.0
+energiser.minable = { mining_time = 0.2, result = "crystarion-energiser" }
 
 local energiser_item = table.deepcopy(data.raw["item"]["assembling-machine-3"])
 energiser_item.name = "crystarion-energiser"
@@ -12,11 +13,11 @@ local energiser_recipe = {
     name = "crystarion-energiser",
     main_product = "crystarion-energiser",
     ingredients = {
-        { type = "item", name = "iron-plate", amount = 3 },
-        { type = "item", name = "copper-plate", amount = 3 },
-        { type = "item", name = "copper-cable", amount = 2 },
+        { type = "item", name = "iron-plate",         amount = 3 },
+        { type = "item", name = "copper-plate",       amount = 3 },
+        { type = "item", name = "copper-cable",       amount = 2 },
         { type = "item", name = "electronic-circuit", amount = 3 },
-        { type = "item", name = "battery", amount = 2 },
+        { type = "item", name = "battery",            amount = 2 },
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {

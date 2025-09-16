@@ -2,6 +2,7 @@ local crusher = table.deepcopy(data.raw["assembling-machine"]["crusher"])
 crusher.crafting_categories = { "crystarion-crusher-category" }
 crusher.name = "crystarion-crusher"
 crusher.crafting_speed = 1.0
+crusher.minable = { mining_time = 0.2, result = "crystarion-crusher" }
 
 local crusher_item = table.deepcopy(data.raw["item"]["crusher"])
 crusher_item.name = "crystarion-crusher"
@@ -14,7 +15,7 @@ local crusher_recipe = {
     main_product = "crystarion-crusher",
     ingredients = {
         { type = "item", name = "iron-gear-wheel", amount = 10 },
-        { type = "item", name = "iron-plate", amount = 5 }
+        { type = "item", name = "iron-plate",      amount = 5 }
     },
     results = {
         { type = "item", name = "crystarion-crusher", amount = 1 }
