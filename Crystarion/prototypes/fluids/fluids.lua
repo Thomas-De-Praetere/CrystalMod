@@ -40,8 +40,12 @@ purple_mixture.flow_color = { 1.0, 0.8, 1.0 }
 local plasma = table.deepcopy(BASE_FLUID)
 plasma.name = "crystarion-plasma"
 plasma.icon = LOCATION .. "plasma.png"
-plasma.base_color = { 0.8, 0.5, 0.8 }
-plasma.flow_color = { 1.0, 0.8, 1.0 }
+plasma.base_color = { 0.4, 1.0, 1.0 }
+plasma.flow_color = { 0.7, 1.0, 1.0 }
+plasma.max_temperature=1600
+plasma.default_temperature=1500
+plasma.auto_barrel = false
+plasma.heat_capacity = "0.2kJ"
 
 data:extend({
     crystal_slurry,
