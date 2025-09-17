@@ -10,6 +10,7 @@ hide circle
 [Green Crystal] as GC #lightgreen
 [Blue Crystal] as BC #lightgreen
 [Crushed Crystal] as CCr #lightgreen
+[Plasma] as PA #lightgreen
 
 package Energizer #lightyellow {
 package "Green Split Flow" {
@@ -45,7 +46,12 @@ package Crusher #lightyellow {
 [Crush Blue Crystal] as CrB #lightblue
 }
 
-
+SG ...> PA : 100
+SM ...> PA : 100
+SR ...> PA : 100
+SC ...> PA : 100
+SB ...> PA : 100
+SY ...> PA : 100
 
 C --> SG  : 1
 SG --> GC1 : 1
@@ -91,5 +97,7 @@ CrR --> CCr : 1
 
 GC --> CrG : 1
 CrG --> CCr : 1
+
+
 
 @enduml

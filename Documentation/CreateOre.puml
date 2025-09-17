@@ -13,6 +13,7 @@ hide circle
 [Copper Ore] as CU #lightgreen
 [Stone] as S #lightgreen
 [Coal] as Ca #lightgreen
+[Plasma] as PA #lightgreen
 
 package Energizer #lightyellow {
 [Neutralize] as NR #lightblue
@@ -20,6 +21,8 @@ package Energizer #lightyellow {
 [Neutralize] as NB #lightblue
 [Neutralize] as NC #lightblue
 }
+
+
 
 RC --> NR : 1
 GC --> NG : 1
@@ -31,4 +34,8 @@ NG --> S : 1
 NB --> FE : 1
 NC --> Ca : 3
 
+NR ...> PA : 100
+NG ...> PA : 100
+NB ...> PA : 100
+NC ...> PA : 100
 @enduml

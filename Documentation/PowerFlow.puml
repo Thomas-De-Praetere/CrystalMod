@@ -4,34 +4,16 @@ hide methods
 hide fields
 hide circle
 
-[Energy] as E #lightgreen
+[Plasma] as PA #lightpink
 
-package Energizer #lightyellow {
-[Neutralize] as NR #lightblue
-[Neutralize] as NG #lightblue
-[Neutralize] as NB #lightblue
-}
+[Energizer] as E #lightyellow
 
-package Energizer #lightyellow {
-[Denaturize] as HOP #lightblue
-[Denaturize] as LOP #lightblue
-[Denaturize] as GP #lightblue
-}
+[Converter] as C #lightyellow
 
-package Energizer #lightyellow {
-[Extract] as DE #lightblue
-}
+[Power] as P #lightgreen
 
-package Splitter #lightyellow {
-[Split Green] as SG #lightblue
-[Split Magenta] as SM #lightblue
-[Split Red] as SR #lightblue
-[Split Cyan] as SC #lightblue
-[Split Blue] as SB #lightblue
-[Split Yellow] as SY #lightblue
-}
-
-Energizer --> E
-Splitter --> E
+E ..> PA
+PA --> C
+C --> P
 
 @enduml

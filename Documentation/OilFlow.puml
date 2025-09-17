@@ -22,6 +22,7 @@ hide circle
 [Light Oil] as LO #lightgreen
 [Gas] as G #lightgreen
 [Lubricant] as L #lightgreen
+[Plasma] as PA #lightgreen
 
 package "Crystalizer" #lightyellow {
 [Sludge from Red Crystal] as SfR #lightblue
@@ -75,5 +76,10 @@ LOP --> LO : 20
 
 GS --> LP : 20
 LP --> L : 20
+
+HOP ...> PA : 100
+LOP ...> PA : 100
+GP ...> PA : 100
+LP ...> PA : 100
 
 @enduml
