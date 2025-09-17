@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Crystarion.iml" filepath="$PROJECT_DIR$/Crystarion.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Examples/Examples.iml" filepath="$PROJECT_DIR$/../Examples/Examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Factorio.iml" filepath="$PROJECT_DIR$/Factorio.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../Program Files (x86)/Steam/steamapps/common/Factorio/data/factorio data.iml" filepath="$PROJECT_DIR$/../../Program Files (x86)/Steam/steamapps/common/Factorio/data/factorio data.iml" />
     </modules>
   </component>

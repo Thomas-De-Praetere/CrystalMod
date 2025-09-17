@@ -1,0 +1,41 @@
+@startuml
+
+hide methods
+hide fields
+hide circle
+
+
+[Crystal] as C #lightpink
+[Red Crystal] as RC #lightpink
+[Blue Crystal] as BC #lightpink
+[Green Crystal] as GC #lightpink
+
+package "Empowerer lvl1" #lightyellow {
+    [Empower takes lots of power] as EMP #lightblue
+}
+
+[Empowered Crystal] as EC
+[Whole Red Crystal] as ERC
+[Whole Blue Crystal] as EBC
+[Whole Green Crystal] as EGC
+
+[Science] as S #lightgreen
+[Better Resources] as BR #lightgreen
+
+C --> EMP : 1
+RC --> EMP : 3
+BC --> EMP : 3
+GC --> EMP : 3
+
+EMP --> EC : 1
+EMP --> ERC : 1
+EMP --> EBC : 1
+EMP --> EGC : 1
+
+EC --> S
+
+ERC --> BR
+EBC --> BR
+EGC --> BR
+
+@enduml

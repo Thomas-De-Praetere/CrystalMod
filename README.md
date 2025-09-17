@@ -147,3 +147,8 @@ When we start the game, we need to be able to set things up. So some manual reci
 Power needs to be created from plasma. We keep it as simple as possible.
 
 ![PowerFlow.svg](Documentation/PowerFlow.svg)
+
+### Upgrade
+We need lots of power to upgrade crystals and that will be the main wa of getting science and some later game tools.
+
+![upgrade.svg](Documentation/upgrade.svg)
