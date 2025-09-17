@@ -5,11 +5,12 @@ generator.fluid_usage_per_tick = 10
 generator.maximum_temperature = 1600
 generator.fluid_box.volume = 400
 generator.fluid_box.filter = "crystarion-plasma"
-generator.fluid_box.minimum_temperature = 1400.0
+generator.fluid_box.minimum_temperature = 1600.0
 generator.energy_source = {
     type = "electric",
-    usage_priority = "primary-output"
+    usage_priority = "secondary-output"
 }
+generator.scale_fluid_usage = true
 
 local generator_item = table.deepcopy(data.raw["item"]["steam-engine"])
 generator_item.name = "crystarion-generator"
