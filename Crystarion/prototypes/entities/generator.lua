@@ -11,6 +11,7 @@ generator.energy_source = {
     usage_priority = "secondary-output"
 }
 generator.scale_fluid_usage = true
+generator.effectivity = 1.0
 
 local generator_item = table.deepcopy(data.raw["item"]["steam-engine"])
 generator_item.name = "crystarion-generator"
@@ -33,3 +34,8 @@ local generator_recipe = {
 }
 
 data:extend({ generator, generator_item, generator_recipe })
+
+-- max_power = (min(fluid_max_temp, maximum_temperature) - fluid_default_temp)
+-- × fluid_usage_per_tick
+-- × fluid_heat_capacity
+-- × effectivity
