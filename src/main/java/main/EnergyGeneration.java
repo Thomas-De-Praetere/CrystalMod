@@ -20,11 +20,10 @@ public class EnergyGeneration {
     }
 
     public static void main(String[] args) {
-        UnitValue laserTurretDrain = new UnitValue(800, kJ);
-        UnitValue continuesLaserTurretPowerRequirement = new UnitValue(800, kW);
+        UnitValue continuesLaserTurretPowerRequirement = new UnitValue(3.86, MW);
 
-        Generator generator = new Generator(10, 1600, 1.0);
-        Fluid plasma = new Fluid(new UnitValue(0.2, kJ), 15, 5000);
+        Generator generator = new Generator(10, 500, 1.0);
+        Fluid plasma = new Fluid(new UnitValue(20, J), 0, 1000);
 
         double fluidProductionPerTickFromSingleMachine = 100.0 / 60.0;
         double machinePerGenerator = generator.fluidUsagePerTick() / fluidProductionPerTickFromSingleMachine;
