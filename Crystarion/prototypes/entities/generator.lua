@@ -2,10 +2,10 @@ local generator = table.deepcopy(data.raw["generator"]["steam-engine"])
 generator.name = "crystarion-generator"
 generator.minable = { mining_time = 0.3, result = "crystarion-generator" }
 generator.fluid_usage_per_tick = 10
-generator.maximum_temperature = 1600
+generator.maximum_temperature = 200
 generator.fluid_box.volume = 400
 generator.fluid_box.filter = "crystarion-plasma"
-generator.fluid_box.minimum_temperature = 1600.0
+generator.fluid_box.minimum_temperature = 200
 generator.energy_source = {
     type = "electric",
     usage_priority = "secondary-output"

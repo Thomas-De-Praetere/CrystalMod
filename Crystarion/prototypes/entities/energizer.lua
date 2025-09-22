@@ -2,7 +2,7 @@ local energiser = table.deepcopy(data.raw["assembling-machine"]["assembling-mach
 energiser.crafting_categories = { "crystarion-energiser-category" }
 energiser.name = "crystarion-energiser"
 energiser.crafting_speed = 1.0
-energiser.energy_usage = "150kW"
+energiser.energy_usage = "200kW"
 energiser.minable = { mining_time = 0.2, result = "crystarion-energiser" }
 local pass_through = table.deepcopy(energiser.fluid_boxes[1])
 pass_through.production_type = "output"

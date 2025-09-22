@@ -22,13 +22,13 @@ public class EnergyGeneration {
     public static void main(String[] args) {
         UnitValue continuesLaserTurretPowerRequirement = new UnitValue(3.86, MW);
 
-        Generator generator = new Generator(10, 500, 1.0);
-        Fluid plasma = new Fluid(new UnitValue(20, J), 0, 1000);
+        Generator generator = new Generator(10, 200, 1.0);
+        Fluid plasma = new Fluid(new UnitValue(20, J), 15, 200);
 
         double fluidProductionPerTickFromSingleMachine = 100.0 / 60.0;
         double machinePerGenerator = generator.fluidUsagePerTick() / fluidProductionPerTickFromSingleMachine;
         System.out.println("Expected Machines per generator: " + machinePerGenerator);
-        UnitValue machineDrain = new UnitValue(150, kW).time(machinePerGenerator);
+        UnitValue machineDrain = new UnitValue(200, kW).time(machinePerGenerator);
         System.out.println("Power usage of those machine " + machineDrain);
 
         UnitValue unitValue = new EnergyGeneration().calculatePower(generator, plasma);

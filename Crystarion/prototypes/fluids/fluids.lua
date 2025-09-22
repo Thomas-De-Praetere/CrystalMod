@@ -42,10 +42,10 @@ plasma.name = "crystarion-plasma"
 plasma.icon = LOCATION .. "plasma.png"
 plasma.base_color = { 0.4, 1.0, 1.0 }
 plasma.flow_color = { 0.7, 1.0, 1.0 }
-plasma.max_temperature = 5000
+plasma.max_temperature = 200
 plasma.default_temperature = 15
 plasma.auto_barrel = false
-plasma.heat_capacity = "0.2kJ"
+plasma.heat_capacity = "20J"
 
 data:extend({
     crystal_slurry,
