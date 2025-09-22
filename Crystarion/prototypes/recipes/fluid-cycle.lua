@@ -26,7 +26,7 @@ function denaturize(name, input, output)
         },
         results = {
             { type = "fluid", name = output,              amount = 20 },
-            { type = "fluid", name = "crystarion-plasma", amount = 100,  temperature = 1600 }
+            { type = "fluid", name = "crystarion-plasma", amount = 100,  temperature = 200 }
         },
         energy_required = 1
     }
