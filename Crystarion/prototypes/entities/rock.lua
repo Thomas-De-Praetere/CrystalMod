@@ -1,6 +1,6 @@
-local rock = table.deepcopy(data.raw["simple-entity"]["big-rock"])
+local entity = table.deepcopy(data.raw["simple-entity"]["big-rock"])
 
-rock.minable.results = {
+entity.minable.results = {
     {
         type = "item",
         name = "crystarion-crushed-crystal",
@@ -34,5 +34,5 @@ rock.minable.results = {
 }
 
 data:extend({
-    rock
+    entity
 })

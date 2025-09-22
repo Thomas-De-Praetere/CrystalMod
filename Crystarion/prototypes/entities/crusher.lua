@@ -1,22 +1,22 @@
-local crusher = table.deepcopy(data.raw["assembling-machine"]["crusher"])
-crusher.crafting_categories = { "crystarion-crusher-category" }
-crusher.name = "crystarion-crusher"
-crusher.crafting_speed = 1.0
-crusher.minable = { mining_time = 0.2, result = "crystarion-crusher" }
-crusher.surface_conditions = {}
+local entity = table.deepcopy(data.raw["assembling-machine"]["crusher"])
+entity.crafting_categories = { "crystarion-crusher-category" }
+entity.name = "crystarion-crusher"
+entity.crafting_speed = 1.0
+entity.minable = { mining_time = 0.2, result = "crystarion-crusher" }
+entity.surface_conditions = {}
 
-local crusher_item = table.deepcopy(data.raw["item"]["crusher"])
-crusher_item.name = "crystarion-crusher"
-crusher_item.place_result = "crystarion-crusher"
-crusher_item.subgroup = "production-machine"
+local item = table.deepcopy(data.raw["item"]["crusher"])
+item.name = "crystarion-crusher"
+item.place_result = "crystarion-crusher"
+item.subgroup = "production-machine"
 
-local crusher_recipe = {
+local recipe = {
     type = "recipe",
     name = "crystarion-crusher",
     main_product = "crystarion-crusher",
     ingredients = {
         { type = "item", name = "iron-gear-wheel", amount = 10 },
-        { type = "item", name = "iron-plate",      amount = 5 }
+        { type = "item", name = "iron-plate", amount = 5 }
     },
     results = {
         { type = "item", name = "crystarion-crusher", amount = 1 }
@@ -24,4 +24,4 @@ local crusher_recipe = {
     energy_required = 2
 }
 
-data:extend({ crusher, crusher_item, crusher_recipe })
+data:extend({ entity, item, recipe })

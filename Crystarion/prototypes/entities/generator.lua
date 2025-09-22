@@ -1,23 +1,23 @@
-local generator = table.deepcopy(data.raw["generator"]["steam-engine"])
-generator.name = "crystarion-generator"
-generator.minable = { mining_time = 0.3, result = "crystarion-generator" }
-generator.fluid_usage_per_tick = 10
-generator.maximum_temperature = 200
-generator.fluid_box.volume = 400
-generator.fluid_box.filter = "crystarion-plasma"
-generator.fluid_box.minimum_temperature = 200
-generator.energy_source = {
+local entity = table.deepcopy(data.raw["generator"]["steam-engine"])
+entity.name = "crystarion-generator"
+entity.minable = { mining_time = 0.3, result = "crystarion-generator" }
+entity.fluid_usage_per_tick = 10
+entity.maximum_temperature = 200
+entity.fluid_box.volume = 400
+entity.fluid_box.filter = "crystarion-plasma"
+entity.fluid_box.minimum_temperature = 200
+entity.energy_source = {
     type = "electric",
     usage_priority = "secondary-output"
 }
-generator.scale_fluid_usage = true
-generator.effectivity = 1.0
+entity.scale_fluid_usage = true
+entity.effectivity = 1.0
 
-local generator_item = table.deepcopy(data.raw["item"]["steam-engine"])
-generator_item.name = "crystarion-generator"
-generator_item.place_result = "crystarion-generator"
+local item = table.deepcopy(data.raw["item"]["steam-engine"])
+item.name = "crystarion-generator"
+item.place_result = "crystarion-generator"
 
-local generator_recipe = {
+local recipe = {
     type = "recipe",
     name = "crystarion-generator",
     main_product = "crystarion-generator",
@@ -33,7 +33,7 @@ local generator_recipe = {
     energy_required = 2
 }
 
-data:extend({ generator, generator_item, generator_recipe })
+data:extend({ entity, item, recipe })
 
 -- max_power = (min(fluid_max_temp, maximum_temperature) - fluid_default_temp)
 -- × fluid_usage_per_tick
