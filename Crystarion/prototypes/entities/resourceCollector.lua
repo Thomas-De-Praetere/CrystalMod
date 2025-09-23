@@ -1,6 +1,7 @@
 local entity = table.deepcopy(data.raw["agricultural-tower"]["agricultural-tower"])
 entity.name = "crystarion-collector"
 entity.surface_conditions = {}
+entity.accepted_seeds = { "crystarion-seed" }
 
 local item = table.deepcopy(data.raw["item"]["agricultural-tower"])
 item.name = "crystarion-collector"
@@ -23,26 +24,14 @@ local recipe = {
     energy_required = 5
 }
 
-local resource = table.deepcopy(data.raw["tree"]["tree-01"])
-resource.minable =
-{
-    mining_particle = "wooden-particle",
-    mining_time = 0.55,
-    result = "crystarion-crystal-ore",
-    count = 4,
-    mining_trigger =
-    {
-        {
-            type = "direct",
-            action_delivery =
-            {
-                {
-                    type = "instant",
-                    target_effects = leaf_sound_trigger
-                }
-            }
-        }
-    }
-}
+local resource = table.deepcopy(data.raw["plant"]["tree-plant"])
+resource.name = "crystarion-resource"
+resource.minable.results = { { type = "item", name = "crystarion-crystal-ore", amount = 4 } }
 
-data:extend({ entity, item, recipe, resource })
+
+local resource_item = table.deepcopy(data.raw["item"]["tree-seed"])
+resource_item.name = "crystarion-seed"
+resource_item.plant_result = "crystarion-resource"
+resource_item.place_result = "crystarion-resource"
+
+data:extend({ entity, item, recipe, resource, resource_item })
