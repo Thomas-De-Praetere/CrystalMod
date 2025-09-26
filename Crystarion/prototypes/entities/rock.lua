@@ -1,5 +1,6 @@
 local entity = table.deepcopy(data.raw["simple-entity"]["big-rock"])
 
+entity.name = "crystarion-rock"
 entity.minable.results = {
     {
         type = "item",
