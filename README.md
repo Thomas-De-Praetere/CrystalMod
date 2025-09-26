@@ -7,8 +7,7 @@ The main goal of the planet is to use energy management and to add new ways of u
 The main result should be better laser turrets, more explosive rounds, smaller power plants and smaller power equipment.
 
 ## Todo
-* Check if we can abuse a radar to collect items
-* Check if we can abuse towers to collect things.
+* Why do we need the plasma if we can simply heat water and reuse the things from the default game?
 * Later game: have fancier versions of the machines that cost more fancy crystals
 * To energize crystals, we already thought of having power surges etc.
   * Let it attract flyers (let all energy creating things attract flyers)
