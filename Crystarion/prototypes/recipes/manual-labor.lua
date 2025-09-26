@@ -4,7 +4,8 @@ function destabilize(name, input, output, output_amount)
         name = "crystarion-destabilize-" .. name,
         main_product = output,
         ingredients = {
-            { type = "item", name = input, amount = 1 }
+            { type = "item", name = input, amount = 1 },
+            { type = "item", name = "ice", amount = 1 }
         },
         results = {
             { type = "item", name = output, amount = output_amount }

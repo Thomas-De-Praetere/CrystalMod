@@ -30,38 +30,8 @@ local recipe = {
     energy_required = 5
 }
 
---local resource = table.deepcopy(data.raw["plant"]["tree-plant"])
---resource.name = "crystarion-resource"
---resource.minable.results = { { type = "item", name = "crystarion-crystal-ore", amount = 4 } }
-
-local resource = table.deepcopy(data.raw["simple-entity"]["big-rock"])
-resource.name = "crystarion-resource"
-resource.type = "plant"
-resource.growth_ticks = 1
-resource.agricultural_tower_tint = {
-    primary = { r = 0.9, g = 1.0, b = 0.9, a = 1.0 },
-    secondary = { r = 0.8, g = 0.9, b = 1.0, a = 1.0 },
-}
-resource.minable.results = { { type = "item", name = "crystarion-crystal-ore", amount = 4 } }
-
---local resource_item = table.deepcopy(data.raw["item"]["tree-seed"])
---resource_item.name = "crystarion-seed"
---resource_item.plant_result = "crystarion-resource"
---resource_item.place_result = "crystarion-resource"
-
-local unit = table.deepcopy(data.raw["unit"]["small-biter"])
-unit.name = "crystarion-biter"
-unit.dying_trigger_effect = {
-    type = "create-entity",
-    check_buildability = false,
-    entity_name = "crystarion-resource",
-}
-
 data:extend({
     entity,
     item,
     recipe,
-    resource,
-    --resource_item,
-    unit,
 })

@@ -14,3 +14,6 @@ require("__Crystarion__.prototypes.planets.crystarion")
 --tech
 require("__Crystarion__.prototypes.technology.technology")
 
+--units
+require("__Crystarion__.prototypes.units.units")
+

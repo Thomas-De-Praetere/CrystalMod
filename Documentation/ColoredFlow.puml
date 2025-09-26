@@ -5,6 +5,7 @@ hide fields
 hide circle
 
 [Crystal] as C #lightpink
+[Water] as W #lightpink
 
 [Red Crystal] as RC #lightgreen
 [Green Crystal] as GC #lightgreen
@@ -52,6 +53,13 @@ SR ...> PA : 100
 SC ...> PA : 100
 SB ...> PA : 100
 SY ...> PA : 100
+
+W ..> SG : 100
+W ..> SM : 100
+W ..> SR : 100
+W ..> SC : 100
+W ..> SB : 100
+W ..> SY : 100
 
 C --> SG  : 1
 SG --> GC1 : 1

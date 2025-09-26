@@ -8,6 +8,7 @@ hide circle
 [Green Crystal] as GC #lightpink
 [Blue Crystal] as BC #lightpink
 [Crystal] as C #lightpink
+[Water] as W #lightpink
 
 [Iron Ore] as FE #lightgreen
 [Copper Ore] as CU #lightgreen
@@ -38,4 +39,9 @@ NR ...> PA : 100
 NG ...> PA : 100
 NB ...> PA : 100
 NC ...> PA : 100
+
+W ...> NR : 100
+W ...> NG : 100
+W ...> NB : 100
+W ...> NC : 100
 @enduml

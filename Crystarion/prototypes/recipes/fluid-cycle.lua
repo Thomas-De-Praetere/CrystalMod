@@ -22,11 +22,12 @@ function denaturize(name, input, output)
         category = "crystarion-energiser-category",
         main_product = output,
         ingredients = {
-            { type = "fluid", name = input, amount = 20 },
+            { type = "fluid", name = input,   amount = 20 },
+            { type = "fluid", name = "water", amount = 100 },
         },
         results = {
             { type = "fluid", name = output,              amount = 20 },
-            { type = "fluid", name = "crystarion-plasma", amount = 100,  temperature = 200 }
+            { type = "fluid", name = "crystarion-plasma", amount = 100, temperature = 200 }
         },
         energy_required = 1
     }

@@ -4,8 +4,7 @@ hide methods
 hide fields
 hide circle
 
-[Ice] as I #lightpink
-[Water] as W
+[Water] as W #lightpink
 
 [Red Crystal] as RC #lightpink
 [Blue Crystal] as BC #lightpink
@@ -33,7 +32,6 @@ package "Crystalizer" #lightyellow {
 package "Chemical Plant" #lightyellow {
 [Purple Mix] as CPB #lightblue
 [Yellow Mix] as CPY #lightblue
-[Melt] as Me #lightblue
 }
 
 
@@ -43,9 +41,6 @@ package Energizer #lightyellow {
 [Denaturize] as GP #lightblue
 [Denaturize] as LP #lightblue
 }
-
-I --> Me : 1
-Me --> W : 20
 
 RC --> SfR : 5
 W --> SfR : 20
@@ -81,5 +76,10 @@ HOP ...> PA : 100
 LOP ...> PA : 100
 GP ...> PA : 100
 LP ...> PA : 100
+
+W ...> HOP : 100
+W ...> LOP : 100
+W ...> GP : 100
+W ...> LP : 100
 
 @enduml

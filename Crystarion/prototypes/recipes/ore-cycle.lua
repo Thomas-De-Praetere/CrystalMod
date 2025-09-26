@@ -22,7 +22,8 @@ function neutralize_color(color, result)
         category = "crystarion-energiser-category",
         main_product = result,
         ingredients = {
-            { type = "item", name = "crystarion-crystal-" .. color, amount = 1 }
+            { type = "item",  name = "crystarion-crystal-" .. color, amount = 1 },
+            { type = "fluid", name = "water",                        amount = 100 },
         },
         results = {
             { type = "item",  name = result,              amount = 1 },
@@ -39,7 +40,8 @@ local split_green = {
     main_product = "crystarion-crystal-green",
     icon = "__Crystarion__/graphics/items/recipe-split-green.png",
     ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 1 }
+        { type = "item",  name = "crystarion-crystal", amount = 1 },
+        { type = "fluid", name = "water",              amount = 100 },
     },
     results = {
         { type = "item",  name = "crystarion-crystal-green",   amount = 1 },
@@ -55,7 +57,8 @@ local split_magenta = {
     main_product = "crystarion-crystal-blue",
     icon = "__Crystarion__/graphics/items/recipe-split-magenta.png",
     ingredients = {
-        { type = "item", name = "crystarion-crystal-magenta", amount = 1 }
+        { type = "item",  name = "crystarion-crystal-magenta", amount = 1 },
+        { type = "fluid", name = "water",                      amount = 100 },
     },
     results = {
         { type = "item",  name = "crystarion-crystal-blue", amount = 1 },
@@ -71,12 +74,13 @@ local split_red = {
     main_product = "crystarion-crystal-red",
     icon = "__Crystarion__/graphics/items/recipe-split-red.png",
     ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 1 }
+        { type = "item",  name = "crystarion-crystal", amount = 1 },
+        { type = "fluid", name = "water",              amount = 100 },
     },
     results = {
         { type = "item",  name = "crystarion-crystal-red",  amount = 1 },
         { type = "item",  name = "crystarion-crystal-cyan", amount = 1 },
-        { type = "fluid", name = "crystarion-plasma",       amount = 100,  temperature = 200 }
+        { type = "fluid", name = "crystarion-plasma",       amount = 100, temperature = 200 }
     },
     energy_required = 1
 }
@@ -87,12 +91,13 @@ local split_cyan = {
     main_product = "crystarion-crystal-green",
     icon = "__Crystarion__/graphics/items/recipe-split-cyan.png",
     ingredients = {
-        { type = "item", name = "crystarion-crystal-cyan", amount = 1 }
+        { type = "item",  name = "crystarion-crystal-cyan", amount = 1 },
+        { type = "fluid", name = "water",                   amount = 100 },
     },
     results = {
         { type = "item",  name = "crystarion-crystal-green", amount = 1 },
         { type = "item",  name = "crystarion-crystal-blue",  amount = 1 },
-        { type = "fluid", name = "crystarion-plasma",        amount = 100,  temperature = 200 }
+        { type = "fluid", name = "crystarion-plasma",        amount = 100, temperature = 200 }
     },
     energy_required = 1
 }
@@ -103,12 +108,13 @@ local split_blue = {
     main_product = "crystarion-crystal-blue",
     icon = "__Crystarion__/graphics/items/recipe-split-blue.png",
     ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 1 }
+        { type = "item",  name = "crystarion-crystal", amount = 1 },
+        { type = "fluid", name = "water",              amount = 100 },
     },
     results = {
         { type = "item",  name = "crystarion-crystal-blue",   amount = 1 },
         { type = "item",  name = "crystarion-crystal-yellow", amount = 1 },
-        { type = "fluid", name = "crystarion-plasma",         amount = 100,  temperature = 200 }
+        { type = "fluid", name = "crystarion-plasma",         amount = 100, temperature = 200 }
     },
     energy_required = 1
 }
@@ -119,7 +125,8 @@ local split_yellow = {
     main_product = "crystarion-crystal-green",
     icon = "__Crystarion__/graphics/items/recipe-split-yellow.png",
     ingredients = {
-        { type = "item", name = "crystarion-crystal-yellow", amount = 1 }
+        { type = "item",  name = "crystarion-crystal-yellow", amount = 1 },
+        { type = "fluid", name = "water",                     amount = 100 },
     },
     results = {
         { type = "item",  name = "crystarion-crystal-green", amount = 1, },
@@ -143,7 +150,8 @@ local neutralize_crystal = {
     category = "crystarion-energiser-category",
     main_product = "coal",
     ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 1 }
+        { type = "item",  name = "crystarion-crystal", amount = 1 },
+        { type = "fluid", name = "water",              amount = 300 },
     },
     results = {
         { type = "item",  name = "coal",              amount = 3 },

@@ -16,6 +16,7 @@ crystarion_map_gen_settings = function()
             ["entity"] = {
                 settings = {
                     ["crystarion-rock"] = {},
+                    ["crystarion-rock-ice"] = {},
                 }
             }
         }
@@ -48,7 +49,7 @@ crystarion = {
     pollutant_type = nil,
     solar_power_in_space = 400,
     surface_properties = {
-        ["day-night-cycle"] = 1.5 * minute,
+        ["day-night-cycle"] = 3 * minute,
         ["solar-power"] = 100,
         -- apparently robot drain multiplier is equal to 100 * gravity / pressure, so this gives us 2x drain as desired
         -- this is not documented from what I could find; credit to factorio discord.
