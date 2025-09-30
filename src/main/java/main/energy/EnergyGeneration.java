@@ -1,6 +1,6 @@
-package main;
+package main.energy;
 
-import static main.Unit.*;
+import static main.energy.Unit.*;
 
 public class EnergyGeneration {
     /**

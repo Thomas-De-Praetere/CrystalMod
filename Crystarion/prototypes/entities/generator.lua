@@ -6,10 +6,7 @@ entity.maximum_temperature = 200
 entity.fluid_box.volume = 400
 entity.fluid_box.filter = "crystarion-plasma"
 entity.fluid_box.minimum_temperature = 200
-entity.energy_source = {
-    type = "electric",
-    usage_priority = "secondary-output"
-}
+entity.energy_source = { type = "electric", usage_priority = "secondary-output" }
 entity.scale_fluid_usage = true
 entity.effectivity = 1.0
 
@@ -22,9 +19,9 @@ local recipe = {
     name = "crystarion-generator",
     main_product = "crystarion-generator",
     ingredients = {
-        { type = "item", name = "iron-plate", amount = 10 },
-        { type = "item", name = "copper-plate", amount = 3 },
-        { type = "item", name = "copper-cable", amount = 2 },
+        { type = "item", name = "iron-plate",         amount = 10 },
+        { type = "item", name = "copper-plate",       amount = 3 },
+        { type = "item", name = "copper-cable",       amount = 2 },
         { type = "item", name = "crystarion-crystal", amount = 2 }
     },
     results = {

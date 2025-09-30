@@ -1,4 +1,4 @@
-package main;
+package main.energy;
 
 public record Fluid(UnitValue heatCapacity, int defaultTemperature, int maxTemperature) {
     public Fluid {

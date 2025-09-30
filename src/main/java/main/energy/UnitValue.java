@@ -1,4 +1,4 @@
-package main;
+package main.energy;
 
 public record UnitValue(double value, Unit unit) {
     @Override
