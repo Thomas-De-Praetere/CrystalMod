@@ -1,8 +1,7 @@
 local entity = table.deepcopy(data.raw["agricultural-tower"]["agricultural-tower"])
 entity.name = "crystarion-collector"
 entity.surface_conditions = {}
-entity.accepted_seeds = {}
-entity.accepted_seeds = {}
+entity.accepted_seeds = { "crystarion-condensation-rod" }
 entity.crane.speed.arm.turn_rate = 0.004
 entity.crane.speed.arm.extension_speed = 0.01
 entity.crane.speed.grappler.vertical_turn_rate = 0.006
