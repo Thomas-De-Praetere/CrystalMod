@@ -20,7 +20,7 @@ local condensation_rod_recipe = {
     energy_required = 0.5
 }
 
-local resource_ice = table.deepcopy(data.raw["simple-entity"]["medium-rock"])
+local resource_ice = table.deepcopy(data.raw["simple-entity"]["lithium-iceberg-big"])
 resource_ice.name = "crystarion-resource-ice"
 resource_ice.type = "plant"
 resource_ice.growth_ticks = 2 * helper.minutes()

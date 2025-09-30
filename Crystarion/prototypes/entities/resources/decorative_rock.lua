@@ -1,4 +1,4 @@
-local crystal_rock = table.deepcopy(data.raw["simple-entity"]["big-rock"])
+local crystal_rock = table.deepcopy(data.raw["simple-entity"]["huge-rock"])
 crystal_rock.name = "crystarion-rock"
 crystal_rock.minable.results = {
     {
@@ -33,7 +33,7 @@ crystal_rock.minable.results = {
     }
 }
 
-local ice_rock = table.deepcopy(data.raw["simple-entity"]["medium-rock"])
+local ice_rock = table.deepcopy(data.raw["simple-entity"]["lithium-iceberg-huge"])
 ice_rock.name = "crystarion-rock-ice"
 ice_rock.minable.results = {
     {
