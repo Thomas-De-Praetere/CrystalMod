@@ -1,4 +1,4 @@
-local planet_map_gen = require("__base__/prototypes/planet/planet-map-gen")
+local planet_map_gen = require("__Crystarion__/prototypes/planets/crystarion-map-gen")
 local nauvis = data.raw['planet']['nauvis']
 
 --data:extend({{
@@ -9,20 +9,6 @@ local nauvis = data.raw['planet']['nauvis']
 
 crystarion_asteroids = table.deepcopy(data.raw['planet']['gleba'].asteroid_spawn_definitions)
 nauvis_crystarion_asteroids = table.deepcopy(data.raw['space-connection']['nauvis-fulgora'].asteroid_spawn_definitions)
-
-crystarion_map_gen_settings = function()
-    return {
-        autoplace_settings = {
-            ["entity"] = {
-                settings = {
-                    ["crystarion-rock"] = {},
-                    ["crystarion-rock-ice"] = {},
-                }
-            }
-        }
-    }
-end
-planet_map_gen.crystarion = crystarion_map_gen_settings
 
 crystarion = {
     type = "planet",
@@ -44,7 +30,7 @@ crystarion = {
     starmap_icon = "__Crystarion__/graphics/planet/planet.png",
     starmap_icon_size = 256,
 
-    map_gen_settings = crystarion_map_gen_settings(),
+    map_gen_settings = planet_map_gen.crystarion(),
     --TODO change this to energy or smth
     pollutant_type = nil,
     solar_power_in_space = 400,

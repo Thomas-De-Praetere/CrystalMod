@@ -10,6 +10,7 @@ require("__Crystarion__.prototypes.entities.entities")
 
 --planets
 require("__Crystarion__.prototypes.planets.crystarion")
+require("__Crystarion__.prototypes.autoplace-controls")
 
 --tech
 require("__Crystarion__.prototypes.technology.technology")
