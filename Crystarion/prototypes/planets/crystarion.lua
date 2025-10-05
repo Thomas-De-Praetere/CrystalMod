@@ -7,10 +7,10 @@ local nauvis = data.raw['planet']['nauvis']
 --  default_value = 0
 --}})
 
-crystarion_asteroids = table.deepcopy(data.raw['planet']['gleba'].asteroid_spawn_definitions)
-nauvis_crystarion_asteroids = table.deepcopy(data.raw['space-connection']['nauvis-fulgora'].asteroid_spawn_definitions)
+local crystarion_asteroids = table.deepcopy(data.raw['planet']['gleba'].asteroid_spawn_definitions)
+local nauvis_crystarion_asteroids = table.deepcopy(data.raw['space-connection']['nauvis-fulgora'].asteroid_spawn_definitions)
 
-crystarion = {
+local crystarion = {
     type = "planet",
     name = "crystarion-planet",
     subgroup = "planets",
@@ -44,7 +44,7 @@ crystarion = {
     }
 }
 
-crystarion_connection = {
+local crystarion_connection = {
     type = "space-connection",
     name = "crystarion-nauvis",
     subgroup = "planet-connections",

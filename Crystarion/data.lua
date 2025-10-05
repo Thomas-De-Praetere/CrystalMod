@@ -11,6 +11,7 @@ require("__Crystarion__.prototypes.entities.entities")
 --planets
 require("__Crystarion__.prototypes.planets.crystarion")
 require("__Crystarion__.prototypes.autoplace-controls")
+require("__Crystarion__.prototypes.terrain.tile")
 
 --tech
 require("__Crystarion__.prototypes.technology.technology")
