@@ -13,16 +13,16 @@ planet_map_gen.crystarion = function()
             temperature = "crystarion_height",
         },
         cliff_settings = {
-            name = "cliff",
-            control = "nauvis_cliff",
-            cliff_smoothing = 0
+            --name = "cliff",
+            --control = "nauvis_cliff",
+            --cliff_smoothing = 0
         },
         autoplace_controls = {
-            ["trees"] = {},
-            ["enemy-base"] = {},
+            --["trees"] = {},
+            --["enemy-base"] = {},
             ["crystarion-rocks"] = {},
-            ["starting_area_moisture"] = {},
-            ["nauvis_cliff"] = {}
+            --["starting_area_moisture"] = {},
+            --["nauvis_cliff"] = {}
         },
         autoplace_settings = {
             ["tile"] = {
