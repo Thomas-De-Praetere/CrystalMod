@@ -8,6 +8,7 @@ crystal_rock.minable.results = {
     { type = "item", name = "crystarion-crystal-blue", amount_min = 12, amount_max = 25 }
 }
 crystal_rock.autoplace.control = "crystarion-rocks"
+crystal_rock.autoplace.probability_expression = "crystarion_dirt*0.001"
 
 local ice_rock = table.deepcopy(data.raw["simple-entity"]["lithium-iceberg-huge"])
 ice_rock.name = "crystarion-rock-ice"
@@ -15,6 +16,7 @@ ice_rock.minable.results = {
     { type = "item", name = "ice", amount_min = 25, amount_max = 50 }
 }
 ice_rock.autoplace.control = "crystarion-rocks"
+ice_rock.autoplace.probability_expression = "crystarion_ice*0.001"
 
 data:extend({
     crystal_rock,
