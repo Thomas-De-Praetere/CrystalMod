@@ -20,17 +20,17 @@ data:extend({
     {
         type = "noise-expression",
         name = "crystarion_ice_region",
-        expression = 'ridge(crystarion_height,-1,0)+1',
+        expression = 'multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 0, octaves = 8, input_scale = 1/50}',
     },
     {
         type = "noise-expression",
         name = "crystarion_snow_region",
-        expression = 'ridge(crystarion_height,0,0.5)*2',
+        expression = 'multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 1, octaves = 8, input_scale = 1/50}',
     },
     {
         type = "noise-expression",
         name = "crystarion_dirt_region",
-        expression = '(ridge(crystarion_height,0.5,1)-0.5)*2',
+        expression = 'multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 2, octaves = 8, input_scale = 1/50}',
     },
     {
         type = "noise-expression",
