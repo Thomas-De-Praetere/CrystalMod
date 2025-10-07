@@ -4,11 +4,16 @@ dirt.autoplace = {
     probability_expression = 'crystarion_dirt'
 }
 
-local snow = table.deepcopy(data.raw['tile']['snow-flat'])
-snow.name = "crystarion-snow"
-snow.autoplace = {
-    probability_expression = 'crystarion_snow'
-}
+
+function create_tile(prefix, postfix)
+    local snow = table.deepcopy(data.raw['tile'][prefix .. '-' .. postfix])
+    snow.name = "crystarion-" .. prefix .. '-' .. postfix
+    snow.autoplace = {
+        probability_expression = 'crystarion_' .. prefix .. '_' .. postfix
+    }
+
+    return snow
+end
 
 local ice = table.deepcopy(data.raw['tile']['ice-smooth'])
 ice.name = "crystarion-ice"
@@ -18,6 +23,12 @@ ice.autoplace = {
 
 data:extend({
     dirt,
-    snow,
+    create_tile("snow", "flat"),
+    create_tile("snow", "crests"),
+    create_tile("snow", "lumpy"),
+    create_tile("snow", "patchy"),
+    create_tile("grass", "1"),
+    create_tile("grass", "2"),
+    create_tile("grass", "3"),
     ice,
 })
