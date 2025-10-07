@@ -62,12 +62,12 @@ planet_map_gen.crystarion = function()
                     --["lava"] = {},
                     --["lava-hot"] = {},
                     --["volcanic-folds-warm"] = {},
+                    --["volcanic-ash-cracks"] = {},
                     --["volcanic-pumice-stones"] = {},
                     --["volcanic-cracks-hot"] = {},
                     --["volcanic-jagged-ground"] = {},
                     --["volcanic-smooth-stone"] = {},
                     --["volcanic-smooth-stone-warm"] = {},
-                    --["volcanic-ash-cracks"] = {},
                     --
                     ---- Aquilo tiles
                     --["snow-flat"] = {},
@@ -76,13 +76,18 @@ planet_map_gen.crystarion = function()
                     --["snow-patchy"] = {},
                     --["ice-rough"] = {},
                     --["ice-smooth"] = {},
-                    ["crystarion-dirt"] = {},
+
+                    --["crystarion-dirt"] = {},
+                    ["crystarion-ice-rough"] = {},
+                    ["crystarion-ice-smooth"] = {},
                     ["crystarion-snow-flat"] = {},
                     ["crystarion-snow-crests"] = {},
                     ["crystarion-snow-lumpy"] = {},
                     ["crystarion-snow-patchy"] = {},
-                    ["crystarion-ice-rough"] = {},
-                    ["crystarion-ice-smooth"] = {},
+                    ["crystarion-volcanic-pumice-stones"] = {},
+                    ["crystarion-volcanic-ash-cracks"] = {},
+                    ["crystarion-volcanic-folds"] = {},
+                    ["crystarion-volcanic-cracks-hot"] = {},
                 }
             },
             ["decorative"] = {
