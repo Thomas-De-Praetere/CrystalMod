@@ -9,8 +9,8 @@ planet_map_gen.crystarion = function()
         property_expression_names = {
             elevation = "crystarion_height",
             aux = "crystarion_height",
-            moisture = "crystarion_height",
-            temperature = "crystarion_height",
+            moisture = "crystarion_moist",
+            temperature = "crystarion_temp",
         },
         cliff_settings = {
             --name = "cliff",
