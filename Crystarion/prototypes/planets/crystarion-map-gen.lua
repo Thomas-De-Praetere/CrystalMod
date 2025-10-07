@@ -81,7 +81,8 @@ planet_map_gen.crystarion = function()
                     ["crystarion-snow-crests"] = {},
                     ["crystarion-snow-lumpy"] = {},
                     ["crystarion-snow-patchy"] = {},
-                    ["crystarion-ice"] = {},
+                    ["crystarion-ice-rough"] = {},
+                    ["crystarion-ice-smooth"] = {},
                 }
             },
             ["decorative"] = {

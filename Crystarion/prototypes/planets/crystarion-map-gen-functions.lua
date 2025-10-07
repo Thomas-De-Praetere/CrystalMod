@@ -98,22 +98,7 @@ data:extend({
     {
         type = "noise-expression",
         name = "crystarion_snow_patchy",
-        expression = 'crystarion_snow_patchy_region+range_select(crystarion_temp,-1,-0.5,0.1,-1,1)',
-    },
-    {
-        type = "noise-expression",
-        name = "crystarion_grass_1",
-        expression = 'crystarion_snow_patchy_region+range_select(crystarion_temp,-0.5,0.0,0.1,-1,1)',
-    },
-    {
-        type = "noise-expression",
-        name = "crystarion_grass_2",
-        expression = 'crystarion_snow_patchy_region+range_select(crystarion_temp,0.0,0.5,0.1,-1,1)',
-    },
-    {
-        type = "noise-expression",
-        name = "crystarion_grass_3",
-        expression = 'crystarion_snow_patchy_region+range_select(crystarion_temp,0.5,1.0,0.1,-1,1)',
+        expression = 'crystarion_snow_region+range_select(crystarion_temp,-1.0,-0.5,0.1,-1,1)',
     },
     --Entity spawn
     {
