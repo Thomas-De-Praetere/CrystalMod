@@ -78,6 +78,8 @@ planet_map_gen.crystarion = function()
                     --["ice-smooth"] = {},
 
                     --["crystarion-dirt"] = {},
+                    -- Large heightmap for water and rough heightmap for colors helps to keep water large
+                    -- Always compare water to height because we want islands
                     ["crystarion-ice-rough"] = {},
                     ["crystarion-ice-smooth"] = {},
                     ["crystarion-snow-flat"] = {},
