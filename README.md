@@ -8,6 +8,10 @@ The main result should be better laser turrets, more explosive rounds,
 smaller power plants and smaller power equipment.
 
 ## Todo
+* Height is nice for landscape but use different larger noise for water
+* Create indicator function to set value of one thing to zero to allow others the win. (when you cannot compare them)
+* Just let the max win when we can compare them. Height between 0 and 100. Water wins when water*100>height. Actual height is -1 when water wins to make sure that all other things lose. Or multiply the range with the height to scale. This makes sure the chance is not 1 but the actual value (is this what _base is used for?)
+* Perhaps glaciers can be done with: within distance ridge of random
 * Why do we need the plasma if we can simply heat water and reuse the things from the default game?
   * investigate what the impact of this would be
 * Use rod+ice to create the condensation rod
