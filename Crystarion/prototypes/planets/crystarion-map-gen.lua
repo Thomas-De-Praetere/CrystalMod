@@ -27,59 +27,6 @@ planet_map_gen.crystarion = function()
         autoplace_settings = {
             ["tile"] = {
                 settings = {
-                    ---- nauvis tiles
-                    --["grass-1"] = {},
-                    --["grass-2"] = {},
-                    --["grass-3"] = {},
-                    --["grass-4"] = {},
-                    --["dry-dirt"] = {},
-                    --["dirt-1"] = {},
-                    --["dirt-2"] = {},
-                    --["dirt-3"] = {},
-                    --["dirt-4"] = {},
-                    --["dirt-5"] = {},
-                    --["dirt-6"] = {},
-                    --["dirt-7"] = {},
-                    --["sand-1"] = {},
-                    --["sand-2"] = {},
-                    --["sand-3"] = {},
-                    --["red-desert-0"] = {},
-                    --["red-desert-1"] = {},
-                    --["red-desert-2"] = {},
-                    --["red-desert-3"] = {},
-                    --["volcanic-soil-dark"] = {},
-                    --["volcanic-soil-light"] = {},
-                    --["volcanic-ash-soil"] = {},
-                    --
-                    ---- Vulcanus tiles
-                    --["volcanic-ash-flats"] = {},
-                    --["volcanic-ash-light"] = {},
-                    --["volcanic-ash-dark"] = {},
-                    --["volcanic-cracks"] = {},
-                    --["volcanic-cracks-warm"] = {},
-                    --["volcanic-folds"] = {},
-                    --["volcanic-folds-flat"] = {},
-                    --["lava"] = {},
-                    --["lava-hot"] = {},
-                    --["volcanic-folds-warm"] = {},
-                    --["volcanic-ash-cracks"] = {},
-                    --["volcanic-pumice-stones"] = {},
-                    --["volcanic-cracks-hot"] = {},
-                    --["volcanic-jagged-ground"] = {},
-                    --["volcanic-smooth-stone"] = {},
-                    --["volcanic-smooth-stone-warm"] = {},
-                    --
-                    ---- Aquilo tiles
-                    --["snow-flat"] = {},
-                    --["snow-crests"] = {},
-                    --["snow-lumpy"] = {},
-                    --["snow-patchy"] = {},
-                    --["ice-rough"] = {},
-                    --["ice-smooth"] = {},
-
-                    --["crystarion-dirt"] = {},
-                    -- Large heightmap for water and rough heightmap for colors helps to keep water large
-                    -- Always compare water to height because we want islands
                     ["crystarion-ice-rough"] = {},
                     ["crystarion-ice-smooth"] = {},
                     ["crystarion-snow-flat"] = {},
@@ -94,40 +41,35 @@ planet_map_gen.crystarion = function()
             },
             ["decorative"] = {
                 settings = {
-                    --["brown-hairy-grass"] = {},
-                    --["green-hairy-grass"] = {},
-                    --["brown-carpet-grass"] = {},
-                    --["green-carpet-grass"] = {},
-                    --["green-small-grass"] = {},
-                    --["green-asterisk"] = {},
-                    --["brown-asterisk-mini"] = {},
-                    --["green-asterisk-mini"] = {},
-                    --["brown-asterisk"] = {},
-                    --["red-asterisk"] = {},
-                    --["dark-mud-decal"] = {},
-                    --["light-mud-decal"] = {},
-                    --["cracked-mud-decal"] = {},
-                    --["red-desert-decal"] = {},
-                    --["sand-decal"] = {},
-                    --["sand-dune-decal"] = {},
-                    --["green-pita"] = {},
-                    --["red-pita"] = {},
-                    --["green-croton"] = {},
-                    --["red-croton"] = {},
-                    --["green-pita-mini"] = {},
-                    --["brown-fluff"] = {},
-                    --["brown-fluff-dry"] = {},
-                    --["green-desert-bush"] = {},
-                    --["red-desert-bush"] = {},
-                    --["white-desert-bush"] = {},
-                    --["garballo-mini-dry"] = {},
-                    --["garballo"] = {},
-                    --["green-bush-mini"] = {},
-                    --["medium-rock"] = {},
-                    --["small-rock"] = {},
-                    --["tiny-rock"] = {},
-                    --["medium-sand-rock"] = {},
-                    --["small-sand-rock"] = {}
+                    ----Grass patches on ice
+                    --["crystarion-green-hairy-grass"] = {},
+                    --["crystarion-dark-mud-decal"] = {},
+                    --["crystarion-cracked-mud-decal"] = {},
+                    --["crystarion-white-carpet-grass"] = {},
+                    --["crystarion-white-desert-bush"] = {},
+                    --["crystarion-green-carpet-grass"] = {},
+                    --
+                    ----Random stuff on snow
+                    --["crystarion-aqulio-ice-decal-blue"] = {},
+                    --["crystarion-aqulio-snowy-decal"] = {},--also on ice but less so
+                    --["crystarion-snow-drift-decal"] = {},--also on ice but less so
+                    --["crystarion-pumice-relief-decal"] = {},
+                    --
+                    --
+                    --
+                    --Volcan stuff
+                    ["crystarion-vulcanus-dune-decal"] = {},
+                    ["crystarion-vulcanus-sand-decal"] = {},
+                    ["crystarion-crater-small"] = {},
+                    ["crystarion-crater-large"] = {},
+                    ["crystarion-tiny-rock-cluster"] = {},
+                    ["crystarion-vulcanus-rock-decal-large"] = {},
+                    ["crystarion-waves-decal"] = {},
+
+                    --flanks stuff
+                    ["crystarion-veins"] = {},
+                    ["crystarion-split-gill-dying-1x1"] = {},
+                    ["crystarion-split-gill-dying-2x2"] = {},
                     ["crystarion-brown-hairy-grass"] = {},
                     ["crystarion-brown-carpet-grass"] = {},
                     ["crystarion-brown-asterisk-mini"] = {},

@@ -49,14 +49,12 @@ data:extend({
     {
         type = "noise-expression",
         name = "crystarion_height_wobble",
-        expression =
-        'multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 0, octaves = 3, input_scale = 1/5} * 2'
+        expression = 'multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 0, octaves = 3, input_scale = 1/5} * 2'
     },
     {
         type = "noise-expression",
         name = "crystarion_height_wobble_large",
-        expression =
-        'crystarion_scale(multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 1, octaves = 8, input_scale = 1/20})'
+        expression = 'crystarion_scale(multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 1, octaves = 8, input_scale = 1/20})'
     },
     {
         type = "noise-expression",
@@ -83,14 +81,12 @@ data:extend({
     {
         type = "noise-expression",
         name = "crystarion_volcans_height_wobble",
-        expression =
-        'multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 2, octaves = 6, input_scale = 1/10}'
+        expression = 'multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 2, octaves = 6, input_scale = 1/10}'
     },
     {
         type = "noise-expression",
         name = "crystarion_volcans_height",
-        expression =
-        "(crystarion_volcans/2.0 + (crystarion_scale_max(crystarion_volcans_height_wobble,75))*crystarion_volcans/100)"
+        expression = "(crystarion_volcans/2.0 + (crystarion_scale_max(crystarion_volcans_height_wobble,75))*crystarion_volcans/100)"
     },
     {
         type = "noise-expression",
@@ -101,8 +97,7 @@ data:extend({
     {
         type = "noise-expression",
         name = "crystarion_moist_wobble_large",
-        expression =
-        'crystarion_scale(multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 3, octaves = 5, input_scale = 1/100})'
+        expression = 'crystarion_scale(multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 3, octaves = 5, input_scale = 1/100})'
     },
     {
         type = "noise-expression",
@@ -113,8 +108,7 @@ data:extend({
     {
         type = "noise-expression",
         name = "crystarion_temp_wobble",
-        expression =
-        'multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 2, octaves = 8, input_scale = 1/10}'
+        expression = 'multioctave_noise{x = x, y = y, persistence = 0.75, seed0 = map_seed, seed1 = 2, octaves = 8, input_scale = 1/10}'
     },
     {
         type = "noise-expression",
@@ -126,7 +120,7 @@ data:extend({
         type = "noise-expression",
         name = "crystarion_is_water",
         --expression = 'if(crystarion_height < crystarion_moist, 1, 0)'
-        expression = 'if(crystarion_moist>75, 1, 0)'
+        expression = 'if(crystarion_moist>75, 1-crystarion_is_volcan, 0)'
     },
     {
         type = "noise-expression",
@@ -179,14 +173,12 @@ data:extend({
     {
         type = "noise-expression",
         name = "crystarion_volcanic_ash_cracks",
-        expression =
-        'crystarion_is_volcan*range_select(crystarion_volcans_height,crystarion_slope,crystarion_ridge,0.01,0,1)',
+        expression = 'crystarion_is_volcan*range_select(crystarion_volcans_height,crystarion_slope,crystarion_ridge,0.01,0,1)',
     },
     {
         type = "noise-expression",
         name = "crystarion_volcanic_folds",
-        expression =
-        'crystarion_is_volcan*range_select(crystarion_volcans_height,crystarion_ridge,crystarion_crater,0.01,0,1)',
+        expression = 'crystarion_is_volcan*range_select(crystarion_volcans_height,crystarion_ridge,crystarion_crater,0.01,0,1)',
     },
     {
         type = "noise-expression",
@@ -208,31 +200,132 @@ data:extend({
     {
         type = "noise-expression",
         name = "crystarion_decorative_knockout", -- small wavelength noise (5 tiles-ish) to make decoratives patchy
-        expression =
-        "multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 1300000, octaves = 2, input_scale = 1/3}"
+        expression = "multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 1300000, octaves = 2, input_scale = 1/20}"
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_decorative_knockout_large",
+        expression = "multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 1400000, octaves = 2, input_scale = 1/30}"
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_decorative_floor_knockout", -- small wavelength noise (5 tiles-ish) to make decoratives patchy
+        expression = "multioctave_noise{x = x, y = y, persistence = 0.7, seed0 = map_seed, seed1 = 1500000, octaves = 2, input_scale = 1/3}"
+    },
+
+
+    ----Grass patches on snow
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-green-hairy-grass",
+    --},
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-dark-mud-decal",
+    --},
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-cracked-mud-decal",
+    --},
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-white-carpet-grass",
+    --},
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-white-desert-bush",
+    --},
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-green-carpet-grass",
+    --},
+    ----Random stuff on snow
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-aqulio-ice-decal-blue",
+    --},
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-aqulio-snowy-decal",
+    --},
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-snow-drift-decal",
+    --},
+    --{
+    --    type = "noise-expression",
+    --    name = "crystarion-pumice-relief-decal",
+    --},
+    --Volcan stuff
+    {
+        type = "noise-expression",
+        name = "crystarion_vulcanus_dune_decal",
+        expression = 'random_penalty{x = x, y = y, source = max(crystarion_volcanic_folds, crystarion_volcanic_ash_cracks, crystarion_volcanic_pumice_stones) * crystarion_decorative_floor_knockout, seed = 10}-0.5',
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_vulcanus_sand_decal",
+        expression = 'random_penalty{x = x, y = y, source = max(crystarion_volcanic_folds, crystarion_volcanic_ash_cracks, crystarion_volcanic_pumice_stones) * crystarion_decorative_floor_knockout, seed = 11}-0.5',
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_crater_small",
+        expression = 'random_penalty{x = x, y = y, source = max(crystarion_volcanic_folds, crystarion_volcanic_ash_cracks, crystarion_volcanic_pumice_stones) * crystarion_decorative_floor_knockout, seed = 12}',
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_crater_large",
+        expression = 'random_penalty{x = x, y = y, source = max(crystarion_volcanic_folds, crystarion_volcanic_ash_cracks, crystarion_volcanic_pumice_stones) * crystarion_decorative_floor_knockout, seed = 13}-0.1',
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_tiny_rock_cluster",
+        expression = 'random_penalty{x = x, y = y, source = max(crystarion_volcanic_folds, crystarion_volcanic_ash_cracks, crystarion_volcanic_pumice_stones) * crystarion_decorative_floor_knockout, seed = 14}-0.3',
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_vulcanus_rock_decal_large",
+        expression = 'random_penalty{x = x, y = y, source = max(crystarion_volcanic_folds, crystarion_volcanic_ash_cracks, crystarion_volcanic_pumice_stones) * crystarion_decorative_floor_knockout, seed = 15}-0.2',
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_waves_decal",
+        expression = 'random_penalty{x = x, y = y, source = max(crystarion_volcanic_folds, crystarion_volcanic_ash_cracks, crystarion_volcanic_pumice_stones) * crystarion_decorative_floor_knockout, seed = 16}-0.5',
+    },
+    --flanks stuff
+    {
+        type = "noise-expression",
+        name = "crystarion_veins",
+        expression = 'random_penalty{x = x, y = y, source = crystarion_volcanic_pumice_stones * crystarion_decorative_knockout_large, seed = 1}',
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_split_gill_dying_1x1",
+        expression = 'random_penalty{x = x, y = y, source = crystarion_volcanic_pumice_stones * crystarion_decorative_knockout_large, seed = 2}-0.5',
+    },
+    {
+        type = "noise-expression",
+        name = "crystarion_split_gill_dying_2x2",
+        expression = 'random_penalty{x = x, y = y, source = crystarion_volcanic_pumice_stones * crystarion_decorative_knockout_large, seed = 3}-0.7',
     },
     {
         type = "noise-expression",
         name = "crystarion_brown_hairy_grass",
-        expression =
-        'random_penalty{x = x, y = y, source = crystarion_volcanic_pumice_stones*crystarion_decorative_knockout, seed = 1}',
+        expression = 'random_penalty{x = x, y = y, source = max(crystarion_volcanic_pumice_stones, crystarion_volcanic_ash_cracks) * crystarion_decorative_knockout, seed = 4}-0.2',
     },
     {
         type = "noise-expression",
         name = "crystarion_brown_carpet_grass",
-        expression =
-        'random_penalty{x = x, y = y, source = crystarion_volcanic_pumice_stones*crystarion_decorative_knockout, seed = 2}',
+        expression = 'random_penalty{x = x, y = y, source = max(crystarion_volcanic_pumice_stones, crystarion_volcanic_ash_cracks) * crystarion_decorative_knockout, seed = 5}-0.2',
     },
     {
         type = "noise-expression",
         name = "crystarion_brown_asterisk_mini",
-        expression =
-        'random_penalty{x = x, y = y, source = crystarion_volcanic_pumice_stones*crystarion_decorative_knockout, seed = 3}',
+        expression = 'random_penalty{x = x, y = y, source = crystarion_volcanic_pumice_stones * crystarion_decorative_knockout, seed = 6}-0.2',
     },
     {
         type = "noise-expression",
         name = "crystarion_brown_asterisk",
-        expression =
-        'random_penalty{x = x, y = y, source = crystarion_volcanic_pumice_stones*crystarion_decorative_knockout, seed = 4}',
+        expression = 'random_penalty{x = x, y = y, source = crystarion_volcanic_pumice_stones * crystarion_decorative_knockout, seed = 7}-0.2',
     },
 })
