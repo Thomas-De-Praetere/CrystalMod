@@ -128,6 +128,10 @@ planet_map_gen.crystarion = function()
                     --["tiny-rock"] = {},
                     --["medium-sand-rock"] = {},
                     --["small-sand-rock"] = {}
+                    ["crystarion-brown-hairy-grass"] = {},
+                    ["crystarion-brown-carpet-grass"] = {},
+                    ["crystarion-brown-asterisk-mini"] = {},
+                    ["crystarion-brown-asterisk"] = {},
                 }
             },
             ["entity"] = {

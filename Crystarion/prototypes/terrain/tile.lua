@@ -7,8 +7,10 @@ function create_tile(element)
     local snow = table.deepcopy(data.raw['tile'][element])
     snow.name = "crystarion-" .. element
     snow.autoplace = {
-        probability_expression = 'crystarion_' .. expression
+        probability_expression = 'crystarion_' .. expression,
+        local_expressions = {}
     }
+    snow.order = "b[tile]-a[crystarion]-a[deco]"
 
     return snow
 end
