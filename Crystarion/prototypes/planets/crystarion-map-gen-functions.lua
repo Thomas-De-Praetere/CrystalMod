@@ -200,7 +200,7 @@ data:extend({
         name = "crystarion_volcanic_cracks_hot",
         expression = "crystarion_is_volcan*if(crystarion_volcans_height>crystarion_crater,1,0)",
     },
-    --Entity spawn
+    --Rock spawn
     {
         type = "noise-expression",
         name = "crystarion_rock",
