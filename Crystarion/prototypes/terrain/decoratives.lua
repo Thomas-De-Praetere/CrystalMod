@@ -15,6 +15,13 @@ function create_deco(element)
 end
 
 data:extend({
+    --Rocks
+    create_deco("small-volcanic-rock"),
+    create_deco("medium-volcanic-rock"),
+    create_deco("tiny-volcanic-rock"),
+    create_deco("lithium-iceberg-medium"),
+    create_deco("lithium-iceberg-small"),
+    create_deco("lithium-iceberg-tiny"),
     --Grass patches on ice
     create_deco("green-hairy-grass"),
     create_deco("dark-mud-decal"),

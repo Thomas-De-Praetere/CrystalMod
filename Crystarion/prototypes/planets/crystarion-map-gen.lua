@@ -41,6 +41,14 @@ planet_map_gen.crystarion = function()
             },
             ["decorative"] = {
                 settings = {
+                    --Rocks
+                    ["crystarion-small-volcanic-rock"] = {},
+                    ["crystarion-medium-volcanic-rock"] = {},
+                    ["crystarion-tiny-volcanic-rock"] = {},
+                    ["crystarion-lithium-iceberg-medium"] = {},
+                    ["crystarion-lithium-iceberg-small"] = {},
+                    ["crystarion-lithium-iceberg-tiny"] = {},
+
                     --Grass patches on ice
                     ["crystarion-green-hairy-grass"] = {},
                     ["crystarion-dark-mud-decal"] = {},
@@ -76,8 +84,10 @@ planet_map_gen.crystarion = function()
             },
             ["entity"] = {
                 settings = {
-                    ["crystarion-rock"] = {},
-                    ["crystarion-rock-ice"] = {},
+                    ["crystarion-rock-huge"] = {},
+                    ["crystarion-rock-big"] = {},
+                    ["crystarion-rock-ice-huge"] = {},
+                    ["crystarion-rock-ice-big"] = {},
                 }
             }
         }
