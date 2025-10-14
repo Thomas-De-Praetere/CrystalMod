@@ -41,23 +41,21 @@ planet_map_gen.crystarion = function()
             },
             ["decorative"] = {
                 settings = {
-                    ----Grass patches on ice
-                    --["crystarion-green-hairy-grass"] = {},
-                    --["crystarion-dark-mud-decal"] = {},
-                    --["crystarion-cracked-mud-decal"] = {},
-                    --["crystarion-white-carpet-grass"] = {},
-                    --["crystarion-white-desert-bush"] = {},
-                    --["crystarion-green-carpet-grass"] = {},
-                    --
-                    ----Random stuff on snow
-                    --["crystarion-aqulio-ice-decal-blue"] = {},
-                    --["crystarion-aqulio-snowy-decal"] = {},--also on ice but less so
-                    --["crystarion-snow-drift-decal"] = {},--also on ice but less so
-                    --["crystarion-pumice-relief-decal"] = {},
-                    --
-                    --
-                    --
+                    --Grass patches on ice
+                    ["crystarion-green-hairy-grass"] = {},
+                    ["crystarion-dark-mud-decal"] = {},
+                    ["crystarion-cracked-mud-decal"] = {},
+                    ["crystarion-white-carpet-grass"] = {},
+                    ["crystarion-white-desert-bush"] = {},
+                    ["crystarion-green-carpet-grass"] = {},
+
+                    --Random stuff on snow
+                    ["crystarion-aqulio-ice-decal-blue"] = {},
+                    ["crystarion-aqulio-snowy-decal"] = {},
+                    ["crystarion-snow-drift-decal"] = {},
+
                     --Volcan stuff
+                    ["crystarion-pumice-relief-decal"] = {},
                     ["crystarion-vulcanus-dune-decal"] = {},
                     ["crystarion-vulcanus-sand-decal"] = {},
                     ["crystarion-crater-small"] = {},

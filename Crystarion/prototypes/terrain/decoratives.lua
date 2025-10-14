@@ -15,6 +15,18 @@ function create_deco(element)
 end
 
 data:extend({
+    --Grass patches on ice
+    create_deco("green-hairy-grass"),
+    create_deco("dark-mud-decal"),
+    create_deco("cracked-mud-decal"),
+    create_deco("white-carpet-grass"),
+    create_deco("white-desert-bush"),
+    create_deco("green-carpet-grass"),
+    --Random stuff on snow
+    create_deco("aqulio-ice-decal-blue"),
+    create_deco("aqulio-snowy-decal"),
+    create_deco("snow-drift-decal"),
+    create_deco("pumice-relief-decal"),
     --Other Volcan stuff
     create_deco("vulcanus-dune-decal"),
     create_deco("vulcanus-sand-decal"),
