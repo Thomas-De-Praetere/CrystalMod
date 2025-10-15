@@ -17,7 +17,9 @@ planet_map_gen.crystarion = function()
         cliff_settings = {
             name = "cliff-crystarion",
             control = "crystarion_cliff",
-            cliff_smoothing = 0
+            cliff_smoothing = 0,
+            cliff_elevation_0 = 15,
+            cliff_elevation_interval = 70,
         },
         autoplace_controls = {
             ["crystarion-rocks"] = {},

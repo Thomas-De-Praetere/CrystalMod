@@ -156,7 +156,6 @@ data:extend({
         type = "noise-expression",
         name = "crystarion_gletsjer_voronoi",
         expression = "voronoi_pyramid_noise{x = x + crystarion_gletsjer_wobble_x * 8 + crystarion_gletsjer_wobble_x_l, y = y + crystarion_gletsjer_wobble_y * 8 + crystarion_gletsjer_wobble_y_l, seed0 = map_seed, seed1 = 35, grid_size = 1024, distance_type = 2, jitter = 1}"
-        --expression = "voronoi_pyramid_noise{x = x + crystarion_gletsjer_wobble_x_l, y = y + crystarion_gletsjer_wobble_y_l, seed0 = map_seed, seed1 = 35, grid_size = 1024, distance_type = 2, jitter = 1}"
     },
     {
         type = "noise-expression",
@@ -172,7 +171,7 @@ data:extend({
     {
         type = "noise-expression",
         name = "crystarion_cliff",
-        expression = "crystarion_gletsjer_voronoi*150"
+        expression = "crystarion_is_ground*clamp(crystarion_gletsjer_voronoi, 0, 0.4)*2.5*crystarion_height"
     },
     --Indication Functions
     {
