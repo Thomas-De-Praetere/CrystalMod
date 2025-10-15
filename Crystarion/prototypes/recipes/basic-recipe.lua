@@ -55,7 +55,7 @@ local battery = {
 }
 local crystal_melt = {
     type = "recipe",
-    name = "ice-melting",
+    name = "crystarion- ice-melting",
     icon = "__space-age__/graphics/icons/fluid/ice-melting.png",
     category = "crystarion-crystalizer-category",
     ingredients = { { type = "item", name = "ice", amount = 1 } },
