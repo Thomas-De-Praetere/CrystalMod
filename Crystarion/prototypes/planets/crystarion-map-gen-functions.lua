@@ -169,6 +169,11 @@ data:extend({
         name = "crystarion_gletsjer",
         expression = "if(crystarion_gletsjer_activation_wobble > 0, 1, 0) * (1 - crystarion_gletsjer_voronoi) * 100"
     },
+    {
+        type = "noise-expression",
+        name = "crystarion_cliff",
+        expression = "crystarion_gletsjer_voronoi*150"
+    },
     --Indication Functions
     {
         type = "noise-expression",
@@ -316,7 +321,8 @@ data:extend({
         type = "noise-expression",
         name = "crystarion_lithium_iceberg_tiny",
         expression =
-        "crystarion_penalty(max(crystarion_ice_smooth, crystarion_ice_rough) * crystarion_rock_knockout_ice * 0.7,54,90)",
+        "max(crystarion_penalty(max(crystarion_ice_smooth, crystarion_ice_rough) * crystarion_rock_knockout_ice * 0.7,54,90),\z
+        crystarion_penalty(max(crystarion_volcanic_folds, crystarion_volcanic_ash_cracks) * crystarion_rock_knockout,44,90))",
     },
     --Decorative spawn
     {
