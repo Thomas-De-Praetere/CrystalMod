@@ -12,7 +12,7 @@ local condensation_rod_recipe = {
     main_product = "crystarion-condensation-rod",
     ingredients = {
         { type = "item", name = "iron-stick", amount = 1 },
-        { type = "item", name = "ice",        amount = 1 },
+        { type = "item", name = "ice", amount = 1 },
     },
     results = {
         { type = "item", name = "crystarion-condensation-rod", amount = 1 }
@@ -29,5 +29,6 @@ resource_ice.agricultural_tower_tint = {
     secondary = { r = 0.8, g = 0.9, b = 1.0, a = 1.0 },
 }
 resource_ice.minable.results = { { type = "item", name = "ice", amount = 5 } }
+resource_ice.autoplace.tile_restriction = { "crystarion-ice-rough", "crystarion-ice-smooth" }
 
 data:extend({ condensation_rod, resource_ice, condensation_rod_recipe })

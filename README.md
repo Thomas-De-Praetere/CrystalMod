@@ -8,10 +8,6 @@ The main result should be better laser turrets, more explosive rounds,
 smaller power plants and smaller power equipment.
 
 ## Todo
-* Next step is the overflows and the gletsjers.
-* We can work on random stuff afterwards.
-* overflow can be dedined by `1-abs(height-water)` which is 1 when they are the same and less other (same is when they cut) 
-* Perhaps glaciers can be done with: within distance ridge of random
 * Why do we need the plasma if we can simply heat water and reuse the things from the default game?
   * investigate what the impact of this would be
 * Use rod+ice to create the condensation rod
