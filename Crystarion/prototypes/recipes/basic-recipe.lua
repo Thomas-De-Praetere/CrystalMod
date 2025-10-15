@@ -53,10 +53,28 @@ local battery = {
     },
     energy_required = 4
 }
+local crystal_melt = {
+    type = "recipe",
+    name = "ice-melting",
+    icon = "__space-age__/graphics/icons/fluid/ice-melting.png",
+    category = "crystarion-crystalizer-category",
+    ingredients = { { type = "item", name = "ice", amount = 1 } },
+    energy_required = 1,
+    results = { { type = "fluid", name = "water", amount = 20 } },
+    allow_productivity = true,
+    allow_decomposition = false,
+    crafting_machine_tint = {
+        primary = { r = 0.433, g = 0.773, b = 1.000, a = 1.000 }, -- #6ec5ffff
+        secondary = { r = 0.591, g = 0.856, b = 1.000, a = 1.000 }, -- #96daffff
+        tertiary = { r = 0.381, g = 0.428, b = 0.436, a = 0.502 }, -- #616d6f80
+        quaternary = { r = 0.499, g = 0.797, b = 0.793, a = 0.733 }, -- #7fcbcabb
+    },
+}
 
 data:extend({
     sludge_from_crushed_crystal,
     crush_crystal_ore,
     crystalise,
-    battery
+    battery,
+    crystal_melt
 })
