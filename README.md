@@ -8,6 +8,10 @@ The main result should be better laser turrets, more explosive rounds,
 smaller power plants and smaller power equipment.
 
 ## Todo
+* Try out enemies
+  * Spawner on the volcano
+  * Do we investigate worms? or biters?
+    * I think some gleba enemies die too soon so they could be new-ish
 * Why do we need the plasma if we can simply heat water and reuse the things from the default game?
   * investigate what the impact of this would be
 * Use rod+ice to create the condensation rod
