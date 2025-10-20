@@ -17,7 +17,6 @@ local recipe = {
         { type = "item", name = "iron-gear-wheel", amount = 3 },
         { type = "item", name = "copper-cable", amount = 2 },
         { type = "item", name = "electronic-circuit", amount = 3 },
-        { type = "item", name = "battery", amount = 2 },
         { type = "item", name = "pipe", amount = 5 }
     },
     results = {

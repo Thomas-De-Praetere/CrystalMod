@@ -18,5 +18,6 @@ require("__Crystarion__.prototypes.planets.crystarion")
 require("__Crystarion__.prototypes.technology.technology")
 
 --units
-require("__Crystarion__.prototypes.units.units")
-
+require("__Crystarion__.prototypes.enemies.units")
+require("__Crystarion__.prototypes.enemies.structures")
+require("__Crystarion__.prototypes.enemies.resonance")

@@ -32,7 +32,7 @@ local crystarion = {
 
     map_gen_settings = planet_map_gen.crystarion(),
     --TODO change this to energy or smth
-    pollutant_type = nil,
+    pollutant_type = "crystarion_resonance",
     solar_power_in_space = 400,
     surface_properties = {
         ["day-night-cycle"] = 3 * minute,
