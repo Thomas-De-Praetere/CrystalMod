@@ -23,7 +23,8 @@ planet_map_gen.crystarion = function()
         },
         autoplace_controls = {
             ["crystarion-rocks"] = {},
-            ["crystarion_cliff"] = {}
+            ["crystarion_cliff"] = {},
+            ["crystarion_spawner"] = {}
         },
         autoplace_settings = {
             ["tile"] = {

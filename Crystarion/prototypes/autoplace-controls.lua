@@ -11,4 +11,10 @@ data:extend({
         order = "c-z",
         category = "cliff"
     },
+    {
+        type = "autoplace-control",
+        name = "crystarion_spawner",
+        order = "c-z",
+        category = "enemy"
+    },
 })

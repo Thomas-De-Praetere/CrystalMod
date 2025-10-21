@@ -1,19 +1,15 @@
 local entity = table.deepcopy(data.raw["radar"]["radar"])
 
 entity.name = "crystarion-lure"
-entity.energy_source = {
-    type = "electric",
-    usage_priority = "secondary-input",
-    emissions_per_minute = {
-        crystarion_resonance = 100
-    }
+entity.energy_source .    emissions_per_minute = {
+    crystarion_resonance = 100
 }
-entity.minable = { mining_time = 0.2, result = "crystarion-crusher" }
 
-local item = table.deepcopy(data.raw["item"]["crusher"])
+entity.minable = { mining_time = 0.2, result = "crystarion-lure" }
+
+local item = table.deepcopy(data.raw["item"]["radar"])
 item.name = "crystarion-lure"
 item.place_result = "crystarion-lure"
-item.subgroup = "production-machine"
 
 local recipe = {
     type = "recipe",
