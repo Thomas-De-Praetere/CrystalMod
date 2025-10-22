@@ -7,6 +7,7 @@ entity.crane.speed.arm.extension_speed = 0.01
 entity.crane.speed.grappler.vertical_turn_rate = 0.006
 entity.crane.speed.grappler.horizontal_turn_rate = 0.02
 entity.crane.speed.grappler.extension_speed = 0.02
+entity.minable = { mining_time = 0.2, result = "crystarion-collector" }
 
 local item = table.deepcopy(data.raw["item"]["agricultural-tower"])
 item.name = "crystarion-collector"
