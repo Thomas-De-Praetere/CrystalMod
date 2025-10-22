@@ -11,7 +11,7 @@ local condensation_rod_recipe = {
     name = "crystarion-condensation-rod",
     main_product = "crystarion-condensation-rod",
     ingredients = {
-        { type = "item", name = "iron-stick", amount = 1 },
+        { type = "item", name = "crystarion-crystal-green", amount = 1 },
         { type = "item", name = "ice", amount = 1 },
     },
     results = {
