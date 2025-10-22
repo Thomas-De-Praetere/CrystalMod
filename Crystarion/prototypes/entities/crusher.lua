@@ -15,8 +15,8 @@ local recipe = {
     name = "crystarion-crusher",
     main_product = "crystarion-crusher",
     ingredients = {
-        { type = "item", name = "iron-gear-wheel", amount = 10 },
-        { type = "item", name = "iron-plate", amount = 5 }
+        { type = "item", name = "iron-gear-wheel", amount = 5 },
+        { type = "item", name = "iron-plate", amount = 2 }
     },
     results = {
         { type = "item", name = "crystarion-crusher", amount = 1 }

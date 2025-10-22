@@ -13,11 +13,10 @@ local recipe = {
     name = "crystarion-crystalizer",
     main_product = "crystarion-crystalizer",
     ingredients = {
-        { type = "item", name = "iron-plate", amount = 3 },
-        { type = "item", name = "iron-gear-wheel", amount = 3 },
-        { type = "item", name = "copper-cable", amount = 2 },
-        { type = "item", name = "electronic-circuit", amount = 3 },
-        { type = "item", name = "pipe", amount = 5 }
+        { type = "item", name = "iron-plate", amount = 1 },
+        { type = "item", name = "iron-gear-wheel", amount = 2 },
+        { type = "item", name = "copper-cable", amount = 1 },
+        { type = "item", name = "pipe", amount = 2 }
     },
     results = {
         { type = "item", name = "crystarion-crystalizer", amount = 1 }

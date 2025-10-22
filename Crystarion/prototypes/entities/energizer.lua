@@ -9,8 +9,7 @@ entity.minable = { mining_time = 0.2, result = "crystarion-energiser" }
 local output = table.deepcopy(entity.fluid_boxes[2])
 
 local input1 = table.deepcopy(entity.fluid_boxes[1])
-input1.pipe_connections =
-{
+input1.pipe_connections = {
     {
         flow_direction = "input",
         direction = defines.direction.north,
@@ -19,8 +18,7 @@ input1.pipe_connections =
 }
 
 local input2 = table.deepcopy(entity.fluid_boxes[1])
-input2.pipe_connections =
-{
+input2.pipe_connections = {
     {
         flow_direction = "input",
         direction = defines.direction.north,
@@ -30,8 +28,7 @@ input2.pipe_connections =
 
 local pass_through = table.deepcopy(entity.fluid_boxes[1])
 pass_through.production_type = "output"
-pass_through.pipe_connections =
-{
+pass_through.pipe_connections = {
     {
         flow_direction = "input-output",
         direction = defines.direction.west,
@@ -57,11 +54,10 @@ local recipe = {
     name = "crystarion-energiser",
     main_product = "crystarion-energiser",
     ingredients = {
-        { type = "item", name = "iron-plate",         amount = 3 },
-        { type = "item", name = "copper-plate",       amount = 3 },
-        { type = "item", name = "copper-cable",       amount = 2 },
-        { type = "item", name = "electronic-circuit", amount = 3 },
-        { type = "item", name = "battery",            amount = 2 },
+        { type = "item", name = "iron-plate", amount = 2 },
+        { type = "item", name = "copper-plate", amount = 1 },
+        { type = "item", name = "copper-cable", amount = 1 },
+        { type = "item", name = "battery", amount = 1 },
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {

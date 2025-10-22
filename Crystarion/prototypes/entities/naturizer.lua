@@ -2,7 +2,7 @@ local entity = table.deepcopy(data.raw["burner-generator"]["burner-generator"])
 entity.name = "crystarion-naturizer"
 entity.minable = { mining_time = 0.2, result = "crystarion-naturizer" }
 
-local item = table.deepcopy(data.raw["item"]["assembling-machine-2"])
+local item = table.deepcopy(data.raw["item"]["burner-generator"])
 item.name = "crystarion-naturizer"
 item.place_result = "crystarion-naturizer"
 

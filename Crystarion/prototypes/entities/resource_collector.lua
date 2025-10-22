@@ -17,9 +17,9 @@ local recipe = {
     name = "crystarion-collector",
     main_product = "crystarion-collector",
     ingredients = {
-        { type = "item", name = "iron-plate",         amount = 6 },
-        { type = "item", name = "copper-plate",       amount = 3 },
-        { type = "item", name = "electronic-circuit", amount = 3 },
+        { type = "item", name = "iron-plate",         amount = 3 },
+        { type = "item", name = "copper-plate",       amount = 1 },
+        { type = "item", name = "electronic-circuit", amount = 2 },
         { type = "item", name = "battery",            amount = 2 },
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
