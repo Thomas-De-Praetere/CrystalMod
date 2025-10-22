@@ -13,7 +13,13 @@ local energiser_category = {
     type = "recipe-category",
     name = "crystarion-energiser-category"
 }
-data:extend({ crusher_category, crystalizer_category, energiser_category })
+
+local naturizer_category = {
+    type = "recipe-category",
+    name = "crystarion-naturizer-category"
+}
+
+data:extend({ crusher_category, crystalizer_category, energiser_category, naturizer_category })
 
 -- new recipes
 

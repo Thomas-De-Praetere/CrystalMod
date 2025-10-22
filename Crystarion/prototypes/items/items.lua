@@ -5,7 +5,7 @@ local crushed_crystal = table.deepcopy(BASE_ITEM)
 crushed_crystal.name = "crystarion-crushed-crystal"
 crushed_crystal.icon = LOCATION .. "crushed_crystal.png"
 crushed_crystal.pictures = {
-    { size = 64, filename = LOCATION .. "crushed_crystal.png", scale = 0.5, mipmap_count = 4 },
+    { size = 64, filename = LOCATION .. "crushed_crystal.png",   scale = 0.5, mipmap_count = 4 },
     { size = 64, filename = LOCATION .. "crushed_crystal_1.png", scale = 0.5, mipmap_count = 4 },
     { size = 64, filename = LOCATION .. "crushed_crystal_2.png", scale = 0.5, mipmap_count = 4 }
 }
@@ -14,7 +14,7 @@ local crystal_ore = table.deepcopy(data.raw["item"]["iron-ore"])
 crystal_ore.name = "crystarion-crystal-ore"
 crystal_ore.icon = LOCATION .. "crystal_ore.png"
 crystal_ore.pictures = {
-    { size = 64, filename = LOCATION .. "crystal_ore.png", scale = 0.5, mipmap_count = 4 },
+    { size = 64, filename = LOCATION .. "crystal_ore.png",   scale = 0.5, mipmap_count = 4 },
     { size = 64, filename = LOCATION .. "crystal_ore_1.png", scale = 0.5, mipmap_count = 4 },
     { size = 64, filename = LOCATION .. "crystal_ore_2.png", scale = 0.5, mipmap_count = 4 }
 }
@@ -23,10 +23,12 @@ local crystal = table.deepcopy(BASE_ITEM)
 crystal.name = "crystarion-crystal"
 crystal.icon = LOCATION .. "crystal.png"
 crystal.pictures = {
-    { size = 64, filename = LOCATION .. "crystal.png", scale = 0.5, mipmap_count = 4 },
+    { size = 64, filename = LOCATION .. "crystal.png",   scale = 0.5, mipmap_count = 4 },
     { size = 64, filename = LOCATION .. "crystal_1.png", scale = 0.5, mipmap_count = 4 },
     { size = 64, filename = LOCATION .. "crystal_2.png", scale = 0.5, mipmap_count = 4 }
 }
+crystal.fuel_category = "chemical"
+crystal.fuel_value = "10MJ"
 
 local crystal_green = table.deepcopy(BASE_ITEM)
 crystal_green.name = "crystarion-crystal-green"

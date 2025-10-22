@@ -1,11 +1,5 @@
 local planet_map_gen = require("__Crystarion__/prototypes/planets/crystarion-map-gen")
-local nauvis = data.raw['planet']['nauvis']
-
---data:extend({{
---  type = "surface-property",
---  name = "instability",
---  default_value = 0
---}})
+local gleba = data.raw['planet']['gleba']
 
 local crystarion_asteroids = table.deepcopy(data.raw['planet']['gleba'].asteroid_spawn_definitions)
 local nauvis_crystarion_asteroids = table.deepcopy(data.raw['space-connection']['nauvis-fulgora'].asteroid_spawn_definitions)
@@ -55,7 +49,7 @@ local crystarion_connection = {
     length = 15000
 }
 
-PlanetsLib.borrow_music(nauvis, crystarion)
+PlanetsLib.borrow_music(gleba, crystarion)
 PlanetsLib:extend({ crystarion })
 
 data:extend({ crystarion_connection })
