@@ -2,7 +2,7 @@ function slurry_from_color(name, in_amount, out_amount)
     return {
         type = "recipe",
         name = "crystarion-slurry-from-" .. name .. "-crystal",
-        category = "crystarion-crystalizer-category",
+        category = "chemistry",
         main_product = "crystarion-" .. name .. "-slurry",
         ingredients = {
             { type = "item",  name = "crystarion-crystal-" .. name, amount = in_amount },
@@ -27,7 +27,7 @@ function denaturize(name, input, output)
         },
         results = {
             { type = "fluid", name = output,              amount = 20 },
-            { type = "fluid", name = "crystarion-plasma", amount = 100, temperature = 200 }
+            { type = "fluid", name = "steam", amount = 10, temperature = 120 }
         },
         energy_required = 1
     }

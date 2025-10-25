@@ -51,8 +51,8 @@ public enum Unit {
             middle = kJ;
             large = MJ;
         }
-        double smallValue = value.convert(small).value();
-        double middleValue = value.convert(middle).value();
+        double smallValue = Math.abs(value.convert(small).value());
+        double middleValue = Math.abs(value.convert(middle).value());
         if (smallValue <= 1000.0) {
             return small;
         }

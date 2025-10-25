@@ -41,7 +41,7 @@ pass_through.pipe_connections = {
     }
 }
 pass_through.secondary_draw_orders = { north = -1 }
-pass_through.filter = "crystarion-plasma"
+pass_through.filter = "steam"
 
 entity.fluid_boxes = { input1, input2, pass_through, output }
 

@@ -8,6 +8,7 @@ The main result should be better laser turrets, more explosive rounds,
 smaller power plants and smaller power equipment.
 
 ## Todo
+* Dynamically create icons
 * Try out enemies
   * Spawner on the volcano
   * Do we investigate worms? or biters?

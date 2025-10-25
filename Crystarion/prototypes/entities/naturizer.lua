@@ -20,4 +20,4 @@ local recipe = {
     energy_required = 5
 }
 
-data:extend({ entity, item, recipe })
+--data:extend({ entity, item, recipe })

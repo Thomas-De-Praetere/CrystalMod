@@ -1,6 +1,6 @@
 package main.energy;
 
-public record Generator(int fluidUsagePerTick,
+public record Generator(double fluidUsagePerTick,
                         int maximumTemperature,
                         double effectivity) {
 }

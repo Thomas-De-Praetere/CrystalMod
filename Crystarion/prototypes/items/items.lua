@@ -27,8 +27,8 @@ crystal.pictures = {
     { size = 64, filename = LOCATION .. "crystal_1.png", scale = 0.5, mipmap_count = 4 },
     { size = 64, filename = LOCATION .. "crystal_2.png", scale = 0.5, mipmap_count = 4 }
 }
-crystal.fuel_category = "chemical"
-crystal.fuel_value = "10MJ"
+--crystal.fuel_category = "chemical"
+--crystal.fuel_value = "10MJ"
 
 local crystal_green = table.deepcopy(BASE_ITEM)
 crystal_green.name = "crystarion-crystal-green"

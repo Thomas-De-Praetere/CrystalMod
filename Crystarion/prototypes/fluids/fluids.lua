@@ -54,5 +54,5 @@ data:extend({
     green_slurry,
     yellow_mixture,
     purple_mixture,
-    plasma
+    --plasma
 })

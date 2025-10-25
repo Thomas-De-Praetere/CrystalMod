@@ -30,7 +30,7 @@ local recipe = {
     energy_required = 2
 }
 
-data:extend({ entity, item, recipe })
+--data:extend({ entity, item, recipe })
 
 -- max_power = (min(fluid_max_temp, maximum_temperature) - fluid_default_temp)
 -- × fluid_usage_per_tick

@@ -4,11 +4,6 @@ local crusher_category = {
     name = "crystarion-crusher-category"
 }
 
-local crystalizer_category = {
-    type = "recipe-category",
-    name = "crystarion-crystalizer-category"
-}
-
 local energiser_category = {
     type = "recipe-category",
     name = "crystarion-energiser-category"
@@ -19,7 +14,7 @@ local naturizer_category = {
     name = "crystarion-naturizer-category"
 }
 
-data:extend({ crusher_category, crystalizer_category, energiser_category, naturizer_category })
+data:extend({ crusher_category, energiser_category, naturizer_category })
 
 -- new recipes
 
