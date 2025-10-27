@@ -1,0 +1,1 @@
+require("__Crystarion__.prototypes.offence.ammo")

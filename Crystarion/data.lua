@@ -1,6 +1,7 @@
 --items
 require("__Crystarion__.prototypes.items.items")
 require("__Crystarion__.prototypes.fluids.fluids")
+require("__Crystarion__.prototypes.offence.offence")
 
 --recipes
 require("__Crystarion__.prototypes.recipes.recipes")

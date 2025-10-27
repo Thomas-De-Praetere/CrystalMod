@@ -1,3 +1,5 @@
+local helper = require("__Crystarion__.helper")
+
 function crush_crystal_color(color)
     return {
         type = "recipe",
@@ -21,6 +23,7 @@ function neutralize_color(color, result)
         name = "crystarion-neutralize-" .. color,
         category = "crystarion-energiser-category",
         main_product = result,
+        icons = helper.icon_1_to_1(helper.icons["crystal_" .. color], "__base__/graphics/icons/" .. result .. ".png"),
         ingredients = {
             { type = "item", name = "crystarion-crystal-" .. color, amount = 1 },
             { type = "fluid", name = "water", amount = 20 },
