@@ -27,7 +27,7 @@ function neutralize_color(color, result)
         },
         results = {
             { type = "item", name = result, amount = 1 },
-            { type = "fluid", name = "steam", amount = 10, temperature = 120 }
+            { type = "fluid", name = "steam", amount = 10, temperature = 165 }
         },
         energy_required = 1
     }
@@ -46,7 +46,7 @@ local split_green = {
     results = {
         { type = "item", name = "crystarion-crystal-green", amount = 1 },
         { type = "item", name = "crystarion-crystal-magenta", amount = 1 },
-        { type = "fluid", name = "steam", amount = 10, temperature = 120 }
+        { type = "fluid", name = "steam", amount = 10, temperature = 165 }
     },
     energy_required = 1
 }
@@ -63,7 +63,7 @@ local split_magenta = {
     results = {
         { type = "item", name = "crystarion-crystal-blue", amount = 1 },
         { type = "item", name = "crystarion-crystal-red", amount = 1 },
-        { type = "fluid", name = "steam", amount = 10, temperature = 120 }
+        { type = "fluid", name = "steam", amount = 10, temperature = 165 }
     },
     energy_required = 1
 }
@@ -80,7 +80,7 @@ local split_red = {
     results = {
         { type = "item", name = "crystarion-crystal-red", amount = 1 },
         { type = "item", name = "crystarion-crystal-cyan", amount = 1 },
-        { type = "fluid", name = "steam", amount = 10, temperature = 120 }
+        { type = "fluid", name = "steam", amount = 10, temperature = 165 }
     },
     energy_required = 1
 }
@@ -97,7 +97,7 @@ local split_cyan = {
     results = {
         { type = "item", name = "crystarion-crystal-green", amount = 1 },
         { type = "item", name = "crystarion-crystal-blue", amount = 1 },
-        { type = "fluid", name = "steam", amount = 10, temperature = 120 }
+        { type = "fluid", name = "steam", amount = 10, temperature = 165 }
     },
     energy_required = 1
 }
@@ -114,7 +114,7 @@ local split_blue = {
     results = {
         { type = "item", name = "crystarion-crystal-blue", amount = 1 },
         { type = "item", name = "crystarion-crystal-yellow", amount = 1 },
-        { type = "fluid", name = "steam", amount = 10, temperature = 120 }
+        { type = "fluid", name = "steam", amount = 10, temperature = 165 }
     },
     energy_required = 1
 }
@@ -131,7 +131,7 @@ local split_yellow = {
     results = {
         { type = "item", name = "crystarion-crystal-green", amount = 1, },
         { type = "item", name = "crystarion-crystal-red", amount = 1, },
-        { type = "fluid", name = "steam", amount = 10, temperature = 120 }
+        { type = "fluid", name = "steam", amount = 10, temperature = 165 }
     },
     energy_required = 1
 }
@@ -155,7 +155,7 @@ local neutralize_crystal = {
     },
     results = {
         { type = "item", name = "coal", amount = 3 },
-        { type = "fluid", name = "steam", amount = 30, temperature = 120 }
+        { type = "fluid", name = "steam", amount = 30, temperature = 165 }
     },
     energy_required = 3
 }

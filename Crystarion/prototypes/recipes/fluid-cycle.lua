@@ -27,7 +27,7 @@ function denaturize(name, input, output)
         },
         results = {
             { type = "fluid", name = output,              amount = 20 },
-            { type = "fluid", name = "steam", amount = 10, temperature = 120 }
+            { type = "fluid", name = "steam", amount = 10, temperature = 165 }
         },
         energy_required = 1
     }

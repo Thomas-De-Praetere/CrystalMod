@@ -77,11 +77,11 @@ local crystal_panel = {
     enabled = true,
     ingredients = {
         { type = "item", name = "iron-plate", amount = 3 },
-        { type = "item", name = "electronic-circuit", amount = 3 },
-        { type = "item", name = "copper-plate", amount = 3 },
+        { type = "item", name = "electronic-circuit", amount = 1 },
+        { type = "item", name = "copper-plate", amount = 1 },
         { type = "item", name = "crystarion-crystal", amount = 2 },
-        { type = "item", name = "crystarion-crystal-red", amount = 15 },
-        { type = "item", name = "crystarion-crystal-blue", amount = 10 },
+        { type = "item", name = "crystarion-crystal-red", amount = 5 },
+        { type = "item", name = "crystarion-crystal-blue", amount = 5 },
     },
     results = { { type = "item", name = "solar-panel", amount = 1 } }
 }
