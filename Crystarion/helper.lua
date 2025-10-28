@@ -14,25 +14,25 @@ end
 
 function helper.icon_2_to_1(source1, source2, target)
     return {
-        { icon = target, icon_size = 64, scale = 0.75, shift = { 0, 8 } },
-        { icon = source1, 64, scale = 0.5, shift = { -16, -16 } },
-        { icon = source2, 64, scale = 0.5, shift = { 16, -16 } }
+        { icon = target, icon_size = 64, scale = 0.75, shift = { 0, 4 } },
+        { icon = source1, 64, scale = 0.5, shift = { -4, -4 } },
+        { icon = source2, 64, scale = 0.5, shift = { 4, -4 } }
     }
 end
 
 function helper.icon_1_to_1(source, target)
     return {
-        { icon = source, icon_size = 64, scale = 0.75, shift = { 0, -8 } },
-        { icon = target, 64, scale = 0.5, shift = { -16, 16 } },
-        { icon = target, 64, scale = 0.5, shift = { 16, 16 } }
+        { icon = source, icon_size = 64, scale = 0.75, shift = { 0, -4 } },
+        { icon = target, 64, scale = 0.5, shift = { -4, 4 } },
+        { icon = target, 64, scale = 0.5, shift = { 4, 4 } }
     }
 end
 
 function helper.icon_1_to_2(source, target1, target2)
     return {
-        { icon = source, icon_size = 64, scale = 0.75, shift = { 0, -8 } },
-        { icon = target1, 64, scale = 0.5, shift = { -16, 16 } },
-        { icon = target2, 64, scale = 0.5, shift = { 16, 16 } }
+        { icon = source, icon_size = 64, scale = 0.75, shift = { 0, -4 } },
+        { icon = target1, 64, scale = 0.5, shift = { -4, 4 } },
+        { icon = target2, 64, scale = 0.5, shift = { 4, 4 } }
     }
 end
 
