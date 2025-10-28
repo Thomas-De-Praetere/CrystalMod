@@ -14,31 +14,31 @@ end
 
 function helper.icon_2_to_1(source1, source2, target)
     return {
-        { icon = target, icon_size = 64, scale = 0.75, shift = { 0, 4 } },
-        { icon = source1, 64, scale = 0.5, shift = { -4, -4 } },
-        { icon = source2, 64, scale = 0.5, shift = { 4, -4 } }
+        { icon = target,  icon_size = 64, scale = 0.75, shift = { 0, 4 } },
+        { icon = source1, icon_size = 64, scale = 0.5, shift = { -8, -8 } },
+        { icon = source2, icon_size = 64, scale = 0.5, shift = { 8, -8 } }
     }
 end
 
 function helper.icon_1_to_1(source, target)
     return {
         { icon = source, icon_size = 64, scale = 0.75, shift = { 0, -4 } },
-        { icon = target, 64, scale = 0.5, shift = { -4, 4 } },
-        { icon = target, 64, scale = 0.5, shift = { 4, 4 } }
+        { icon = target, icon_size = 64, scale = 0.5, shift = { -8, 8 } },
+        { icon = target, icon_size = 64, scale = 0.5, shift = { 8, 8 } }
     }
 end
 
 function helper.icon_1_to_2(source, target1, target2)
     return {
-        { icon = source, icon_size = 64, scale = 0.75, shift = { 0, -4 } },
-        { icon = target1, 64, scale = 0.5, shift = { -4, 4 } },
-        { icon = target2, 64, scale = 0.5, shift = { 4, 4 } }
+        { icon = source,  icon_size = 64, scale = 0.75, shift = { 0, -4 } },
+        { icon = target1, icon_size = 64, scale = 0.5, shift = { -8, 8 } },
+        { icon = target2, icon_size = 64, scale = 0.5, shift = { 8, 8 } }
     }
 end
 
 function helper.alternate(main, special)
     return {
-        { icon = main, icon_size = 64 },
+        { icon = main,    icon_size = 64 },
         { icon = special, icon_size = 64, scale = 0.25, shift = { 8, 8 } }
     }
 end
