@@ -1,9 +1,14 @@
+local helper = require("__Crystarion__.helper")
+
+local icons = helper.alternate("__base__/graphics/icons/assembling-machine-3.png", helper.icons.planet)
+
 local entity = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"])
 entity.crafting_categories = { "crystarion-energiser-category" }
 entity.name = "crystarion-energiser"
 entity.crafting_speed = 1.0
-entity.energy_usage = "200kW"
+entity.energy_usage = "150kW"
 entity.minable = { mining_time = 0.2, result = "crystarion-energiser" }
+entity.icons = icons
 
 --Fluid boxes
 local output = table.deepcopy(entity.fluid_boxes[2])
@@ -48,16 +53,17 @@ entity.fluid_boxes = { input1, input2, pass_through, output }
 local item = table.deepcopy(data.raw["item"]["assembling-machine-3"])
 item.name = "crystarion-energiser"
 item.place_result = "crystarion-energiser"
+item.icons = icons
 
 local recipe = {
     type = "recipe",
     name = "crystarion-energiser",
     main_product = "crystarion-energiser",
     ingredients = {
-        { type = "item", name = "iron-plate", amount = 2 },
-        { type = "item", name = "copper-plate", amount = 1 },
-        { type = "item", name = "copper-cable", amount = 1 },
-        { type = "item", name = "battery", amount = 1 },
+        { type = "item", name = "iron-plate",         amount = 2 },
+        { type = "item", name = "copper-plate",       amount = 1 },
+        { type = "item", name = "copper-cable",       amount = 1 },
+        { type = "item", name = "battery",            amount = 1 },
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {

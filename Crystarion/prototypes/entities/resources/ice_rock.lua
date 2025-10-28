@@ -1,10 +1,13 @@
 local helper = require("__Crystarion__.helper")
 
+local icons = helper.alternate("__base__/graphics/icons/iron-stick.png", helper.icons.planet)
+
 local condensation_rod = table.deepcopy(data.raw["item"]["iron-stick"])
 condensation_rod.name = "crystarion-condensation-rod"
 condensation_rod.plant_result = "crystarion-resource-ice"
 condensation_rod.place_result = "crystarion-resource-ice"
 condensation_rod.stack_size = 10
+condensation_rod.icons = icons
 
 local condensation_rod_recipe = {
     type = "recipe",
@@ -12,7 +15,7 @@ local condensation_rod_recipe = {
     main_product = "crystarion-condensation-rod",
     ingredients = {
         { type = "item", name = "crystarion-crystal-green", amount = 1 },
-        { type = "item", name = "ice", amount = 1 },
+        { type = "item", name = "ice",                      amount = 1 },
     },
     results = {
         { type = "item", name = "crystarion-condensation-rod", amount = 1 }

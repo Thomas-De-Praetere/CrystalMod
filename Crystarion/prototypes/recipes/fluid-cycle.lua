@@ -1,6 +1,5 @@
 local helper = require("__Crystarion__.helper")
 function slurry_from_color(name, in_amount, out_amount)
-    local helper = require("__Crystarion__.helper")
     return {
         type = "recipe",
         name = "crystarion-slurry-from-" .. name .. "-crystal",
@@ -8,8 +7,8 @@ function slurry_from_color(name, in_amount, out_amount)
         main_product = "crystarion-" .. name .. "-slurry",
         icons = helper.icon_1_to_1(helper.icons["crystal_" .. name], helper.icons[name .. "_slurry"]),
         ingredients = {
-            { type = "item", name = "crystarion-crystal-" .. name, amount = in_amount },
-            { type = "fluid", name = "water", amount = 20 }
+            { type = "item",  name = "crystarion-crystal-" .. name, amount = in_amount },
+            { type = "fluid", name = "water",                       amount = 20 }
         },
         results = {
             { type = "fluid", name = "crystarion-" .. name .. "-slurry", amount = out_amount }
@@ -19,7 +18,6 @@ function slurry_from_color(name, in_amount, out_amount)
 end
 
 function denaturize(name, input, input_icon, output)
-    local helper = require("__Crystarion__.helper")
     return {
         type = "recipe",
         name = "crystarion-denaturize-" .. name,
@@ -27,12 +25,12 @@ function denaturize(name, input, input_icon, output)
         main_product = output,
         icons = helper.icon_1_to_1(helper.icons[input_icon], "__base__/graphics/icons/fluid/" .. output .. ".png"),
         ingredients = {
-            { type = "fluid", name = input, amount = 20 },
-            { type = "fluid", name = "water", amount = 100 },
+            { type = "fluid", name = input,   amount = 20 },
+            { type = "fluid", name = "water", amount = 20 },
         },
         results = {
-            { type = "fluid", name = output, amount = 20 },
-            { type = "fluid", name = "steam", amount = 20, temperature = 165 }
+            { type = "fluid", name = output,  amount = 20 },
+            { type = "fluid", name = "steam", amount = 80, temperature = 165 }
         },
         energy_required = 1
     }
@@ -50,7 +48,7 @@ local mix_yellow = {
     icons = helper.icon_2_to_1(helper.icons.green_slurry, helper.icons.red_slurry, helper.icons.yellow_mixture),
     ingredients = {
         { type = "fluid", name = "crystarion-green-slurry", amount = 5 },
-        { type = "fluid", name = "crystarion-red-slurry", amount = 5 }
+        { type = "fluid", name = "crystarion-red-slurry",   amount = 5 }
     },
     results = {
         { type = "fluid", name = "crystarion-yellow-mixture", amount = 5 }
@@ -65,7 +63,7 @@ local mix_purple = {
     icons = helper.icon_2_to_1(helper.icons.blue_slurry, helper.icons.red_slurry, helper.icons.purple_mixture),
     ingredients = {
         { type = "fluid", name = "crystarion-blue-slurry", amount = 5 },
-        { type = "fluid", name = "crystarion-red-slurry", amount = 5 }
+        { type = "fluid", name = "crystarion-red-slurry",  amount = 5 }
     },
     results = {
         { type = "fluid", name = "crystarion-purple-mixture", amount = 5 }

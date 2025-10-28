@@ -63,6 +63,8 @@ helper.icons = {
     yellow_mixture = FLUID_LOCATION .. "yellow-mixture.png",
     purple_mixture = FLUID_LOCATION .. "purple-mixture.png",
     plasma = FLUID_LOCATION .. "plasma.png",
+
+    planet = "__Crystarion__/graphics/planet/planet-icon.png"
 }
 
 return helper
