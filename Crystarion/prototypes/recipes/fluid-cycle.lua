@@ -23,7 +23,10 @@ function denaturize(name, input, input_icon, output)
         name = "crystarion-denaturize-" .. name,
         category = "crystarion-energiser-category",
         main_product = output,
-        icons = helper.icon_1_to_1(helper.icons[input_icon], "__base__/graphics/icons/fluid/" .. output .. ".png"),
+        icons = helper.icon_1_to_1(
+            helper.icons[input_icon],
+            { icon = "__base__/graphics/icons/fluid/" .. output .. ".png" }
+        ),
         ingredients = {
             { type = "fluid", name = input,   amount = 20 },
             { type = "fluid", name = "water", amount = 20 },

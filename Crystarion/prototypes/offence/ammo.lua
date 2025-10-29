@@ -2,8 +2,10 @@ local helper = require("__Crystarion__.helper")
 
 local item = table.deepcopy(data.raw["ammo"]["firearm-magazine"])
 item.name = "crystarion-shard"
---item.icon = helper.alternate("__base__/graphics/icons/firearm-magazine.png", "__base__/graphics/icons/firearm-magazine.png")
-item.icons = helper.alternate("__base__/graphics/icons/firearm-magazine.png", helper.icons.planet)
+item.icons = helper.alternate(
+    { icon = "__base__/graphics/icons/firearm-magazine.png" },
+    helper.icons.planet
+)
 item.ammo_type = {
     action = {
         {

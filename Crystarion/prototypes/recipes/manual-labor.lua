@@ -5,7 +5,10 @@ function destabilize(name, input, input_icon, output, output_amount)
         type = "recipe",
         name = "crystarion-destabilize-" .. name,
         main_product = output,
-        icons = helper.icon_1_to_1(helper.icons[input_icon], "__base__/graphics/icons/" .. output .. ".png"),
+        icons = helper.icon_1_to_1(
+            helper.icons[input_icon],
+            { icon = "__base__/graphics/icons/" .. output .. ".png" }
+        ),
         ingredients = {
             { type = "item", name = input, amount = 1 },
             { type = "item", name = "ice", amount = 1 }

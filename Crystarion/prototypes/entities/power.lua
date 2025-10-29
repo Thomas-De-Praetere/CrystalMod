@@ -1,6 +1,9 @@
 local helper = require("__Crystarion__.helper")
 
-local icons = helper.alternate("__base__/graphics/icons/radar.png", helper.icons.planet)
+local icons = helper.alternate(
+    { icon = "__base__/graphics/icons/radar.png" },
+    helper.icons.planet
+)
 
 local entity = table.deepcopy(data.raw["radar"]["radar"])
 

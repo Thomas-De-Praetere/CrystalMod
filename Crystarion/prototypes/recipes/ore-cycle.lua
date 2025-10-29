@@ -23,7 +23,10 @@ function neutralize_color(color, result)
         name = "crystarion-neutralize-" .. color,
         category = "crystarion-energiser-category",
         main_product = result,
-        icons = helper.icon_1_to_1(helper.icons["crystal_" .. color], "__base__/graphics/icons/" .. result .. ".png"),
+        icons = helper.icon_1_to_1(
+            helper.icons["crystal_" .. color],
+            { icon = "__base__/graphics/icons/" .. result .. ".png" }
+        ),
         ingredients = {
             { type = "item",  name = "crystarion-crystal-" .. color, amount = 1 },
             { type = "fluid", name = "water",                        amount = 5 },
@@ -111,7 +114,10 @@ local neutralize_crystal = {
     name = "crystarion-neutralize-crystal",
     category = "crystarion-energiser-category",
     main_product = "coal",
-    icons = helper.icon_1_to_1(helper.icons.crystal, "__base__/graphics/icons/coal.png"),
+    icons = helper.icon_1_to_1(
+        helper.icons.crystal,
+        { icon = "__base__/graphics/icons/coal.png" }
+    ),
     ingredients = {
         { type = "item",  name = "crystarion-crystal", amount = 1 },
         { type = "fluid", name = "water",              amount = 15 },

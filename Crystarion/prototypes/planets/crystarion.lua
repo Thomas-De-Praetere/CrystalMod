@@ -4,7 +4,7 @@ local gleba = data.raw['planet']['gleba']
 
 local crystarion_asteroids = table.deepcopy(data.raw['planet']['gleba'].asteroid_spawn_definitions)
 local nauvis_crystarion_asteroids = table.deepcopy(data.raw['space-connection']['nauvis-fulgora']
-.asteroid_spawn_definitions)
+    .asteroid_spawn_definitions)
 
 local crystarion = {
     type = "planet",
@@ -21,7 +21,7 @@ local crystarion = {
         orientation = 0.9
     },
     asteroid_spawn_definitions = crystarion_asteroids,
-    icon = helper.icons.planet,
+    icon = helper.icons.planet.icon,
     icon_size = 64,
     starmap_icon = "__Crystarion__/graphics/planet/planet.png",
     starmap_icon_size = 256,

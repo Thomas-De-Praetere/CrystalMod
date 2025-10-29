@@ -46,7 +46,10 @@ local battery = {
     type = "recipe",
     name = "crystarion-battery",
     main_product = "battery",
-    icons = helper.alternate("__base__/graphics/icons/battery.png", helper.icons.planet),
+    icons = helper.alternate(
+        { icon = "__base__/graphics/icons/battery.png" },
+        helper.icons.planet
+    ),
     ingredients = {
         { type = "item", name = "crystarion-crystal", amount = 1 },
         { type = "item", name = "iron-plate",         amount = 1 },
@@ -60,7 +63,10 @@ local battery = {
 local crystal_melt = {
     type = "recipe",
     name = "crystarion-ice-melting",
-    icons = helper.alternate("__space-age__/graphics/icons/fluid/ice-melting.png", helper.icons.planet),
+    icons = helper.alternate(
+        { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
+        helper.icons.planet
+    ),
     category = "crystarion-energiser-category",
     ingredients = { { type = "item", name = "ice", amount = 1 } },
     energy_required = 1,
@@ -79,7 +85,10 @@ local crystal_panel = {
     name = "crystarion-solar-panel",
     energy_required = 10,
     enabled = true,
-    icons = helper.alternate("__base__/graphics/icons/solar-panel.png", helper.icons.planet),
+    icons = helper.alternate(
+        { icon = "__base__/graphics/icons/solar-panel.png" },
+        helper.icons.planet
+    ),
     ingredients = {
         { type = "item", name = "iron-plate",              amount = 3 },
         { type = "item", name = "electronic-circuit",      amount = 1 },
@@ -96,7 +105,10 @@ local crystal_plant = {
     name = "chemical-plant",
     energy_required = 5,
     enabled = true,
-    icons = helper.alternate("__base__/graphics/icons/chemical-plant.png", helper.icons.planet),
+    icons = helper.alternate(
+        { icon = "__base__/graphics/icons/chemical-plant.png" },
+        helper.icons.planet
+    ),
     ingredients = {
         { type = "item", name = "iron-gear-wheel",         amount = 5 },
         { type = "item", name = "pipe",                    amount = 5 },
@@ -112,9 +124,9 @@ local revitalise_coal = {
     category = "crystarion-energiser-category",
     main_product = "wood",
     icons = helper.icon_2_to_1(
-        "__base__/graphics/icons/coal.png",
+        { icon = "__base__/graphics/icons/coal.png" },
         helper.icons.crystal,
-        "__base__/graphics/icons/wood.png"
+        { icon = "__base__/graphics/icons/wood.png" }
     ),
     ingredients = {
         { type = "item",  name = "crystarion-crystal", amount = 1 },

@@ -1,6 +1,9 @@
 local helper = require("__Crystarion__.helper")
 
-local icons = helper.alternate("__base__/graphics/icons/assembling-machine-3.png", helper.icons.planet)
+local icons = helper.alternate(
+    { icon = "__base__/graphics/icons/assembling-machine-3.png" },
+    helper.icons.planet
+)
 
 local entity = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"])
 entity.crafting_categories = { "crystarion-energiser-category" }

@@ -1,6 +1,9 @@
 local helper = require("__Crystarion__.helper")
 
-local icons = helper.alternate("__base__/graphics/icons/iron-stick.png", helper.icons.planet)
+local icons = helper.alternate(
+    { icon = "__base__/graphics/icons/iron-stick.png" },
+    helper.icons.planet
+)
 
 local condensation_rod = table.deepcopy(data.raw["item"]["iron-stick"])
 condensation_rod.name = "crystarion-condensation-rod"
