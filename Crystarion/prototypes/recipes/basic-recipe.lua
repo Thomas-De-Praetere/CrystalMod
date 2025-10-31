@@ -5,7 +5,7 @@ local sludge_from_crushed_crystal = {
     name = "crystarion-sludge-from-crushed-crystal",
     category = "chemistry",
     main_product = "crystarion-crystal-slurry",
-    icons = helper.icon_1_to_1(helper.icons.crushed_crystal, helper.icons.crystal_slurry),
+    icons = helper.icon_1_to_1(helper.icons("crushed_crystal"), helper.icons("crystal_slurry")),
     ingredients = {
         { type = "fluid", name = "water",                      amount = 20 },
         { type = "item",  name = "crystarion-crushed-crystal", amount = 15 }
@@ -48,7 +48,7 @@ local battery = {
     main_product = "battery",
     icons = helper.alternate(
         { icon = "__base__/graphics/icons/battery.png" },
-        helper.icons.planet
+        helper.icons("planet")
     ),
     ingredients = {
         { type = "item", name = "crystarion-crystal", amount = 1 },
@@ -65,7 +65,7 @@ local crystal_melt = {
     name = "crystarion-ice-melting",
     icons = helper.alternate(
         { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
-        helper.icons.planet
+        helper.icons("planet")
     ),
     category = "crystarion-energiser-category",
     ingredients = { { type = "item", name = "ice", amount = 1 } },
@@ -87,7 +87,7 @@ local crystal_panel = {
     enabled = true,
     icons = helper.alternate(
         { icon = "__base__/graphics/icons/solar-panel.png" },
-        helper.icons.planet
+        helper.icons("planet")
     ),
     ingredients = {
         { type = "item", name = "iron-plate",              amount = 3 },
@@ -107,7 +107,7 @@ local crystal_plant = {
     enabled = true,
     icons = helper.alternate(
         { icon = "__base__/graphics/icons/chemical-plant.png" },
-        helper.icons.planet
+        helper.icons("planet")
     ),
     ingredients = {
         { type = "item", name = "iron-gear-wheel",         amount = 5 },
@@ -125,7 +125,7 @@ local revitalise_coal = {
     main_product = "wood",
     icons = helper.icon_2_to_1(
         { icon = "__base__/graphics/icons/coal.png" },
-        helper.icons.crystal,
+        helper.icons("crystal"),
         { icon = "__base__/graphics/icons/wood.png" }
     ),
     ingredients = {

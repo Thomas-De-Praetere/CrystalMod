@@ -79,7 +79,7 @@ helper.crystal_tint = {
 
 local ITEM_LOCATION = "__Crystarion__/graphics/items/"
 local FLUID_LOCATION = "__Crystarion__/graphics/fluids/"
-helper.icons = {
+local icon_table = {
     crushed_crystal = { icon = ITEM_LOCATION .. "crushed_crystal.png", icon_size = 64 },
     crystal_ore = { icon = ITEM_LOCATION .. "crystal_ore.png", icon_size = 64 },
     crystal = { icon = ITEM_LOCATION .. "crystal.png", icon_size = 64, tint = helper.crystal_tint.white },
@@ -98,6 +98,8 @@ helper.icons = {
     plasma = { icon = FLUID_LOCATION .. "plasma.png", icon_size = 64 },
     planet = { icon = "__Crystarion__/graphics/planet/planet-icon.png", icon_size = 64 },
 }
-
+function helper.icons(key)
+    return table.deepcopy(icon_table[key])
+end
 
 return helper

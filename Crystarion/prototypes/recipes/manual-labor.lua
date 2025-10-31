@@ -6,7 +6,7 @@ function destabilize(name, input, input_icon, output, output_amount)
         name = "crystarion-destabilize-" .. name,
         main_product = output,
         icons = helper.icon_1_to_1(
-            helper.icons[input_icon],
+            helper.icons(input_icon),
             { icon = "__base__/graphics/icons/" .. output .. ".png" }
         ),
         ingredients = {

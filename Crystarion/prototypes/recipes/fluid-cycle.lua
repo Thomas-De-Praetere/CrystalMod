@@ -5,7 +5,7 @@ function slurry_from_color(name, in_amount, out_amount)
         name = "crystarion-slurry-from-" .. name .. "-crystal",
         category = "chemistry",
         main_product = "crystarion-" .. name .. "-slurry",
-        icons = helper.icon_1_to_1(helper.icons["crystal_" .. name], helper.icons[name .. "_slurry"]),
+        icons = helper.icon_1_to_1(helper.icons("crystal_" .. name), helper.icons(name .. "_slurry")),
         ingredients = {
             { type = "item",  name = "crystarion-crystal-" .. name, amount = in_amount },
             { type = "fluid", name = "water",                       amount = 20 }
@@ -24,7 +24,7 @@ function denaturize(name, input, input_icon, output)
         category = "crystarion-energiser-category",
         main_product = output,
         icons = helper.icon_1_to_1(
-            helper.icons[input_icon],
+            helper.icons(input_icon),
             { icon = "__base__/graphics/icons/fluid/" .. output .. ".png" }
         ),
         ingredients = {
@@ -48,7 +48,7 @@ local mix_yellow = {
     name = "crystarion-mix-yellow",
     category = "chemistry",
     main_product = "crystarion-yellow-mixture",
-    icons = helper.icon_2_to_1(helper.icons.green_slurry, helper.icons.red_slurry, helper.icons.yellow_mixture),
+    icons = helper.icon_2_to_1(helper.icons("green_slurry"), helper.icons("red_slurry"), helper.icons("yellow_mixture")),
     ingredients = {
         { type = "fluid", name = "crystarion-green-slurry", amount = 5 },
         { type = "fluid", name = "crystarion-red-slurry",   amount = 5 }
@@ -63,7 +63,7 @@ local mix_purple = {
     name = "crystarion-mix-purple",
     category = "chemistry",
     main_product = "crystarion-purple-mixture",
-    icons = helper.icon_2_to_1(helper.icons.blue_slurry, helper.icons.red_slurry, helper.icons.purple_mixture),
+    icons = helper.icon_2_to_1(helper.icons("blue_slurry"), helper.icons("red_slurry"), helper.icons("purple_mixture")),
     ingredients = {
         { type = "fluid", name = "crystarion-blue-slurry", amount = 5 },
         { type = "fluid", name = "crystarion-red-slurry",  amount = 5 }

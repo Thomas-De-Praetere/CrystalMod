@@ -2,13 +2,17 @@ local helper = require("__Crystarion__.helper")
 
 local icons = helper.alternate(
     { icon = "__space-age__/graphics/icons/agricultural-tower.png" },
-    helper.icons.planet
+    helper.icons("planet")
 )
 
 local entity = table.deepcopy(data.raw["agricultural-tower"]["agricultural-tower"])
 entity.name = "crystarion-collector"
 entity.surface_conditions = {}
-entity.accepted_seeds = { "crystarion-condensation-rod" }
+entity.accepted_seeds = {
+    "crystarion-condensation-rod-medium",
+    "crystarion-condensation-rod-big",
+    "crystarion-condensation-rod-huge"
+}
 entity.crane.speed.arm.turn_rate = 0.004
 entity.crane.speed.arm.extension_speed = 0.01
 entity.crane.speed.grappler.vertical_turn_rate = 0.006

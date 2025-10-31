@@ -6,7 +6,7 @@ function crush_crystal_color(color)
         name = "crystarion-crush-crystal-" .. color,
         category = "crystarion-crusher-category",
         main_product = "crystarion-crushed-crystal",
-        icons = helper.icon_1_to_1(helper.icons["crystal_" .. color], helper.icons.crushed_crystal),
+        icons = helper.icon_1_to_1(helper.icons("crystal_" .. color), helper.icons("crushed_crystal")),
         ingredients = {
             { type = "item", name = "crystarion-crystal-" .. color, amount = 3 }
         },
@@ -24,7 +24,7 @@ function neutralize_color(color, result)
         category = "crystarion-energiser-category",
         main_product = result,
         icons = helper.icon_1_to_1(
-            helper.icons["crystal_" .. color],
+            helper.icons("crystal_" .. color),
             { icon = "__base__/graphics/icons/" .. result .. ".png" }
         ),
         ingredients = {
@@ -46,9 +46,9 @@ function split_crystal(name, to_split, result1, result2)
         category = "crystarion-energiser-category",
         main_product = "crystarion-" .. result1,
         icons = helper.icon_1_to_2(
-            helper.icons[helper.replace(to_split, "-", "_")],
-            helper.icons[helper.replace(result1, "-", "_")],
-            helper.icons[helper.replace(result2, "-", "_")]
+            helper.icons(helper.replace(to_split, "-", "_")),
+            helper.icons(helper.replace(result1, "-", "_")),
+            helper.icons(helper.replace(result2, "-", "_"))
         ),
         ingredients = {
             { type = "item",  name = "crystarion-" .. to_split, amount = 1 },
@@ -115,7 +115,7 @@ local neutralize_crystal = {
     category = "crystarion-energiser-category",
     main_product = "coal",
     icons = helper.icon_1_to_1(
-        helper.icons.crystal,
+        helper.icons("crystal"),
         { icon = "__base__/graphics/icons/coal.png" }
     ),
     ingredients = {

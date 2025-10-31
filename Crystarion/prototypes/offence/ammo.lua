@@ -4,7 +4,7 @@ local item = table.deepcopy(data.raw["ammo"]["firearm-magazine"])
 item.name = "crystarion-shard"
 item.icons = helper.alternate(
     { icon = "__base__/graphics/icons/firearm-magazine.png" },
-    helper.icons.planet
+    helper.icons("planet")
 )
 item.ammo_type = {
     action = {

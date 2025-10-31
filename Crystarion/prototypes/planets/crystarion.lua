@@ -21,7 +21,7 @@ local crystarion = {
         orientation = 0.9
     },
     asteroid_spawn_definitions = crystarion_asteroids,
-    icon = helper.icons.planet.icon,
+    icon = helper.icons("planet").icon,
     icon_size = 64,
     starmap_icon = "__Crystarion__/graphics/planet/planet.png",
     starmap_icon_size = 256,
