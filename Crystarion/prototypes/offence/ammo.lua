@@ -15,7 +15,7 @@ item.pictures = {
         {
             draw_as_light = true,
             size = 64,
-            filename = "__Crystarion__/graphics/items/magazine-light.png",
+            filename = "__Crystarion__/graphics/items/magazine_light.png",
             scale = 0.5
         }
     }
