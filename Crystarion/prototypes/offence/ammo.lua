@@ -1,11 +1,26 @@
 local helper = require("__Crystarion__.helper")
 
 local item = table.deepcopy(data.raw["ammo"]["firearm-magazine"])
-item.name = "crystarion-shard"
-item.icons = helper.alternate(
-    { icon = "__base__/graphics/icons/firearm-magazine.png" },
-    helper.icons("planet")
-)
+item.name = "crystarion-crystal-ammo"
+
+item.icon = "__Crystarion__/graphics/items/magazine.png"
+item.pictures = {
+    layers = {
+        {
+            size = 64,
+            filename = "__Crystarion__/graphics/items/magazine.png",
+            scale = 0.5,
+            mipmap_count = 4
+        },
+        {
+            draw_as_light = true,
+            size = 64,
+            filename = "__Crystarion__/graphics/items/magazine-light.png",
+            scale = 0.5
+        }
+    }
+}
+
 item.ammo_type = {
     action = {
         {
@@ -45,13 +60,13 @@ item.ammo_type = {
 
 local recipe = {
     type = "recipe",
-    name = "crystarion-shard",
-    main_product = "crystarion-shard",
+    name = "crystarion-crystal-ammo",
+    main_product = "crystarion-crystal-ammo",
     ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 1 }
+        { type = "item", name = "crystarion-crystal-splinter", amount = 1 }
     },
     results = {
-        { type = "item", name = "crystarion-shard", amount = 2 }
+        { type = "item", name = "crystarion-crystal-ammo", amount = 2 }
     },
     energy_required = 1
 }

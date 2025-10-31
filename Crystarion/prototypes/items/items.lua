@@ -8,20 +8,20 @@ function get_crystal_sprites(name, tint)
     return {
         {
             layers = {
-                { size = 64, filename = LOCATION .. name .. ".png",       scale = 0.5, mipmap_count = 4, tint = tint },
-                { size = 64, filename = LOCATION .. name .. "_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true,  tint = tint }
-            }
-        },
-        {
-            layers = {
                 { size = 64, filename = LOCATION .. name .. "_1.png",       scale = 0.5, mipmap_count = 4, tint = tint },
-                { size = 64, filename = LOCATION .. name .. "_1_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true, tint = tint }
+                { size = 64, filename = LOCATION .. name .. "_1_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true,  tint = tint }
             }
         },
         {
             layers = {
                 { size = 64, filename = LOCATION .. name .. "_2.png",       scale = 0.5, mipmap_count = 4, tint = tint },
                 { size = 64, filename = LOCATION .. name .. "_2_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true, tint = tint }
+            }
+        },
+        {
+            layers = {
+                { size = 64, filename = LOCATION .. name .. "_3.png",       scale = 0.5, mipmap_count = 4, tint = tint },
+                { size = 64, filename = LOCATION .. name .. "_3_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true, tint = tint }
             }
         },
     }
@@ -74,6 +74,11 @@ crystal_yellow.name = "crystarion-crystal-yellow"
 crystal_yellow.icons = { helper.icons("crystal_yellow") }
 crystal_yellow.pictures = get_crystal_sprites("crystal_shard", helper.crystal_tint.yellow)
 
+local crystal_splinter = table.deepcopy(BASE_ITEM)
+crystal_splinter.name = "crystarion-crystal-splinter"
+crystal_splinter.icons = { helper.icons("splinter") }
+crystal_splinter.pictures = get_crystal_sprites("crystal_splinter", helper.crystal_tint.white)
+
 data:extend({
     crushed_crystal,
     crystal,
@@ -83,5 +88,6 @@ data:extend({
     crystal_red,
     crystal_magenta,
     crystal_cyan,
-    crystal_yellow
+    crystal_yellow,
+    crystal_splinter
 })

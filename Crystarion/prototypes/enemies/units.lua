@@ -4,7 +4,7 @@ local unit = table.deepcopy(data.raw["unit"]["small-biter"])
 unit.name = "crystarion-biter"
 unit.dying_trigger_effect = {
     type = "create-entity",
-    check_buildability = false,
+    check_buildability = true,
     entity_name = "crystarion-resource",
 }
 unit.vision_distance = 10
