@@ -6,7 +6,11 @@ resource_ore.agricultural_tower_tint = {
     primary = { r = 0.9, g = 1.0, b = 0.9, a = 1.0 },
     secondary = { r = 0.8, g = 0.9, b = 1.0, a = 1.0 },
 }
-resource_ore.minable.results = { { type = "item", name = "crystarion-crystal-ore", amount = 4 } }
+resource_ore.minable = {
+    mining_particle = "stone-particle",
+    mining_time = 0.5,
+    results = { { type = "item", name = "crystarion-crystal-ore", amount = 4 } },
+}
 resource_ore.collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } }
 resource_ore.selection_box = { { -0.7, -0.7 }, { 0.7, 0.7 } }
 local base_decorative_sprite_priority = "extra-high"

@@ -3,24 +3,23 @@ local helper = require("__Crystarion__.helper")
 local LOCATION = "__Crystarion__/graphics/items/"
 local BASE_ITEM = data.raw["item"]["iron-plate"]
 
-
 function get_crystal_sprites(name, tint)
     return {
         {
             layers = {
-                { size = 64, filename = LOCATION .. name .. "_1.png",       scale = 0.5, mipmap_count = 4, tint = tint },
-                { size = 64, filename = LOCATION .. name .. "_1_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true,  tint = tint }
+                { size = 64, filename = LOCATION .. name .. "_1.png", scale = 0.5, mipmap_count = 4, tint = tint },
+                { size = 64, filename = LOCATION .. name .. "_1_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true, tint = tint }
             }
         },
         {
             layers = {
-                { size = 64, filename = LOCATION .. name .. "_2.png",       scale = 0.5, mipmap_count = 4, tint = tint },
+                { size = 64, filename = LOCATION .. name .. "_2.png", scale = 0.5, mipmap_count = 4, tint = tint },
                 { size = 64, filename = LOCATION .. name .. "_2_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true, tint = tint }
             }
         },
         {
             layers = {
-                { size = 64, filename = LOCATION .. name .. "_3.png",       scale = 0.5, mipmap_count = 4, tint = tint },
+                { size = 64, filename = LOCATION .. name .. "_3.png", scale = 0.5, mipmap_count = 4, tint = tint },
                 { size = 64, filename = LOCATION .. name .. "_3_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true, tint = tint }
             }
         },
@@ -78,6 +77,27 @@ local crystal_splinter = table.deepcopy(BASE_ITEM)
 crystal_splinter.name = "crystarion-crystal-splinter"
 crystal_splinter.icons = { helper.icons("splinter") }
 crystal_splinter.pictures = get_crystal_sprites("crystal_splinter", helper.crystal_tint.white)
+crystal_splinter.spoil_ticks = 1 * helper.minutes()
+crystal_splinter.spoil_to_trigger_result = {
+    trigger = {
+        type = "direct",
+        action_delivery = {
+            {
+                type = "instant",
+                source_effects = {
+                    {
+                        type = "create-entity",
+                        entity_name = "explosion",
+                        offsets = { { 0, 1 } },
+                        offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+                        only_when_visible = true
+                    },
+                },
+            }
+        }
+    },
+    items_per_trigger = 1,
+}
 
 data:extend({
     crushed_crystal,
