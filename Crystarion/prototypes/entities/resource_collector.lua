@@ -20,7 +20,7 @@ entity.crane.speed.grappler.horizontal_turn_rate = 0.02
 entity.crane.speed.grappler.extension_speed = 0.02
 entity.minable = { mining_time = 0.2, result = "crystarion-collector" }
 entity.icons = icons
-entity.growth_grid_tile_size = 2
+entity.growth_grid_tile_size = 3
 entity.growth_area_radius = 0.7
 entity.radius = 6
 

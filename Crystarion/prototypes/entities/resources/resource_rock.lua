@@ -9,7 +9,7 @@ resource_ore.agricultural_tower_tint = {
 resource_ore.minable = {
     mining_particle = "stone-particle",
     mining_time = 0.5,
-    results = { { type = "item", name = "crystarion-crystal-ore", amount = 4 } },
+    results = { { type = "item", name = "crystarion-crystal-ore", amount = 1 } },
 }
 resource_ore.collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } }
 resource_ore.selection_box = { { -0.7, -0.7 }, { 0.7, 0.7 } }
