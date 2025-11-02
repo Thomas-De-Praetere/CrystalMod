@@ -92,6 +92,22 @@ crystal_splinter.spoil_to_trigger_result = {
                         offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
                         only_when_visible = true
                     },
+                    {
+                        type = "nested-result",
+                        action = {
+                            type = "area",
+                            radius = 2.0,
+                            action_delivery = {
+                                type = "instant",
+                                target_effects = {
+                                    {
+                                        type = "damage",
+                                        damage = { amount = 10, type = "explosion" }
+                                    }
+                                }
+                            }
+                        }
+                    },
                 },
             }
         }
