@@ -45,12 +45,28 @@ item.ammo_type = {
                         },
                         {
                             type = "damage",
-                            damage = { amount = 6, type = "explosion" }
+                            damage = { amount = 8, type = "physical" }
                         },
                         {
                             type = "activate-impact",
                             deliver_category = "bullet"
-                        }
+                        },
+                        {
+                            type = "nested-result",
+                            action = {
+                                type = "area",
+                                radius = 2.0,
+                                action_delivery = {
+                                    type = "instant",
+                                    target_effects = {
+                                        {
+                                            type = "damage",
+                                            damage = { amount = 4, type = "explosion" }
+                                        }
+                                    }
+                                }
+                            }
+                        },
                     }
                 }
             }
@@ -63,12 +79,12 @@ local recipe = {
     name = "crystarion-crystal-ammo",
     main_product = "crystarion-crystal-ammo",
     ingredients = {
-        { type = "item", name = "crystarion-crystal-splinter", amount = 1 }
+        { type = "item", name = "crystarion-crystal-splinter", amount = 10 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal-ammo", amount = 2 }
+        { type = "item", name = "crystarion-crystal-ammo", amount = 1 }
     },
-    energy_required = 1
+    energy_required = 0.5
 }
 
 data:extend({ item, recipe })

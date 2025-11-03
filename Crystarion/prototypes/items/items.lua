@@ -102,7 +102,7 @@ crystal_splinter.spoil_to_trigger_result = {
                                 target_effects = {
                                     {
                                         type = "damage",
-                                        damage = { amount = 10, type = "explosion" }
+                                        damage = { amount = 4, type = "explosion" }
                                     }
                                 }
                             }

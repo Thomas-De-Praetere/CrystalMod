@@ -37,7 +37,7 @@ local crystal_splinter = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal-splinter", amount = 4 }
+        { type = "item", name = "crystarion-crystal-splinter", amount = 10 }
     },
     energy_required = 1
 }

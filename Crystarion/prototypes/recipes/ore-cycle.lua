@@ -32,7 +32,7 @@ function neutralize_color(color, result)
             { type = "fluid", name = "water",                        amount = 5 },
         },
         results = {
-            { type = "item",  name = result,  amount = 1 },
+            { type = "item",  name = result,  amount = 2 },
             { type = "fluid", name = "steam", amount = 20, temperature = 165 }
         },
         energy_required = 1
