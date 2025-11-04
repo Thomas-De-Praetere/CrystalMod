@@ -93,25 +93,6 @@ local crystal_melt = {
         quaternary = { r = 0.499, g = 0.797, b = 0.793, a = 0.733 }, -- #7fcbcabb
     },
 }
-local crystal_panel = {
-    type = "recipe",
-    name = "crystarion-solar-panel",
-    energy_required = 10,
-    enabled = true,
-    icons = helper.alternate(
-            { icon = "__base__/graphics/icons/solar-panel.png" },
-            helper.icons("planet")
-    ),
-    ingredients = {
-        { type = "item", name = "iron-plate", amount = 3 },
-        { type = "item", name = "electronic-circuit", amount = 1 },
-        { type = "item", name = "copper-plate", amount = 1 },
-        { type = "item", name = "crystarion-crystal", amount = 2 },
-        { type = "item", name = "crystarion-crystal-red", amount = 5 },
-        { type = "item", name = "crystarion-crystal-blue", amount = 5 },
-    },
-    results = { { type = "item", name = "solar-panel", amount = 1 } }
-}
 
 local crystal_plant = {
     type = "recipe",

@@ -24,81 +24,105 @@ function neutralize_color(color, result)
         category = "crystarion-energiser-category",
         main_product = result,
         icons = helper.icon_1_to_1(
-            helper.icons("crystal_" .. color),
-            { icon = "__base__/graphics/icons/" .. result .. ".png" }
+                helper.icons("crystal_" .. color),
+                { icon = "__base__/graphics/icons/" .. result .. ".png" }
         ),
         ingredients = {
-            { type = "item",  name = "crystarion-crystal-" .. color, amount = 1 },
-            { type = "fluid", name = "water",                        amount = 5 },
+            { type = "item", name = "crystarion-crystal-" .. color, amount = 1 },
+            { type = "fluid", name = "water", amount = 5 },
         },
         results = {
-            { type = "item",  name = result,  amount = 2 },
+            { type = "item", name = result, amount = 2 },
             { type = "fluid", name = "steam", amount = 20, temperature = 165 }
         },
         energy_required = 1
     }
 end
 
-function split_crystal(name, to_split, result1, result2)
+function split_crystal_1(name, to_split, result1, result2)
     return {
         type = "recipe",
         name = "crystarion-split-" .. name,
         category = "crystarion-energiser-category",
         main_product = "crystarion-" .. result1,
         icons = helper.icon_1_to_2(
-            helper.icons(helper.replace(to_split, "-", "_")),
-            helper.icons(helper.replace(result1, "-", "_")),
-            helper.icons(helper.replace(result2, "-", "_"))
+                helper.icons(helper.replace(to_split, "-", "_")),
+                helper.icons(helper.replace(result1, "-", "_")),
+                helper.icons(helper.replace(result2, "-", "_"))
         ),
         ingredients = {
-            { type = "item",  name = "crystarion-" .. to_split, amount = 1 },
-            { type = "fluid", name = "water",                   amount = 5 },
+            { type = "item", name = "crystarion-" .. to_split, amount = 4 },
+            { type = "item", name = "ice", amount = 1 },
         },
         results = {
-            { type = "item",  name = "crystarion-" .. result1, amount = 1 },
-            { type = "item",  name = "crystarion-" .. result2, amount = 1 },
-            { type = "fluid", name = "steam",                  amount = 20, temperature = 165 }
+            { type = "item", name = "crystarion-" .. result1, amount = 4 },
+            { type = "item", name = "crystarion-" .. result2, amount = 4 },
+            { type = "fluid", name = "steam", amount = 80, temperature = 165 }
         },
         energy_required = 1
     }
 end
 
-local split_green = split_crystal(
-    "green",
-    "crystal",
-    "crystal-green",
-    "crystal-magenta"
+function split_crystal_2(name, to_split, result1, result2)
+    return {
+        type = "recipe",
+        name = "crystarion-split-" .. name,
+        category = "crystarion-energiser-category",
+        main_product = "crystarion-" .. result1,
+        icons = helper.icon_1_to_2(
+                helper.icons(helper.replace(to_split, "-", "_")),
+                helper.icons(helper.replace(result1, "-", "_")),
+                helper.icons(helper.replace(result2, "-", "_"))
+        ),
+        ingredients = {
+            { type = "item", name = "crystarion-" .. to_split, amount = 1 },
+            { type = "fluid", name = "water", amount = 5 },
+        },
+        results = {
+            { type = "item", name = "crystarion-" .. result1, amount = 1 },
+            { type = "item", name = "crystarion-" .. result2, amount = 1 },
+            { type = "fluid", name = "steam", amount = 20, temperature = 165 }
+        },
+        energy_required = 1
+    }
+end
+
+local split_green = split_crystal_1(
+        "green",
+        "crystal",
+        "crystal-green",
+        "crystal-magenta"
 )
-local split_magenta = split_crystal(
-    "magenta",
-    "crystal-magenta",
-    "crystal-blue",
-    "crystal-red"
+local split_magenta = split_crystal_2(
+        "magenta",
+        "crystal-magenta",
+        "crystal-blue",
+        "crystal-red"
 )
 
-local split_red = split_crystal(
-    "red",
-    "crystal",
-    "crystal-red",
-    "crystal-cyan"
+local split_red = split_crystal_1(
+        "red",
+        "crystal",
+        "crystal-red",
+        "crystal-cyan"
 )
-local split_cyan = split_crystal(
-    "cyan",
-    "crystal-cyan",
-    "crystal-green",
-    "crystal-blue"
+local split_cyan = split_crystal_2(
+        "cyan",
+        "crystal-cyan",
+        "crystal-green",
+        "crystal-blue"
 )
-local split_blue = split_crystal(
-    "blue",
-    "crystal",
-    "crystal-blue",
-    "crystal-yellow"
+local split_blue = split_crystal_1(
+        "blue",
+        "crystal",
+        "crystal-blue",
+        "crystal-yellow"
 )
-local split_yellow = split_crystal(
-    "yellow",
-    "crystal-yellow",
-    "crystal-green",
-    "crystal-red"
+local split_yellow = split_crystal_2(
+        "yellow",
+        "crystal-yellow",
+        "crystal-green",
+        "crystal-red"
 )
 
 local crush_crystal_red = crush_crystal_color("red")
@@ -115,15 +139,15 @@ local neutralize_crystal = {
     category = "crystarion-energiser-category",
     main_product = "coal",
     icons = helper.icon_1_to_1(
-        helper.icons("crystal"),
-        { icon = "__base__/graphics/icons/coal.png" }
+            helper.icons("crystal"),
+            { icon = "__base__/graphics/icons/coal.png" }
     ),
     ingredients = {
-        { type = "item",  name = "crystarion-crystal", amount = 1 },
-        { type = "fluid", name = "water",              amount = 15 },
+        { type = "item", name = "crystarion-crystal", amount = 1 },
+        { type = "fluid", name = "water", amount = 15 },
     },
     results = {
-        { type = "item",  name = "coal",  amount = 3 },
+        { type = "item", name = "coal", amount = 6 },
         { type = "fluid", name = "steam", amount = 60, temperature = 165 }
     },
     energy_required = 3

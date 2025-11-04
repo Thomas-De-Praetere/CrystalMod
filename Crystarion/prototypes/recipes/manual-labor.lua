@@ -21,8 +21,8 @@ function destabilize(name, input, input_icon, output, output_amount)
 end
 
 data:extend({
-    destabilize("crystal", "crystarion-crystal", "crystal", "coal", 3),
-    destabilize("crystal-red", "crystarion-crystal-red", "crystal_red", "copper-ore", 1),
-    destabilize("crystal-green", "crystarion-crystal-green", "crystal_green", "stone", 1),
-    destabilize("crystal-blue", "crystarion-crystal-blue", "crystal_blue", "iron-ore", 1)
+    destabilize("crystal", "crystarion-crystal", "crystal", "coal", 6),
+    destabilize("crystal-red", "crystarion-crystal-red", "crystal_red", "copper-ore", 2),
+    destabilize("crystal-green", "crystarion-crystal-green", "crystal_green", "stone", 2),
+    destabilize("crystal-blue", "crystarion-crystal-blue", "crystal_blue", "iron-ore", 2)
 })
