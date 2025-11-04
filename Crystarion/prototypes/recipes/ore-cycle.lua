@@ -57,9 +57,9 @@ function split_crystal_1(name, to_split, result1, result2)
         results = {
             { type = "item", name = "crystarion-" .. result1, amount = 4 },
             { type = "item", name = "crystarion-" .. result2, amount = 4 },
-            { type = "fluid", name = "steam", amount = 80, temperature = 165 }
+            { type = "fluid", name = "water", amount = 20 }
         },
-        energy_required = 1
+        energy_required = 4
     }
 end
 
