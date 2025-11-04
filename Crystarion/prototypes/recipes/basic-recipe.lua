@@ -80,7 +80,7 @@ local crystal_melt = {
             { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
             helper.icons("planet")
     ),
-    category = "crystarion-energiser-category",
+    category = "smelting",
     ingredients = { { type = "item", name = "ice", amount = 1 } },
     energy_required = 1,
     results = { { type = "fluid", name = "water", amount = 20 } },
@@ -140,7 +140,6 @@ data:extend({
     crystalise,
     battery,
     crystal_melt,
-    crystal_panel,
     crystal_plant,
     revitalise_coal,
     crystal_splinter,
