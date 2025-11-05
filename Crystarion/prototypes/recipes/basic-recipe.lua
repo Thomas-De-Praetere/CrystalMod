@@ -80,7 +80,7 @@ local crystal_melt = {
             { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
             helper.icons("planet")
     ),
-    category = "smelting",
+    category = "crystarion-smelter-category",
     ingredients = { { type = "item", name = "ice", amount = 1 } },
     energy_required = 1,
     results = { { type = "fluid", name = "water", amount = 20 } },
