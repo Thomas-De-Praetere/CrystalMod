@@ -1,6 +1,6 @@
 local helper = require("__Crystarion__.helper")
 
-function create_deco(element)
+local function create_deco(element)
     local expression = helper.replace(element, "-", "_")
 
     local snow = table.deepcopy(data.raw['optimized-decorative'][element])

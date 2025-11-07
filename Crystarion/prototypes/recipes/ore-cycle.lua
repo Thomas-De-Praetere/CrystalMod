@@ -1,6 +1,6 @@
 local helper = require("__Crystarion__.helper")
 
-function crush_crystal_color(color)
+local function crush_crystal_color(color)
     return {
         type = "recipe",
         name = "crystarion-crush-crystal-" .. color,
@@ -17,7 +17,7 @@ function crush_crystal_color(color)
     }
 end
 
-function neutralize_color(color, result)
+local function neutralize_color(color, result)
     return {
         type = "recipe",
         name = "crystarion-neutralize-" .. color,
@@ -39,7 +39,7 @@ function neutralize_color(color, result)
     }
 end
 
-function split_crystal_1(name, to_split, result1, result2)
+local function split_crystal_1(name, to_split, result1, result2)
     return {
         type = "recipe",
         name = "crystarion-split-" .. name,
@@ -63,7 +63,7 @@ function split_crystal_1(name, to_split, result1, result2)
     }
 end
 
-function split_crystal_2(name, to_split, result1, result2)
+local function split_crystal_2(name, to_split, result1, result2)
     return {
         type = "recipe",
         name = "crystarion-split-" .. name,

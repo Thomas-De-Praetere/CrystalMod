@@ -1,6 +1,6 @@
 local helper = require("__Crystarion__.helper")
 
-function create_tile(element)
+local function create_tile(element)
     local expression = helper.replace(element, "-", "_")
 
     local snow = table.deepcopy(data.raw['tile'][element])

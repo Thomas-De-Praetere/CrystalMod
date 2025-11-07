@@ -1,6 +1,6 @@
 local helper = require("__Crystarion__.helper")
 
-function create_resource(size_name, amount, pictures, crystal_color_icon_name)
+local function create_resource(size_name, amount, pictures, crystal_color_icon_name)
     local resource_ice = table.deepcopy(data.raw["simple-entity"]["lithium-iceberg-big"])
     resource_ice.name = "crystarion-resource-ice-" .. size_name
     resource_ice.type = "plant"
@@ -22,7 +22,7 @@ function create_resource(size_name, amount, pictures, crystal_color_icon_name)
     return resource_ice
 end
 
-function create_rod(size_name, crystal_color_icon_name)
+local function create_rod(size_name, crystal_color_icon_name)
     local condensation_rod = table.deepcopy(data.raw["item"]["iron-stick"])
     condensation_rod.name = "crystarion-condensation-rod-" .. size_name
     condensation_rod.plant_result = "crystarion-resource-ice-" .. size_name
@@ -37,7 +37,7 @@ function create_rod(size_name, crystal_color_icon_name)
     return condensation_rod
 end
 
-function create_recipe(size_name, crystal_ingredient)
+local function create_recipe(size_name, crystal_ingredient)
     return {
         type = "recipe",
         name = "crystarion-condensation-rod-" .. size_name,

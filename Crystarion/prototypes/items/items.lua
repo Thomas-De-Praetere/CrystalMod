@@ -3,7 +3,7 @@ local helper = require("__Crystarion__.helper")
 local LOCATION = "__Crystarion__/graphics/items/"
 local BASE_ITEM = data.raw["item"]["iron-plate"]
 
-function get_crystal_sprites(name, tint)
+local function get_crystal_sprites(name, tint)
     return {
         {
             layers = {

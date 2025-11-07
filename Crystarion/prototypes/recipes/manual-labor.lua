@@ -1,6 +1,6 @@
 local helper = require("__Crystarion__.helper")
 
-function destabilize(name, input, input_icon, output, output_amount)
+local function destabilize(name, input, input_icon, output, output_amount)
     return {
         type = "recipe",
         name = "crystarion-destabilize-" .. name,

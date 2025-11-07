@@ -1,5 +1,5 @@
 local helper = require("__Crystarion__.helper")
-function slurry_from_color(name, in_amount, out_amount)
+local function slurry_from_color(name, in_amount, out_amount)
     return {
         type = "recipe",
         name = "crystarion-slurry-from-" .. name .. "-crystal",
@@ -17,7 +17,7 @@ function slurry_from_color(name, in_amount, out_amount)
     }
 end
 
-function denaturize(name, input, input_icon, output)
+local function denaturize(name, input, input_icon, output)
     return {
         type = "recipe",
         name = "crystarion-denaturize-" .. name,
