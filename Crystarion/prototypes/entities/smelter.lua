@@ -1,8 +1,8 @@
 local helper = require("__Crystarion__.helper")
-local tint = { 0.5, 0.5, 0.9 }
+
 local icons = helper.alternate(
-    { icon = "__base__/graphics/icons/stone-furnace.png", tint = tint },
-    helper.icons("planet")
+        { icon = "__Crystarion__/graphics/icons/smelter.png" },
+        helper.icons("planet")
 )
 
 local fluid_box = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes[2])
@@ -14,8 +14,8 @@ entity.name = "crystarion-furnace"
 entity.minable = { mining_time = 0.2, result = "crystarion-furnace" }
 entity.icons = icons
 entity.fluid_boxes = { fluid_box }
-entity.graphics_set.animation.layers[1].tint = tint
-entity.graphics_set.water_reflection.pictures.tint = tint
+
+entity.graphics_set.animation.layers[1].filename = "__Crystarion__/graphics/entity/smelter/smelter.png"
 
 local item = table.deepcopy(data.raw["item"]["stone-furnace"])
 item.name = "crystarion-furnace"
