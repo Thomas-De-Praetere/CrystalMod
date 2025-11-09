@@ -5,37 +5,64 @@ hide fields
 hide circle
 
 
-[Crystal] as C #lightpink
-[Red Crystal] as RC #lightpink
-[Blue Crystal] as BC #lightpink
-[Green Crystal] as GC #lightpink
+[Crystal] as C1 #lightpink
+[Crystal] as C2 #lightpink
+[Crystal] as C3 #lightpink
+
+[Power] as P1 #lightpink
+[Power] as P2 #lightpink
+[Power] as P3 #lightpink
 
 package "Empowerer lvl1" #lightyellow {
-    [Empower takes lots of power] as EMP #lightblue
+    [Empower 1s] as EMP1 #lightblue
 }
 
-[Empowered Crystal] as EC
-[Whole Red Crystal] as ERC
-[Whole Blue Crystal] as EBC
-[Whole Green Crystal] as EGC
+package "Empowerer lvl2" #lightyellow {
+    [Empower 2s] as EMP2 #lightblue
+}
 
-[Science] as S #lightgreen
-[Better Resources] as BR #lightgreen
+package "Empowerer lvl3" #lightyellow {
+    [Empower 5s] as EMP3 #lightblue
+}
 
-C --> EMP : 1
-RC --> EMP : 3
-BC --> EMP : 3
-GC --> EMP : 3
+[Volatile Powercrystal] as VPC
+[Unstable Powercrystal] as UPC
+[Stable Powercrystal] as SPC
 
-EMP --> EC : 1
-EMP --> ERC : 1
-EMP --> EBC : 1
-EMP --> EGC : 1
+[Red Science] as RS #lightgreen
+[Green Science] as GS #lightgreen
+[Blue Science] as BS #lightgreen
 
-EC --> S
+[Create] as Cr1 #lightblue
+[Create] as Cr2 #lightblue
+[Create] as Cr3 #lightblue
 
-ERC --> BR
-EBC --> BR
-EGC --> BR
+[Volatile Crystal Science] as VS #lightgreen
+[Unstable Crystal Science] as US #lightgreen
+[Stable Crystal Science] as S #lightgreen
+
+C1 --> EMP1 : 15
+C2 --> EMP2 : 30
+C3 --> EMP3 : 60
+
+P1 --> EMP1 : 100 MW
+P2 --> EMP2 : 200 MW
+P3 --> EMP3 : 400 MW
+
+EMP1 --> VPC : 15
+EMP2 --> UPC : 30
+EMP3 --> SPC : 60
+
+VPC --> Cr1
+RS --> Cr1
+Cr1 --> VS
+
+UPC --> Cr2
+GS --> Cr2
+Cr2 --> US
+
+SPC --> Cr3
+BS --> Cr3
+Cr3 --> S
 
 @enduml
