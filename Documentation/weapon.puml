@@ -1,0 +1,27 @@
+@startuml
+
+hide methods
+hide fields
+hide circle
+
+[Crystal] as C #lightpink
+
+[Crystal Splinter] as CS
+
+[Ammo] as A #lightgreen
+
+package Crusher #lightyellow {
+
+[Splice] as S #lightblue
+
+}
+
+[Create] as Cr #lightblue
+
+
+C --> S : 1
+S --> CS : 10
+CS --> Cr : 10
+Cr --> A : 1
+
+@enduml

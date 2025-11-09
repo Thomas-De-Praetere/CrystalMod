@@ -5,39 +5,46 @@ hide fields
 hide circle
 
 [Crystal] as C #lightpink
-[Water] as W #lightpink
+[Ice] as I #lightpink
+
 
 [Red Crystal] as RC #lightgreen
 [Green Crystal] as GC #lightgreen
 [Blue Crystal] as BC #lightgreen
 [Crushed Crystal] as CCr #lightgreen
-[Plasma] as PA #lightgreen
 
 package Energizer #lightyellow {
+
 package "Green Split Flow" {
 [Split Green] as SG #lightblue
 [Split Magenta] as SM #lightblue
 [Magenta Crystal] as MC
-[Red Crystal] as RC1
-[Green Crystal] as GC1
-[Blue Crystal] as BC1
+[Water] as W1
+[Red Crystal] as RC1 #lightgreen
+[Green Crystal] as GC1 #lightgreen
+[Blue Crystal] as BC1 #lightgreen
+[Steam 165] as ST1 #lightgreen
 }
 package "Red Split Flow" {
 [Split Red] as SR #lightblue
 [Split Cyan] as SC #lightblue
 [Cyan Crystal] as CC
-[Red Crystal] as RC2
-[Green Crystal] as GC2
-[Blue Crystal] as BC2
+[Water] as W2
+[Red Crystal] as RC2 #lightgreen
+[Green Crystal] as GC2 #lightgreen
+[Blue Crystal] as BC2 #lightgreen
+[Steam 165] as ST2 #lightgreen
 
 }
 package "Blue Split Flow" {
 [Split Blue] as SB #lightblue
 [Split Yellow] as SY #lightblue
 [Yellow Crystal] as YC
-[Red Crystal] as RC3
-[Green Crystal] as GC3
-[Blue Crystal] as BC3
+[Water] as W3
+[Red Crystal] as RC3 #lightgreen
+[Green Crystal] as GC3 #lightgreen
+[Blue Crystal] as BC3 #lightgreen
+[Steam 165] as ST3 #lightgreen
 }
 }
 
@@ -47,64 +54,47 @@ package Crusher #lightyellow {
 [Crush Blue Crystal] as CrB #lightblue
 }
 
-SG ...> PA : 100
-SM ...> PA : 100
-SR ...> PA : 100
-SC ...> PA : 100
-SB ...> PA : 100
-SY ...> PA : 100
-
-W ..> SG : 100
-W ..> SM : 100
-W ..> SR : 100
-W ..> SC : 100
-W ..> SB : 100
-W ..> SY : 100
-
-C --> SG  : 1
-SG --> GC1 : 1
-SG --> MC : 1
-
-C --> SR : 1
-SR --> RC2 : 1
-SR --> CC : 1
-
-C --> SB : 1
-SB --> BC3 : 1
-SB --> YC : 1
-
-YC --> SY : 1
-SY --> RC3 : 1
-SY --> GC3 : 1
-
-CC --> SC : 1
-SC --> GC2 : 1
-SC --> BC2 : 1
-
+C --> SG : 4
+I --> SG : 1
+SG --> GC1 : 4
+SG --> MC : 4
+SG --> W1 : 20
 MC --> SM : 1
+W1 --> SM : 5
 SM --> BC1 : 1
 SM --> RC1 : 1
+SM --> ST1 : 20
 
-RC1 --> RC : 1
-RC2 --> RC : 1
-RC3 --> RC : 1
+C --> SR : 4
+I --> SR : 1
+SR --> RC2 : 4
+SR --> CC : 4
+SR --> W2 : 20
+CC --> SC : 1
+W2 --> SC : 5
+SC --> BC2 : 1
+SC --> GC2 : 1
+SC --> ST2 : 20
 
-GC1 --> GC : 1
-GC2 --> GC : 1
-GC3 --> GC : 1
+C --> SB : 4
+I --> SB : 1
+SB --> BC3 : 4
+SB --> YC : 4
+SB --> W3 : 20
+YC --> SY : 1
+W3 --> SY : 5
+SY --> GC3 : 1
+SY --> RC3 : 1
+SY --> ST3 : 20
 
-BC1 --> BC : 1
-BC2 --> BC : 1
-BC3 --> BC : 1
+BC --> CrB : 3
+CrB --> CCr : 1 (50%)
 
-BC --> CrB : 1
-CrB --> CCr : 1
+RC --> CrR : 3
+CrR --> CCr : 1 (50%)
 
-RC --> CrR : 1
-CrR --> CCr : 1
-
-GC --> CrG : 1
-CrG --> CCr : 1
+GC --> CrG : 3
+CrG --> CCr : 1 (50%)
 
 
 

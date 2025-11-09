@@ -186,10 +186,10 @@ When we start the game, we need to be able to set things up. So some manual reci
 
 ![ManualFlow.svg](Documentation/ManualFlow.svg)
 
-### Power
-Power needs to be created from plasma. We keep it as simple as possible.
+### Offence
+Splinters of the crystals have the potential to explode, so we create bullets from them.
 
-![PowerFlow.svg](Documentation/PowerFlow.svg)
+![weapon.svg](Documentation/weapon.svg)
 
 ### Upgrade
 We need lots of power to upgrade crystals and that will be the main wa of getting science and some later game tools.

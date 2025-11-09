@@ -14,7 +14,7 @@ hide circle
 [Copper Ore] as CU #lightgreen
 [Stone] as S #lightgreen
 [Coal] as Ca #lightgreen
-[Plasma] as PA #lightgreen
+[Steam 165] as PA #lightgreen
 
 package Energizer #lightyellow {
 [Neutralize] as NR #lightblue
@@ -23,25 +23,23 @@ package Energizer #lightyellow {
 [Neutralize] as NC #lightblue
 }
 
-
-
 RC --> NR : 1
 GC --> NG : 1
 BC --> NB : 1
 C --> NC : 1
 
-NR --> CU : 1
-NG --> S : 1
-NB --> FE : 1
-NC --> Ca : 3
+NR --> CU : 2
+NG --> S : 2
+NB --> FE : 2
+NC --> Ca : 6
 
-NR ...> PA : 100
-NG ...> PA : 100
-NB ...> PA : 100
-NC ...> PA : 100
+NR ...> PA : 20
+NG ...> PA : 20
+NB ...> PA : 20
+NC ...> PA : 60
 
-W ...> NR : 100
-W ...> NG : 100
-W ...> NB : 100
-W ...> NC : 100
+W ...> NR : 5
+W ...> NG : 5
+W ...> NB : 5
+W ...> NC : 15
 @enduml
