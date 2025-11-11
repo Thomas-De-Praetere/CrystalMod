@@ -134,6 +134,20 @@ local revitalise_coal = {
     energy_required = 1
 }
 
+local crystal_empower_1 = {
+    type = "recipe",
+    name = "crystarion-crystal-empower",
+    category = "crystarion-empowerer-category",
+    main_product = "crystarion-crystal-splinter",
+    ingredients = {
+        { type = "item", name = "crystarion-crystal", amount = 1 }
+    },
+    results = {
+        { type = "item", name = "crystarion-crystal-splinter", amount = 10 }
+    },
+    energy_required = 1
+}
+
 data:extend({
     sludge_from_crushed_crystal,
     crush_crystal_ore,
@@ -143,4 +157,5 @@ data:extend({
     crystal_plant,
     revitalise_coal,
     crystal_splinter,
+    crystal_empower_1,
 })

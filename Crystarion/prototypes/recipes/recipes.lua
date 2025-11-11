@@ -19,7 +19,18 @@ local smelter_category = {
     name = "crystarion-smelter-category"
 }
 
-data:extend({ crusher_category, energiser_category, naturizer_category, smelter_category })
+local empowerer_category = {
+    type = "recipe-category",
+    name = "crystarion-empowerer-category"
+}
+
+data:extend({
+    crusher_category,
+    energiser_category,
+    naturizer_category,
+    smelter_category,
+    empowerer_category,
+})
 
 -- new recipes
 
