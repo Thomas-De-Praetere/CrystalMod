@@ -14,6 +14,7 @@ entity.surface_conditions = {}
 entity.icons = icons
 
 entity.graphics_set = {
+    always_draw_idle_animation = true,
     idle_animation = {
         layers = {
             {
@@ -60,33 +61,6 @@ entity.graphics_set = {
     },
 
     working_visualisations = {
-        {
-            always_draw = true,
-            draw_in_states = { "idle", "warmup", "active" },
-            animation = {
-                layers = {
-                    {
-                        filename = "__base__/graphics/entity/accumulator/accumulator.png",
-                        priority = "high",
-                        width = 130,
-                        height = 189,
-                        repeat_count = 24,
-                        shift = util.by_pixel(0, -11),
-                        scale = 0.5
-                    },
-                    {
-                        filename = "__base__/graphics/entity/accumulator/accumulator-shadow.png",
-                        priority = "high",
-                        width = 234,
-                        height = 106,
-                        repeat_count = 24,
-                        shift = util.by_pixel(29, 6),
-                        draw_as_shadow = true,
-                        scale = 0.5
-                    }
-                }
-            },
-        },
         {
             always_draw = true,
             draw_in_states = { "warmup" },
