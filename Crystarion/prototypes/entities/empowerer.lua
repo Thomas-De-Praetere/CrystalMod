@@ -1,3 +1,4 @@
+require("__Crystarion__.prototypes.entities.graphics.empowerer")
 local helper = require("__Crystarion__.helper")
 local icons = helper.alternate(
         { icon = "__base__/graphics/icons/accumulator.png" },
@@ -13,94 +14,11 @@ entity.minable = { mining_time = 0.2, result = "crystarion-empowerer" }
 entity.surface_conditions = {}
 entity.icons = icons
 
-entity.graphics_set = {
-    always_draw_idle_animation = true,
-    idle_animation = {
-        layers = {
-            {
-                filename = "__base__/graphics/entity/accumulator/accumulator.png",
-                priority = "high",
-                width = 130,
-                height = 189,
-                repeat_count = 24,
-                shift = util.by_pixel(0, -11),
-                scale = 0.5
-            },
-            {
-                filename = "__base__/graphics/entity/accumulator/accumulator-shadow.png",
-                priority = "high",
-                width = 234,
-                height = 106,
-                repeat_count = 24,
-                shift = util.by_pixel(29, 6),
-                draw_as_shadow = true,
-                scale = 0.5
-            }
-        }
-    },
+entity.collision_box = {{-1.7, -1.7}, {1.7, 1.7}}
+entity.selection_box = {{-2, -2}, {2, 2}}
 
-    states = {
-        {
-            name = "idle",
-            duration = 1,
-            next_active = "warmup",
-            next_inactive = "idle",
-        },
-        {
-            name = "active",
-            duration = 24,
-            next_active = "active",
-            next_inactive = "warmup",
-        },
-        {
-            name = "warmup",
-            duration = 24,
-            next_active = "active",
-            next_inactive = "idle",
-        },
-    },
+entity.graphics_set = get_graphics()
 
-    working_visualisations = {
-        {
-            always_draw = true,
-            draw_in_states = { "warmup" },
-            animation = {
-                layers = {
-                    {
-                        filename = "__base__/graphics/entity/accumulator/accumulator-charge.png",
-                        priority = "high",
-                        width = 178,
-                        height = 210,
-                        line_length = 6,
-                        frame_count = 24,
-                        draw_as_glow = true,
-                        shift = util.by_pixel(1, -20),
-                        scale = 0.5
-                    },
-                }
-            },
-        },
-        {
-            always_draw = true,
-            draw_in_states = { "active" },
-            animation = {
-                layers = {
-                    {
-                        filename = "__base__/graphics/entity/accumulator/accumulator-discharge.png",
-                        priority = "high",
-                        width = 174,
-                        height = 214,
-                        line_length = 6,
-                        frame_count = 24,
-                        draw_as_glow = true,
-                        shift = util.by_pixel(-1, -21),
-                        scale = 0.5
-                    },
-                }
-            },
-        },
-    }
-}
 entity.working_sound = {
     main_sounds = {
         {

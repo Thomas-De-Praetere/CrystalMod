@@ -1,3 +1,4 @@
+require("__Crystarion__.prototypes.entities.graphics.energizer")
 local helper = require("__Crystarion__.helper")
 
 local icons = helper.alternate(
@@ -35,68 +36,7 @@ pass_through.secondary_draw_orders = { north = -1 }
 pass_through.filter = "steam"
 
 entity.fluid_boxes = { input, pass_through, output }
-entity.graphics_set = {
-    animation_progress = 0.5,
-    animation =
-    {
-        layers =
-        {
-            {
-                filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
-                priority = "high",
-                width = 214,
-                height = 237,
-                frame_count = 32,
-                line_length = 8,
-                shift = util.by_pixel(0, -0.75),
-                scale = 0.5
-            },
-            {
-                filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-shadow.png",
-                priority = "high",
-                width = 260,
-                height = 162,
-                frame_count = 32,
-                line_length = 8,
-                draw_as_shadow = true,
-                shift = util.by_pixel(28, 4),
-                scale = 0.5
-            }
-        }
-    },
-    states = {
-        {
-            name = "idle",
-            duration = 1,
-            next_active = "active",
-            next_inactive = "idle",
-        },
-        {
-            name = "active",
-            duration = 36,
-            next_active = "active",
-            next_inactive = "idle",
-        },
-    },
-    working_visualisations = {
-        {
-            always_draw = true,
-            draw_in_states = { "active" },
-            animation = {
-                layers = {
-                    util.sprite_load(
-                        "__space-age__/graphics/entity/lightning/lightning-attractor-hit-anim",
-                        {
-                            draw_as_glow = true,
-                            scale = 0.33,
-                            frame_count = 36
-                        }
-                    ),
-                }
-            },
-        },
-    }
-}
+entity.graphics_set = get_graphics()
 
 local item = table.deepcopy(data.raw["item"]["assembling-machine-3"])
 item.name = "crystarion-energiser"
