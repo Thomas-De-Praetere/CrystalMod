@@ -29,7 +29,6 @@ local function denaturize(name, input, input_icon, output)
         ),
         ingredients = {
             { type = "fluid", name = input,   amount = 20 },
-            { type = "fluid", name = "water", amount = 20 },
         },
         results = {
             { type = "fluid", name = output,  amount = 20 },

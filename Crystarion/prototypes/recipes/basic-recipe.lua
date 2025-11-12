@@ -37,7 +37,7 @@ local crystal_splinter = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal-splinter", amount = 10 }
+        { type = "item", name = "crystarion-crystal-splinter", amount = 20 }
     },
     energy_required = 1
 }
@@ -143,7 +143,7 @@ local crystal_empower_1 = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal-splinter", amount = 10 }
+        { type = "item", name = "crystarion-crystal-splinter", amount = 20 }
     },
     energy_required = 1
 }

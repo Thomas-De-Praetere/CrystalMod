@@ -15,24 +15,7 @@ entity.icons = icons
 
 --Fluid boxes
 local output = table.deepcopy(entity.fluid_boxes[2])
-
-local input1 = table.deepcopy(entity.fluid_boxes[1])
-input1.pipe_connections = {
-    {
-        flow_direction = "input",
-        direction = defines.direction.north,
-        position = { -1, -1 }
-    }
-}
-
-local input2 = table.deepcopy(entity.fluid_boxes[1])
-input2.pipe_connections = {
-    {
-        flow_direction = "input",
-        direction = defines.direction.north,
-        position = { 1, -1 }
-    }
-}
+local input = table.deepcopy(entity.fluid_boxes[1])
 
 local pass_through = table.deepcopy(entity.fluid_boxes[1])
 pass_through.production_type = "output"
@@ -51,18 +34,19 @@ pass_through.pipe_connections = {
 pass_through.secondary_draw_orders = { north = -1 }
 pass_through.filter = "steam"
 
-entity.fluid_boxes = { input1, input2, pass_through, output }
-
+entity.fluid_boxes = { input, pass_through, output }
 entity.graphics_set = {
-    always_draw_idle_animation = true,
-    idle_animation = {
-        layers = {
+    animation_progress = 0.5,
+    animation =
+    {
+        layers =
+        {
             {
                 filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
                 priority = "high",
                 width = 214,
                 height = 237,
-                frame_count = 1,
+                frame_count = 32,
                 line_length = 8,
                 shift = util.by_pixel(0, -0.75),
                 scale = 0.5
@@ -72,135 +56,47 @@ entity.graphics_set = {
                 priority = "high",
                 width = 260,
                 height = 162,
-                frame_count = 1,
+                frame_count = 32,
                 line_length = 8,
                 draw_as_shadow = true,
                 shift = util.by_pixel(28, 4),
                 scale = 0.5
-            },
-            {
-                filename = "__base__/graphics/entity/accumulator/accumulator.png",
-                priority = "high",
-                width = 130,
-                height = 189,
-                shift = util.by_pixel(0, -11),
-                scale = 0.5
-            },
-            {
-                filename = "__base__/graphics/entity/accumulator/accumulator-shadow.png",
-                priority = "high",
-                width = 234,
-                height = 106,
-                shift = util.by_pixel(29, 6),
-                draw_as_shadow = true,
-                scale = 0.5
             }
         }
     },
-
     states = {
         {
             name = "idle",
             duration = 1,
-            next_active = "warmup",
+            next_active = "active",
             next_inactive = "idle",
         },
         {
             name = "active",
-            duration = 24,
-            next_active = "active",
-            next_inactive = "warmup",
-        },
-        {
-            name = "warmup",
-            duration = 24,
+            duration = 36,
             next_active = "active",
             next_inactive = "idle",
         },
     },
-
     working_visualisations = {
-                {
-            always_draw = true,
-            draw_in_states = { "warmup" },
-            animation = {
-                layers = {
-                    {
-                        filename = "__base__/graphics/entity/accumulator/accumulator-charge.png",
-                        priority = "high",
-                        width = 178,
-                        height = 210,
-                        line_length = 6,
-                        frame_count = 24,
-                        draw_as_glow = true,
-                        shift = util.by_pixel(1, -20),
-                        scale = 0.5
-                    },
-                }
-            },
-        },
         {
             always_draw = true,
             draw_in_states = { "active" },
             animation = {
                 layers = {
-                    {
-                        filename = "__base__/graphics/entity/accumulator/accumulator-discharge.png",
-                        priority = "high",
-                        width = 174,
-                        height = 214,
-                        line_length = 6,
-                        frame_count = 24,
-                        draw_as_glow = true,
-                        shift = util.by_pixel(-1, -21),
-                        scale = 0.5
-                    },
+                    util.sprite_load(
+                        "__space-age__/graphics/entity/lightning/lightning-attractor-hit-anim",
+                        {
+                            draw_as_glow = true,
+                            scale = 0.33,
+                            frame_count = 36
+                        }
+                    ),
                 }
             },
         },
     }
 }
-entity.working_sound = {
-    main_sounds = {
-        {
-            sound = {
-                filename = "__base__/sound/accumulator-working.ogg",
-                volume = 0.4,
-                modifiers = volume_multiplier("main-menu", 1.44),
-                audible_distance_modifier = 0.5
-            },
-            match_volume_to_activity = true,
-            activity_to_volume_modifiers = { offset = 2, inverted = true },
-            fade_in_ticks = 4,
-            fade_out_ticks = 20
-        },
-        {
-            sound = {
-                filename = "__base__/sound/accumulator-discharging.ogg",
-                volume = 0.4,
-                modifiers = volume_multiplier("main-menu", 1.44),
-                audible_distance_modifier = 0.5
-            },
-            match_volume_to_activity = true,
-            activity_to_volume_modifiers = { offset = 1 },
-            fade_in_ticks = 4,
-            fade_out_ticks = 20
-        }
-    },
-    idle_sound = { filename = "__base__/sound/accumulator-idle.ogg", volume = 0.35, audible_distance_modifier = 0.5 },
-    max_sounds_per_prototype = 3,
-}
-
-
-
-
-
-
-
-
-
-
-
 
 local item = table.deepcopy(data.raw["item"]["assembling-machine-3"])
 item.name = "crystarion-energiser"
