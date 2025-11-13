@@ -4,8 +4,12 @@ hide methods
 hide fields
 hide circle
 
-[Crystal] as C #lightpink
-[Ice] as I #lightpink
+[Crystal] as C1 #lightpink
+[Crystal] as C2 #lightpink
+[Crystal] as C3 #lightpink
+[Ice] as I1 #lightpink
+[Ice] as I2 #lightpink
+[Ice] as I3 #lightpink
 
 
 [Red Crystal] as RC #lightgreen
@@ -54,8 +58,8 @@ package Crusher #lightyellow {
 [Crush Blue Crystal] as CrB #lightblue
 }
 
-C --> SG : 4
-I --> SG : 1
+C1 --> SG : 4
+I1 --> SG : 1
 SG --> GC1 : 4
 SG --> MC : 4
 SG --> W1 : 20
@@ -65,8 +69,8 @@ SM --> BC1 : 1
 SM --> RC1 : 1
 SM --> ST1 : 20
 
-C --> SR : 4
-I --> SR : 1
+C2 --> SR : 4
+I2 --> SR : 1
 SR --> RC2 : 4
 SR --> CC : 4
 SR --> W2 : 20
@@ -76,8 +80,8 @@ SC --> BC2 : 1
 SC --> GC2 : 1
 SC --> ST2 : 20
 
-C --> SB : 4
-I --> SB : 1
+C3 --> SB : 4
+I3 --> SB : 1
 SB --> BC3 : 4
 SB --> YC : 4
 SB --> W3 : 20

@@ -8,20 +8,25 @@ hide circle
 [Green Crystal] as GC #lightpink
 [Blue Crystal] as BC #lightpink
 [Crystal] as C #lightpink
-[Water] as W #lightpink
+[Water] as W1 #lightpink
+[Water] as W2 #lightpink
+[Water] as W3 #lightpink
+[Water] as W4 #lightpink
 
 [Iron Ore] as FE #lightgreen
 [Copper Ore] as CU #lightgreen
 [Stone] as S #lightgreen
 [Coal] as Ca #lightgreen
-[Steam 165] as PA #lightgreen
+[Steam 165] as PA1 #lightgreen
+[Steam 165] as PA2 #lightgreen
+[Steam 165] as PA3 #lightgreen
+[Steam 165] as PA4 #lightgreen
 
-package Energizer #lightyellow {
 [Neutralize] as NR #lightblue
 [Neutralize] as NG #lightblue
 [Neutralize] as NB #lightblue
 [Neutralize] as NC #lightblue
-}
+
 
 RC --> NR : 1
 GC --> NG : 1
@@ -33,13 +38,13 @@ NG --> S : 2
 NB --> FE : 2
 NC --> Ca : 6
 
-NR ...> PA : 20
-NG ...> PA : 20
-NB ...> PA : 20
-NC ...> PA : 60
+NR ..> PA1 : 20
+NG ..> PA2 : 20
+NB ..> PA3 : 20
+NC ..> PA4 : 60
 
-W ...> NR : 5
-W ...> NG : 5
-W ...> NB : 5
-W ...> NC : 15
+W1 ..> NR : 5
+W2 ..> NG : 5
+W3 ..> NB : 5
+W4 ..> NC : 15
 @enduml

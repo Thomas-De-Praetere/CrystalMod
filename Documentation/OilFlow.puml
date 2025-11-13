@@ -4,7 +4,9 @@ hide methods
 hide fields
 hide circle
 
-[Water] as W #lightpink
+[Water] as W1 #lightpink
+[Water] as W2 #lightpink
+[Water] as W3 #lightpink
 
 [Red Crystal] as RC #lightpink
 [Blue Crystal] as BC #lightpink
@@ -21,37 +23,33 @@ hide circle
 [Light Oil] as LO #lightgreen
 [Gas] as G #lightgreen
 [Lubricant] as L #lightgreen
-[Plasma] as PA #lightgreen
+[Steam 165] as PA1 #lightgreen
+[Steam 165] as PA2 #lightgreen
+[Steam 165] as PA3 #lightgreen
+[Steam 165] as PA4 #lightgreen
 
-package "Crystalizer" #lightyellow {
 [Sludge from Red Crystal] as SfR #lightblue
 [Sludge from Blue Crystal]as SfB #lightblue
 [Sludge from Green Crystal]as SfG #lightblue
-}
-
-package "Chemical Plant" #lightyellow {
 [Purple Mix] as CPB #lightblue
 [Yellow Mix] as CPY #lightblue
-}
 
-
-package Energizer #lightyellow {
 [Denaturize] as HOP #lightblue
 [Denaturize] as LOP #lightblue
 [Denaturize] as GP #lightblue
 [Denaturize] as LP #lightblue
-}
+
 
 RC --> SfR : 5
-W --> SfR : 20
+W1 --> SfR : 20
 SfR --> RS : 20
 
 BC --> SfB : 10
-W --> SfB : 20
+W2 --> SfB : 20
 SfB  --> BS : 20
 
 GC --> SfG : 10
-W --> SfG : 20
+W3 --> SfG : 20
 SfG --> GS : 20
 
 RS --> CPB : 5
@@ -60,7 +58,7 @@ CPB --> PM : 5
 PM --> GP : 20
 GP --> G : 20
 
-RS --> HOP : 20
+RS ----> HOP : 20
 HOP --> HO : 20
 
 GS --> CPY : 5
@@ -69,17 +67,13 @@ CPY --> YM : 5
 YM --> LOP : 20
 LOP --> LO : 20
 
-GS --> LP : 20
+GS ----> LP : 20
 LP --> L : 20
 
-HOP ...> PA : 100
-LOP ...> PA : 100
-GP ...> PA : 100
-LP ...> PA : 100
+HOP ..> PA1 : 80
+LOP ..> PA2 : 08
+GP ..> PA3 : 80
+LP ..> PA4 : 08
 
-W ...> HOP : 100
-W ...> LOP : 100
-W ...> GP : 100
-W ...> LP : 100
 
 @enduml

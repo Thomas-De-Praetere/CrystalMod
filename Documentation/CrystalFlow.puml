@@ -12,15 +12,13 @@ hide circle
 
 [Crystal] as C #lightgreen
 
-package "Chemical Plant" #lightyellow {
 [Melt 1s] as Me #lightblue
 [Sludge from Crushed Crystal 1s] as SCS #lightblue
 [Crystalise 4s] as CCF #lightblue
-}
 
-package "Crusher" #lightyellow {
+
 [Crush Crystal Ore 1s] as Cr #lightblue
-}
+
 
 
 
