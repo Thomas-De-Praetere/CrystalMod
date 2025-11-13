@@ -12,10 +12,10 @@ entity.icons = icons
 
 entity.energy_source = {
     type = "electric",
-    buffer_capacity = "100MJ",
+    buffer_capacity = "100200kJ",
     usage_priority = "tertiary",
     input_flow_limit = "1MW",
-    output_flow_limit = "100MW"
+    output_flow_limit = "100200kW"
 }
 
 local item = table.deepcopy(data.raw["item"]["accumulator"])

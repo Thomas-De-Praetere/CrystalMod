@@ -13,7 +13,13 @@ entity.energy_usage = "100MW"
 entity.minable = { mining_time = 0.2, result = "crystarion-empowerer" }
 entity.surface_conditions = {}
 entity.icons = icons
-
+entity.energy_source =
+{
+    type = "electric",
+    usage_priority = "secondary-input",
+    emissions_per_minute = { crystarion_resonance = 200 },
+    drain = "200kW"
+}
 entity.collision_box = {{-1.7, -1.7}, {1.7, 1.7}}
 entity.selection_box = {{-2, -2}, {2, 2}}
 
