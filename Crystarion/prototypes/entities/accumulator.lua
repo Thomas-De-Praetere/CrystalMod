@@ -14,7 +14,7 @@ entity.energy_source = {
     type = "electric",
     buffer_capacity = "100200kJ",
     usage_priority = "tertiary",
-    input_flow_limit = "1MW",
+    input_flow_limit = "2MW",
     output_flow_limit = "100200kW"
 }
 

@@ -90,6 +90,7 @@ local icon_table = {
     crushed_crystal = { icon = ITEM_LOCATION .. "crushed_crystal_1.png", icon_size = 64, scale = 0.5 },
     crystal_ore = { icon = ITEM_LOCATION .. "crystal_ore_1.png", icon_size = 64, scale = 0.5 },
     crystal = { icon = ITEM_LOCATION .. "crystal_1.png", icon_size = 64, tint = helper.crystal_tint.white, scale = 0.5 },
+    crystal_volatile = { icon = ITEM_LOCATION .. "crystal_volatile_1.png", icon_size = 64, tint = helper.crystal_tint.white, scale = 0.5 },
     splinter = { icon = ITEM_LOCATION .. "crystal_splinter_1.png", icon_size = 64, tint = helper.crystal_tint.white, scale = 0.5 },
     crystal_green = { icon = ITEM_LOCATION .. "crystal_shard_1.png", icon_size = 64, tint = helper.crystal_tint.green, scale = 0.5 },
     crystal_blue = { icon = ITEM_LOCATION .. "crystal_shard_1.png", icon_size = 64, tint = helper.crystal_tint.blue, scale = 0.5 },

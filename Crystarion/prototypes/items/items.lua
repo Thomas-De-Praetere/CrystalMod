@@ -115,6 +115,48 @@ crystal_splinter.spoil_to_trigger_result = {
     items_per_trigger = 1,
 }
 
+local crystal_volatile = table.deepcopy(BASE_ITEM)
+crystal_volatile.name = "crystarion-crystal-volatile"
+crystal_volatile.icons = { helper.icons("crystal_volatile") }
+crystal_volatile.pictures = get_crystal_sprites("crystal_volatile", helper.crystal_tint.white)
+crystal_volatile.spoil_ticks = 1 * helper.minutes()
+crystal_volatile.spoil_to_trigger_result = {
+    trigger = {
+        type = "direct",
+        action_delivery = {
+            {
+                type = "instant",
+                source_effects = {
+                    {
+                        type = "create-entity",
+                        entity_name = "explosion",
+                        offsets = { { 0, 1 } },
+                        offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+                        only_when_visible = true
+                    },
+                    {
+                        type = "nested-result",
+                        action = {
+                            type = "area",
+                            radius = 4.0,
+                            action_delivery = {
+                                type = "instant",
+                                target_effects = {
+                                    {
+                                        type = "damage",
+                                        damage = { amount = 10, type = "explosion" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                },
+            }
+        }
+    },
+    items_per_trigger = 1,
+}
+
 data:extend({
     crushed_crystal,
     crystal,
@@ -125,5 +167,6 @@ data:extend({
     crystal_magenta,
     crystal_cyan,
     crystal_yellow,
-    crystal_splinter
+    crystal_splinter,
+    crystal_volatile
 })
