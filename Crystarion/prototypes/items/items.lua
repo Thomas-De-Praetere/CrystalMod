@@ -157,6 +157,53 @@ crystal_volatile.spoil_to_trigger_result = {
     items_per_trigger = 1,
 }
 
+local crystal_unstable = table.deepcopy(BASE_ITEM)
+crystal_unstable.name = "crystarion-crystal-unstable"
+crystal_unstable.icons = { helper.icons("crystal_unstable") }
+crystal_unstable.pictures = get_crystal_sprites("crystal_unstable", helper.crystal_tint.white)
+crystal_unstable.spoil_ticks = 2 * helper.minutes()
+crystal_unstable.spoil_to_trigger_result = {
+    trigger = {
+        type = "direct",
+        action_delivery = {
+            {
+                type = "instant",
+                source_effects = {
+                    {
+                        type = "create-entity",
+                        entity_name = "explosion",
+                        offsets = { { 0, 1 } },
+                        offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+                        only_when_visible = true
+                    },
+                    {
+                        type = "nested-result",
+                        action = {
+                            type = "area",
+                            radius = 6.0,
+                            action_delivery = {
+                                type = "instant",
+                                target_effects = {
+                                    {
+                                        type = "damage",
+                                        damage = { amount = 20, type = "explosion" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                },
+            }
+        }
+    },
+    items_per_trigger = 1,
+}
+
+local crystal_stable = table.deepcopy(BASE_ITEM)
+crystal_stable.name = "crystarion-crystal-stable"
+crystal_stable.icons = { helper.icons("crystal_stable") }
+crystal_stable.pictures = get_crystal_sprites("crystal_stable", helper.crystal_tint.white)
+
 data:extend({
     crushed_crystal,
     crystal,
@@ -168,5 +215,7 @@ data:extend({
     crystal_cyan,
     crystal_yellow,
     crystal_splinter,
-    crystal_volatile
+    crystal_volatile,
+    crystal_unstable,
+    crystal_stable,
 })

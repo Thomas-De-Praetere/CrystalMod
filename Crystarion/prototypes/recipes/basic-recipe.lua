@@ -136,7 +136,7 @@ local revitalise_coal = {
 
 local crystal_empower_1 = {
     type = "recipe",
-    name = "crystarion-crystal-empower",
+    name = "crystarion-crystal-empower-1",
     category = "crystarion-empowerer-category",
     main_product = "crystarion-crystal-volatile",
     ingredients = {
@@ -146,6 +146,34 @@ local crystal_empower_1 = {
         { type = "item", name = "crystarion-crystal-volatile", amount = 15 }
     },
     energy_required = 1
+}
+
+local crystal_empower_2 = {
+    type = "recipe",
+    name = "crystarion-crystal-empower-2",
+    category = "crystarion-empowerer-category",
+    main_product = "crystarion-crystal-unstable",
+    ingredients = {
+        { type = "item", name = "crystarion-crystal", amount = 30 }
+    },
+    results = {
+        { type = "item", name = "crystarion-crystal-unstable", amount = 30 }
+    },
+    energy_required = 2
+}
+
+local crystal_empower_3 = {
+    type = "recipe",
+    name = "crystarion-crystal-empower-3",
+    category = "crystarion-empowerer-category",
+    main_product = "crystarion-crystal-stable",
+    ingredients = {
+        { type = "item", name = "crystarion-crystal", amount = 60 }
+    },
+    results = {
+        { type = "item", name = "crystarion-crystal-stable", amount = 60 }
+    },
+    energy_required = 5
 }
 
 data:extend({
@@ -158,4 +186,6 @@ data:extend({
     revitalise_coal,
     crystal_splinter,
     crystal_empower_1,
+    crystal_empower_2,
+    crystal_empower_3,
 })
