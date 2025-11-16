@@ -204,26 +204,26 @@ crystal_stable.name = "crystarion-crystal-stable"
 crystal_stable.icons = { helper.icons("crystal_stable") }
 crystal_stable.pictures = get_crystal_sprites("crystal_stable", helper.crystal_tint.white)
 
-local science_volatile = table.deepcopy(data["tool"]["automation-science-pack"])
+local science_volatile = table.deepcopy(data.raw["tool"]["automation-science-pack"])
 science_volatile.name = "crystarion-science-volatile"
-science_volatile.icons = helper.alternate(
-        { icon = "__base__/graphics/icons/automation-science-pack.png" },
-        helper.icons("planet")
-)
+science_volatile.icons = {
+    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
+    { icon = "__base__/graphics/icons/automation-science-pack.png", tint = { 1, 1, 1, 0.3 } },
+}
 
-local science_unstable = table.deepcopy(data["tool"]["logistic-science-pack"])
+local science_unstable = table.deepcopy(data.raw["tool"]["logistic-science-pack"])
 science_unstable.name = "crystarion-science-unstable"
-science_unstable.icons = helper.alternate(
-        { icon = "__base__/graphics/icons/logistic-science-pack.png" },
-        helper.icons("planet")
-)
+science_unstable.icons = {
+    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
+    { icon = "__base__/graphics/icons/logistic-science-pack.png", tint = { 1, 1, 1, 0.3 } },
+}
 
-local science_stable = table.deepcopy(data["tool"]["chemical-science-pack"])
+local science_stable = table.deepcopy(data.raw["tool"]["chemical-science-pack"])
 science_stable.name = "crystarion-science-stable"
-science_stable.icons = helper.alternate(
-        { icon = "__base__/graphics/icons/chemical-science-pack.png" },
-        helper.icons("planet")
-)
+science_stable.icons = {
+    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
+    { icon = "__base__/graphics/icons/chemical-science-pack.png", tint = { 1, 1, 1, 0.3 } },
+}
 
 data:extend({
     crushed_crystal,
