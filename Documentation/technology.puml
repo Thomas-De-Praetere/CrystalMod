@@ -1,0 +1,60 @@
+@startuml
+
+hide methods
+
+hide circle
+
+object space-platform-thruster #lightpink
+object chemistry #lightpink
+
+object "planet-discovery-crystarion" {
+    unlock = space location
+}
+
+object crystarion-unlock-harvester {
+    entities = harvester, resource-ice-medium, furnace
+    trigger = mine rock-ice-huge
+}
+
+object crystarion-unlock-energizer {
+    entities = energizer, crystal-plant, battery
+    trigger = mine rock-big
+}
+
+object crystarion-unlock-empowerer {
+    entities = empowerer
+    trigger = create 50 crystal
+}
+
+object crystarion-unlock-crusher {
+    entities = crusher, harvester, splinter, bullet
+    trigger = kill biter
+}
+
+object crystarion-oil {
+    recipes for oil
+    cost = volatile
+}
+
+object crystarion-unstable {
+    unlock unstable
+    cost = volatile
+}
+
+object crystarion-stable {
+    unlock stable
+    cost = unstable
+}
+
+"space-platform-thruster" --> "planet-discovery-crystarion"
+"planet-discovery-crystarion" --> "crystarion-unlock-harvester"
+"planet-discovery-crystarion" --> "crystarion-unlock-energizer"
+"planet-discovery-crystarion" --> "crystarion-unlock-crusher"
+"crystarion-unlock-energizer" --> "crystarion-unlock-empowerer"
+"crystarion-unlock-empowerer" --> "crystarion-oil"
+"chemistry" --> "crystarion-oil"
+
+"crystarion-unlock-empowerer" --> "crystarion-unstable"
+"crystarion-unstable" --> "crystarion-stable"
+
+@enduml
