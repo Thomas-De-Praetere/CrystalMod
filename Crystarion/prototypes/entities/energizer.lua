@@ -1,10 +1,16 @@
 require("__Crystarion__.prototypes.entities.graphics.energizer")
 local helper = require("__Crystarion__.helper")
 
+local tint = { 1, 0.6, 0.2 }
+
 local icons = helper.alternate(
-    { icon = "__base__/graphics/icons/assembling-machine-3.png" },
-    helper.icons("planet")
+        { icon = "__base__/graphics/icons/assembling-machine-3.png", tint = tint },
+        helper.icons("planet")
 )
+
+local corpse = table.deepcopy(data.raw["corpse"]["assembling-machine-3-remnants"])
+corpse.name = "crystarion-energiser-remnants"
+helper.set_tint(corpse.animation, tint)
 
 local entity = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-3"])
 entity.crafting_categories = { "crystarion-energiser-category" }
@@ -13,6 +19,14 @@ entity.crafting_speed = 1.0
 entity.energy_usage = "150kW"
 entity.minable = { mining_time = 0.2, result = "crystarion-energiser" }
 entity.icons = icons
+entity.corpse = "crystarion-energiser-remnants"
+entity.energy_source =
+{
+    type = "electric",
+    usage_priority = "secondary-input",
+    emissions_per_minute = { crystarion_resonance = 2 }
+}
+entity.graphics_set = get_graphics(tint)
 
 --Fluid boxes
 local output = table.deepcopy(entity.fluid_boxes[2])
@@ -36,7 +50,6 @@ pass_through.secondary_draw_orders = { north = -1 }
 pass_through.filter = "steam"
 
 entity.fluid_boxes = { input, pass_through, output }
-entity.graphics_set = get_graphics()
 
 local item = table.deepcopy(data.raw["item"]["assembling-machine-3"])
 item.name = "crystarion-energiser"
@@ -48,10 +61,10 @@ local recipe = {
     name = "crystarion-energiser",
     main_product = "crystarion-energiser",
     ingredients = {
-        { type = "item", name = "iron-plate",         amount = 2 },
-        { type = "item", name = "copper-plate",       amount = 1 },
-        { type = "item", name = "copper-cable",       amount = 1 },
-        { type = "item", name = "battery",            amount = 1 },
+        { type = "item", name = "iron-plate", amount = 2 },
+        { type = "item", name = "copper-plate", amount = 1 },
+        { type = "item", name = "copper-cable", amount = 1 },
+        { type = "item", name = "battery", amount = 1 },
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
@@ -60,4 +73,4 @@ local recipe = {
     energy_required = 5
 }
 
-data:extend({ entity, item, recipe })
+data:extend({ entity, item, recipe, corpse })

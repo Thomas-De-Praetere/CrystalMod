@@ -113,4 +113,10 @@ function helper.icons(key)
     return table.deepcopy(icon_table[key])
 end
 
+function helper.set_tint(pictures, tint)
+    for i, pic in ipairs(pictures) do
+        pic.tint = tint
+    end
+end
+
 return helper

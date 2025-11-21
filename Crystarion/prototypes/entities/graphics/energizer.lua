@@ -1,4 +1,4 @@
-function get_graphics()
+function get_graphics(tint)
     return {
         animation_progress = 0.5,
         animation = {
@@ -11,7 +11,8 @@ function get_graphics()
                     frame_count = 32,
                     line_length = 8,
                     shift = util.by_pixel(0, -0.75),
-                    scale = 0.5
+                    scale = 0.5,
+                    tint = tint
                 },
                 {
                     filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-shadow.png",
@@ -22,7 +23,7 @@ function get_graphics()
                     line_length = 8,
                     draw_as_shadow = true,
                     shift = util.by_pixel(28, 4),
-                    scale = 0.5
+                    scale = 0.5,
                 }
             }
         },

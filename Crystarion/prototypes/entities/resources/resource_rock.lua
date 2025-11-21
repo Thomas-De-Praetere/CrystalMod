@@ -1,3 +1,5 @@
+helper = require("__Crystarion__.helper")
+
 local function create_resource(size, results, pictures_type, pictures_name)
     local resource_ore = table.deepcopy(data.raw["simple-entity"]["big-rock"])
     resource_ore.name = "crystarion-resource-" .. size
@@ -17,9 +19,7 @@ local function create_resource(size, results, pictures_type, pictures_name)
     local grey_mask = { 0.38, 0.54, 0.81 }
 
     resource_ore.pictures = table.deepcopy(data.raw[pictures_type][pictures_name]).pictures
-    for i, pic in ipairs(resource_ore.pictures) do
-        pic.tint = grey_mask
-    end
+    helper.set_tint(resource_ore.pictures, grey_mask)
     return resource_ore
 end
 
