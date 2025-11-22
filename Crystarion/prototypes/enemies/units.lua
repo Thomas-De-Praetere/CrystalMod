@@ -17,6 +17,10 @@ local function create_enemy(size, absorption, type)
     return unit
 end
 
+-- biters multiply
+-- spitters do not attack but create worms.
+
+
 data:extend({
     create_enemy("small", 4, "biter"),
     create_enemy("medium", 20, "biter"),
