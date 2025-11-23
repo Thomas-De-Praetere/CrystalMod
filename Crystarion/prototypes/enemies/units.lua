@@ -29,9 +29,9 @@ end
 
 data:extend({
     create_enemy("small", 4, "biter", false, "crystarion-resource-small"),
-    create_enemy("medium", 20, "biter", true, "crystarion-biter-small"),
-    create_enemy("big", 80, "biter", true, "crystarion-biter-medium"),
-    create_enemy("behemoth", 400, "biter", true, "crystarion-biter-big"),
+    create_enemy("medium", 20, "biter", true, "crystarion-small-biter"),
+    create_enemy("big", 80, "biter", true, "crystarion-medium-biter"),
+    create_enemy("behemoth", 400, "biter", true, "crystarion-big-biter"),
     create_enemy("small", 4, "spitter", false, "crystarion-resource-small"),
     create_enemy("medium", 20, "spitter", false, "crystarion-resource-medium"),
     create_enemy("big", 80, "spitter", false, "crystarion-resource-big"),
