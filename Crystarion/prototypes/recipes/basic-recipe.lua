@@ -96,7 +96,7 @@ local crystal_melt = {
 
 local crystal_plant = {
     type = "recipe",
-    name = "chemical-plant",
+    name = "crystarion-chemical-plant",
     energy_required = 5,
     enabled = true,
     icons = helper.alternate(
