@@ -16,7 +16,8 @@ local function destabilize(name, input, input_icon, output, output_amount)
         results = {
             { type = "item", name = output, amount = output_amount }
         },
-        energy_required = 1
+        energy_required = 1,
+        enabled = false,
     }
 end
 

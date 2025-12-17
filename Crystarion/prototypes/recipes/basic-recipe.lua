@@ -13,7 +13,8 @@ local sludge_from_crushed_crystal = {
     results = {
         { type = "fluid", name = "crystarion-crystal-slurry", amount = 20 }
     },
-    energy_required = 1
+    energy_required = 1,
+    enabled = false,
 }
 local crush_crystal_ore = {
     type = "recipe",
@@ -53,7 +54,8 @@ local crystalise = {
         { type = "item", name = "crystarion-crystal", amount = 8, probability = 0.75 },
         { type = "item", name = "crystarion-crushed-crystal", amount = 2, probability = 0.25 }
     },
-    energy_required = 4
+    energy_required = 4,
+    enabled = false,
 }
 local battery = {
     type = "recipe",
@@ -71,7 +73,8 @@ local battery = {
     results = {
         { type = "item", name = "battery", amount = 1 }
     },
-    energy_required = 4
+    energy_required = 4,
+    enabled = false,
 }
 local crystal_melt = {
     type = "recipe",
@@ -98,7 +101,7 @@ local crystal_plant = {
     type = "recipe",
     name = "crystarion-chemical-plant",
     energy_required = 5,
-    enabled = true,
+    enabled = false,
     icons = helper.alternate(
             { icon = "__base__/graphics/icons/chemical-plant.png" },
             helper.icons("planet")

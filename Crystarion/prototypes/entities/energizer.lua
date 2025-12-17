@@ -70,7 +70,8 @@ local recipe = {
     results = {
         { type = "item", name = "crystarion-energiser", amount = 1 }
     },
-    energy_required = 5
+    energy_required = 5,
+    enabled = false,
 }
 
 data:extend({ entity, item, recipe, corpse })

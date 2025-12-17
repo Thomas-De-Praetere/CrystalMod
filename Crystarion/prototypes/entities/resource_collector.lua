@@ -43,7 +43,8 @@ local recipe = {
     results = {
         { type = "item", name = "crystarion-collector", amount = 1 }
     },
-    energy_required = 5
+    energy_required = 5,
+    enabled = false,
 }
 
 data:extend({

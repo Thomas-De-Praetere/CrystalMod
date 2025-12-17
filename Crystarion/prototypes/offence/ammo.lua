@@ -84,7 +84,8 @@ local recipe = {
     results = {
         { type = "item", name = "crystarion-crystal-ammo", amount = 1 }
     },
-    energy_required = 0.5
+    energy_required = 0.5,
+    enabled = false,
 }
 
 data:extend({ item, recipe })

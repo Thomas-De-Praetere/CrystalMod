@@ -13,7 +13,8 @@ local function slurry_from_color(name, in_amount, out_amount)
         results = {
             { type = "fluid", name = "crystarion-" .. name .. "-slurry", amount = out_amount }
         },
-        energy_required = 1
+        energy_required = 1,
+        enabled = false,
     }
 end
 
@@ -55,7 +56,8 @@ local mix_yellow = {
     results = {
         { type = "fluid", name = "crystarion-yellow-mixture", amount = 5 }
     },
-    energy_required = 1
+    energy_required = 1,
+    enabled = false,
 }
 local mix_purple = {
     type = "recipe",
@@ -70,7 +72,8 @@ local mix_purple = {
     results = {
         { type = "fluid", name = "crystarion-purple-mixture", amount = 5 }
     },
-    energy_required = 1
+    energy_required = 1,
+    enabled = false,
 }
 
 local denaturize_yellow = denaturize("yellow", "crystarion-yellow-mixture", "yellow_mixture", "light-oil")

@@ -51,7 +51,8 @@ local science_volatile = {
     results = {
         { type = "item", name = "crystarion-science-volatile", amount = 1 }
     },
-    energy_required = 5
+    energy_required = 5,
+    enabled = false,
 }
 local science_unstable = {
     type = "recipe",
@@ -64,7 +65,8 @@ local science_unstable = {
     results = {
         { type = "item", name = "crystarion-science-unstable", amount = 1 }
     },
-    energy_required = 5
+    energy_required = 5,
+    enabled = false,
 }
 local science_stable = {
     type = "recipe",
@@ -77,7 +79,8 @@ local science_stable = {
     results = {
         { type = "item", name = "crystarion-science-stable", amount = 1 }
     },
-    energy_required = 5
+    energy_required = 5,
+    enabled = false,
 }
 
 data:extend({

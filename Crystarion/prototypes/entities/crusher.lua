@@ -31,7 +31,8 @@ local recipe = {
     results = {
         { type = "item", name = "crystarion-crusher", amount = 1 }
     },
-    energy_required = 2
+    energy_required = 2,
+    enabled = false,
 }
 
 data:extend({ entity, item, recipe })
