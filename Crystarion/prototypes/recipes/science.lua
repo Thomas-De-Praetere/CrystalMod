@@ -9,7 +9,8 @@ local crystal_empower_1 = {
     results = {
         { type = "item", name = "crystarion-crystal-volatile", amount = 15 }
     },
-    energy_required = 1
+    energy_required = 1,
+    enabled = false,
 }
 
 local crystal_empower_2 = {
@@ -23,7 +24,8 @@ local crystal_empower_2 = {
     results = {
         { type = "item", name = "crystarion-crystal-unstable", amount = 30 }
     },
-    energy_required = 2
+    energy_required = 2,
+    enabled = false,
 }
 
 local crystal_empower_3 = {
@@ -37,7 +39,8 @@ local crystal_empower_3 = {
     results = {
         { type = "item", name = "crystarion-crystal-stable", amount = 60 }
     },
-    energy_required = 5
+    energy_required = 5,
+    enabled = false,
 }
 
 local science_volatile = {

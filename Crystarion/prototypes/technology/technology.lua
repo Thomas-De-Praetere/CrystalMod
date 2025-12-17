@@ -121,6 +121,102 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-science-stable"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crush-crystal-ore"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-ore-splinter"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-ice-melting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-revitalise-coal"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-denaturize-yellow"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-denaturize-purple"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-denaturize-red"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-denaturize-green"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crush-crystal-red"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crush-crystal-green"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crush-crystal-blue"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-neutralize-red"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-neutralize-green"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-neutralize-blue"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-neutralize-crystal"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-split-green"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-split-magenta"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-split-red"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-split-cyan"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-split-blue"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-split-yellow"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-empower-1"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-empower-2"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-empower-3"
+            },
         },
         unit = {
             count = 1000,

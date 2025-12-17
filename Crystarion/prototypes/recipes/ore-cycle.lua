@@ -13,7 +13,8 @@ local function crush_crystal_color(color)
         results = {
             { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.5 }
         },
-        energy_required = 1
+        energy_required = 1,
+        enabled = false,
     }
 end
 
@@ -35,7 +36,8 @@ local function neutralize_color(color, result)
             { type = "item", name = result, amount = 2 },
             { type = "fluid", name = "steam", amount = 20, temperature = 165 }
         },
-        energy_required = 1
+        energy_required = 1,
+        enabled = false,
     }
 end
 
@@ -59,7 +61,8 @@ local function split_crystal_1(name, to_split, result1, result2)
             { type = "item", name = "crystarion-" .. result2, amount = 4 },
             { type = "fluid", name = "water", amount = 20 }
         },
-        energy_required = 4
+        energy_required = 4,
+        enabled = false,
     }
 end
 
@@ -83,7 +86,8 @@ local function split_crystal_2(name, to_split, result1, result2)
             { type = "item", name = "crystarion-" .. result2, amount = 1 },
             { type = "fluid", name = "steam", amount = 20, temperature = 165 }
         },
-        energy_required = 1
+        energy_required = 1,
+        enabled = false,
     }
 end
 
@@ -150,7 +154,8 @@ local neutralize_crystal = {
         { type = "item", name = "coal", amount = 6 },
         { type = "fluid", name = "steam", amount = 60, temperature = 165 }
     },
-    energy_required = 3
+    energy_required = 3,
+    enabled = false,
 }
 
 data:extend({

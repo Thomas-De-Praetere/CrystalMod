@@ -27,7 +27,8 @@ local crush_crystal_ore = {
     results = {
         { type = "item", name = "crystarion-crushed-crystal", amount = 2 }
     },
-    energy_required = 1
+    energy_required = 1,
+    enabled = false,
 }
 local crystal_splinter = {
     type = "recipe",
@@ -40,7 +41,8 @@ local crystal_splinter = {
     results = {
         { type = "item", name = "crystarion-crystal-splinter", amount = 20 }
     },
-    energy_required = 1
+    energy_required = 1,
+    enabled = false,
 }
 local crystalise = {
     type = "recipe",
@@ -95,13 +97,13 @@ local crystal_melt = {
         tertiary = { r = 0.381, g = 0.428, b = 0.436, a = 0.502 }, -- #616d6f80
         quaternary = { r = 0.499, g = 0.797, b = 0.793, a = 0.733 }, -- #7fcbcabb
     },
+    enabled = false,
 }
 
 local crystal_plant = {
     type = "recipe",
     name = "crystarion-chemical-plant",
     energy_required = 5,
-    enabled = false,
     icons = helper.alternate(
             { icon = "__base__/graphics/icons/chemical-plant.png" },
             helper.icons("planet")
@@ -112,7 +114,8 @@ local crystal_plant = {
         { type = "item", name = "crystarion-crystal", amount = 2 },
         { type = "item", name = "crystarion-crystal-blue", amount = 15 },
     },
-    results = { { type = "item", name = "chemical-plant", amount = 1 } }
+    results = { { type = "item", name = "chemical-plant", amount = 1 } },
+    enabled = false,
 }
 
 local revitalise_coal = {
@@ -134,7 +137,8 @@ local revitalise_coal = {
         { type = "item", name = "wood", amount = 2 },
         { type = "fluid", name = "steam", amount = 20, temperature = 165 }
     },
-    energy_required = 1
+    energy_required = 1,
+    enabled = false,
 }
 
 
