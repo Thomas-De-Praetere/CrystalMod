@@ -49,7 +49,8 @@ local function create_recipe(size_name, crystal_ingredient)
         results = {
             { type = "item", name = "crystarion-condensation-rod-" .. size_name, amount = 1 }
         },
-        energy_required = 0.5
+        energy_required = 0.5,
+        enabled = false,
     }
 end
 

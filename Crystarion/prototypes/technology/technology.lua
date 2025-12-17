@@ -217,6 +217,18 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-crystal-empower-3"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-condensation-rod-medium"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-condensation-rod-big"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-condensation-rod-huge"
+            },
         },
         unit = {
             count = 1000,
