@@ -27,54 +27,6 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-accumulator"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-crusher"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-empowerer"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-energiser"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-lure"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-collector"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-furnace"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-crystal-ammo"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-sludge-from-crushed-crystal"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-crystalise"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-battery"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-chemical-plant"
-            },
-            {
-                type = "unlock-recipe",
                 recipe = "crystarion-slurry-from-red-crystal"
             },
             {
@@ -95,22 +47,6 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-destabilize-crystal"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-destabilize-crystal-red"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-destabilize-crystal-green"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-destabilize-crystal-blue"
-            },
-            {
-                type = "unlock-recipe",
                 recipe = "crystarion-science-volatile"
             },
             {
@@ -119,20 +55,71 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-science-stable"
+                recipe = "crystarion-crystal-empower-2"
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-crush-crystal-ore"
+                recipe = "crystarion-crystal-empower-3"
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-crystal-ore-splinter"
+                recipe = "crystarion-condensation-rod-big"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-condensation-rod-huge"
+            },
+        },
+        unit = {
+            count = 1000,
+            ingredients = {
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack", 1 },
+                { "chemical-science-pack", 1 },
+                { "space-science-pack", 1 },
+            },
+            time = 60
+        },
+        prerequisites = { "space-platform-thruster" },
+        essential = true
+    },
+    {
+        type = "technology",
+        name = "crystarion-unlock-ice",
+        icon = "__base__/graphics/technology/automation-science-pack.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-condensation-rod-medium"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-collector"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-furnace"
             },
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-ice-melting"
             },
+        },
+        prerequisites = { "planet-discovery-crystarion" },
+        research_trigger = {
+            type = "mine-entity",
+            item = "crystarion-rock-ice-big"
+        }
+    },
+    {
+        type = "technology",
+        name = "crystarion-unlock-resource",
+        icon = "__base__/graphics/technology/automation-science-pack.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-revitalise-coal"
@@ -211,56 +198,93 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-crystal-empower-2"
+                recipe = "crystarion-science-stable"
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-crystal-empower-3"
+                recipe = "crystarion-destabilize-crystal"
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-condensation-rod-medium"
+                recipe = "crystarion-destabilize-crystal-red"
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-condensation-rod-big"
+                recipe = "crystarion-destabilize-crystal-green"
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-condensation-rod-huge"
+                recipe = "crystarion-destabilize-crystal-blue"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-accumulator"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-empowerer"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-energiser"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-sludge-from-crushed-crystal"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystalise"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-battery"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-chemical-plant"
             },
         },
-        unit = {
-            count = 1000,
-            ingredients = {
-                { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
-                { "chemical-science-pack",   1 },
-                { "space-science-pack",      1 },
-            },
-            time = 60
-        },
-        prerequisites = { "space-platform-thruster" },
-        essential = true
+        prerequisites = { "planet-discovery-crystarion" },
+        research_trigger = {
+            type = "mine-entity",
+            item = "crystarion-rock-big"
+        }
     },
-    --{
-    --    type = "technology",
-    --    name = "automation-science-pack",
-    --    icon = "__base__/graphics/technology/automation-science-pack.png",
-    --    icon_size = 256,
-    --    essential = true,
-    --    effects = {
-    --        {
-    --            type = "unlock-recipe",
-    --            recipe = "automation-science-pack"
-    --        }
-    --    },
-    --    prerequisites = { "steam-power", "electronics" },
-    --    research_trigger = {
-    --        type = "craft-item",
-    --        item = "lab"
-    --    }
-    --},
+    {
+        type = "technology",
+        name = "crystarion-unlock-biter",
+        icon = "__base__/graphics/technology/automation-science-pack.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crush-crystal-ore"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-ore-splinter"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crusher"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-lure"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-ammo"
+            },
+        },
+        prerequisites = { "planet-discovery-crystarion" },
+        research_trigger = {
+            type = "mine-entity",
+            item = "crystarion-resource-small"
+        }
+    },
     --{
     --    type = "technology",
     --    name = "electric-mining-drill",
