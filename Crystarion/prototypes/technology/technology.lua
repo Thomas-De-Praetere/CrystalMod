@@ -110,7 +110,7 @@ data:extend({
         prerequisites = { "planet-discovery-crystarion" },
         research_trigger = {
             type = "mine-entity",
-            item = "crystarion-rock-ice-big"
+            entity = "crystarion-rock-ice-big"
         }
     },
     {
@@ -248,7 +248,7 @@ data:extend({
         prerequisites = { "planet-discovery-crystarion" },
         research_trigger = {
             type = "mine-entity",
-            item = "crystarion-rock-big"
+            entity = "crystarion-rock-big"
         }
     },
     {
@@ -282,25 +282,7 @@ data:extend({
         prerequisites = { "planet-discovery-crystarion" },
         research_trigger = {
             type = "mine-entity",
-            item = "crystarion-resource-small"
+            entity = "crystarion-resource-small"
         }
     },
-    --{
-    --    type = "technology",
-    --    name = "electric-mining-drill",
-    --    icon = "__base__/graphics/technology/electric-mining-drill.png",
-    --    icon_size = 256,
-    --    effects = {
-    --        {
-    --            type = "unlock-recipe",
-    --            recipe = "electric-mining-drill"
-    --        }
-    --    },
-    --    prerequisites = { "automation-science-pack" },
-    --    unit = {
-    --        count = 25,
-    --        ingredients = { { "automation-science-pack", 1 } },
-    --        time = 10
-    --    }
-    --},
 })
