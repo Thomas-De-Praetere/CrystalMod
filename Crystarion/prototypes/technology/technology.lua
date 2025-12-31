@@ -25,50 +25,6 @@ data:extend({
                 type = "unlock-space-location",
                 use_icon_overlay_constant = true
             },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-slurry-from-red-crystal"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-slurry-from-green-crystal"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-slurry-from-blue-crystal"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-mix-yellow"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-mix-purple"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-science-volatile"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-science-unstable"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-crystal-empower-2"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-crystal-empower-3"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-condensation-rod-big"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-condensation-rod-huge"
-            },
         },
         unit = {
             count = 1000,
@@ -115,6 +71,51 @@ data:extend({
     },
     {
         type = "technology",
+        name = "crystarion-unlock-rod-big",
+        icon = "__base__/graphics/technology/automation-science-pack.png",
+        icon_size = 256,
+        essential = false,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-condensation-rod-big"
+            },
+        },
+        prerequisites = { "crystarion-unlock-ice", "crystarion-unlock-science-volatile" },
+        unit = {
+            count = 100,
+            ingredients = {
+                { "automation-science-pack", 1 },
+                { "crystarion-science-volatile", 1 },
+            },
+            time = 30
+        },
+    },
+    {
+        type = "technology",
+        name = "crystarion-unlock-rod-huge",
+        icon = "__base__/graphics/technology/automation-science-pack.png",
+        icon_size = 256,
+        essential = false,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-condensation-rod-huge"
+            },
+        },
+        prerequisites = { "crystarion-unlock-rod-big", "crystarion-unlock-science-unstable" },
+        unit = {
+            count = 200,
+            ingredients = {
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack", 1 },
+                { "crystarion-science-unstable", 1 },
+            },
+            time = 30
+        },
+    },
+    {
+        type = "technology",
         name = "crystarion-unlock-resource",
         icon = "__base__/graphics/technology/automation-science-pack.png",
         icon_size = 256,
@@ -123,22 +124,6 @@ data:extend({
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-revitalise-coal"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-denaturize-yellow"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-denaturize-purple"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-denaturize-red"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-denaturize-green"
             },
             {
                 type = "unlock-recipe",
@@ -194,14 +179,6 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-crystal-empower-1"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-science-stable"
-            },
-            {
-                type = "unlock-recipe",
                 recipe = "crystarion-destabilize-crystal"
             },
             {
@@ -215,14 +192,6 @@ data:extend({
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-destabilize-crystal-blue"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-accumulator"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-empowerer"
             },
             {
                 type = "unlock-recipe",
@@ -284,5 +253,147 @@ data:extend({
             type = "mine-entity",
             entity = "crystarion-resource-small"
         }
+    },
+    {
+        type = "technology",
+        name = "crystarion-unlock-science-volatile",
+        icon = "__base__/graphics/technology/automation-science-pack.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-empower-1"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-science-volatile"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-accumulator"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-empowerer"
+            },
+        },
+        prerequisites = { "crystarion-unlock-resource" },
+        research_trigger = {
+            type = "craft-item",
+            item = "crystarion-crystal",
+            count = 50,
+        }
+    },
+    {
+        type = "technology",
+        name = "crystarion-unlock-science-unstable",
+        icon = "__base__/graphics/technology/automation-science-pack.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-empower-2"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-science-unstable"
+            },
+        },
+        prerequisites = { "crystarion-unlock-science-volatile" },
+        unit = {
+            count = 200,
+            ingredients = {
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack", 1 },
+                { "crystarion-science-volatile", 1 },
+            },
+            time = 30
+        },
+    },
+    {
+        type = "technology",
+        name = "crystarion-unlock-science-stable",
+        icon = "__base__/graphics/technology/automation-science-pack.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-empower-3"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-science-stable"
+            },
+        },
+        prerequisites = { "crystarion-unlock-science-unstable" },
+        unit = {
+            count = 200,
+            ingredients = {
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack", 1 },
+                { "crystarion-science-volatile", 1 },
+                { "crystarion-science-unstable", 1 },
+            },
+            time = 30
+        },
+    },
+    {
+        type = "technology",
+        name = "crystarion-chemistry",
+        icon = "__base__/graphics/technology/automation-science-pack.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-slurry-from-red-crystal"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-slurry-from-green-crystal"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-slurry-from-blue-crystal"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-mix-yellow"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-mix-purple"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-denaturize-yellow"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-denaturize-purple"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-denaturize-red"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-denaturize-green"
+            },
+        },
+        prerequisites = { "crystarion-unlock-science-unstable", "crystarion-unlock-science-volatile" },
+        unit = {
+            count = 200,
+            ingredients = {
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack", 1 },
+                { "crystarion-science-volatile", 1 },
+                { "crystarion-science-unstable", 1 },
+            },
+            time = 30
+        },
     },
 })
