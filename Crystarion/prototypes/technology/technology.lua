@@ -1,4 +1,5 @@
--- Planet Discovery Janus
+local helper = require("__Crystarion__.helper")
+
 data:extend({
     {
         type = "technology",
@@ -30,9 +31,9 @@ data:extend({
             count = 1000,
             ingredients = {
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack", 1 },
-                { "chemical-science-pack", 1 },
-                { "space-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
+                { "space-science-pack",      1 },
             },
             time = 60
         },
@@ -42,8 +43,10 @@ data:extend({
     {
         type = "technology",
         name = "crystarion-unlock-ice",
-        icon = "__base__/graphics/technology/automation-science-pack.png",
-        icon_size = 256,
+        icons = helper.alternate(
+            { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
+            helper.icons("planet")
+        ),
         essential = true,
         effects = {
             {
@@ -72,8 +75,10 @@ data:extend({
     {
         type = "technology",
         name = "crystarion-unlock-rod-big",
-        icon = "__base__/graphics/technology/automation-science-pack.png",
-        icon_size = 256,
+        icons = helper.alternate(
+            { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
+            helper.icons("planet")
+        ),
         essential = false,
         effects = {
             {
@@ -85,7 +90,7 @@ data:extend({
         unit = {
             count = 100,
             ingredients = {
-                { "automation-science-pack", 1 },
+                { "automation-science-pack",     1 },
                 { "crystarion-science-volatile", 1 },
             },
             time = 30
@@ -94,8 +99,10 @@ data:extend({
     {
         type = "technology",
         name = "crystarion-unlock-rod-huge",
-        icon = "__base__/graphics/technology/automation-science-pack.png",
-        icon_size = 256,
+        icons = helper.alternate(
+            { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
+            helper.icons("planet")
+        ),
         essential = false,
         effects = {
             {
@@ -107,8 +114,8 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "automation-science-pack", 1 },
-                { "logistic-science-pack", 1 },
+                { "automation-science-pack",     1 },
+                { "logistic-science-pack",       1 },
                 { "crystarion-science-unstable", 1 },
             },
             time = 30
@@ -117,8 +124,9 @@ data:extend({
     {
         type = "technology",
         name = "crystarion-unlock-resource",
-        icon = "__base__/graphics/technology/automation-science-pack.png",
-        icon_size = 256,
+        icons = {
+            helper.icons("crystal")
+        },
         essential = true,
         effects = {
             {
@@ -223,8 +231,7 @@ data:extend({
     {
         type = "technology",
         name = "crystarion-unlock-biter",
-        icon = "__base__/graphics/technology/automation-science-pack.png",
-        icon_size = 256,
+        icon = "__Crystarion__/graphics/items/magazine.png",
         essential = true,
         effects = {
             {
@@ -257,8 +264,7 @@ data:extend({
     {
         type = "technology",
         name = "crystarion-unlock-science-volatile",
-        icon = "__base__/graphics/technology/automation-science-pack.png",
-        icon_size = 256,
+        icons = { helper.icons("crystal_volatile") },
         essential = true,
         effects = {
             {
@@ -288,8 +294,7 @@ data:extend({
     {
         type = "technology",
         name = "crystarion-unlock-science-unstable",
-        icon = "__base__/graphics/technology/automation-science-pack.png",
-        icon_size = 256,
+        icons = { helper.icons("crystal_unstable") },
         essential = true,
         effects = {
             {
@@ -305,8 +310,8 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "automation-science-pack", 1 },
-                { "logistic-science-pack", 1 },
+                { "automation-science-pack",     1 },
+                { "logistic-science-pack",       1 },
                 { "crystarion-science-volatile", 1 },
             },
             time = 30
@@ -315,8 +320,7 @@ data:extend({
     {
         type = "technology",
         name = "crystarion-unlock-science-stable",
-        icon = "__base__/graphics/technology/automation-science-pack.png",
-        icon_size = 256,
+        icons = { helper.icons("crystal_stable") },
         essential = true,
         effects = {
             {
@@ -332,8 +336,8 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "automation-science-pack", 1 },
-                { "logistic-science-pack", 1 },
+                { "automation-science-pack",     1 },
+                { "logistic-science-pack",       1 },
                 { "crystarion-science-volatile", 1 },
                 { "crystarion-science-unstable", 1 },
             },
@@ -343,8 +347,10 @@ data:extend({
     {
         type = "technology",
         name = "crystarion-chemistry",
-        icon = "__base__/graphics/technology/automation-science-pack.png",
-        icon_size = 256,
+        icons = helper.alternate(
+            { icon = "__base__/graphics/technology/advanced-oil-processing.png", size = 256 },
+            helper.icons("planet")
+        ),
         essential = true,
         effects = {
             {
@@ -388,8 +394,8 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "automation-science-pack", 1 },
-                { "logistic-science-pack", 1 },
+                { "automation-science-pack",     1 },
+                { "logistic-science-pack",       1 },
                 { "crystarion-science-volatile", 1 },
                 { "crystarion-science-unstable", 1 },
             },
