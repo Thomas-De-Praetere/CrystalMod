@@ -38,6 +38,7 @@ local function neutralize_color(color, result)
         },
         energy_required = 1,
         enabled = false,
+        auto_recycle = false,
     }
 end
 
