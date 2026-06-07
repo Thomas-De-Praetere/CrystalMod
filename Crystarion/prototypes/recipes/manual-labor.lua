@@ -18,6 +18,7 @@ local function destabilize(name, input, input_icon, output, output_amount)
         },
         energy_required = 1,
         enabled = false,
+        auto_recycle = false,
     }
 end
 

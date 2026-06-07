@@ -77,6 +77,7 @@ local battery = {
     },
     energy_required = 4,
     enabled = false,
+    auto_recycle = false,
 }
 local crystal_melt = {
     type = "recipe",
@@ -116,6 +117,7 @@ local crystal_plant = {
     },
     results = { { type = "item", name = "chemical-plant", amount = 1 } },
     enabled = false,
+    auto_recycle = false,
 }
 
 local revitalise_coal = {
