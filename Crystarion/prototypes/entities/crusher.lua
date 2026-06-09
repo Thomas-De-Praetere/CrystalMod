@@ -10,6 +10,13 @@ entity.crafting_categories = { "crystarion-crusher-category" }
 entity.name = "crystarion-crusher"
 entity.crafting_speed = 1.0
 entity.energy_usage = "150kW"
+entity.energy_source =
+{
+    type = "burner",
+    fuel_categories = {"crystarion-volatile"},
+    effectivity = 1,
+    fuel_inventory_size = 1,
+}
 entity.minable = { mining_time = 0.2, result = "crystarion-crusher" }
 entity.surface_conditions = {}
 entity.icons = icons

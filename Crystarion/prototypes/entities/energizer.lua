@@ -16,16 +16,18 @@ local entity = table.deepcopy(data.raw["assembling-machine"]["assembling-machine
 entity.crafting_categories = { "crystarion-energiser-category" }
 entity.name = "crystarion-energiser"
 entity.crafting_speed = 1.0
-entity.energy_usage = "150kW"
+entity.energy_usage = "300kW"
+entity.energy_source =
+{
+    type = "burner",
+    fuel_categories = {"crystarion-volatile"},
+    effectivity = 1,
+    fuel_inventory_size = 1,
+    emissions_per_minute = { crystarion_resonance = 2 }
+}
 entity.minable = { mining_time = 0.2, result = "crystarion-energiser" }
 entity.icons = icons
 entity.corpse = "crystarion-energiser-remnants"
-entity.energy_source =
-{
-    type = "electric",
-    usage_priority = "secondary-input",
-    emissions_per_minute = { crystarion_resonance = 2 }
-}
 entity.graphics_set = get_graphics(tint)
 
 --Fluid boxes

@@ -44,6 +44,20 @@ local crystal_splinter = {
     energy_required = 1,
     enabled = false,
 }
+local crystal_splinter_less = {
+    type = "recipe",
+    name = "crystarion-crystal-ore-splinter",
+    category = "crystarion-crusher-category",
+    main_product = "crystarion-crystal-splinter",
+    ingredients = {
+        { type = "item", name = "crystarion-crushed-crystal", amount = 1 }
+    },
+    results = {
+        { type = "item", name = "crystarion-crystal-splinter", amount = 5 }
+    },
+    energy_required = 1,
+    enabled = false,
+}
 local crystalise = {
     type = "recipe",
     name = "crystarion-crystalise",
@@ -153,4 +167,5 @@ data:extend({
     crystal_plant,
     revitalise_coal,
     crystal_splinter,
+    crystal_splinter_less,
 })
