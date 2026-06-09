@@ -75,8 +75,8 @@ data:extend({
                              y = y,\z
                              seed0 = map_seed,\z
                              seed1 = 2,\z
-                             candidate_spot_count = 10,\z
-                             suggested_minimum_candidate_point_spacing = 128,\z
+                             candidate_spot_count = 20,\z
+                             suggested_minimum_candidate_point_spacing = 64,\z
                              skip_span = 3,\z
                              skip_offset = 0,\z
                              region_size = 2048,\z
