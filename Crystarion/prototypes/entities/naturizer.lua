@@ -4,15 +4,13 @@ local entity = {
     name = "crystarion-naturizer",
     minable = { mining_time = 0.2, result = "crystarion-naturizer" },
     max_power_output = "4MW",
-    burner =
-    {
+    burner = {
         type = "burner",
         fuel_categories = { "crystarion-volatile" },
         effectivity = 1,
-        fuel_inventory_size = 1,
+        fuel_inventory_size = 2,
         emissions_per_minute = { crystarion_resonance = 10 },
-        smoke =
-        {
+        smoke = {
             {
                 name = "smoke",
                 north_position = { 0.9, 0.0 },
@@ -20,31 +18,38 @@ local entity = {
                 deviation = { 0.1, 0.1 },
                 frequency = 9
             }
+        },
+        light_flicker = {
+            color = helper.crystal_tint.cyan,
+            minimum_intensity = 0.7,
+            maximum_intensity = 0.95
         }
     },
-    energy_source =
-    {
+    energy_source = {
         type = "electric",
         usage_priority = "secondary-output"
     },
     collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    picture =
-    {
-        layers =
-        {
-            util.sprite_load("__space-age__/graphics/entity/heating-tower/heating-tower-main", {
-                scale = 0.5
-            }),
-            util.sprite_load("__space-age__/graphics/entity/heating-tower/heating-tower-shadow", {
-                scale = 0.5,
-                draw_as_shadow = true
-            })
+    idle_animation = {
+        north = {
+            layers = {
+                util.sprite_load("__space-age__/graphics/entity/heating-tower/heating-tower-main", {
+                    scale = 0.5,
+                    frame_count = 1,
+                    repeat_count = 24,
+                }),
+                util.sprite_load("__space-age__/graphics/entity/heating-tower/heating-tower-shadow", {
+                    scale = 0.5,
+                    frame_count = 1,
+                    repeat_count = 24,
+                    draw_as_shadow = true
+                })
+            }
+
         }
     },
-
-    working_light_picture =
-    {
+    animation = {
         layers = {
             util.sprite_load("__space-age__/graphics/entity/heating-tower/heating-tower-working-fire", {
                 frame_count = 24,
@@ -52,7 +57,7 @@ local entity = {
                 blend_mode = "additive",
                 draw_as_glow = true,
                 animation_speed = 0.333,
-                tint = helper.crystal_tint.white
+                tint = helper.crystal_tint.cyan
             }),
             util.sprite_load("__space-age__/graphics/entity/heating-tower/heating-tower-working-light", {
                 frame_count = 1,
@@ -60,10 +65,11 @@ local entity = {
                 scale = 0.5,
                 blend_mode = "additive",
                 draw_as_glow = true,
-                tint = helper.crystal_tint.white
+                tint = helper.crystal_tint.cyan
             })
         }
     },
+    always_draw_idle_animation = true,
     type = "burner-generator",
     icon = "__space-age__/graphics/icons/heating-tower.png",
     flags = { "placeable-neutral", "player-creation" },
@@ -73,10 +79,6 @@ local entity = {
     -- idle_animation can also be specified
     perceived_performance = { minimum = 0.25, performance_to_activity_rate = 2.0 },
 }
-
-
-
-
 
 local item = table.deepcopy(data.raw["item"]["burner-generator"])
 item.name = "crystarion-naturizer"
@@ -88,7 +90,7 @@ local recipe = {
     name = "crystarion-naturizer",
     main_product = "crystarion-naturizer",
     ingredients = {
-        { type = "item", name = "iron-plate",         amount = 3 },
+        { type = "item", name = "iron-plate", amount = 3 },
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
