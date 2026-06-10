@@ -66,7 +66,7 @@ local crystal_splinter_fewer = {
         { type = "item", name = "crystarion-crushed-crystal", amount = 1 }
     },
     results = {
-        { type = "item", name = "crystarion-crystal-splinter", amount = 4 }
+        { type = "item", name = "crystarion-crystal-splinter", amount = 1 }
     },
     energy_required = 1,
     enabled = false,
