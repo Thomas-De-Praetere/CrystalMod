@@ -248,6 +248,10 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
+                recipe = "crystarion-crystal-ore-splinter-fewer"
+            },
+            {
+                type = "unlock-recipe",
                 recipe = "crystarion-crusher"
             },
             {
