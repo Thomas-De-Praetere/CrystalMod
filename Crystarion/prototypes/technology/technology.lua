@@ -244,6 +244,10 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
+                recipe = "crystarion-crystal-ore-splinter-less"
+            },
+            {
+                type = "unlock-recipe",
                 recipe = "crystarion-crusher"
             },
             {
