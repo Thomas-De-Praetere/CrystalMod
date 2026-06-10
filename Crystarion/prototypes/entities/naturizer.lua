@@ -29,7 +29,7 @@ local entity = {
     },
     collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-    pictures =
+    picture =
     {
         layers =
         {
@@ -81,6 +81,7 @@ local entity = {
 local item = table.deepcopy(data.raw["item"]["burner-generator"])
 item.name = "crystarion-naturizer"
 item.place_result = "crystarion-naturizer"
+item.icon = "__space-age__/graphics/icons/heating-tower.png"
 
 local recipe = {
     type = "recipe",
