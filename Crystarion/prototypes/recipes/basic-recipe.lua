@@ -46,7 +46,7 @@ local crystal_splinter = {
 }
 local crystal_splinter_less = {
     type = "recipe",
-    name = "crystarion-crystal-ore-splinter",
+    name = "crystarion-crystal-ore-splinter-less",
     category = "crystarion-crusher-category",
     main_product = "crystarion-crystal-splinter",
     ingredients = {
