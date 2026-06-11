@@ -82,6 +82,7 @@ helper.crystal_tint = {
     cyan = { 0.8, 1, 1 },
     yellow = { 1, 1, 0.8 },
     white = { 1, 1, 1 },
+    orange = { 1, 0.6, 0 },
 }
 
 local ITEM_LOCATION = "__Crystarion__/graphics/items/"

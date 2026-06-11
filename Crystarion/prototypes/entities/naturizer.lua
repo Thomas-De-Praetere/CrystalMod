@@ -4,12 +4,13 @@ local entity = {
     name = "crystarion-naturizer",
     minable = { mining_time = 0.2, result = "crystarion-naturizer" },
     max_power_output = "4MW",
+    order = "c[crystarion-naturizer]",
     burner = {
         type = "burner",
-        fuel_categories = { "crystarion-volatile" },
+        fuel_categories = { "crystarion-explosive" },
         effectivity = 1,
         fuel_inventory_size = 2,
-        emissions_per_minute = { crystarion_resonance = 10 },
+        emissions_per_minute = { crystarion_resonance = 50 },
         smoke = {
             {
                 name = "smoke",
@@ -20,7 +21,7 @@ local entity = {
             }
         },
         light_flicker = {
-            color = helper.crystal_tint.cyan,
+            color = helper.crystal_tint.orange,
             minimum_intensity = 0.7,
             maximum_intensity = 0.95
         }
@@ -74,8 +75,8 @@ local entity = {
     icon = "__space-age__/graphics/icons/heating-tower.png",
     flags = { "placeable-neutral", "player-creation" },
     max_health = 400,
-    dying_explosion = "medium-explosion",
-    corpse = "steam-engine-remnants",
+    dying_explosion = "heating-tower-explosion",
+    corpse = "heating-tower-remnants",
     -- idle_animation can also be specified
     perceived_performance = { minimum = 0.25, performance_to_activity_rate = 2.0 },
 }
