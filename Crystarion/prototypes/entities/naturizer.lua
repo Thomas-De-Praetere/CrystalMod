@@ -4,7 +4,6 @@ local entity = {
     name = "crystarion-naturizer",
     minable = { mining_time = 0.2, result = "crystarion-naturizer" },
     max_power_output = "4MW",
-    order = "c[crystarion-naturizer]",
     burner = {
         type = "burner",
         fuel_categories = { "crystarion-explosive" },
@@ -85,6 +84,8 @@ local item = table.deepcopy(data.raw["item"]["burner-generator"])
 item.name = "crystarion-naturizer"
 item.place_result = "crystarion-naturizer"
 item.icon = "__space-age__/graphics/icons/heating-tower.png"
+item.order = "c[crystarion-naturizer]"
+item.subgroup = "environmental-protection"
 
 local recipe = {
     type = "recipe",
