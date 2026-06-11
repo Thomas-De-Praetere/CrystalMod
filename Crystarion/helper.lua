@@ -95,6 +95,7 @@ local icon_table = {
     crystal_unstable = { icon = ITEM_LOCATION .. "crystal_unstable_1.png", icon_size = 64, tint = helper.crystal_tint.white, scale = 0.5 },
     crystal_stable = { icon = ITEM_LOCATION .. "crystal_stable_1.png", icon_size = 64, tint = helper.crystal_tint.white, scale = 0.5 },
     splinter = { icon = ITEM_LOCATION .. "crystal_splinter_1.png", icon_size = 64, tint = helper.crystal_tint.white, scale = 0.5 },
+    splinter_volatile = { icon = ITEM_LOCATION .. "crystal_splinter_1.png", icon_size = 64, tint = helper.crystal_tint.orange, scale = 0.5 },
     crystal_green = { icon = ITEM_LOCATION .. "crystal_shard_1.png", icon_size = 64, tint = helper.crystal_tint.green, scale = 0.5 },
     crystal_blue = { icon = ITEM_LOCATION .. "crystal_shard_1.png", icon_size = 64, tint = helper.crystal_tint.blue, scale = 0.5 },
     crystal_red = { icon = ITEM_LOCATION .. "crystal_shard_1.png", icon_size = 64, tint = helper.crystal_tint.red, scale = 0.5 },
