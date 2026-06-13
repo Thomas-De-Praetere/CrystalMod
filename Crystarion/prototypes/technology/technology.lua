@@ -57,14 +57,6 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-collector"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-furnace"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-ice-melting"
-            },
         },
         prerequisites = { "planet-discovery-crystarion" },
         research_trigger = {
@@ -217,10 +209,6 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-battery"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-chemical-plant"
-            },
         },
         prerequisites = { "planet-discovery-crystarion" },
         research_trigger = {
@@ -245,10 +233,6 @@ data:extend({
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-crystal-ore-splinter-less"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-crystal-ore-splinter-fewer"
             },
             {
                 type = "unlock-recipe",

@@ -58,19 +58,6 @@ local crystal_splinter_less = {
     energy_required = 1,
     enabled = false,
 }
-local crystal_splinter_fewer = {
-    type = "recipe",
-    name = "crystarion-crystal-ore-splinter-fewer",
-    main_product = "crystarion-crystal-splinter",
-    ingredients = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 1 }
-    },
-    results = {
-        { type = "item", name = "crystarion-crystal-splinter", amount = 1 }
-    },
-    energy_required = 1,
-    enabled = false,
-}
 local crystalise = {
     type = "recipe",
     name = "crystarion-crystalise",
@@ -106,46 +93,6 @@ local battery = {
     enabled = false,
     auto_recycle = false,
 }
-local crystal_melt = {
-    type = "recipe",
-    name = "crystarion-ice-melting",
-    icons = helper.alternate(
-            { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
-            helper.icons("planet")
-    ),
-    category = "crystarion-smelter-category",
-    ingredients = { { type = "item", name = "ice", amount = 1 } },
-    energy_required = 1,
-    results = { { type = "fluid", name = "water", amount = 20 } },
-    allow_productivity = true,
-    allow_decomposition = false,
-    crafting_machine_tint = {
-        primary = { r = 0.433, g = 0.773, b = 1.000, a = 1.000 }, -- #6ec5ffff
-        secondary = { r = 0.591, g = 0.856, b = 1.000, a = 1.000 }, -- #96daffff
-        tertiary = { r = 0.381, g = 0.428, b = 0.436, a = 0.502 }, -- #616d6f80
-        quaternary = { r = 0.499, g = 0.797, b = 0.793, a = 0.733 }, -- #7fcbcabb
-    },
-    enabled = false,
-}
-
-local crystal_plant = {
-    type = "recipe",
-    name = "crystarion-chemical-plant",
-    energy_required = 5,
-    icons = helper.alternate(
-            { icon = "__base__/graphics/icons/chemical-plant.png" },
-            helper.icons("planet")
-    ),
-    ingredients = {
-        { type = "item", name = "iron-gear-wheel", amount = 5 },
-        { type = "item", name = "pipe", amount = 5 },
-        { type = "item", name = "crystarion-crystal", amount = 2 },
-        { type = "item", name = "crystarion-crystal-blue", amount = 15 },
-    },
-    results = { { type = "item", name = "chemical-plant", amount = 1 } },
-    enabled = false,
-    auto_recycle = false,
-}
 
 local revitalise_coal = {
     type = "recipe",
@@ -176,10 +123,7 @@ data:extend({
     crush_crystal_ore,
     crystalise,
     battery,
-    crystal_melt,
-    crystal_plant,
     revitalise_coal,
     crystal_splinter,
     crystal_splinter_less,
-    crystal_splinter_fewer,
 })
