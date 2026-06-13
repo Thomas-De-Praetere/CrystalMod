@@ -3,13 +3,13 @@ local helper = require("__Crystarion__.helper")
 local entity = {
     name = "crystarion-naturizer",
     minable = { mining_time = 0.2, result = "crystarion-naturizer" },
-    max_power_output = "4MW",
+    max_power_output = "8MW",
     burner = {
         type = "burner",
         fuel_categories = { "crystarion-explosive" },
         effectivity = 1,
         fuel_inventory_size = 2,
-        emissions_per_minute = { crystarion_resonance = 50 },
+        emissions_per_minute = { crystarion_resonance = 100 },
         smoke = {
             {
                 name = "smoke",
