@@ -79,7 +79,7 @@ crystal_splinter.icons = { helper.icons("splinter") }
 crystal_splinter.pictures = get_crystal_sprites("crystal_splinter", helper.crystal_tint.white)
 crystal_splinter.fuel_category = "crystarion-volatile"
 crystal_splinter.fuel_value = "2MJ"
-crystal_splinter.spoil_ticks = 1 * helper.minutes()
+crystal_splinter.spoil_ticks = 2 * helper.minutes()
 crystal_splinter.spoil_result = "crystarion-crystal-splinter-volatile"
 
 local crystal_splinter_volatile = table.deepcopy(BASE_ITEM)
@@ -88,7 +88,7 @@ crystal_splinter_volatile.icons = { helper.icons("splinter_volatile") }
 crystal_splinter_volatile.pictures = get_crystal_sprites("crystal_splinter", helper.crystal_tint.orange)
 crystal_splinter_volatile.fuel_category = "crystarion-explosive"
 crystal_splinter_volatile.fuel_value = "500kJ"
-crystal_splinter_volatile.spoil_ticks = 15 * helper.seconds()
+crystal_splinter_volatile.spoil_ticks = 30 * helper.seconds()
 crystal_splinter_volatile.spoil_to_trigger_result = {
     trigger = {
         type = "direct",
