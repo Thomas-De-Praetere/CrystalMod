@@ -16,7 +16,7 @@ local entity = table.deepcopy(data.raw["assembling-machine"]["assembling-machine
 entity.crafting_categories = { "crystarion-energiser-category" }
 entity.name = "crystarion-energiser"
 entity.crafting_speed = 1.0
-entity.energy_usage = "300kW"
+entity.energy_usage = "750kW"
 entity.energy_source =
 {
     type = "burner",
