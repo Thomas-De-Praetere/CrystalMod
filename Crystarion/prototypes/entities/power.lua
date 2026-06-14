@@ -13,6 +13,7 @@ entity.energy_source.emissions_per_minute = {
 }
 entity.minable = { mining_time = 0.2, result = "crystarion-lure" }
 entity.icons = icons
+entity.energy_usage = "1MW"
 
 local item = table.deepcopy(data.raw["item"]["radar"])
 item.name = "crystarion-lure"
