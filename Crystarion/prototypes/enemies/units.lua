@@ -15,11 +15,11 @@ local function create_enemy(size, absorption, type, multiple, to_spawn)
         entity_name = to_spawn,
         offsets = spawn_array,
     }
-    unit.vision_distance = 10
+    unit.vision_distance = 40
     unit.absorptions_to_join_attack = { crystarion_resonance = absorption }
-    unit.distraction_cooldown = 50
-    unit.min_pursue_time = helper.seconds() * 10
-    unit.max_pursue_distance = 20
+    unit.distraction_cooldown = 300
+    unit.min_pursue_time = helper.minutes()
+    unit.max_pursue_distance = 100
     return unit
 end
 
