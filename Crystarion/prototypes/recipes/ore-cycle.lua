@@ -133,6 +133,9 @@ local split_yellow = split_crystal_2(
 local crush_crystal_red = crush_crystal_color("red")
 local crush_crystal_green = crush_crystal_color("green")
 local crush_crystal_blue = crush_crystal_color("blue")
+local crush_crystal_yellow = crush_crystal_color("yellow")
+local crush_crystal_cyan = crush_crystal_color("cyan")
+local crush_crystal_magenta = crush_crystal_color("magenta")
 
 local neutralize_red = neutralize_color("red", "copper-ore")
 local neutralize_green = neutralize_color("green", "stone")
@@ -169,6 +172,9 @@ data:extend({
     crush_crystal_red,
     crush_crystal_green,
     crush_crystal_blue,
+    crush_crystal_yellow,
+    crush_crystal_cyan,
+    crush_crystal_magenta,
     neutralize_red,
     neutralize_green,
     neutralize_blue,

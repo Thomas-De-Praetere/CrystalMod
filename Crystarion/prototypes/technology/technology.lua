@@ -246,6 +246,11 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-crystal-ammo"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-land-mine"
+            },
+
         },
         prerequisites = { "planet-discovery-crystarion" },
         research_trigger = {
