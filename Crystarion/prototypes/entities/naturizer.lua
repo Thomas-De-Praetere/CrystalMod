@@ -1,4 +1,7 @@
 local helper = require("__Crystarion__.helper")
+require ("circuit-connector-sprites")
+require ("util")
+require ("__space-age__.prototypes.entity.circuit-network")
 
 local entity = {
     name = "crystarion-naturizer",
@@ -78,6 +81,8 @@ local entity = {
     corpse = "heating-tower-remnants",
     -- idle_animation can also be specified
     perceived_performance = { minimum = 0.25, performance_to_activity_rate = 2.0 },
+    circuit_wire_max_distance = reactor_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["heating-tower"]
 }
 
 local item = table.deepcopy(data.raw["item"]["burner-generator"])
