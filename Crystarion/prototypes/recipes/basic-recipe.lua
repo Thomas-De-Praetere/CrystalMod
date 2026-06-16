@@ -76,6 +76,7 @@ local crystalise = {
 local battery = {
     type = "recipe",
     name = "crystarion-battery",
+    category = "crafting",
     main_product = "battery",
     icons = helper.alternate(
             { icon = "__base__/graphics/icons/battery.png" },
