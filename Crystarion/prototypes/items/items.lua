@@ -58,15 +58,15 @@ crystal_red.name = "crystarion-crystal-red"
 crystal_red.icons = { helper.icons("crystal_red") }
 crystal_red.pictures = get_crystal_sprites("crystal_shard", helper.crystal_tint.red)
 
-local crystal_magenta = table.deepcopy(BASE_ITEM)
-crystal_magenta.name = "crystarion-crystal-magenta"
-crystal_magenta.icons = { helper.icons("crystal_magenta") }
-crystal_magenta.pictures = get_crystal_sprites("crystal_shard", helper.crystal_tint.magenta)
-
-local crystal_cyan = table.deepcopy(BASE_ITEM)
-crystal_cyan.name = "crystarion-crystal-cyan"
-crystal_cyan.icons = { helper.icons("crystal_cyan") }
-crystal_cyan.pictures = get_crystal_sprites("crystal_shard", helper.crystal_tint.cyan)
+--local crystal_magenta = table.deepcopy(BASE_ITEM)
+--crystal_magenta.name = "crystarion-crystal-magenta"
+--crystal_magenta.icons = { helper.icons("crystal_magenta") }
+--crystal_magenta.pictures = get_crystal_sprites("crystal_shard", helper.crystal_tint.magenta)
+--
+--local crystal_cyan = table.deepcopy(BASE_ITEM)
+--crystal_cyan.name = "crystarion-crystal-cyan"
+--crystal_cyan.icons = { helper.icons("crystal_cyan") }
+--crystal_cyan.pictures = get_crystal_sprites("crystal_shard", helper.crystal_tint.cyan)
 
 local crystal_yellow = table.deepcopy(BASE_ITEM)
 crystal_yellow.name = "crystarion-crystal-yellow"
@@ -243,8 +243,8 @@ data:extend({
     crystal_green,
     crystal_blue,
     crystal_red,
-    crystal_magenta,
-    crystal_cyan,
+    --crystal_magenta,
+    --crystal_cyan,
     crystal_yellow,
     crystal_splinter,
     crystal_splinter_volatile,

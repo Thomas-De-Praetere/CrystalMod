@@ -92,31 +92,31 @@ local function split_crystal_2(name, to_split, result1, result2)
     }
 end
 
-local split_green = split_crystal_1(
-        "green",
-        "crystal",
-        "crystal-green",
-        "crystal-magenta"
-)
-local split_magenta = split_crystal_2(
-        "magenta",
-        "crystal-magenta",
-        "crystal-blue",
-        "crystal-red"
-)
+--local split_green = split_crystal_1(
+--        "green",
+--        "crystal",
+--        "crystal-green",
+--        "crystal-magenta"
+--)
+--local split_magenta = split_crystal_2(
+--        "magenta",
+--        "crystal-magenta",
+--        "crystal-blue",
+--        "crystal-red"
+--)
 
-local split_red = split_crystal_1(
-        "red",
-        "crystal",
-        "crystal-red",
-        "crystal-cyan"
-)
-local split_cyan = split_crystal_2(
-        "cyan",
-        "crystal-cyan",
-        "crystal-green",
-        "crystal-blue"
-)
+--local split_red = split_crystal_1(
+--        "red",
+--        "crystal",
+--        "crystal-red",
+--        "crystal-cyan"
+--)
+--local split_cyan = split_crystal_2(
+--        "cyan",
+--        "crystal-cyan",
+--        "crystal-green",
+--        "crystal-blue"
+--)
 local split_blue = split_crystal_1(
         "blue",
         "crystal",
@@ -134,8 +134,8 @@ local crush_crystal_red = crush_crystal_color("red")
 local crush_crystal_green = crush_crystal_color("green")
 local crush_crystal_blue = crush_crystal_color("blue")
 local crush_crystal_yellow = crush_crystal_color("yellow")
-local crush_crystal_cyan = crush_crystal_color("cyan")
-local crush_crystal_magenta = crush_crystal_color("magenta")
+--local crush_crystal_cyan = crush_crystal_color("cyan")
+--local crush_crystal_magenta = crush_crystal_color("magenta")
 
 local neutralize_red = neutralize_color("red", "copper-ore")
 local neutralize_green = neutralize_color("green", "stone")
@@ -163,18 +163,18 @@ local neutralize_crystal = {
 }
 
 data:extend({
-    split_red,
-    split_green,
+    --split_red,
+    --split_green,
     split_blue,
-    split_magenta,
-    split_cyan,
+    --split_magenta,
+    --split_cyan,
     split_yellow,
     crush_crystal_red,
     crush_crystal_green,
     crush_crystal_blue,
     crush_crystal_yellow,
-    crush_crystal_cyan,
-    crush_crystal_magenta,
+    --crush_crystal_cyan,
+    --crush_crystal_magenta,
     neutralize_red,
     neutralize_green,
     neutralize_blue,

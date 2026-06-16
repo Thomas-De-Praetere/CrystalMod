@@ -55,7 +55,7 @@ local function create_recipe(size_name, crystal_ingredient)
 end
 
 local resource_green = data.raw["optimized-decorative"]["lithium-iceberg-medium"]
-local resource_magenta = data.raw["simple-entity"]["lithium-iceberg-big"]
+local resource_yellow = data.raw["simple-entity"]["lithium-iceberg-big"]
 local resource_crystal = data.raw["simple-entity"]["lithium-iceberg-huge"]
 
 data:extend({
@@ -64,9 +64,9 @@ data:extend({
     create_rod("medium", "crystal_green"),
     create_recipe("medium", "crystarion-crystal-green"),
 
-    create_resource("big", 7, resource_magenta.pictures, "crystal_magenta"),
-    create_rod("big", "crystal_magenta"),
-    create_recipe("big", "crystarion-crystal-magenta"),
+    create_resource("big", 7, resource_yellow.pictures, "crystal_yellow"),
+    create_rod("big", "crystal_yellow"),
+    create_recipe("big", "crystarion-crystal-yellow"),
 
     create_resource("huge", 10, resource_crystal.pictures, "crystal"),
     create_rod("huge", "crystal"),

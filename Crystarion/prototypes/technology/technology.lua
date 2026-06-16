@@ -141,14 +141,14 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-crush-crystal-yellow"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-crush-crystal-magenta"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-crush-crystal-cyan"
-            },
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-crush-crystal-magenta"
+            --},
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-crush-crystal-cyan"
+            --},
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-neutralize-red"
@@ -165,22 +165,22 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-neutralize-crystal"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-split-green"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-split-magenta"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-split-red"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-split-cyan"
-            },
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-split-green"
+            --},
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-split-magenta"
+            --},
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-split-red"
+            --},
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-split-cyan"
+            --},
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-split-blue"
@@ -189,22 +189,22 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-split-yellow"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-destabilize-crystal"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-destabilize-crystal-red"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-destabilize-crystal-green"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-destabilize-crystal-blue"
-            },
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-destabilize-crystal"
+            --},
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-destabilize-crystal-red"
+            --},
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-destabilize-crystal-green"
+            --},
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-destabilize-crystal-blue"
+            --},
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-energiser"
