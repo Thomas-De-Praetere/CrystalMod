@@ -34,7 +34,7 @@ local function neutralize_color(color, result)
         },
         results = {
             { type = "item", name = result, amount = 2 },
-            { type = "fluid", name = "steam", amount = 20, temperature = 165 }
+            { type = "fluid", name = "steam", amount = 20, temperature = 500 }
         },
         energy_required = 1,
         enabled = false,
@@ -85,7 +85,7 @@ local function split_crystal_2(name, to_split, result1, result2)
         results = {
             { type = "item", name = "crystarion-" .. result1, amount = 1 },
             { type = "item", name = "crystarion-" .. result2, amount = 1 },
-            { type = "fluid", name = "steam", amount = 20, temperature = 165 }
+            { type = "fluid", name = "steam", amount = 20, temperature = 500 }
         },
         energy_required = 1,
         enabled = false,
@@ -156,7 +156,7 @@ local neutralize_crystal = {
     },
     results = {
         { type = "item", name = "coal", amount = 6 },
-        { type = "fluid", name = "steam", amount = 60, temperature = 165 }
+        { type = "fluid", name = "steam", amount = 60, temperature = 500 }
     },
     energy_required = 3,
     enabled = false,

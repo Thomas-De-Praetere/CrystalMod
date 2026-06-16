@@ -31,27 +31,27 @@ entity.corpse = "crystarion-energiser-remnants"
 entity.graphics_set = get_graphics(tint)
 
 --Fluid boxes
-local output = table.deepcopy(entity.fluid_boxes[2])
-local input = table.deepcopy(entity.fluid_boxes[1])
-
-local pass_through = table.deepcopy(entity.fluid_boxes[1])
-pass_through.production_type = "output"
-pass_through.pipe_connections = {
-    {
-        flow_direction = "input-output",
-        direction = defines.direction.west,
-        position = { -1, 0 }
-    },
-    {
-        flow_direction = "input-output",
-        direction = defines.direction.east,
-        position = { 1, 0 }
-    }
-}
-pass_through.secondary_draw_orders = { north = -1 }
-pass_through.filter = "steam"
-
-entity.fluid_boxes = { input, pass_through, output }
+--local output = table.deepcopy(entity.fluid_boxes[2])
+--local input = table.deepcopy(entity.fluid_boxes[1])
+--
+--local pass_through = table.deepcopy(entity.fluid_boxes[1])
+--pass_through.production_type = "output"
+--pass_through.pipe_connections = {
+--    {
+--        flow_direction = "input-output",
+--        direction = defines.direction.west,
+--        position = { -1, 0 }
+--    },
+--    {
+--        flow_direction = "input-output",
+--        direction = defines.direction.east,
+--        position = { 1, 0 }
+--    }
+--}
+--pass_through.secondary_draw_orders = { north = -1 }
+--pass_through.filter = "steam"
+--
+--entity.fluid_boxes = { input, pass_through, output }
 
 local item = table.deepcopy(data.raw["item"]["assembling-machine-3"])
 item.name = "crystarion-energiser"

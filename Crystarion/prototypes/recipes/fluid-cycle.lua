@@ -33,7 +33,7 @@ local function denaturize(name, input, input_icon, output)
         },
         results = {
             { type = "fluid", name = output,  amount = 20 },
-            { type = "fluid", name = "steam", amount = 80, temperature = 165 }
+            { type = "item", name = "crystarion-crystal-splinter-volatile", amount = 20 }
         },
         energy_required = 1,
         enabled = false,
