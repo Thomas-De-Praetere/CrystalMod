@@ -72,7 +72,11 @@ public class LocaleGenerator {
 
             if (!namesNotDefined.isEmpty()) {
                 System.out.println("Some names were not defined:");
-                System.out.println(String.join("\n", namesNotDefined));
+                System.out.println(
+                        namesNotDefined.stream()
+                                .map(s -> String.format("new Locale(\"%s\",\"\"),", s))
+                                .collect(Collectors.joining("\n"))
+                );
             }
 
             if (!definedNamesNotFound.isEmpty()) {
