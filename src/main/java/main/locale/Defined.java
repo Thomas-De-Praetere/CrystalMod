@@ -7,39 +7,53 @@ public class Defined {
 
     public static final Map<Category, List<Locale>> DEFINED = Map.of(
             Category.ENTITY, List.of(
-                    new Locale("crystarion-energiser", "Energizer"),
-                    new Locale("crystarion-crystalizer", "Crystalizer"),
-                    new Locale("crystarion-crusher", "Crusher"),
-                    new Locale("crystarion-generator", "Flux Capacitator"),
-                    new Locale("crystarion-collector", "Collector"),
-                    new Locale("crystarion-rock", "Crystal Rock"),
-                    new Locale("crystarion-resource-ice", "Ice Rock"),
-                    new Locale("crystarion-rock-ice", "Ice Rock"),
-                    new Locale("crystarion-science-stable", "Stable Science"),
-                    new Locale("crystarion-rock-huge", "Huge Rock"),
-                    new Locale("crystarion-naturizer-category", "Naturizer"),
-                    new Locale("crystarion-lure", "Lure"),
-                    new Locale("crystarion-rock-ice-huge", "Huge Ice Rock"),
-                    new Locale("crystarion-naturizer", "Naturizer"),
-                    new Locale("crystarion-science-unstable", "Unstable Science"),
-                    new Locale("crystarion-nauvis", "Crystarion - Nauvis"),
-                    new Locale("crystarion-crusher-category", "Crusher"),
-                    new Locale("crystarion-energiser-category", "Energiser"),
-                    new Locale("crystarion-empowerer-category", "Empowerer"),
-                    new Locale("crystarion-empowerer", "Empowerer"),
-                    new Locale("crystarion-rock-big", "Big Rock"),
-                    new Locale("crystarion-smelter-category", "Smelter"),
-                    new Locale("crystarion-explosive", "Explosive Power"),
-                    new Locale("crystarion-spawner", "Crystosphere"),
-                    new Locale("crystarion-land-mine", "Splinter Mine"),
                     new Locale("crystarion-accumulator", "Crystal Power Cell"),
-                    new Locale("crystarion-volatile", "Crystal Power"),
+                    new Locale("crystarion-collector", "Collector"),
+                    new Locale("crystarion-crusher", "Crusher"),
+                    new Locale("crystarion-crusher-category", "Crusher"),
+                    new Locale("crystarion-crystalizer", "Crystalizer"),
+                    new Locale("crystarion-empowerer", "Empowerer"),
+                    new Locale("crystarion-empowerer-category", "Empowerer"),
+                    new Locale("crystarion-energiser", "Energizer"),
+                    new Locale("crystarion-energiser-category", "Energiser"),
+                    new Locale("crystarion-generator", "Flux Capacitator"),
+                    new Locale("crystarion-land-mine", "Splinter Mine"),
+                    new Locale("crystarion-lure", "Lure"),
+                    new Locale("crystarion-naturizer", "Naturizer"),
+                    new Locale("crystarion-naturizer-category", "Naturizer"),
+                    new Locale("crystarion-nauvis", "Crystarion - Nauvis"),
+                    new Locale("crystarion-resource-ice", "Ice Rock"),
+                    new Locale("crystarion-rock", "Crystal Rock"),
+                    new Locale("crystarion-rock-big", "Big Rock"),
+                    new Locale("crystarion-rock-huge", "Huge Rock"),
+                    new Locale("crystarion-rock-ice", "Ice Rock"),
                     new Locale("crystarion-rock-ice-big", "Big Ice Rock"),
+                    new Locale("crystarion-rock-ice-huge", "Huge Ice Rock"),
+                    new Locale("crystarion-science-stable", "Stable Science"),
+                    new Locale("crystarion-science-unstable", "Unstable Science"),
                     new Locale("crystarion-science-volatile", "Volatile Science"),
-                    new Locale("crystarion-crystal-ammo", "Crystaline Ammunition"),
-                    new Locale("crystarion_resonance", "Resonance")
+                    new Locale("crystarion-smelter-category", "Smelter"),
+                    new Locale("crystarion-spawner", "Crystosphere"),
+                    new Locale("crystarion-biter", "Crystaloid"),
+                    new Locale("crystarion-small-biter", "Small Crystaloid"),
+                    new Locale("crystarion-medium-biter", "Crystaloid"),
+                    new Locale("crystarion-big-biter", "Big Crystaloid"),
+                    new Locale("crystarion-behemoth-biter", "Behemoth Crystaloid"),
+                    new Locale("crystarion-small-spitter", "Small Crystalid"),
+                    new Locale("crystarion-medium-spitter", "Crystalid"),
+                    new Locale("crystarion-big-spitter", "Big Crystalid"),
+                    new Locale("crystarion-behemoth-spitter", "Behemoth Crystalid"),
+                    new Locale("crystarion-resource", "Crystaline remains"),
+                    new Locale("crystarion-resource-ice-huge", "Huge Condensation Rock"),
+                    new Locale("crystarion-resource-ice-big", "Big Condensation Rock"),
+                    new Locale("crystarion-resource-ice-medium", "Condensation Rock"),
+                    new Locale("crystarion-resource-small", "Crystaline remains"),
+                    new Locale("crystarion-resource-medium", "Large Crystaline remains"),
+                    new Locale("crystarion-resource-big", "Big Crystaline remains"),
+                    new Locale("crystarion-resource-behemoth", "Huge Crystaline remains")
             ),
             Category.ITEM, List.of(
+                    new Locale("crystarion-crystal-ammo", "Crystaline Ammunition"),
                     new Locale("crystarion-crushed-crystal", "Crushed Crystal"),
                     new Locale("crystarion-crystal", "Crystal"),
                     new Locale("crystarion-crystal-red", "Red Crystal"),
@@ -75,27 +89,6 @@ public class Defined {
                     new Locale("crystarion-blue-slurry", "Cryocryst"),
                     new Locale("crystarion-red-slurry", "Pyrocryst"),
                     new Locale("crystarion-plasma", "Plasmoflux")
-            ),
-            Category.PLANT, List.of(
-                    new Locale("crystarion-resource", "Crystaline remains"),
-                    new Locale("crystarion-resource-ice-huge", "Huge Condensation Rock"),
-                    new Locale("crystarion-resource-ice-big", "Big Condensation Rock"),
-                    new Locale("crystarion-resource-ice-medium", "Condensation Rock"),
-                    new Locale("crystarion-resource-small", "Crystaline remains"),
-                    new Locale("crystarion-resource-medium", "Large Crystaline remains"),
-                    new Locale("crystarion-resource-big", "Big Crystaline remains"),
-                    new Locale("crystarion-resource-behemoth", "Huge Crystaline remains")
-            ),
-            Category.UNIT, List.of(
-                    new Locale("crystarion-biter", "Crystaloid"),
-                    new Locale("crystarion-small-biter", "Small Crystaloid"),
-                    new Locale("crystarion-medium-biter", "Crystaloid"),
-                    new Locale("crystarion-big-biter", "Big Crystaloid"),
-                    new Locale("crystarion-behemoth-biter", "Behemoth Crystaloid"),
-                    new Locale("crystarion-small-spitter", "Small Crystalid"),
-                    new Locale("crystarion-medium-spitter", "Crystalid"),
-                    new Locale("crystarion-big-spitter", "Big Crystalid"),
-                    new Locale("crystarion-behemoth-spitter", "Behemoth Crystalid")
             ),
             Category.SPACE_LOCATION, List.of(
                     new Locale("crystarion-planet", "Crystarion")
@@ -169,6 +162,13 @@ public class Defined {
                     new Locale("crystarion-unlock-science-unstable", "Unstable Crystal Industry"),
                     new Locale("crystarion-unlock-science-stable", "Stable Crystal Industry"),
                     new Locale("planet-discovery-crystarion", "Crystarion")
+            ),
+            Category.FUEL_CATEGORY, List.of(
+                    new Locale("crystarion-volatile", "Crystal Power"),
+                    new Locale("crystarion-explosive", "Explosive Power")
+            ),
+            Category.AIRBORNE_POLLUTANT, List.of(
+                    new Locale("crystarion_resonance", "Resonance")
             )
     );
 
@@ -182,22 +182,22 @@ public class Defined {
         ENTITY,
         ITEM,
         FLUID,
-        PLANT,
-        UNIT,
         SPACE_LOCATION,
         RECIPE,
-        TECHNOLOGY;
+        TECHNOLOGY,
+        FUEL_CATEGORY,
+        AIRBORNE_POLLUTANT;
 
         public static Category forName(String string) {
             return switch (string.toUpperCase().replace("-", "_")) {
                 case "ENTITY" -> ENTITY;
                 case "ITEM" -> ITEM;
                 case "FLUID" -> FLUID;
-                case "PLANT" -> PLANT;
-                case "UNIT" -> UNIT;
                 case "SPACE_LOCATION" -> SPACE_LOCATION;
                 case "RECIPE" -> RECIPE;
                 case "TECHNOLOGY" -> TECHNOLOGY;
+                case "FUEL_CATEGORY" -> FUEL_CATEGORY;
+                case "AIRBORNE_POLLUTANT" -> AIRBORNE_POLLUTANT;
                 default -> ENTITY;
             };
         }

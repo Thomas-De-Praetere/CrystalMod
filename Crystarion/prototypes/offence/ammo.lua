@@ -1,4 +1,4 @@
--- locale ammo crystarion-crystal-ammo
+-- locale item crystarion-crystal-ammo
 -- locale recipe crystarion-crystal-ammo
 
 local helper = require("__Crystarion__.helper")
