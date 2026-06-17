@@ -55,7 +55,6 @@ public class Defined {
                     new Locale("crystarion-crusher", "Crusher"),
                     new Locale("crystarion-naturizer", "Naturizer"),
                     new Locale("crystarion-condensation-rod-big", "Big Condensation Rod"),
-                    new Locale("crystarion-crystal-volatile", "Volatile Crystal"),
                     new Locale("crystarion-condensation-rod-huge", "Huge Condensation Rod"),
                     new Locale("crystarion-empowerer", "Empowerer"),
                     new Locale("crystarion-collector", "Collector"),
@@ -64,6 +63,7 @@ public class Defined {
                     new Locale("crystarion-accumulator", "Crystal Power Cell"),
                     new Locale("crystarion-crystal-splinter", "Splinter"),
                     new Locale("crystarion-crystal-splinter-volatile", "Volatile Splinter"),
+                    new Locale("crystarion-crystal-volatile", "Volatile Crystal"),
                     new Locale("crystarion-crystal-unstable", "Unstable Crystal"),
                     new Locale("crystarion-crystal-stable", "Stable Crystal")
             ),
@@ -113,6 +113,9 @@ public class Defined {
                     new Locale("crystarion-crush-crystal-red", "Crush __ITEM__crystarion-crystal-red__"),
                     new Locale("crystarion-crush-crystal-blue", "Crush __ITEM__crystarion-crystal-blue__"),
                     new Locale("crystarion-crush-crystal-green", "Crush __ITEM__crystarion-crystal-green__"),
+                    new Locale("crystarion-crush-crystal-cyan", "Crush __ITEM__crystarion-crystal-cyan"),
+                    new Locale("crystarion-crush-crystal-magenta", "Crush __ITEM__crystarion-crystal-magenta"),
+                    new Locale("crystarion-crush-crystal-yellow", "Crush __ITEM__crystarion-crystal-yellow"),
                     new Locale("crystarion-neutralize-red", "Neutralize __ITEM__crystarion-crystal-red__"),
                     new Locale("crystarion-neutralize-blue", "Neutralize __ITEM__crystarion-crystal-blue__"),
                     new Locale("crystarion-neutralize-green", "Neutralize __ITEM__crystarion-crystal-green__"),
@@ -130,10 +133,42 @@ public class Defined {
                     new Locale("crystarion-destabilize-crystal-red", "Destabilize __ITEM__crystarion-crystal-red__"),
                     new Locale("crystarion-destabilize-crystal-green", "Destabilize __ITEM__crystarion-crystal-green__"),
                     new Locale("crystarion-destabilize-crystal-blue", "Destabilize __ITEM__crystarion-crystal-blue__"),
-                    new Locale("crystarion-battery", "Crystaline __ITEM__battery__")
+                    new Locale("crystarion-battery", "Crystaline __ITEM__battery__"),
+                    new Locale("crystarion-accumulator", "__ITEM__crystarion-accumulator__"),
+                    new Locale("crystarion-collector", "__ITEM__crystarion-collector__"),
+                    new Locale("crystarion-condensation-rod-big", "__ITEM__crystarion-condensation-rod-big__"),
+                    new Locale("crystarion-condensation-rod-huge", "__ITEM__crystarion-condensation-rod-huge__"),
+                    new Locale("crystarion-condensation-rod-medium", "__ITEM__crystarion-condensation-rod-medium__"),
+                    new Locale("crystarion-crusher", "Crusher"),
+                    new Locale("crystarion-crystal-ammo", "__ITEM__crystarion-crystal-ammo__"),
+                    new Locale("crystarion-crystal-empower-1", "Create __ITEM__crystarion-crystal-volatile__"),
+                    new Locale("crystarion-crystal-empower-2", "Create __ITEM__crystarion-crystal-unstable__"),
+                    new Locale("crystarion-crystal-empower-3", "Create __ITEM__crystarion-crystal-stable__"),
+                    new Locale("crystarion-crystal-ore-splinter", "Splinter __ITEM__crystarion-crystal__"),
+                    new Locale("crystarion-crystal-ore-splinter-less", "Splinter __ITEM__crystarion-crushed-crystal__"),
+                    new Locale("crystarion-empowerer", "__ITEM__crystarion-empowerer__"),
+                    new Locale("crystarion-energiser", "__ITEM__crystarion-energiser__"),
+                    new Locale("crystarion-land-mine", "__ITEM__crystarion-land-mine__"),
+                    new Locale("crystarion-lure", "__ITEM__crystarion-lure__"),
+                    new Locale("crystarion-naturizer", "__ITEM__crystarion-naturizer__"),
+                    new Locale("crystarion-revitalise-coal", "Revitalise Coal"),
+                    new Locale("crystarion-science-stable", "Create Stable Science"),
+                    new Locale("crystarion-science-unstable", "Create Unstable Science"),
+                    new Locale("crystarion-science-volatile", "Create Volatile Science")
+
             ),
             Category.TECHNOLOGY, List.of(
-                    new Locale("crystarion-planet", "Crystarion")
+                    new Locale("crystarion-planet", "Crystarion"),
+                    new Locale("crystarion-chemistry", "Crystaline Mixtures"),
+                    new Locale("crystarion-unlock-biter", "Basic Crystaloid Biology"),
+                    new Locale("crystarion-unlock-ice", "Basic Crystaline Structures"),
+                    new Locale("crystarion-unlock-resource", "Crystal Industry"),
+                    new Locale("crystarion-unlock-rod-big", "Advanced Crystaline Structures"),
+                    new Locale("crystarion-unlock-rod-huge", "Expert Crystaline Structures"),
+                    new Locale("crystarion-unlock-science-volatile", "Volatile Crystal Industry"),
+                    new Locale("crystarion-unlock-science-unstable", "Unstable Crystal Industry"),
+                    new Locale("crystarion-unlock-science-stable", "Stable Crystal Industry"),
+                    new Locale("planet-discovery-crystarion", "Crystarion")
             )
     );
 
