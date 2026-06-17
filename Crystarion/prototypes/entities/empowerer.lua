@@ -1,3 +1,7 @@
+-- locale assembling-machine crystarion-empowerer
+-- locale item crystarion-empowerer
+-- locale recipe crystarion-empowerer
+
 require("__Crystarion__.prototypes.entities.graphics.empowerer")
 local helper = require("__Crystarion__.helper")
 local icons = helper.alternate(

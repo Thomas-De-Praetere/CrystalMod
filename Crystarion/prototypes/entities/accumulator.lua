@@ -1,3 +1,7 @@
+-- locale accumulator crystarion-accumulator
+-- locale item crystarion-accumulator
+-- locale recipe crystarion-accumulator
+
 local helper = require("__Crystarion__.helper")
 
 local icons = helper.alternate(

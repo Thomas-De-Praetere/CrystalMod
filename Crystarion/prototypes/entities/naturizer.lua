@@ -1,3 +1,7 @@
+-- locale burner-generator crystarion-naturizer
+-- locale item crystarion-naturizer
+-- locale recipe crystarion-naturizer
+
 local helper = require("__Crystarion__.helper")
 require ("circuit-connector-sprites")
 require ("util")

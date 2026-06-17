@@ -1,3 +1,8 @@
+-- locale recipe-category crystarion-crusher-category
+-- locale recipe-category crystarion-energiser-category
+-- locale recipe-category crystarion-naturizer-category
+-- locale recipe-category crystarion-smelter-category
+-- locale recipe-category crystarion-empowerer-category
 -- categories for new machines
 local crusher_category = {
     type = "recipe-category",

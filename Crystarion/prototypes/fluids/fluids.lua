@@ -1,3 +1,11 @@
+-- locale fluid crystarion-crystal-slurry
+-- locale fluid crystarion-red-slurry
+-- locale fluid crystarion-blue-slurry
+-- locale fluid crystarion-green-slurry
+-- locale fluid crystarion-yellow-mixture
+-- locale fluid crystarion-purple-mixture
+-- locale fluid crystarion-plasma
+
 local helper = require("__Crystarion__.helper")
 
 local BASE_FLUID = data.raw["fluid"]["water"]

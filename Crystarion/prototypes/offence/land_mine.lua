@@ -1,3 +1,7 @@
+-- locale land-mine crystarion-land-mine
+-- locale item crystarion-land-mine
+-- locale recipe crystarion-land-mine
+
 local helper = require("__Crystarion__.helper")
 
 local entity = table.deepcopy(data.raw["land-mine"]["land-mine"])

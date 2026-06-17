@@ -1,3 +1,7 @@
+-- locale rader crystarion-lure
+-- locale item crystarion-lure
+-- locale recipe crystarion-lure
+
 local helper = require("__Crystarion__.helper")
 
 local icons = helper.alternate(

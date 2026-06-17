@@ -1,3 +1,8 @@
+-- locale agricultural-tower crystarion-collector
+-- locale item crystarion-collector
+-- locale recipe crystarion-collector
+
+
 local helper = require("__Crystarion__.helper")
 
 local icons = helper.alternate(

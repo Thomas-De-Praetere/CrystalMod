@@ -1,3 +1,14 @@
+-- locale technology planet-discovery-crystarion
+-- locale technology crystarion-unlock-ice
+-- locale technology crystarion-unlock-rod-big
+-- locale technology crystarion-unlock-rod-huge
+-- locale technology crystarion-unlock-resource
+-- locale technology crystarion-unlock-biter
+-- locale technology crystarion-unlock-science-volatile
+-- locale technology crystarion-unlock-science-unstable
+-- locale technology crystarion-unlock-science-stable
+-- locale technology crystarion-chemistry
+
 local helper = require("__Crystarion__.helper")
 
 data:extend({

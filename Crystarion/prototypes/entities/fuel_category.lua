@@ -1,3 +1,5 @@
+-- locale fuel-category crystarion-volatile
+-- locale fuel-category crystarion-explosive
 data:extend({
     {
         type = "fuel-category",

@@ -1,3 +1,13 @@
+-- locale plant crystarion-resource-ice-medium
+-- locale item crystarion-condensation-rod-medium
+-- locale recipe crystarion-condensation-rod-medium
+-- locale plant crystarion-resource-ice-big
+-- locale item crystarion-condensation-rod-big
+-- locale recipe crystarion-condensation-rod-big
+-- locale plant crystarion-resource-ice-huge
+-- locale item crystarion-condensation-rod-huge
+-- locale recipe crystarion-condensation-rod-huge
+
 local helper = require("__Crystarion__.helper")
 
 local function create_resource(size_name, amount, pictures, crystal_color_icon_name)

@@ -1,3 +1,20 @@
+-- locale recipe crystarion-crush-crystal-red
+-- locale recipe crystarion-crush-crystal-green
+-- locale recipe crystarion-crush-crystal-blue
+-- locale recipe crystarion-crush-crystal-yellow
+-- locale recipe crystarion-crush-crystal-cyan
+-- locale recipe crystarion-crush-crystal-magenta
+-- locale recipe crystarion-neutralize-red
+-- locale recipe crystarion-neutralize-green
+-- locale recipe crystarion-neutralize-blue
+-- locale recipe crystarion-neutralize-crystal
+-- locale recipe crystarion-split-red
+-- locale recipe crystarion-split-green
+-- locale recipe crystarion-split-blue
+-- locale recipe crystarion-split-magenta
+-- locale recipe crystarion-split-cyan
+-- locale recipe crystarion-split-yellow
+
 local helper = require("__Crystarion__.helper")
 
 local function crush_crystal_color(color)

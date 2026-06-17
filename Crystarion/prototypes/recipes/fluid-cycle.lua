@@ -1,3 +1,13 @@
+-- locale recipe crystarion-slurry-from-red-crystal
+-- locale recipe crystarion-slurry-from-green-crystal
+-- locale recipe crystarion-slurry-from-blue-crystal
+-- locale recipe crystarion-denaturize-yellow
+-- locale recipe crystarion-denaturize-purple
+-- locale recipe crystarion-denaturize-red
+-- locale recipe crystarion-denaturize-green
+-- locale recipe crystarion-mix-yellow
+-- locale recipe crystarion-mix-purple
+
 local helper = require("__Crystarion__.helper")
 local function slurry_from_color(name, in_amount, out_amount)
     return {

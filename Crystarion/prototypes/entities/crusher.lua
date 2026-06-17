@@ -1,3 +1,7 @@
+-- locale assembling-machine crystarion-crusher
+-- locale item crystarion-crusher
+-- locale recipe crystarion-crusher
+
 local helper = require("__Crystarion__.helper")
 
 local icons = helper.alternate(

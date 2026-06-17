@@ -1,5 +1,7 @@
 package main.locale;
 
+import main.locale.Defined.Category;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,7 +21,7 @@ public class LocaleGenerator {
     }
 
     public void generate() {
-        Set<String> names = findNames(Paths.get(LOCATION));
+        Set<TypeAndName> names = findNames(Paths.get(LOCATION));
         verifyAllDefined(names);
         System.out.println();
         System.out.println("File");
@@ -28,9 +30,9 @@ public class LocaleGenerator {
     }
 
     private void createLocaleFile() {
-        Map<Defined.Category, List<Defined.Locale>> defined = Defined.DEFINED;
+        Map<Category, List<Defined.Locale>> defined = Defined.DEFINED;
         StringBuilder builder = new StringBuilder();
-        for (Defined.Category category : Defined.Category.values()) {
+        for (Category category : Category.values()) {
             List<Defined.Locale> locales = defined.get(category);
             if (locales == null || locales.isEmpty()) {
                 continue;
@@ -44,60 +46,69 @@ public class LocaleGenerator {
         System.out.println(builder);
     }
 
-    private void verifyAllDefined(Set<String> names) {
-        Set<String> definedNames = Defined.DEFINED.values().stream()
-                .flatMap(s -> s.stream())
-                .map(l -> l.name())
-                .collect(Collectors.toSet());
-        Set<String> namesNotDefined = new HashSet<>(names);
-        namesNotDefined.removeAll(definedNames);
-        namesNotDefined.removeAll(Defined.IGNORED);
-        Set<String> definedNamesNotFound = new HashSet<>(definedNames);
-        definedNamesNotFound.removeAll(names);
-        definedNamesNotFound.removeAll(Defined.GENERATED);
+    private void verifyAllDefined(Set<TypeAndName> names) {
+        Map<Category, Set<String>> foundNames = names.stream()
+                .collect(Collectors.groupingBy(
+                        TypeAndName::type,
+                        Collectors.mapping(TypeAndName::name, Collectors.toSet())
+                ));
+        Map<Category, Set<String>> definedNames = Defined.DEFINED.entrySet().stream()
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        e -> e.getValue().stream()
+                                .map(Defined.Locale::name)
+                                .collect(Collectors.toSet())
+                ));
 
-        if (!namesNotDefined.isEmpty()) {
-            System.out.println("Some names were not defined:");
-            System.out.println(namesNotDefined.stream().collect(Collectors.joining("\n")));
+        for (Category value : Category.values()) {
+            System.out.println("For Category " + value);
+            Set<String> foundCategoryNames = foundNames.get(value);
+            Set<String> definedCategoryNames = definedNames.get(value);
+
+            Set<String> namesNotDefined = new HashSet<>(foundCategoryNames);
+            namesNotDefined.removeAll(definedCategoryNames);
+            Set<String> definedNamesNotFound = new HashSet<>(definedCategoryNames);
+            definedNamesNotFound.removeAll(foundCategoryNames);
+
+            if (!namesNotDefined.isEmpty()) {
+                System.out.println("Some names were not defined:");
+                System.out.println(String.join("\n", namesNotDefined));
+            }
+
+            if (!definedNamesNotFound.isEmpty()) {
+                System.out.println("Some names were defined but are not found:");
+                System.out.println(String.join("\n", definedNamesNotFound));
+            }
         }
-        if (!definedNamesNotFound.isEmpty()) {
-            System.out.println("Some names were defined but are not found:");
-            System.out.println(definedNamesNotFound.stream().collect(Collectors.joining("\n")));
-        }
+
     }
 
-    private Set<String> findNames(Path searchPath) {
-        try (Stream<Path> stream = Files.find(searchPath, 20, (p, a) -> p.toFile().getName().endsWith((".lua")))) {
+    private Set<TypeAndName> findNames(Path searchPath) {
+        try (Stream<Path> stream = Files.find(searchPath, 20, (p, _) -> p.toFile().getName().endsWith((".lua")))) {
             return stream
                     .map(this::analyse)
                     .flatMap(Collection::stream)
-                    .filter(s -> s.contains("crystarion"))
                     .collect(Collectors.toSet());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private List<String> analyse(Path path) {
-        try {
-            List<String> strings = Files.readAllLines(path);
-            List<String> names = new ArrayList<>();
-            for (String string : strings) {
-                extractName(string).ifPresent(names::add);
-            }
-            return names;
+    private List<TypeAndName> analyse(Path path) {
+        try (Stream<String> lines = Files.lines(path)) {
+            Pattern nameFinder = Pattern.compile("^-- locale ([^ ]+) ([^ ]+)");
+            return lines
+                    .takeWhile(nameFinder.asPredicate())
+                    .map(nameFinder::matcher)
+                    .filter(Matcher::matches)
+                    .map(m -> new TypeAndName(Category.forName(m.group(1)), m.group(2)))
+                    .toList();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private Optional<String> extractName(String string) {
-        Pattern nameFinder = Pattern.compile("^ *(?:[A-z]+\\.)*name = \"([^\"]*)\".*");
-        Matcher matcher = nameFinder.matcher(string);
-        if (matcher.matches()) {
-            return Optional.of(matcher.group(1));
-        }
-        return Optional.empty();
+    record TypeAndName(Category type, String name) {
     }
-
 }

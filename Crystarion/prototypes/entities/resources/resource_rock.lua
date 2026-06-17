@@ -1,3 +1,8 @@
+-- locale plant crystarion-resource-small
+-- locale plant crystarion-resource-medium
+-- locale plant crystarion-resource-big
+-- locale plant crystarion-resource-behemoth
+
 helper = require("__Crystarion__.helper")
 
 local function create_resource(size, results, pictures_type, pictures_name)

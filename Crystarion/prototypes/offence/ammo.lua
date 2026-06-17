@@ -1,3 +1,6 @@
+-- locale ammo crystarion-crystal-ammo
+-- locale recipe crystarion-crystal-ammo
+
 local helper = require("__Crystarion__.helper")
 
 local item = table.deepcopy(data.raw["ammo"]["firearm-magazine"])

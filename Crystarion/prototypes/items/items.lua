@@ -1,3 +1,21 @@
+-- locale item crystarion-crushed-crystal
+-- locale item crystarion-crystal
+-- locale item crystarion-crystal-ore
+-- locale item crystarion-crystal-green
+-- locale item crystarion-crystal-blue
+-- locale item crystarion-crystal-red
+-- locale item crystarion-crystal-magenta
+-- locale item crystarion-crystal-cyan
+-- locale item crystarion-crystal-yellow
+-- locale item crystarion-crystal-splinter
+-- locale item crystarion-crystal-splinter-volatile
+-- locale item crystarion-crystal-volatile
+-- locale item crystarion-crystal-unstable
+-- locale item crystarion-crystal-stable
+-- locale tool crystarion-science-volatile
+-- locale tool crystarion-science-unstable
+-- locale tool crystarion-science-stable
+
 local helper = require("__Crystarion__.helper")
 
 local LOCATION = "__Crystarion__/graphics/items/"

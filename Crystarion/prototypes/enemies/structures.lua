@@ -1,3 +1,4 @@
+-- locale unit-spawner crystarion-spawner
 local spawner = table.deepcopy(data.raw["unit-spawner"]["biter-spawner"])
 
 spawner.name = "crystarion-spawner"

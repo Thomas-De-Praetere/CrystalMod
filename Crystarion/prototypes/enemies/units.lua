@@ -1,3 +1,12 @@
+-- locale unit crystarion-small-biter
+-- locale unit crystarion-medium-biter
+-- locale unit crystarion-big-biter
+-- locale unit crystarion-behemoth-biter
+-- locale unit crystarion-small-spitter
+-- locale unit crystarion-medium-spitter
+-- locale unit crystarion-big-spitter
+-- locale unit crystarion-behemoth-spitter
+
 local helper = require("__Crystarion__.helper")
 
 local function create_enemy(size, absorption, type, multiple, to_spawn)

@@ -1,3 +1,7 @@
+-- locale assembling-machine crystarion-energiser
+-- locale item crystarion-energiser
+-- locale recipe crystarion-energiser
+
 require("__Crystarion__.prototypes.entities.graphics.energizer")
 local helper = require("__Crystarion__.helper")
 

@@ -1,3 +1,8 @@
+-- locale simple-entity crystarion-rock-huge
+-- locale simple-entity crystarion-rock-big
+-- locale simple-entity crystarion-rock-ice-huge
+-- locale simple-entity crystarion-rock-ice-big
+
 local crystal_rock_huge = table.deepcopy(data.raw["simple-entity"]["huge-volcanic-rock"])
 crystal_rock_huge.name = "crystarion-rock-huge"
 crystal_rock_huge.minable.results = {

@@ -1,3 +1,11 @@
+-- locale recipe crystarion-sludge-from-crushed-crystal
+-- locale recipe crystarion-crush-crystal-ore
+-- locale recipe crystarion-crystal-ore-splinter
+-- locale recipe crystarion-crystal-ore-splinter-less
+-- locale recipe crystarion-crystalise
+-- locale recipe crystarion-battery
+-- locale recipe crystarion-revitalise-coal
+
 local helper = require("__Crystarion__.helper")
 
 local sludge_from_crushed_crystal = {

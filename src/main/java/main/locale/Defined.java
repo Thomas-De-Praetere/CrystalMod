@@ -2,43 +2,9 @@ package main.locale;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class Defined {
 
-
-    public static final Set<String> IGNORED = Set.of(
-            "crystarion-denaturize-",
-            "planet-discovery-crystarion",
-            "crystarion-crush-crystal-",
-            "crystarion-nauvis",
-            "crystarion-neutralize-",
-            "crystarion-crystalizer-category",
-            "crystarion-crusher-category",
-            "crystarion-energiser-category",
-            "crystarion-destabilize-",
-            "crystarion-slurry-from-"
-    );
-
-    public static final Set<String> GENERATED = Set.of(
-            "crystarion-crush-crystal-red",
-            "crystarion-neutralize-green",
-            "crystarion-crush-crystal-green",
-            "crystarion-denaturize-yellow",
-            "crystarion-neutralize-red",
-            "crystarion-neutralize-blue",
-            "crystarion-crush-crystal-blue",
-            "crystarion-destabilize-crystal",
-            "crystarion-slurry-from-blue-crystal",
-            "crystarion-slurry-from-green-crystal",
-            "crystarion-destabilize-crystal-red",
-            "crystarion-denaturize-green",
-            "crystarion-slurry-from-red-crystal",
-            "crystarion-destabilize-crystal-blue",
-            "crystarion-denaturize-purple",
-            "crystarion-denaturize-red",
-            "crystarion-destabilize-crystal-green"
-    );
     public static final Map<Category, List<Locale>> DEFINED = Map.of(
             Category.ENTITY, List.of(
                     new Locale("crystarion-energiser", "Energizer"),
@@ -129,6 +95,18 @@ public class Defined {
         SPACE_LOCATION,
         RECIPE;
 
+        public static Category forName(String string) {
+            return switch (string.toUpperCase().replace("-", "_")) {
+                case "ENTITY" -> ENTITY;
+                case "ITEM" -> ITEM;
+                case "FLUID" -> FLUID;
+                case "PLANT" -> PLANT;
+                case "UNIT" -> UNIT;
+                case "SPACE_LOCATION" -> SPACE_LOCATION;
+                case "RECIPE" -> RECIPE;
+                default -> ENTITY;
+            };
+        }
 
         public String getCategoryName() {
             return name().toLowerCase().replace("_", "-") + "-name";

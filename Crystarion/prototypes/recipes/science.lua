@@ -1,3 +1,10 @@
+-- locale recipe crystarion-crystal-empower-1
+-- locale recipe crystarion-crystal-empower-2
+-- locale recipe crystarion-crystal-empower-3
+-- locale recipe crystarion-science-volatile
+-- locale recipe crystarion-science-unstable
+-- locale recipe crystarion-science-stable
+
 local crystal_empower_1 = {
     type = "recipe",
     name = "crystarion-crystal-empower-1",

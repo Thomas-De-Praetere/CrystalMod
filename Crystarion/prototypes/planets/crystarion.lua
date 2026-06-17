@@ -1,3 +1,6 @@
+-- locale space-location crystarion-planet
+-- locale space-connection crystarion-nauvis
+
 local helper = require("__Crystarion__.helper")
 local planet_map_gen = require("__Crystarion__/prototypes/planets/crystarion-map-gen")
 local gleba = data.raw['planet']['gleba']

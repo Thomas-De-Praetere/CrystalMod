@@ -1,3 +1,4 @@
+-- locale airborne-pollutant crystarion_resonance
 data:extend({
     {
         type = "airborne-pollutant",
