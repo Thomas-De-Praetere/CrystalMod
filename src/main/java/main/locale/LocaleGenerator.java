@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -33,17 +35,29 @@ public class LocaleGenerator {
         Map<Category, List<Defined.Locale>> defined = Defined.DEFINED;
         StringBuilder builder = new StringBuilder();
         for (Category category : Category.values()) {
-            List<Defined.Locale> locales = defined.get(category);
+            List<Defined.Locale> locales = new ArrayList<>(defined.get(category));
             if (locales == null || locales.isEmpty()) {
                 continue;
             }
-
-            builder.append("[").append(category.getCategoryName()).append("]").append("\n");
-            for (Defined.Locale locale : locales) {
-                builder.append(locale.toEntry()).append("\n");
+            locales.sort(Comparator.comparing(Defined.Locale::key, Comparator.naturalOrder()));
+            if (category.hasName()) {
+                appendToBuilder(category::getCategoryName, Defined.Locale::toName, builder, locales);
+            }
+            if (category.hasDescription()) {
+                appendToBuilder(category::getCategoryDescription, Defined.Locale::toDescription, builder, locales);
+            }
+            if (category.hasAmount()) {
+                appendToBuilder(category::getCategoryWithAmount, Defined.Locale::toAmount, builder, locales);
             }
         }
         System.out.println(builder);
+    }
+
+    private static void appendToBuilder(Supplier<String> sectionName, Function<Defined.Locale, String> toSectionValue, StringBuilder builder, List<Defined.Locale> locales) {
+        builder.append("[").append(sectionName.get()).append("]").append("\n");
+        for (Defined.Locale locale : locales) {
+            builder.append(toSectionValue.apply(locale)).append("\n");
+        }
     }
 
     private void verifyAllDefined(Set<TypeAndName> names) {

@@ -172,21 +172,43 @@ public class Defined {
             )
     );
 
-    public record Locale(String name, String description) {
-        public String toEntry() {
-            return name + "=" + description;
+    public record Locale(String key, String name, String description, String withAmount) {
+        public Locale(String key, String name) {
+            this(key, name, "", name);
+        }
+
+        public String toName() {
+            return key + "=" + name;
+        }
+
+        public String toDescription() {
+            return key + "=" + name;
+        }
+
+        public String toAmount() {
+            return key + "=" + name;
         }
     }
 
     public enum Category {
-        ENTITY,
-        ITEM,
-        FLUID,
-        SPACE_LOCATION,
-        RECIPE,
-        TECHNOLOGY,
-        FUEL_CATEGORY,
-        AIRBORNE_POLLUTANT;
+        ENTITY(true, false, false),
+        ITEM(true, false, false),
+        FLUID(true, false, false),
+        SPACE_LOCATION(true, false, false),
+        RECIPE(true, false, false),
+        TECHNOLOGY(true, false, false),
+        FUEL_CATEGORY(true, false, false),
+        AIRBORNE_POLLUTANT(true, false, true);
+
+        private final boolean hasName;
+        private final boolean hasDescription;
+        private final boolean hasAmount;
+
+        Category(boolean hasName, boolean hasDescription, boolean hasAmount) {
+            this.hasName = hasName;
+            this.hasDescription = hasDescription;
+            this.hasAmount = hasAmount;
+        }
 
         public static Category forName(String string) {
             return switch (string.toUpperCase().replace("-", "_")) {
@@ -202,8 +224,28 @@ public class Defined {
             };
         }
 
+        public boolean hasName() {
+            return hasName;
+        }
+
+        public boolean hasDescription() {
+            return hasDescription;
+        }
+
+        public boolean hasAmount() {
+            return hasAmount;
+        }
+
         public String getCategoryName() {
             return name().toLowerCase().replace("_", "-") + "-name";
+        }
+
+        public String getCategoryDescription() {
+            return name().toLowerCase().replace("_", "-") + "-description";
+        }
+
+        public String getCategoryWithAmount() {
+            return name().toLowerCase().replace("_", "-") + "-with-amount";
         }
     }
 }
