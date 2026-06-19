@@ -245,7 +245,7 @@ public class Defined {
         }
 
         public String getCategoryWithAmount() {
-            return name().toLowerCase().replace("_", "-") + "-with-amount";
+            return name().toLowerCase().replace("_", "-") + "-name-with-amount";
         }
     }
 }
