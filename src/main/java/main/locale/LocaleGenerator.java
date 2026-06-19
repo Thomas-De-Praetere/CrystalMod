@@ -70,7 +70,7 @@ public class LocaleGenerator {
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         e -> e.getValue().stream()
-                                .map(Defined.Locale::name)
+                                .map(Defined.Locale::key)
                                 .collect(Collectors.toSet())
                 ));
 
@@ -98,6 +98,7 @@ public class LocaleGenerator {
                 System.out.println("Some names were defined but are not found:");
                 System.out.println(String.join("\n", definedNamesNotFound));
             }
+            System.out.println();
         }
 
     }
