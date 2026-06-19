@@ -145,10 +145,7 @@ public class Defined {
                     new Locale("crystarion-lure", "__ITEM__crystarion-lure__"),
                     new Locale("crystarion-naturizer", "__ITEM__crystarion-naturizer__"),
                     new Locale("crystarion-revitalise-coal", "Revitalise Coal"),
-                    new Locale("crystarion-science-stable", "Create Stable Science"),
-                    new Locale("crystarion-science-unstable", "Create Unstable Science"),
-                    new Locale("crystarion-science-volatile", "Create Volatile Science")
-
+                    new Locale("crystarion-science", "Create Unstable Science")
             ),
             Category.TECHNOLOGY, List.of(
                     new Locale("crystarion-planet", "Crystarion"),

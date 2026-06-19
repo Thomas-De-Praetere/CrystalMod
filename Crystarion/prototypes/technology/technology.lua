@@ -89,12 +89,16 @@ data:extend({
                 recipe = "crystarion-condensation-rod-big"
             },
         },
-        prerequisites = { "crystarion-unlock-ice", "crystarion-unlock-science-volatile" },
+        prerequisites = { "crystarion-unlock-ice" },
         unit = {
             count = 100,
             ingredients = {
-                { "automation-science-pack",     1 },
-                { "crystarion-science-volatile", 1 },
+                { "crystarion-science",      1 },
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
+                { "space-science-pack",      1 },
+                { "utility-science-pack",    1 },
             },
             time = 30
         },
@@ -113,13 +117,16 @@ data:extend({
                 recipe = "crystarion-condensation-rod-huge"
             },
         },
-        prerequisites = { "crystarion-unlock-rod-big", "crystarion-unlock-science-unstable" },
+        prerequisites = { "crystarion-unlock-rod-big" },
         unit = {
             count = 200,
             ingredients = {
-                { "automation-science-pack",     1 },
-                { "logistic-science-pack",       1 },
-                { "crystarion-science-unstable", 1 },
+                { "crystarion-science",      1 },
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
+                { "space-science-pack",      1 },
+                { "utility-science-pack",    1 },
             },
             time = 30
         },
@@ -293,7 +300,7 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-science-volatile"
+                recipe = "crystarion-science"
             },
             {
                 type = "unlock-recipe",
@@ -303,76 +310,14 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-empowerer"
             },
-        },
-        prerequisites = { "crystarion-unlock-resource" },
-        research_trigger = {
-            type = "craft-item",
-            item = "crystarion-crystal",
-            count = 50,
-        }
-    },
-    {
-        type = "technology",
-        name = "crystarion-unlock-science-unstable",
-        icons = { helper.icons("crystal_unstable") },
-        essential = true,
-        effects = {
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-crystal-empower-2"
             },
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-science-unstable"
-            },
-        },
-        prerequisites = { "crystarion-unlock-science-volatile" },
-        unit = {
-            count = 200,
-            ingredients = {
-                { "automation-science-pack",     1 },
-                { "logistic-science-pack",       1 },
-                { "crystarion-science-volatile", 1 },
-            },
-            time = 30
-        },
-    },
-    {
-        type = "technology",
-        name = "crystarion-unlock-science-stable",
-        icons = { helper.icons("crystal_stable") },
-        essential = true,
-        effects = {
-            {
-                type = "unlock-recipe",
                 recipe = "crystarion-crystal-empower-3"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-science-stable"
-            },
-        },
-        prerequisites = { "crystarion-unlock-science-unstable" },
-        unit = {
-            count = 200,
-            ingredients = {
-                { "automation-science-pack",     1 },
-                { "logistic-science-pack",       1 },
-                { "crystarion-science-volatile", 1 },
-                { "crystarion-science-unstable", 1 },
-            },
-            time = 30
-        },
-    },
-    {
-        type = "technology",
-        name = "crystarion-chemistry",
-        icons = helper.alternate(
-            { icon = "__base__/graphics/technology/advanced-oil-processing.png", size = 256 },
-            helper.icons("planet")
-        ),
-        essential = true,
-        effects = {
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-slurry-from-red-crystal"
@@ -410,16 +355,11 @@ data:extend({
                 recipe = "crystarion-denaturize-green"
             },
         },
-        prerequisites = { "crystarion-unlock-science-unstable", "crystarion-unlock-science-volatile" },
-        unit = {
-            count = 200,
-            ingredients = {
-                { "automation-science-pack",     1 },
-                { "logistic-science-pack",       1 },
-                { "crystarion-science-volatile", 1 },
-                { "crystarion-science-unstable", 1 },
-            },
-            time = 30
-        },
+        prerequisites = { "crystarion-unlock-resource" },
+        research_trigger = {
+            type = "craft-item",
+            item = "crystarion-crystal",
+            count = 50,
+        }
     },
 })

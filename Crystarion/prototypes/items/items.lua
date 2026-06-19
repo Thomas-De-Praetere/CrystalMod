@@ -13,7 +13,7 @@
 -- locale item crystarion-crystal-unstable
 -- locale item crystarion-crystal-stable
 -- locale tool crystarion-science-volatile
--- locale tool crystarion-science-unstable
+-- locale tool crystarion-science
 -- locale tool crystarion-science-stable
 
 local helper = require("__Crystarion__.helper")
@@ -233,26 +233,63 @@ crystal_stable.name = "crystarion-crystal-stable"
 crystal_stable.icons = { helper.icons("crystal_stable") }
 crystal_stable.pictures = get_crystal_sprites("crystal_stable", helper.crystal_tint.white)
 
-local science_volatile = table.deepcopy(data.raw["tool"]["automation-science-pack"])
-science_volatile.name = "crystarion-science-volatile"
-science_volatile.icons = {
-    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
-    { icon = "__base__/graphics/icons/automation-science-pack.png", tint = { 1, 1, 1, 0.3 } },
-}
+--local science_volatile = table.deepcopy(data.raw["tool"]["automation-science-pack"])
+--science_volatile.name = "crystarion-science-volatile"
+--science_volatile.icons = {
+--    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
+--    { icon = "__base__/graphics/icons/automation-science-pack.png", tint = { 1, 1, 1, 0.3 } },
+--}
 
-local science_unstable = table.deepcopy(data.raw["tool"]["logistic-science-pack"])
-science_unstable.name = "crystarion-science-unstable"
-science_unstable.icons = {
+local science = table.deepcopy(data.raw["tool"]["logistic-science-pack"])
+science.name = "crystarion-science"
+science.icons = {
     { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
     { icon = "__base__/graphics/icons/logistic-science-pack.png", tint = { 1, 1, 1, 0.3 } },
 }
-
-local science_stable = table.deepcopy(data.raw["tool"]["chemical-science-pack"])
-science_stable.name = "crystarion-science-stable"
-science_stable.icons = {
-    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
-    { icon = "__base__/graphics/icons/chemical-science-pack.png", tint = { 1, 1, 1, 0.3 } },
+science.spoil_ticks = 30 * helper.minutes()
+science.spoil_to_trigger_result = {
+    trigger = {
+        type = "direct",
+        action_delivery = {
+            {
+                type = "instant",
+                source_effects = {
+                    {
+                        type = "create-entity",
+                        entity_name = "explosion",
+                        offsets = { { 0, 1 } },
+                        offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+                        only_when_visible = true
+                    },
+                    {
+                        type = "nested-result",
+                        action = {
+                            type = "area",
+                            radius = 20.0,
+                            action_delivery = {
+                                type = "instant",
+                                target_effects = {
+                                    {
+                                        type = "damage",
+                                        damage = { amount = 80, type = "explosion" }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                },
+            }
+        }
+    },
+    items_per_trigger = 1,
 }
+
+--local science_stable = table.deepcopy(data.raw["tool"]["chemical-science-pack"])
+--science_stable.name = "crystarion-science-stable"
+--science_stable.icons = {
+--    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
+--    { icon = "__base__/graphics/icons/chemical-science-pack.png", tint = { 1, 1, 1, 0.3 } },
+--}
 
 data:extend({
     crushed_crystal,
@@ -269,7 +306,5 @@ data:extend({
     crystal_volatile,
     crystal_unstable,
     crystal_stable,
-    science_volatile,
-    science_unstable,
-    science_stable,
+    science,
 })

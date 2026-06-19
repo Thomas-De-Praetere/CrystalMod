@@ -2,7 +2,7 @@
 -- locale recipe crystarion-crystal-empower-2
 -- locale recipe crystarion-crystal-empower-3
 -- locale recipe crystarion-science-volatile
--- locale recipe crystarion-science-unstable
+-- locale recipe crystarion-science
 -- locale recipe crystarion-science-stable
 
 local crystal_empower_1 = {
@@ -50,54 +50,54 @@ local crystal_empower_3 = {
     enabled = false,
 }
 
-local science_volatile = {
-    type = "recipe",
-    name = "crystarion-science-volatile",
-    main_product = "crystarion-science-volatile",
-    ingredients = {
-        { type = "item", name = "automation-science-pack", amount = 1 },
-        { type = "item", name = "crystarion-crystal-volatile", amount = 1 }
-    },
-    results = {
-        { type = "item", name = "crystarion-science-volatile", amount = 1 }
-    },
-    energy_required = 5,
-    enabled = false,
-}
+--local science_volatile = {
+--    type = "recipe",
+--    name = "crystarion-science-volatile",
+--    main_product = "crystarion-science-volatile",
+--    ingredients = {
+--        { type = "item", name = "automation-science-pack", amount = 1 },
+--        { type = "item", name = "crystarion-crystal-volatile", amount = 1 }
+--    },
+--    results = {
+--        { type = "item", name = "crystarion-science-volatile", amount = 1 }
+--    },
+--    energy_required = 5,
+--    enabled = false,
+--}
 local science_unstable = {
     type = "recipe",
-    name = "crystarion-science-unstable",
-    main_product = "crystarion-science-unstable",
+    name = "crystarion-science",
+    main_product = "crystarion-science",
     ingredients = {
-        { type = "item", name = "logistic-science-pack", amount = 1 },
-        { type = "item", name = "crystarion-crystal-unstable", amount = 1 }
+        { type = "item", name = "crystarion-crystal",          amount = 1 },
+        { type = "item", name = "crystarion-crystal-volatile", amount = 1 },
+        { type = "item", name = "crystarion-crystal-unstable", amount = 1 },
+        { type = "item", name = "crystarion-crystal-stable",   amount = 1 }
     },
     results = {
-        { type = "item", name = "crystarion-science-unstable", amount = 1 }
+        { type = "item", name = "crystarion-science", amount = 1 }
     },
     energy_required = 5,
     enabled = false,
 }
-local science_stable = {
-    type = "recipe",
-    name = "crystarion-science-stable",
-    main_product = "crystarion-science-stable",
-    ingredients = {
-        { type = "item", name = "chemical-science-pack", amount = 1 },
-        { type = "item", name = "crystarion-crystal-stable", amount = 1 }
-    },
-    results = {
-        { type = "item", name = "crystarion-science-stable", amount = 1 }
-    },
-    energy_required = 5,
-    enabled = false,
-}
+--local science_stable = {
+--    type = "recipe",
+--    name = "crystarion-science-stable",
+--    main_product = "crystarion-science-stable",
+--    ingredients = {
+--        { type = "item", name = "chemical-science-pack", amount = 1 },
+--        { type = "item", name = "crystarion-crystal-stable", amount = 1 }
+--    },
+--    results = {
+--        { type = "item", name = "crystarion-science-stable", amount = 1 }
+--    },
+--    energy_required = 5,
+--    enabled = false,
+--}
 
 data:extend({
     crystal_empower_1,
     crystal_empower_2,
     crystal_empower_3,
-    science_volatile,
     science_unstable,
-    science_stable,
 })
