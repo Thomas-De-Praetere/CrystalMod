@@ -30,10 +30,10 @@ local crush_crystal_ore = {
     category = "crystarion-crusher-category",
     main_product = "crystarion-crushed-crystal",
     ingredients = {
-        { type = "item", name = "crystarion-crystal-ore", amount = 2 }
+        { type = "item", name = "crystarion-crystal-ore", amount = 4 }
     },
     results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 1 }
+        { type = "item", name = "crystarion-crushed-crystal", amount = 4 }
     },
     energy_required = 1,
     enabled = false,
