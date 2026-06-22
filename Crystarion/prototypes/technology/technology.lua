@@ -8,6 +8,7 @@
 -- locale technology crystarion-unlock-science-unstable
 -- locale technology crystarion-unlock-science-stable
 -- locale technology crystarion-chemistry
+-- locale technology crystarion-unlock-lure-big
 
 local helper = require("__Crystarion__.helper")
 
@@ -118,6 +119,34 @@ data:extend({
             },
         },
         prerequisites = { "crystarion-unlock-rod-big" },
+        unit = {
+            count = 200,
+            ingredients = {
+                { "crystarion-science",      1 },
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
+                { "space-science-pack",      1 },
+                { "utility-science-pack",    1 },
+            },
+            time = 30
+        },
+    },
+    {
+        type = "technology",
+        name = "crystarion-unlock-lure-big",
+        icons = helper.alternate(
+                { icon = "__space-age__/graphics/icons/lightning-collector.png" },
+                helper.icons("planet")
+        ),
+        essential = false,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-condensation-lure-big"
+            },
+        },
+        prerequisites = { "crystarion-unlock-biter" },
         unit = {
             count = 200,
             ingredients = {

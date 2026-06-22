@@ -16,7 +16,7 @@ local entity = {
         fuel_categories = { "crystarion-explosive" },
         effectivity = 1,
         fuel_inventory_size = 2,
-        emissions_per_minute = { crystarion_resonance = 100 },
+        emissions_per_minute = { crystarion_resonance = 800 },
         smoke = {
             {
                 name = "smoke",

@@ -19,6 +19,7 @@ public class Defined {
                     new Locale("crystarion-generator", "Flux Capacitator"),
                     new Locale("crystarion-land-mine", "Splinter Mine"),
                     new Locale("crystarion-lure", "Lure"),
+                    new Locale("crystarion-lure-big", "Advanced Lure"),
                     new Locale("crystarion-naturizer", "Naturizer"),
                     new Locale("crystarion-naturizer-category", "Naturizer"),
                     new Locale("crystarion-nauvis", "Crystarion - Nauvis"),
@@ -29,6 +30,7 @@ public class Defined {
                     new Locale("crystarion-rock-ice", "Ice Rock"),
                     new Locale("crystarion-rock-ice-big", "Big Ice Rock"),
                     new Locale("crystarion-rock-ice-huge", "Huge Ice Rock"),
+                    new Locale("crystarion-science", "Unstable Science"),
                     new Locale("crystarion-science-stable", "Stable Science"),
                     new Locale("crystarion-science-unstable", "Unstable Science"),
                     new Locale("crystarion-science-volatile", "Volatile Science"),
@@ -66,6 +68,7 @@ public class Defined {
                     new Locale("crystarion-condensation-rod", "Condensation Rod"),
                     new Locale("crystarion-energiser", "Energiser"),
                     new Locale("crystarion-lure", "Lure"),
+                    new Locale("crystarion-lure-big", "Advanced Lure"),
                     new Locale("crystarion-crusher", "Crusher"),
                     new Locale("crystarion-naturizer", "Naturizer"),
                     new Locale("crystarion-condensation-rod-big", "Big Condensation Rod"),
@@ -145,7 +148,10 @@ public class Defined {
                     new Locale("crystarion-lure", "__ITEM__crystarion-lure__"),
                     new Locale("crystarion-naturizer", "__ITEM__crystarion-naturizer__"),
                     new Locale("crystarion-revitalise-coal", "Revitalise Coal"),
-                    new Locale("crystarion-science", "Create Unstable Science")
+                    new Locale("crystarion-science", "Create Unstable Science"),
+                    new Locale("crystarion-lure-big", "__ITEM__crystarion-lure-big__"),
+                    new Locale("crystarion-science-stable", "__ITEM__crystarion-science-stable__"),
+                    new Locale("crystarion-science-volatile", "__ITEM__crystarion-science-volatile__")
             ),
             Category.TECHNOLOGY, List.of(
                     new Locale("crystarion-planet", "Crystarion"),
@@ -158,7 +164,8 @@ public class Defined {
                     new Locale("crystarion-unlock-science-volatile", "Volatile Crystal Industry"),
                     new Locale("crystarion-unlock-science-unstable", "Unstable Crystal Industry"),
                     new Locale("crystarion-unlock-science-stable", "Stable Crystal Industry"),
-                    new Locale("planet-discovery-crystarion", "Crystarion")
+                    new Locale("planet-discovery-crystarion", "Crystarion"),
+                    new Locale("crystarion-unlock-lure-big", "Advanced Crystaloid Biology")
             ),
             Category.FUEL_CATEGORY, List.of(
                     new Locale("crystarion-volatile", "Crystal Power"),

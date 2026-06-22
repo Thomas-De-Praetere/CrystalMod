@@ -27,7 +27,7 @@ entity.energy_source =
     fuel_categories = {"crystarion-volatile"},
     effectivity = 1,
     fuel_inventory_size = 1,
-    emissions_per_minute = { crystarion_resonance = 10 }
+    emissions_per_minute = { crystarion_resonance = 75 }
 }
 entity.minable = { mining_time = 0.2, result = "crystarion-energiser" }
 entity.icons = icons
