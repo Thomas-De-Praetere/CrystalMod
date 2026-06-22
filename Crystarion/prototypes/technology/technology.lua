@@ -143,7 +143,7 @@ data:extend({
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-condensation-lure-big"
+                recipe = "crystarion-lure-big"
             },
         },
         prerequisites = { "crystarion-unlock-biter" },
