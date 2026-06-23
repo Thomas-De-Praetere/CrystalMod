@@ -21,7 +21,7 @@ function get_graphics()
             },
             {
                 layers = {
-                    util.sprite_load("__space-age__/graphics/entity/lightning-collector/lightning-collector-discharge",
+                    util.sprite_load("__space-age__/graphics/entity/lightning-collector/lightning-collector-charge",
                         {
                             priority = "high",
                             blend_mode = "additive",
@@ -29,8 +29,9 @@ function get_graphics()
                             frame_count = 24,
                             draw_as_glow = true,
                         })
-                }
+                },
             }
         },
+        run_mode = "backward",
     }
 end

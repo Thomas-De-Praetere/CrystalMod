@@ -6,8 +6,8 @@ local helper = require("__Crystarion__.helper")
 require("__Crystarion__.prototypes.entities.graphics.lure_big")
 
 local icons = helper.alternate(
-        { icon = "__space-age__/graphics/icons/lightning-collector.png" },
-        helper.icons("planet")
+    { icon = "__space-age__/graphics/icons/lightning-collector.png" },
+    helper.icons("planet")
 )
 
 local entity = {
@@ -20,35 +20,27 @@ local entity = {
     dying_explosion = "substation-explosion",
     hidden = true,
     max_health = 150,
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-1, -1}, {1, 1}},
+    collision_box = { { -0.7, -0.7 }, { 0.7, 0.7 } },
+    selection_box = { { -1, -1 }, { 1, 1 } },
     drawing_box_vertical_extension = 4.5,
     gui_mode = "none",
     continuous_animation = true,
     is_military_target = true,
     energy_source = {
         type = "electric",
-        buffer_capacity = "6MJ",
+        buffer_capacity = "8MJ",
         usage_priority = "tertiary",
-        input_flow_limit = "12MW",
-        output_flow_limit = "12MW",
+        input_flow_limit = "16MW",
+        output_flow_limit = "16MW",
         emissions_per_minute = {
-            crystarion_resonance = 600
+            crystarion_resonance = 800
         },
+        render_no_power_icon = false,
     },
-    energy_usage = "6MW",
+    energy_usage = "8MW",
     allow_copy_paste = true,
     working_sound = {
         main_sounds = {
-            {
-                sound = {
-                    filename = "__space-age__/sound/entity/lightning-attractor/lightning-attractor-charge.ogg",
-                    volume = 0.5,
-                    audible_distance_modifier = 0.5,
-                },
-                match_volume_to_activity = true,
-                activity_to_volume_modifiers = { offset = 2, inverted = true },
-            },
             {
                 sound = {
                     filename = "__space-age__/sound/entity/lightning-attractor/lightning-attractor-discharge.ogg",
@@ -56,7 +48,7 @@ local entity = {
                     audible_distance_modifier = 0.5,
                 },
                 match_volume_to_activity = true,
-                activity_to_volume_modifiers = { offset = 1 },
+                activity_to_volume_modifiers = { offset = 2, inverted = true },
             }
         },
         max_sounds_per_prototype = 3,
@@ -76,7 +68,7 @@ local recipe = {
     name = "crystarion-lure-big",
     main_product = "crystarion-lure-big",
     ingredients = {
-        { type = "item", name = "copper-cable", amount = 40 },
+        { type = "item", name = "copper-cable",    amount = 40 },
         { type = "item", name = "crystarion-lure", amount = 4 },
     },
     results = {
