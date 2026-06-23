@@ -7,6 +7,7 @@
 -- locale recipe crystarion-denaturize-green
 -- locale recipe crystarion-mix-yellow
 -- locale recipe crystarion-mix-purple
+-- locale recipe crystarion-crystalise-purple
 
 local helper = require("__Crystarion__.helper")
 local function slurry_from_color(name, in_amount, out_amount)
@@ -39,11 +40,11 @@ local function denaturize(name, input, input_icon, output)
             { icon = "__base__/graphics/icons/fluid/" .. output .. ".png" }
         ),
         ingredients = {
-            { type = "fluid", name = input,   amount = 20 },
+            { type = "fluid", name = input, amount = 20 },
         },
         results = {
-            { type = "fluid", name = output,  amount = 20 },
-            { type = "item", name = "crystarion-crystal-splinter-volatile", amount = 20 }
+            { type = "fluid", name = output,                                 amount = 20 },
+            { type = "item",  name = "crystarion-crystal-splinter-volatile", amount = 20 }
         },
         energy_required = 1,
         enabled = false,
@@ -87,6 +88,23 @@ local mix_purple = {
     enabled = false,
 }
 
+local crystalise_purple = {
+    type = "recipe",
+    name = "crystarion-crystalise-purple",
+    category = "chemistry",
+    main_product = "crystarion-crystal-magenta",
+    ingredients = {
+        { type = "fluid", name = "crystarion-purple-mixture", amount = 20 }
+    },
+    results = {
+        { type = "item",  name = "crystarion-crystal-magenta", amount = 4 },
+        { type = "fluid", name = "steam",                      amount = 80, temperature = 500 },
+        { type = "fluid", name = "petroleum-gas",              amount = 20 },
+    },
+    energy_required = 4,
+    enabled = false,
+}
+
 local denaturize_yellow = denaturize("yellow", "crystarion-yellow-mixture", "yellow_mixture", "light-oil")
 local denaturize_purple = denaturize("purple", "crystarion-purple-mixture", "purple_mixture", "petroleum-gas")
 local denaturize_red = denaturize("red", "crystarion-red-slurry", "red_slurry", "heavy-oil")
@@ -101,5 +119,6 @@ data:extend({
     denaturize_yellow,
     denaturize_purple,
     denaturize_red,
-    denaturize_green
+    denaturize_green,
+    crystalise_purple,
 })

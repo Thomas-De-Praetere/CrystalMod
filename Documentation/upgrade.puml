@@ -8,61 +8,53 @@ hide circle
 [Crystal] as C1 #lightpink
 [Crystal] as C2 #lightpink
 [Crystal] as C3 #lightpink
+[Yellow Crystal] as YC1 #lightpink
+[Yellow Crystal] as YC2 #lightpink
+[Purple Crystal] as PCr
 
 [Power] as P1 #lightpink
 [Power] as P2 #lightpink
 [Power] as P3 #lightpink
 
-package "Empowerer lvl1" #lightyellow {
+[Purple Mix] as CPB #lightpink
+
+package "Empowerer" #lightyellow {
     [Empower 1s] as EMP1 #lightblue
-}
-
-package "Empowerer lvl2" #lightyellow {
     [Empower 2s] as EMP2 #lightblue
-}
-
-package "Empowerer lvl3" #lightyellow {
     [Empower 5s] as EMP3 #lightblue
 }
+
+[Crystalise] as CR #lightblue
 
 [Volatile Powercrystal] as VPC
 [Unstable Powercrystal] as UPC
 [Stable Powercrystal] as SPC
 
-[Red Science] as RS #lightgreen
-[Green Science] as GS #lightgreen
-[Blue Science] as BS #lightgreen
-
 [Create] as Cr1 #lightblue
-[Create] as Cr2 #lightblue
-[Create] as Cr3 #lightblue
 
-[Volatile Crystal Science] as VS #lightgreen
-[Unstable Crystal Science] as US #lightgreen
-[Stable Crystal Science] as S #lightgreen
+[Unstable Crystal Science] as S #lightgreen
 
-C1 --> EMP1 : 15
-C2 --> EMP2 : 30
-C3 --> EMP3 : 60
+CPB --> CR
+CR --> PCr
 
-P1 --> EMP1 : 100 MW
-P2 --> EMP2 : 200 MW
-P3 --> EMP3 : 400 MW
+C1 ----> EMP1 : 15
+C2 ----> EMP2 : 30
+YC1 ----> EMP2 : 30
+YC2 ----> EMP3 : 60
+C3 ----> EMP3 : 60
+PCr --> EMP3 : 60
+
+P1 ----> EMP1 : 100 MW
+P2 ----> EMP2 : 200 MW
+P3 ----> EMP3 : 500 MW
 
 EMP1 --> VPC : 15
 EMP2 --> UPC : 30
 EMP3 --> SPC : 60
 
 VPC --> Cr1
-RS --> Cr1
-Cr1 --> VS
-
-UPC --> Cr2
-GS --> Cr2
-Cr2 --> US
-
-SPC --> Cr3
-BS --> Cr3
-Cr3 --> S
+UPC --> Cr1
+SPC --> Cr1
+Cr1 --> S
 
 @enduml

@@ -26,7 +26,8 @@ local crystal_empower_2 = {
     category = "crystarion-empowerer-category",
     main_product = "crystarion-crystal-unstable",
     ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 30 }
+        { type = "item", name = "crystarion-crystal",        amount = 30 },
+        { type = "item", name = "crystarion-crystal-yellow", amount = 30 },
     },
     results = {
         { type = "item", name = "crystarion-crystal-unstable", amount = 30 }
@@ -41,7 +42,9 @@ local crystal_empower_3 = {
     category = "crystarion-empowerer-category",
     main_product = "crystarion-crystal-stable",
     ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 60 }
+        { type = "item", name = "crystarion-crystal", amount = 60 },
+        { type = "item", name = "crystarion-crystal-yellow", amount = 60 },
+        { type = "item", name = "crystarion-crystal-purple", amount = 60 },
     },
     results = {
         { type = "item", name = "crystarion-crystal-stable", amount = 60 }
@@ -50,20 +53,6 @@ local crystal_empower_3 = {
     enabled = false,
 }
 
---local science_volatile = {
---    type = "recipe",
---    name = "crystarion-science-volatile",
---    main_product = "crystarion-science-volatile",
---    ingredients = {
---        { type = "item", name = "automation-science-pack", amount = 1 },
---        { type = "item", name = "crystarion-crystal-volatile", amount = 1 }
---    },
---    results = {
---        { type = "item", name = "crystarion-science-volatile", amount = 1 }
---    },
---    energy_required = 5,
---    enabled = false,
---}
 local science_unstable = {
     type = "recipe",
     name = "crystarion-science",
@@ -80,20 +69,6 @@ local science_unstable = {
     energy_required = 5,
     enabled = false,
 }
---local science_stable = {
---    type = "recipe",
---    name = "crystarion-science-stable",
---    main_product = "crystarion-science-stable",
---    ingredients = {
---        { type = "item", name = "chemical-science-pack", amount = 1 },
---        { type = "item", name = "crystarion-crystal-stable", amount = 1 }
---    },
---    results = {
---        { type = "item", name = "crystarion-science-stable", amount = 1 }
---    },
---    energy_required = 5,
---    enabled = false,
---}
 
 data:extend({
     crystal_empower_1,

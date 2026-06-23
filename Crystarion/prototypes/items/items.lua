@@ -25,19 +25,19 @@ local function get_crystal_sprites(name, tint)
     return {
         {
             layers = {
-                { size = 64, filename = LOCATION .. name .. "_1.png", scale = 0.5, mipmap_count = 4, tint = tint },
+                { size = 64, filename = LOCATION .. name .. "_1.png",       scale = 0.5, mipmap_count = 4, tint = tint },
                 { size = 64, filename = LOCATION .. name .. "_1_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true, tint = tint }
             }
         },
         {
             layers = {
-                { size = 64, filename = LOCATION .. name .. "_2.png", scale = 0.5, mipmap_count = 4, tint = tint },
+                { size = 64, filename = LOCATION .. name .. "_2.png",       scale = 0.5, mipmap_count = 4, tint = tint },
                 { size = 64, filename = LOCATION .. name .. "_2_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true, tint = tint }
             }
         },
         {
             layers = {
-                { size = 64, filename = LOCATION .. name .. "_3.png", scale = 0.5, mipmap_count = 4, tint = tint },
+                { size = 64, filename = LOCATION .. name .. "_3.png",       scale = 0.5, mipmap_count = 4, tint = tint },
                 { size = 64, filename = LOCATION .. name .. "_3_light.png", scale = 0.5, mipmap_count = 4, draw_as_light = true, tint = tint }
             }
         },
@@ -76,10 +76,10 @@ crystal_red.name = "crystarion-crystal-red"
 crystal_red.icons = { helper.icons("crystal_red") }
 crystal_red.pictures = get_crystal_sprites("crystal_shard", helper.crystal_tint.red)
 
---local crystal_magenta = table.deepcopy(BASE_ITEM)
---crystal_magenta.name = "crystarion-crystal-magenta"
---crystal_magenta.icons = { helper.icons("crystal_magenta") }
---crystal_magenta.pictures = get_crystal_sprites("crystal_shard", helper.crystal_tint.magenta)
+local crystal_magenta = table.deepcopy(BASE_ITEM)
+crystal_magenta.name = "crystarion-crystal-magenta"
+crystal_magenta.icons = { helper.icons("crystal_magenta") }
+crystal_magenta.pictures = get_crystal_sprites("crystal_shard", helper.crystal_tint.magenta)
 --
 --local crystal_cyan = table.deepcopy(BASE_ITEM)
 --crystal_cyan.name = "crystarion-crystal-cyan"
@@ -233,21 +233,23 @@ crystal_stable.name = "crystarion-crystal-stable"
 crystal_stable.icons = { helper.icons("crystal_stable") }
 crystal_stable.pictures = get_crystal_sprites("crystal_stable", helper.crystal_tint.white)
 
---local science_volatile = table.deepcopy(data.raw["tool"]["automation-science-pack"])
---science_volatile.name = "crystarion-science-volatile"
---science_volatile.icons = {
---    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
---    { icon = "__base__/graphics/icons/automation-science-pack.png", tint = { 1, 1, 1, 0.3 } },
---}
-
 local science = table.deepcopy(data.raw["tool"]["logistic-science-pack"])
 science.name = "crystarion-science"
 science.icons = {
-    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
-    { icon = "__base__/graphics/icons/logistic-science-pack.png", tint = { 1, 1, 1, 0.3 } },
+    { icon = "__base__/graphics/icons/space-science-pack.png",    tint = { .5, .5, .5, 0.7 } },
+    { icon = "__base__/graphics/icons/logistic-science-pack.png", tint = { .5, .5, .5, 0.3 } },
 }
 science.spoil_ticks = 30 * helper.minutes()
-science.spoil_to_trigger_result = {
+science.spoil_result = "crystarion-science-volatile"
+
+local volatile_science = table.deepcopy(data.raw["tool"]["logistic-science-pack"])
+volatile_science.name = "crystarion-science-volatile"
+volatile_science.icons = {
+    { icon = "__base__/graphics/icons/space-science-pack.png",    tint = { 1, .5, .5, 0.7 } },
+    { icon = "__base__/graphics/icons/logistic-science-pack.png", tint = { 1, .5, .5, 0.3 } },
+}
+volatile_science.spoil_ticks = 1 * helper.minutes()
+volatile_science.spoil_to_trigger_result = {
     trigger = {
         type = "direct",
         action_delivery = {
@@ -271,7 +273,7 @@ science.spoil_to_trigger_result = {
                                 target_effects = {
                                     {
                                         type = "damage",
-                                        damage = { amount = 80, type = "explosion" }
+                                        damage = { amount = 100, type = "explosion" }
                                     }
                                 }
                             }
@@ -284,13 +286,6 @@ science.spoil_to_trigger_result = {
     items_per_trigger = 1,
 }
 
---local science_stable = table.deepcopy(data.raw["tool"]["chemical-science-pack"])
---science_stable.name = "crystarion-science-stable"
---science_stable.icons = {
---    { icon = "__base__/graphics/icons/space-science-pack.png", tint = { 1, 1, 1, 0.7 } },
---    { icon = "__base__/graphics/icons/chemical-science-pack.png", tint = { 1, 1, 1, 0.3 } },
---}
-
 data:extend({
     crushed_crystal,
     crystal,
@@ -298,7 +293,7 @@ data:extend({
     crystal_green,
     crystal_blue,
     crystal_red,
-    --crystal_magenta,
+    crystal_magenta,
     --crystal_cyan,
     crystal_yellow,
     crystal_splinter,
@@ -307,4 +302,5 @@ data:extend({
     crystal_unstable,
     crystal_stable,
     science,
+    volatile_science,
 })
