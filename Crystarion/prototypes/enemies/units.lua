@@ -32,6 +32,64 @@ local function create_enemy(size, absorption, type, multiple, to_spawn)
     return unit
 end
 
+local function create_enemy_boom(size, absorption, type, to_spawn, radius)
+    local spawn_array = { { 0, 0 } }
+
+    local unit = table.deepcopy(data.raw["unit"][size .. "-" .. type])
+    unit.name = "crystarion-" .. size .. "-" .. type
+    unit.dying_trigger_effect = {
+        type = "nested-result",
+        action = {
+            type = "direct",
+            action_delivery = {
+                {
+                    type = "instant",
+                    source_effects = {
+                        {
+                            type = "create-entity",
+                            entity_name = "explosion",
+                            offsets = { { 0, 1 } },
+                            offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+                            only_when_visible = true
+                        },
+                        {
+                            type = "nested-result",
+                            action = {
+                                type = "area",
+                                radius = radius,
+                                action_delivery = {
+                                    type = "instant",
+                                    target_effects = {
+                                        {
+                                            type = "damage",
+                                            damage = { amount = 25, type = "explosion" }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            type = "create-entity",
+                            check_buildability = true,
+                            find_non_colliding_position = true,
+                            entity_name = to_spawn,
+                            offsets = spawn_array,
+                        },
+                    },
+                }
+            }
+        }
+    }
+    unit.vision_distance = 40
+    unit.absorptions_to_join_attack = { crystarion_resonance = absorption }
+    unit.distraction_cooldown = 300
+    unit.min_pursue_time = helper.minutes()
+    unit.max_pursue_distance = 100
+    return unit
+end
+
+
+
 -- biters multiply
 -- spitters do not attack but create worms.
 
@@ -41,8 +99,8 @@ data:extend({
     create_enemy("medium", 20, "biter", true, "crystarion-small-biter"),
     create_enemy("big", 80, "biter", true, "crystarion-medium-biter"),
     create_enemy("behemoth", 400, "biter", true, "crystarion-big-biter"),
-    create_enemy("small", 4, "spitter", false, "crystarion-resource-small"),
-    create_enemy("medium", 20, "spitter", false, "crystarion-resource-medium"),
-    create_enemy("big", 80, "spitter", false, "crystarion-resource-big"),
-    create_enemy("behemoth", 400, "spitter", false, "crystarion-resource-behemoth"),
+    create_enemy_boom("small", 4, "spitter", "crystarion-resource-small", 1),
+    create_enemy_boom("medium", 20, "spitter", "crystarion-resource-medium", 2),
+    create_enemy_boom("big", 80, "spitter", "crystarion-resource-big", 4),
+    create_enemy_boom("behemoth", 400, "spitter", "crystarion-resource-behemoth", 6),
 })

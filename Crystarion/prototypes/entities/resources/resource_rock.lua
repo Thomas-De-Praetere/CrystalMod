@@ -19,8 +19,10 @@ local function create_resource(size, results, pictures_type, pictures_name)
         mining_time = 0.5,
         results = { { type = "item", name = "crystarion-crystal-ore", amount = results } },
     }
+    --resource_ore.collision_box = nil
     resource_ore.collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } }
     resource_ore.selection_box = { { -0.7, -0.7 }, { 0.7, 0.7 } }
+    resource_ore.max_health = 100
     local grey_mask = { 0.38, 0.54, 0.81 }
 
     resource_ore.pictures = table.deepcopy(data.raw[pictures_type][pictures_name]).pictures

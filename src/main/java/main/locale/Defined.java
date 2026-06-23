@@ -110,7 +110,7 @@ public class Defined {
                     new Locale("crystarion-crush-crystal-blue", "Crush __ITEM__crystarion-crystal-blue__"),
                     new Locale("crystarion-crush-crystal-green", "Crush __ITEM__crystarion-crystal-green__"),
                     new Locale("crystarion-crush-crystal-cyan", "Crush __ITEM__crystarion-crystal-cyan"),
-                    new Locale("crystarion-crush-crystal-magenta", "Crush __ITEM__crystarion-crystal-magenta"),
+                    new Locale("crystarion-crush-crystal-magenta", "Crush __ITEM__crystarion-crystal-magenta__"),
                     new Locale("crystarion-crush-crystal-yellow", "Crush __ITEM__crystarion-crystal-yellow"),
                     new Locale("crystarion-neutralize-red", "Neutralize __ITEM__crystarion-crystal-red__"),
                     new Locale("crystarion-neutralize-blue", "Neutralize __ITEM__crystarion-crystal-blue__"),
@@ -152,7 +152,7 @@ public class Defined {
                     new Locale("crystarion-lure-big", "__ITEM__crystarion-lure-big__"),
                     new Locale("crystarion-science-stable", "__ITEM__crystarion-science-stable__"),
                     new Locale("crystarion-science-volatile", "__ITEM__crystarion-science-volatile__"),
-                    new Locale("crystarion-crystalise-purple", "Crystalise __ITEM__crystarion-crystal-magenta")
+                    new Locale("crystarion-crystalise-purple", "Crystalise __ITEM__crystarion-crystal-magenta__")
             ),
             Category.TECHNOLOGY, List.of(
                     new Locale("crystarion-planet", "Crystarion"),
