@@ -44,7 +44,7 @@ local crystal_empower_3 = {
     ingredients = {
         { type = "item", name = "crystarion-crystal", amount = 60 },
         { type = "item", name = "crystarion-crystal-yellow", amount = 60 },
-        { type = "item", name = "crystarion-crystal-purple", amount = 60 },
+        { type = "item", name = "crystarion-crystal-magenta", amount = 60 },
     },
     results = {
         { type = "item", name = "crystarion-crystal-stable", amount = 60 }

@@ -136,8 +136,8 @@ data:extend({
         type = "technology",
         name = "crystarion-unlock-lure-big",
         icons = helper.alternate(
-                { icon = "__space-age__/graphics/icons/lightning-collector.png" },
-                helper.icons("planet")
+            { icon = "__space-age__/graphics/icons/lightning-collector.png" },
+            helper.icons("planet")
         ),
         essential = false,
         effects = {
@@ -346,6 +346,10 @@ data:extend({
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-crystal-empower-3"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystalise-purple"
             },
             {
                 type = "unlock-recipe",

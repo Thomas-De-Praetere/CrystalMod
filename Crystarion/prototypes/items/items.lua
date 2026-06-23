@@ -148,85 +148,11 @@ local crystal_volatile = table.deepcopy(BASE_ITEM)
 crystal_volatile.name = "crystarion-crystal-volatile"
 crystal_volatile.icons = { helper.icons("crystal_volatile") }
 crystal_volatile.pictures = get_crystal_sprites("crystal_volatile", helper.crystal_tint.white)
-crystal_volatile.spoil_ticks = 1 * helper.minutes()
-crystal_volatile.spoil_to_trigger_result = {
-    trigger = {
-        type = "direct",
-        action_delivery = {
-            {
-                type = "instant",
-                source_effects = {
-                    {
-                        type = "create-entity",
-                        entity_name = "explosion",
-                        offsets = { { 0, 1 } },
-                        offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-                        only_when_visible = true
-                    },
-                    {
-                        type = "nested-result",
-                        action = {
-                            type = "area",
-                            radius = 4.0,
-                            action_delivery = {
-                                type = "instant",
-                                target_effects = {
-                                    {
-                                        type = "damage",
-                                        damage = { amount = 10, type = "explosion" }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                },
-            }
-        }
-    },
-    items_per_trigger = 1,
-}
 
 local crystal_unstable = table.deepcopy(BASE_ITEM)
 crystal_unstable.name = "crystarion-crystal-unstable"
 crystal_unstable.icons = { helper.icons("crystal_unstable") }
 crystal_unstable.pictures = get_crystal_sprites("crystal_unstable", helper.crystal_tint.white)
-crystal_unstable.spoil_ticks = 2 * helper.minutes()
-crystal_unstable.spoil_to_trigger_result = {
-    trigger = {
-        type = "direct",
-        action_delivery = {
-            {
-                type = "instant",
-                source_effects = {
-                    {
-                        type = "create-entity",
-                        entity_name = "explosion",
-                        offsets = { { 0, 1 } },
-                        offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
-                        only_when_visible = true
-                    },
-                    {
-                        type = "nested-result",
-                        action = {
-                            type = "area",
-                            radius = 6.0,
-                            action_delivery = {
-                                type = "instant",
-                                target_effects = {
-                                    {
-                                        type = "damage",
-                                        damage = { amount = 20, type = "explosion" }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                },
-            }
-        }
-    },
-    items_per_trigger = 1,
-}
 
 local crystal_stable = table.deepcopy(BASE_ITEM)
 crystal_stable.name = "crystarion-crystal-stable"
@@ -248,6 +174,8 @@ volatile_science.icons = {
     { icon = "__base__/graphics/icons/space-science-pack.png",    tint = { 1, .5, .5, 0.7 } },
     { icon = "__base__/graphics/icons/logistic-science-pack.png", tint = { 1, .5, .5, 0.3 } },
 }
+volatile_science.fuel_category = "crystarion-explosive"
+volatile_science.fuel_value = "6MJ"
 volatile_science.spoil_ticks = 1 * helper.minutes()
 volatile_science.spoil_to_trigger_result = {
     trigger = {
