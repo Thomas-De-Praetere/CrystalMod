@@ -60,6 +60,34 @@ function helper.icon_1_to_2(source, target1, target2)
     return { c_source, c_target1, c_target2 }
 end
 
+function helper.icon_3_to_3(source1, source2, source3, target1, target2, target3)
+    local c_source = table.deepcopy(source1);
+    c_source.scale = 0.5 * normalise(source1.scale)
+    c_source.shift = { 0, -8 }
+
+    local l_source = table.deepcopy(source2);
+    l_source.scale = 0.5 * normalise(source2.scale)
+    l_source.shift = { -8, -8 }
+
+    local r_source = table.deepcopy(source3);
+    r_source.scale = 0.5 * normalise(source3.scale)
+    r_source.shift = { 8, -8 }
+
+    local l_target = table.deepcopy(target1);
+    l_target.scale = 0.5 * normalise(target1.scale)
+    l_target.shift = { -8, 8 }
+
+    local c_target = table.deepcopy(target2);
+    c_target.scale = 0.5 * normalise(target2.scale)
+    c_target.shift = { 0, 8 }
+
+    local r_target = table.deepcopy(target3);
+    r_target.scale = 0.5 * normalise(target3.scale)
+    r_target.shift = { 8, 8 }
+
+    return { l_source, c_source, r_source, l_target, c_target, r_target }
+end
+
 function helper.alternate(main, special)
     local c_special = table.deepcopy(special);
     c_special.scale = 0.28 * normalise(special.scale)

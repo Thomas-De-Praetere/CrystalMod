@@ -32,7 +32,7 @@ local function create_enemy(size, absorption, type, multiple, to_spawn)
     return unit
 end
 
-local function create_enemy_boom(size, absorption, type, to_spawn, radius)
+local function create_enemy_boom(size, absorption, type, to_spawn, radius, damage)
     local spawn_array = { { 0, 0 } }
 
     local unit = table.deepcopy(data.raw["unit"][size .. "-" .. type])
@@ -62,7 +62,7 @@ local function create_enemy_boom(size, absorption, type, to_spawn, radius)
                                     target_effects = {
                                         {
                                             type = "damage",
-                                            damage = { amount = 25, type = "explosion" }
+                                            damage = { amount = damage, type = "explosion" }
                                         }
                                     }
                                 }
@@ -99,8 +99,8 @@ data:extend({
     create_enemy("medium", 20, "biter", true, "crystarion-small-biter"),
     create_enemy("big", 80, "biter", true, "crystarion-medium-biter"),
     create_enemy("behemoth", 400, "biter", true, "crystarion-big-biter"),
-    create_enemy_boom("small", 4, "spitter", "crystarion-resource-small", 1),
-    create_enemy_boom("medium", 20, "spitter", "crystarion-resource-medium", 2),
-    create_enemy_boom("big", 80, "spitter", "crystarion-resource-big", 4),
-    create_enemy_boom("behemoth", 400, "spitter", "crystarion-resource-behemoth", 6),
+    create_enemy_boom("small", 4, "spitter", "crystarion-resource-small", 1, 5),
+    create_enemy_boom("medium", 20, "spitter", "crystarion-resource-medium", 2, 10),
+    create_enemy_boom("big", 80, "spitter", "crystarion-resource-big", 4, 15),
+    create_enemy_boom("behemoth", 400, "spitter", "crystarion-resource-behemoth", 6, 25),
 })

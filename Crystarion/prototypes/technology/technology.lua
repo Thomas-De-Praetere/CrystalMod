@@ -355,14 +355,14 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-slurry-from-red-crystal"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-slurry-from-green-crystal"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-slurry-from-blue-crystal"
-            },
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-slurry-from-green-crystal"
+            --},
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-slurry-from-blue-crystal"
+            --},
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-mix-yellow"
@@ -386,6 +386,10 @@ data:extend({
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-denaturize-green"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-create-slurry"
             },
         },
         prerequisites = { "crystarion-unlock-resource" },
