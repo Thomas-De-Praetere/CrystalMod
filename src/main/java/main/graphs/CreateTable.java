@@ -26,35 +26,45 @@ public class CreateTable {
     }
 
     private Recipe of(String line) {
-        String[] split = line.split("\\|");
+        String[] split = line.split("#");
+        String tag = split[0];
+        split = split[1].split("\\|");
         String name = split[0];
         split = split[1].split(":");
         List<String> input = Arrays.stream(split[0].split(",")).toList();
         List<String> output = Arrays.stream(split[1].split(",")).toList();
-        return new Recipe(name, input, output);
+        return new Recipe(tag, name, input, output);
     }
 
-    record Recipe(String name, List<String> inputs, List<String> outputs) {
+    static int COUNTER = 0;
+
+    record Recipe(String tag, String name, List<String> inputs, List<String> outputs) {
+
         String toPumlRecord() {
+            String i = tag();
+            if (i.equals("S")) {
+                i = "S" + COUNTER++;
+            }
+
             StringBuilder builder = new StringBuilder();
-
-            builder.append("[").append(name).append("]").append(" AS rec_").append(name).append(" #lightblue").append("\n");
-            for (String input : inputs) {
-                builder.append("[").append(input).append("]").append(" AS ").append(input).append("\n");
-            }
-            for (String output : outputs) {
-                builder.append("[").append(output).append("]").append(" AS ").append(output).append("\n");
-            }
-
-
+            builder.append(String.format("[%s] AS rec_%s_%s #lightblue\n", name(), name(), i));
             for (String input : inputs()) {
-                builder.append(input).append(" --> rec_").append(name).append("\n");
+                builder.append(String.format("[%s] AS %s_%s \n", input, input, i));
             }
             for (String output : outputs()) {
-                builder.append("rec_").append(name).append(" --> ").append(output).append("\n");
+                builder.append(String.format("[%s] AS %s_%s \n", output, output, i));
+            }
+
+            for (String input : inputs()) {
+
+                builder.append(String.format("%s_%s --> rec_%s_%s \n", input, i, name(), i));
+            }
+            for (String output : outputs()) {
+                builder.append(String.format("rec_%s_%s --> %s_%s \n", name(), i, output, i));
             }
             return builder.toString();
         }
     }
+
 
 }

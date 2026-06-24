@@ -160,38 +160,5 @@ The main goal is to balance energy for feeding enemies to have access to
 ores and energy to power the powerhungry processes.
 
 ## Creation Flows
-### Crystals
-The base inputs are Ice and Crystal ore, which are the only resources on the planet.
 
-![CrystalFlow.svg](Documentation/CrystalFlow.svg)
-
-### Coloured Crystals
-Crystals can be split into smaller compounds. These compounds will be used to
-create the basic factorio resources.
-
-![ColoredFlow.svg](Documentation/ColoredFlow.svg)
-
-### Ore Creation
-When we have crystals, we can make any ore we want.
-
-![CreateOre.svg](Documentation/CreateOre.svg)
-
-### Oils
-We also need to be able to create the fluids
-
-![OilFlow.svg](Documentation/OilFlow.svg)
-
-### Manual
-When we start the game, we need to be able to set things up. So some manual recipes are needed.
-
-![ManualFlow.svg](Documentation/ManualFlow.svg)
-
-### Offence
-Splinters of the crystals have the potential to explode, so we create bullets from them.
-
-![weapon.svg](Documentation/weapon.svg)
-
-### Upgrade
-We need lots of power to upgrade crystals and that will be the main wa of getting science and some later game tools.
-
-![upgrade.svg](Documentation/upgrade.svg)
+![table.svg](Documentation/table.svg)
