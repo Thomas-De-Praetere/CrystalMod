@@ -12,8 +12,8 @@ local sludge_from_crushed_crystal = {
     type = "recipe",
     name = "crystarion-sludge-from-crushed-crystal",
     category = "chemistry",
-    main_product = "crystarion-crystal-slurry",
     icons = helper.icon_1_to_1(helper.icons("crushed_crystal"), helper.icons("crystal_slurry")),
+    main_product = "crystarion-crystal-slurry",
     ingredients = {
         { type = "fluid", name = "water", amount = 20 },
         { type = "item", name = "crystarion-crushed-crystal", amount = 15 }
