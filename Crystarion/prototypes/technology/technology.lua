@@ -303,6 +303,10 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
+                recipe = "crystarion-naturizer"
+            },
+            {
+                type = "unlock-recipe",
                 recipe = "crystarion-crystal-ammo"
             },
             {

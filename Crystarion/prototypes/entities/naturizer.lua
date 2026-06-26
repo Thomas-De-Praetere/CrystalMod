@@ -3,9 +3,9 @@
 -- locale recipe crystarion-naturizer
 
 local helper = require("__Crystarion__.helper")
-require ("circuit-connector-sprites")
-require ("util")
-require ("__space-age__.prototypes.entity.circuit-network")
+require("circuit-connector-sprites")
+require("util")
+require("__space-age__.prototypes.entity.circuit-network")
 
 local entity = {
     name = "crystarion-naturizer",
@@ -95,19 +95,21 @@ item.place_result = "crystarion-naturizer"
 item.icon = "__space-age__/graphics/icons/heating-tower.png"
 item.order = "c[crystarion-naturizer]"
 item.subgroup = "environmental-protection"
+item.hidden = false
 
 local recipe = {
     type = "recipe",
     name = "crystarion-naturizer",
     main_product = "crystarion-naturizer",
     ingredients = {
-        { type = "item", name = "iron-plate", amount = 3 },
+        { type = "item", name = "iron-plate",         amount = 3 },
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },
     results = {
         { type = "item", name = "crystarion-naturizer", amount = 1 }
     },
-    energy_required = 5
+    energy_required = 5,
+    enabled = false,
 }
 
 data:extend({ entity, item, recipe })
