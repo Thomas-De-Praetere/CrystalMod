@@ -125,13 +125,13 @@ crystal_splinter_volatile.spoil_to_trigger_result = {
                         type = "nested-result",
                         action = {
                             type = "area",
-                            radius = 2.0,
+                            radius = 3.0,
                             action_delivery = {
                                 type = "instant",
                                 target_effects = {
                                     {
                                         type = "damage",
-                                        damage = { amount = 4, type = "explosion" }
+                                        damage = { amount = 15, type = "explosion" }
                                     }
                                 }
                             }
