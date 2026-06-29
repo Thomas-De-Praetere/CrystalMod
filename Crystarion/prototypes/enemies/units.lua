@@ -9,21 +9,50 @@
 
 local helper = require("__Crystarion__.helper")
 
-local function create_enemy(size, absorption, type, multiple, to_spawn)
-    local spawn_array = { { 0, 0 } }
-    if multiple then
-        spawn_array = { { 0, 1 }, { 0, -1 } }
-    end
+local function create_enemy(size, absorption, type, only_resource, to_spawn_unit, to_spawn_resource)
+    local spawn_array = { { 0, 1 }, { 0, -1 } }
 
     local unit = table.deepcopy(data.raw["unit"][size .. "-" .. type])
     unit.name = "crystarion-" .. size .. "-" .. type
-    unit.dying_trigger_effect = {
-        type = "create-entity",
-        check_buildability = true,
-        find_non_colliding_position = true,
-        entity_name = to_spawn,
-        offsets = spawn_array,
-    }
+
+    if only_resource then
+        unit.dying_trigger_effect = {
+            type = "create-entity",
+            check_buildability = true,
+            find_non_colliding_position = true,
+            entity_name = to_spawn_resource,
+            offsets = { { 0, 0 } },
+        }
+    else
+        unit.dying_trigger_effect = {
+            type = "nested-result",
+            action = {
+                type = "direct",
+                action_delivery = {
+                    {
+                        type = "instant",
+                        source_effects = {
+                            {
+                                type = "create-entity",
+                                check_buildability = true,
+                                find_non_colliding_position = true,
+                                entity_name = to_spawn_unit,
+                                offsets = spawn_array,
+                            },
+                            {
+                                type = "create-entity",
+                                check_buildability = true,
+                                find_non_colliding_position = true,
+                                entity_name = to_spawn_resource,
+                                offsets = { { 0, 0 } },
+                            },
+                        },
+                    }
+                }
+            }
+        }
+    end
+
     unit.vision_distance = 40
     unit.absorptions_to_join_attack = { crystarion_resonance = absorption }
     unit.distraction_cooldown = 300
@@ -95,10 +124,10 @@ end
 
 
 data:extend({
-    create_enemy("small", 4, "biter", false, "crystarion-resource-small"),
-    create_enemy("medium", 20, "biter", true, "crystarion-small-biter"),
-    create_enemy("big", 80, "biter", true, "crystarion-medium-biter"),
-    create_enemy("behemoth", 400, "biter", true, "crystarion-big-biter"),
+    create_enemy("small", 4, "biter", true, nil, "crystarion-resource-small"),
+    create_enemy("medium", 20, "biter", false, "crystarion-small-biter", "crystarion-resource-medium"),
+    create_enemy("big", 80, "biter", false, "crystarion-medium-biter", "crystarion-resource-big"),
+    create_enemy("behemoth", 400, "biter", false, "crystarion-big-biter", "crystarion-resource-behemoth"),
     create_enemy_boom("small", 4, "spitter", "crystarion-resource-small", 1, 5),
     create_enemy_boom("medium", 20, "spitter", "crystarion-resource-medium", 2, 10),
     create_enemy_boom("big", 80, "spitter", "crystarion-resource-big", 4, 15),
