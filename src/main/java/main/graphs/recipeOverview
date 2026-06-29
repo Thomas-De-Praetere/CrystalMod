@@ -23,6 +23,7 @@ M#crystarion-crystal-ore-splinter-less|crystarion-crushed-crystal:crystarion-cry
 2#crystarion-denaturize-purple|crystarion-purple-mixture:petroleum-gas,crystarion-crystal-splinter-volatile
 2#crystarion-denaturize-red|crystarion-red-slurry:heavy-oil,crystarion-crystal-splinter-volatile
 2#crystarion-denaturize-green|crystarion-green-slurry:lubricant,crystarion-crystal-splinter-volatile
+2#crystarion-denaturize-blue|crystarion-blue-slurry:sulfuric-acid,crystarion-crystal-splinter-volatile
 2#crystarion-create-slurry|crystarion-crystal-red,crystarion-crystal-green,crystarion-crystal-blue,water:crystarion-red-slurry,crystarion-green-slurry,crystarion-blue-slurry
 2#crystarion-mix-yellow|crystarion-green-slurry,crystarion-red-slurry:crystarion-yellow-mixture
 2#crystarion-mix-purple|crystarion-blue-slurry,crystarion-red-slurry:crystarion-purple-mixture

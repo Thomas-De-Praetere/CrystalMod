@@ -139,12 +139,14 @@ local denaturize_yellow = denaturize("yellow", "crystarion-yellow-mixture", "yel
 local denaturize_purple = denaturize("purple", "crystarion-purple-mixture", "purple_mixture", "petroleum-gas")
 local denaturize_red = denaturize("red", "crystarion-red-slurry", "red_slurry", "heavy-oil")
 local denaturize_green = denaturize("green", "crystarion-green-slurry", "green_slurry", "lubricant")
+local denaturize_blue = denaturize("blue", "crystarion-blue-slurry", "blue_slurry", "sulfuric-acid")
 
 data:extend({
     mix_yellow,
     mix_purple,
     denaturize_yellow,
     denaturize_purple,
+    denaturize_blue,
     denaturize_red,
     denaturize_green,
     crystalise_purple,
