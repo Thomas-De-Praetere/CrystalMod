@@ -31,8 +31,8 @@ local function create_resource(size, results, pictures_type, pictures_name)
 end
 
 data:extend({
-    create_resource("small", 2, "optimized-decorative", "small-rock"),
-    create_resource("medium", 4, "optimized-decorative", "medium-rock"),
-    create_resource("big", 6, "simple-entity", "big-rock"),
-    create_resource("behemoth", 10, "simple-entity", "huge-rock"),
+    create_resource("small", 4, "optimized-decorative", "small-rock"),
+    create_resource("medium", 8, "optimized-decorative", "medium-rock"),
+    create_resource("big", 16, "simple-entity", "big-rock"),
+    create_resource("behemoth", 32, "simple-entity", "huge-rock"),
 })
