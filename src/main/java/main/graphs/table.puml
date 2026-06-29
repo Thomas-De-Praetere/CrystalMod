@@ -216,6 +216,14 @@ crystarion_green_slurry_2 --> rec_crystarion_denaturize_green_2
 rec_crystarion_denaturize_green_2 --> lubricant_2
 rec_crystarion_denaturize_green_2 --> crystarion_crystal_splinter_volatile_2
 
+[crystarion_denaturize_blue] AS rec_crystarion_denaturize_blue_2 #lightblue
+[crystarion_blue_slurry] AS crystarion_blue_slurry_2
+[sulfuric_acid] AS sulfuric_acid_2
+[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_2
+crystarion_blue_slurry_2 --> rec_crystarion_denaturize_blue_2
+rec_crystarion_denaturize_blue_2 --> sulfuric_acid_2
+rec_crystarion_denaturize_blue_2 --> crystarion_crystal_splinter_volatile_2
+
 [crystarion_create_slurry] AS rec_crystarion_create_slurry_2 #lightblue
 [crystarion_crystal_red] AS crystarion_crystal_red_2
 [crystarion_crystal_green] AS crystarion_crystal_green_2
@@ -389,3 +397,4 @@ crystarion_crystal_stable_4 --> rec_crystarion_science_4
 rec_crystarion_science_4 --> crystarion_science_4
 
 @enduml
+
