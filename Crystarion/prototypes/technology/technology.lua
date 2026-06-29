@@ -393,6 +393,10 @@ data:extend({
             },
             {
                 type = "unlock-recipe",
+                recipe = "crystarion-denaturize-blue"
+            },
+            {
+                type = "unlock-recipe",
                 recipe = "crystarion-create-slurry"
             },
         },

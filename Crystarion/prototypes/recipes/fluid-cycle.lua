@@ -71,9 +71,9 @@ local create_slurry = {
             helper.icons("blue_slurry")
     ),
     ingredients = {
-        { type = "item", name = "crystarion-crystal-red", amount = 5 },
-        { type = "item", name = "crystarion-crystal-green", amount = 5 },
-        { type = "item", name = "crystarion-crystal-blue", amount = 5 },
+        { type = "item", name = "crystarion-crystal-red", amount = 1 },
+        { type = "item", name = "crystarion-crystal-green", amount = 1 },
+        { type = "item", name = "crystarion-crystal-blue", amount = 1 },
         { type = "fluid", name = "water", amount = 60 },
     },
     results = {
