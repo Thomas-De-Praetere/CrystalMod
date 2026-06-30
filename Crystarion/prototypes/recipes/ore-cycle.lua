@@ -75,7 +75,7 @@ local function split_crystal_1(name, to_split, result1, result2)
             { type = "item", name = "ice",                     amount = 1 },
         },
         results = {
-            { type = "item",  name = "crystarion-" .. result1, amount = 4 },
+            { type = "item",  name = "crystarion-" .. result1, amount = 8 },
             { type = "item",  name = "crystarion-" .. result2, amount = 4 },
             { type = "fluid", name = "water",                  amount = 20 }
         },
@@ -100,8 +100,8 @@ local function split_crystal_2(name, to_split, result1, result2)
             { type = "fluid", name = "water",                   amount = 5 },
         },
         results = {
-            { type = "item",  name = "crystarion-" .. result1, amount = 1 },
-            { type = "item",  name = "crystarion-" .. result2, amount = 1 },
+            { type = "item",  name = "crystarion-" .. result1, amount = 2 },
+            { type = "item",  name = "crystarion-" .. result2, amount = 2 },
             { type = "fluid", name = "steam",                  amount = 20, temperature = 500 }
         },
         energy_required = 1,
