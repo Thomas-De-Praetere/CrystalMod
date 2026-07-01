@@ -16,6 +16,7 @@ S#crystarion-battery|crystarion-crystal,iron-plate,copper-plate:battery
 1#crystarion-crush-crystal-ore|crystarion-crystal-ore:crystarion-crushed-crystal
 M#crystarion-crystal-ore-splinter|crystarion-crystal:crystarion-crystal-splinter
 M#crystarion-crystal-ore-splinter-less|crystarion-crushed-crystal:crystarion-crystal-splinter
+M#crystarion-crystal-ore-splinter-volatile|crystarion-crystal:crystarion-crystal-splinter-volatile
 1#crystarion-crystalise|crystarion-crystal-slurry:crystarion-crystal,crystarion-crushed-crystal
 3#crystarion-revitalise-coal|crystarion-crystal,coal,water:wood,steam
 2#crystarion-slurry-from-red-crystal|crystarion-crystal-red,water:crystarion-red-slurry

@@ -5,6 +5,7 @@
 -- locale recipe crystarion-crystalise
 -- locale recipe crystarion-battery
 -- locale recipe crystarion-revitalise-coal
+-- locale recipe crystarion-crystal-ore-splinter-volatile
 
 local helper = require("__Crystarion__.helper")
 
@@ -52,6 +53,23 @@ local crystal_splinter = {
     energy_required = 1,
     enabled = false,
 }
+
+local crystal_splinter_volatile = {
+    type = "recipe",
+    name = "crystarion-crystal-ore-splinter-volatile",
+    category = "crystarion-crusher-category",
+    main_product = "crystarion-crystal-splinter-volatile",
+    ingredients = {
+        { type = "item", name = "crystarion-crystal", amount = 1 }
+    },
+    results = {
+        { type = "item", name = "crystarion-crystal-splinter-volatile", amount = 40 }
+    },
+    energy_required = 1,
+    enabled = false,
+}
+
+
 local crystal_splinter_less = {
     type = "recipe",
     name = "crystarion-crystal-ore-splinter-less",
@@ -134,5 +152,6 @@ data:extend({
     battery,
     revitalise_coal,
     crystal_splinter,
+    crystal_splinter_volatile,
     crystal_splinter_less,
 })
