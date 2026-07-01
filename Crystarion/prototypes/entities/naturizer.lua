@@ -34,7 +34,7 @@ local entity = {
     },
     energy_source = {
         type = "electric",
-        usage_priority = "secondary-output"
+        usage_priority = "primary-output"
     },
     collision_box = { { -1.25, -1.25 }, { 1.25, 1.25 } },
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
