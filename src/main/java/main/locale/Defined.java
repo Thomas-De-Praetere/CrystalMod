@@ -30,10 +30,6 @@ public class Defined {
                     new Locale("crystarion-rock-ice", "Ice Rock"),
                     new Locale("crystarion-rock-ice-big", "Big Ice Rock"),
                     new Locale("crystarion-rock-ice-huge", "Huge Ice Rock"),
-                    new Locale("crystarion-science", "Unstable Science"),
-                    new Locale("crystarion-science-stable", "Stable Science"),
-                    new Locale("crystarion-science-unstable", "Unstable Science"),
-                    new Locale("crystarion-science-volatile", "Volatile Science"),
                     new Locale("crystarion-smelter-category", "Smelter"),
                     new Locale("crystarion-spawner", "Crystosphere"),
                     new Locale("crystarion-biter", "Crystaloid"),
@@ -55,6 +51,10 @@ public class Defined {
                     new Locale("crystarion-resource-behemoth", "Huge Crystaline remains")
             ),
             Category.ITEM, List.of(
+                    new Locale("crystarion-science", "Unstable Science"),
+                    new Locale("crystarion-science-stable", "Stable Science"),
+                    new Locale("crystarion-science-unstable", "Unstable Science"),
+                    new Locale("crystarion-science-volatile", "Volatile Science"),
                     new Locale("crystarion-crystal-ammo", "Crystaline Ammunition"),
                     new Locale("crystarion-crushed-crystal", "Crushed Crystal"),
                     new Locale("crystarion-crystal", "Crystal"),

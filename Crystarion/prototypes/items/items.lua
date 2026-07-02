@@ -165,7 +165,7 @@ science.icons = {
     { icon = "__base__/graphics/icons/space-science-pack.png",    tint = { .5, .5, .5, 0.7 } },
     { icon = "__base__/graphics/icons/logistic-science-pack.png", tint = { .5, .5, .5, 0.3 } },
 }
-science.spoil_ticks = 30 * helper.minutes()
+science.spoil_ticks = 90 * helper.minutes()
 science.spoil_result = "crystarion-science-volatile"
 
 local volatile_science = table.deepcopy(data.raw["tool"]["logistic-science-pack"])
@@ -176,7 +176,7 @@ volatile_science.icons = {
 }
 volatile_science.fuel_category = "crystarion-explosive"
 volatile_science.fuel_value = "6MJ"
-volatile_science.spoil_ticks = 1 * helper.minutes()
+volatile_science.spoil_ticks = 5 * helper.minutes()
 volatile_science.spoil_to_trigger_result = {
     trigger = {
         type = "direct",

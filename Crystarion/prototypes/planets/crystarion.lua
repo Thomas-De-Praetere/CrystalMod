@@ -30,7 +30,7 @@ local crystarion = {
     starmap_icon_size = 256,
 
     map_gen_settings = planet_map_gen.crystarion(),
-    --TODO change this to energy or smth
+
     pollutant_type = "crystarion_resonance",
     solar_power_in_space = 400,
     surface_properties = {
@@ -43,11 +43,22 @@ local crystarion = {
     }
 }
 
-local crystarion_connection = {
+local crystarion_connection1 = {
     type = "space-connection",
-    name = "crystarion-nauvis",
+    name = "crystarion-vulcanus",
     subgroup = "planet-connections",
-    from = "nauvis",
+    from = "vulcanus",
+    to = "crystarion-planet",
+    asteroid_spawn_definitions = nauvis_crystarion_asteroids,
+    -- no need for icon since __space-age__/data-updates.lua in automatically generates icons for space connections
+    length = 15000
+}
+
+local crystarion_connection2 = {
+    type = "space-connection",
+    name = "crystarion-gleba",
+    subgroup = "planet-connections",
+    from = "gleba",
     to = "crystarion-planet",
     asteroid_spawn_definitions = nauvis_crystarion_asteroids,
     -- no need for icon since __space-age__/data-updates.lua in automatically generates icons for space connections
@@ -57,4 +68,7 @@ local crystarion_connection = {
 PlanetsLib.borrow_music(gleba, crystarion)
 PlanetsLib:extend({ crystarion })
 
-data:extend({ crystarion_connection })
+data:extend({
+    crystarion_connection1,
+    crystarion_connection2,
+})

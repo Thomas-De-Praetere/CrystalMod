@@ -59,15 +59,15 @@ local science_unstable = {
     category = "crystarion-energiser-category",
     main_product = "crystarion-science",
     ingredients = {
-        { type = "item", name = "crystarion-crystal",          amount = 1 },
+        --{ type = "item", name = "crystarion-crystal",          amount = 1 },
         --{ type = "item", name = "crystarion-crystal-volatile", amount = 1 },
         --{ type = "item", name = "crystarion-crystal-unstable", amount = 1 },
-        { type = "item", name = "crystarion-crystal-stable",   amount = 1 }
+        { type = "item", name = "crystarion-crystal-stable",   amount = 10 }
     },
     results = {
-        { type = "item", name = "crystarion-science", amount = 1 }
+        { type = "item", name = "crystarion-science", amount = 5 }
     },
-    energy_required = 5,
+    energy_required = 25,
     enabled = false,
 }
 
