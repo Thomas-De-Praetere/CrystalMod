@@ -42,8 +42,8 @@ local crystal_empower_3 = {
     category = "crystarion-empowerer-category",
     main_product = "crystarion-crystal-stable",
     ingredients = {
-        { type = "item", name = "crystarion-crystal", amount = 60 },
-        { type = "item", name = "crystarion-crystal-yellow", amount = 60 },
+        { type = "item", name = "crystarion-crystal",         amount = 60 },
+        { type = "item", name = "crystarion-crystal-yellow",  amount = 60 },
         { type = "item", name = "crystarion-crystal-magenta", amount = 60 },
     },
     results = {
@@ -56,6 +56,7 @@ local crystal_empower_3 = {
 local science_unstable = {
     type = "recipe",
     name = "crystarion-science",
+    category = "crystarion-energiser-category",
     main_product = "crystarion-science",
     ingredients = {
         { type = "item", name = "crystarion-crystal",          amount = 1 },
