@@ -144,15 +144,15 @@ crystal_splinter_volatile.spoil_to_trigger_result = {
     items_per_trigger = 1,
 }
 
-local crystal_volatile = table.deepcopy(BASE_ITEM)
-crystal_volatile.name = "crystarion-crystal-volatile"
-crystal_volatile.icons = { helper.icons("crystal_volatile") }
-crystal_volatile.pictures = get_crystal_sprites("crystal_volatile", helper.crystal_tint.white)
-
-local crystal_unstable = table.deepcopy(BASE_ITEM)
-crystal_unstable.name = "crystarion-crystal-unstable"
-crystal_unstable.icons = { helper.icons("crystal_unstable") }
-crystal_unstable.pictures = get_crystal_sprites("crystal_unstable", helper.crystal_tint.white)
+--local crystal_volatile = table.deepcopy(BASE_ITEM)
+--crystal_volatile.name = "crystarion-crystal-volatile"
+--crystal_volatile.icons = { helper.icons("crystal_volatile") }
+--crystal_volatile.pictures = get_crystal_sprites("crystal_volatile", helper.crystal_tint.white)
+--
+--local crystal_unstable = table.deepcopy(BASE_ITEM)
+--crystal_unstable.name = "crystarion-crystal-unstable"
+--crystal_unstable.icons = { helper.icons("crystal_unstable") }
+--crystal_unstable.pictures = get_crystal_sprites("crystal_unstable", helper.crystal_tint.white)
 
 local crystal_stable = table.deepcopy(BASE_ITEM)
 crystal_stable.name = "crystarion-crystal-stable"
@@ -226,8 +226,8 @@ data:extend({
     crystal_yellow,
     crystal_splinter,
     crystal_splinter_volatile,
-    crystal_volatile,
-    crystal_unstable,
+    --crystal_volatile,
+    --crystal_unstable,
     crystal_stable,
     science,
     volatile_science,

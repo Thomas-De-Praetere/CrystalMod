@@ -333,10 +333,6 @@ data:extend({
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "crystarion-crystal-empower-1"
-            },
-            {
-                type = "unlock-recipe",
                 recipe = "crystarion-science"
             },
             {
@@ -347,10 +343,14 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-empowerer"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "crystarion-crystal-empower-2"
-            },
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-crystal-empower-1"
+            --},
+            --{
+            --    type = "unlock-recipe",
+            --    recipe = "crystarion-crystal-empower-2"
+            --},
             {
                 type = "unlock-recipe",
                 recipe = "crystarion-crystal-empower-3"

@@ -96,7 +96,7 @@ local mix_yellow = {
         { type = "fluid", name = "crystarion-red-slurry", amount = 5 }
     },
     results = {
-        { type = "fluid", name = "crystarion-yellow-mixture", amount = 5 }
+        { type = "fluid", name = "crystarion-yellow-mixture", amount = 20 }
     },
     energy_required = 1,
     enabled = false,
@@ -112,7 +112,7 @@ local mix_purple = {
         { type = "fluid", name = "crystarion-red-slurry", amount = 5 }
     },
     results = {
-        { type = "fluid", name = "crystarion-purple-mixture", amount = 5 }
+        { type = "fluid", name = "crystarion-purple-mixture", amount = 10 }
     },
     energy_required = 1,
     enabled = false,
@@ -124,12 +124,12 @@ local crystalise_purple = {
     category = "chemistry",
     main_product = "crystarion-crystal-magenta",
     ingredients = {
-        { type = "fluid", name = "crystarion-purple-mixture", amount = 20 }
+        { type = "fluid", name = "crystarion-purple-mixture", amount = 10 }
     },
     results = {
         { type = "item", name = "crystarion-crystal-magenta", amount = 4 },
         { type = "fluid", name = "steam", amount = 80, temperature = 500 },
-        { type = "fluid", name = "petroleum-gas", amount = 20 },
+        { type = "fluid", name = "petroleum-gas", amount = 5 },
     },
     energy_required = 4,
     enabled = false,
