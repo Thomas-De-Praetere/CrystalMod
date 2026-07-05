@@ -67,9 +67,7 @@ local recipe = {
     name = "crystarion-energiser",
     main_product = "crystarion-energiser",
     ingredients = {
-        { type = "item", name = "iron-plate", amount = 2 },
-        { type = "item", name = "copper-plate", amount = 1 },
-        { type = "item", name = "copper-cable", amount = 1 },
+        { type = "item", name = "assembling-machine-2", amount = 2 },
         { type = "item", name = "battery", amount = 1 },
         { type = "item", name = "crystarion-crystal", amount = 1 }
     },

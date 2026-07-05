@@ -78,8 +78,11 @@ local recipe = {
     name = "crystarion-empowerer",
     main_product = "crystarion-empowerer",
     ingredients = {
-        { type = "item", name = "iron-gear-wheel", amount = 5 },
-        { type = "item", name = "iron-plate", amount = 2 }
+        { type = "item", name = "crystarion-crystal", amount = 5 },
+        { type = "item", name = "iron-plate", amount = 8 },
+        { type = "item", name = "battery", amount = 20 },
+        { type = "item", name = "processing-unit", amount = 4 },
+        { type = "item", name = "electronic-circuit", amount = 16 },
     },
     results = {
         { type = "item", name = "crystarion-empowerer", amount = 1 }

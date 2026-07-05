@@ -34,7 +34,8 @@ local recipe = {
     ingredients = {
         { type = "item", name = "iron-plate", amount = 2 },
         { type = "item", name = "battery", amount = 5 },
-        { type = "item", name = "crystarion-crystal", amount = 5 }
+        { type = "item", name = "advanced-circuit", amount = 2 },
+        { type = "item", name = "crystarion-crystal-stable", amount = 5 }
     },
     results = {
         { type = "item", name = "crystarion-accumulator", amount = 1 }

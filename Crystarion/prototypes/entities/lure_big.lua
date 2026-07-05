@@ -68,8 +68,9 @@ local recipe = {
     name = "crystarion-lure-big",
     main_product = "crystarion-lure-big",
     ingredients = {
-        { type = "item", name = "copper-cable",    amount = 40 },
-        { type = "item", name = "crystarion-lure", amount = 4 },
+        { type = "item", name = "copper-cable",     amount = 40 },
+        { type = "item", name = "advanced-circuit", amount = 5 },
+        { type = "item", name = "crystarion-lure",  amount = 4 },
     },
     results = {
         { type = "item", name = "crystarion-lure-big", amount = 1 }
