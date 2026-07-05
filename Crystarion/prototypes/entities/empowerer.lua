@@ -13,14 +13,7 @@ local entity = table.deepcopy(data.raw["assembling-machine"]["assembling-machine
 entity.crafting_categories = { "crystarion-empowerer-category" }
 entity.name = "crystarion-empowerer"
 entity.crafting_speed = 1.0
-entity.energy_usage = "100MW"
-entity.energy_source =
-{
-    type = "burner",
-    fuel_categories = {"crystarion-volatile"},
-    effectivity = 1,
-    fuel_inventory_size = 1,
-}
+entity.energy_usage = "10MW"
 entity.minable = { mining_time = 0.2, result = "crystarion-empowerer" }
 entity.surface_conditions = {}
 entity.icons = icons

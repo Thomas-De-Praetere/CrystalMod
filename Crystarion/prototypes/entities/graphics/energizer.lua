@@ -2,29 +2,29 @@ function get_graphics(tint)
     return {
         animation_progress = 0.5,
         animation = {
-            layers = {
-                {
-                    filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3.png",
-                    priority = "high",
-                    width = 214,
-                    height = 237,
-                    frame_count = 32,
-                    line_length = 8,
-                    shift = util.by_pixel(0, -0.75),
-                    scale = 0.5,
-                    tint = tint
-                },
-                {
-                    filename = "__base__/graphics/entity/assembling-machine-3/assembling-machine-3-shadow.png",
-                    priority = "high",
-                    width = 260,
-                    height = 162,
-                    frame_count = 32,
-                    line_length = 8,
-                    draw_as_shadow = true,
-                    shift = util.by_pixel(28, 4),
-                    scale = 0.5,
-                }
+            layers =
+            {
+                util.sprite_load("__base__/graphics/entity/assembling-machine-3/assembling-machine-3-base",
+                    {
+                        priority = "high",
+                        repeat_count = 64,
+                        scale = 0.5,
+                        tint = tint,
+                    }),
+                util.sprite_load("__base__/graphics/entity/assembling-machine-3/assembling-machine-3-anim",
+                    {
+                        priority = "high",
+                        frame_count = 64,
+                        scale = 0.5,
+                        tint = tint,
+                    }),
+                util.sprite_load("__base__/graphics/entity/assembling-machine-3/assembling-machine-3-shadow",
+                    {
+                        priority = "high",
+                        frame_count = 64,
+                        scale = 0.5,
+                        draw_as_shadow = true,
+                    }),
             }
         },
         states = {
@@ -122,22 +122,23 @@ end
 
 function get_loop(token, speed)
     return util.sprite_load("__space-age__/graphics/entity/beam/lightning-loop-" .. token .. "",
-            {
-                frame_count = 80,
-                draw_as_glow = true,
-                animation_speed = speed,
-                scale = 0.5,
-                blend_mode = "additive",
-            })
+        {
+            frame_count = 80,
+            draw_as_glow = true,
+            animation_speed = speed,
+            scale = 0.5,
+            blend_mode = "additive",
+        })
 end
+
 function get_loop_shift(token, speed)
     return util.sprite_load("__space-age__/graphics/entity/beam/lightning-loop-" .. token .. "",
-            {
-                frame_count = 80,
-                draw_as_glow = true,
-                animation_speed = speed,
-                scale = 0.5,
-                blend_mode = "additive",
-                shift = { 0, -1 }
-            })
+        {
+            frame_count = 80,
+            draw_as_glow = true,
+            animation_speed = speed,
+            scale = 0.5,
+            blend_mode = "additive",
+            shift = { 0, -1 }
+        })
 end

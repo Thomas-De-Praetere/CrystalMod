@@ -8,7 +8,7 @@
 --local crystal_empower_1 = {
 --    type = "recipe",
 --    name = "crystarion-crystal-empower-1",
---    category = "crystarion-empowerer-category",
+--    categories = {"crystarion-empowerer-category"},
 --    main_product = "crystarion-crystal-volatile",
 --    ingredients = {
 --        { type = "item", name = "crystarion-crystal", amount = 15 }
@@ -23,7 +23,7 @@
 --local crystal_empower_2 = {
 --    type = "recipe",
 --    name = "crystarion-crystal-empower-2",
---    category = "crystarion-empowerer-category",
+--    categories = {"crystarion-empowerer-category"},
 --    main_product = "crystarion-crystal-unstable",
 --    ingredients = {
 --        { type = "item", name = "crystarion-crystal",        amount = 30 },
@@ -39,7 +39,7 @@
 local crystal_empower_3 = {
     type = "recipe",
     name = "crystarion-crystal-empower-3",
-    category = "crystarion-empowerer-category",
+    categories = {"crystarion-empowerer-category"},
     main_product = "crystarion-crystal-stable",
     ingredients = {
         { type = "item", name = "crystarion-crystal",         amount = 2 },
@@ -56,7 +56,7 @@ local crystal_empower_3 = {
 local science_unstable = {
     type = "recipe",
     name = "crystarion-science",
-    category = "crystarion-energiser-category",
+    categories = {"crystarion-energiser-category"},
     main_product = "crystarion-science",
     ingredients = {
         --{ type = "item", name = "crystarion-crystal",          amount = 1 },

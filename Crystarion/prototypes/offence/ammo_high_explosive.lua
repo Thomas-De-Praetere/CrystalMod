@@ -6,7 +6,7 @@ local helper = require("__Crystarion__.helper")
 local item = table.deepcopy(data.raw["ammo"]["firearm-magazine"])
 item.name = "crystarion-crystal-ammo-high-explosive"
 
-item.icon = "__Crystarion__/graphics/items/magazine.png"
+item.icon = "__Crystarion__/graphics/items/magazine_high_explosive.png"
 item.pictures = {
     layers = {
         {

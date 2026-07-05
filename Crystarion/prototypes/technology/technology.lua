@@ -75,7 +75,7 @@ data:extend({
         prerequisites = { "planet-discovery-crystarion" },
         research_trigger = {
             type = "mine-entity",
-            entity = "crystarion-rock-ice-big"
+            entities = { "crystarion-rock-ice-big" }
         }
     },
 
@@ -93,7 +93,7 @@ data:extend({
                 recipe = "crystarion-condensation-rod-huge"
             },
         },
-        prerequisites = { "crystarion-unlock-ice" },
+        prerequisites = { "crystarion-unlock-ice", "crystarion-unlock-science-volatile" },
         unit = {
             count = 200,
             ingredients = {
@@ -121,7 +121,7 @@ data:extend({
                 recipe = "crystarion-lure-big"
             },
         },
-        prerequisites = { "crystarion-unlock-biter" },
+        prerequisites = { "crystarion-unlock-biter", "crystarion-unlock-science-volatile" },
         unit = {
             count = 200,
             ingredients = {
@@ -247,7 +247,7 @@ data:extend({
         prerequisites = { "planet-discovery-crystarion" },
         research_trigger = {
             type = "mine-entity",
-            entity = "crystarion-rock-big"
+            entities = { "crystarion-rock-big" }
         }
     },
     {
@@ -297,13 +297,13 @@ data:extend({
         prerequisites = { "planet-discovery-crystarion" },
         research_trigger = {
             type = "mine-entity",
-            entity = "crystarion-resource-small"
+            entities = { "crystarion-resource-small" }
         }
     },
     {
         type = "technology",
         name = "crystarion-unlock-science-volatile",
-        icons = { helper.icons("crystal_volatile") },
+        icons = { helper.icons("crystal_stable") },
         essential = true,
         effects = {
             {
@@ -386,7 +386,7 @@ data:extend({
         type = "technology",
         name = "crystarion-unlock-megaccumulator",
         icons = helper.alternate(
-            { icon = "__space-age__/graphics/icons/lightning-collector.png" },
+            { icon = "__base__/graphics/icons/accumulator.png" },
             helper.icons("planet")
         ),
         essential = false,
@@ -410,34 +410,31 @@ data:extend({
             time = 30
         },
     },
-        {
-            type = "technology",
-            name = "crystarion-unlock-high-explosive-ammo",
-            icons = helper.alternate(
-                { icon = "__space-age__/graphics/icons/lightning-collector.png" },
-                helper.icons("planet")
-            ),
-            essential = false,
-            effects = {
-                {
-                    type = "unlock-recipe",
-                    recipe = "crystarion-crystal-ammo-high-explosive"
-                },
-            },
-            prerequisites = { "crystarion-unlock-science-volatile" },
-            unit = {
-                count = 200,
-                ingredients = {
-                    { "crystarion-science",      1 },
-                    { "automation-science-pack", 1 },
-                    { "logistic-science-pack",   1 },
-                    { "chemical-science-pack",   1 },
-                    { "space-science-pack",      1 },
-                    { "utility-science-pack",    1 },
-                },
-                time = 30
+    {
+        type = "technology",
+        name = "crystarion-unlock-high-explosive-ammo",
+        icon = "__Crystarion__/graphics/items/magazine_high_explosive.png",
+        essential = false,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-ammo-high-explosive"
             },
         },
+        prerequisites = { "crystarion-unlock-science-volatile", "crystarion-unlock-biter" },
+        unit = {
+            count = 200,
+            ingredients = {
+                { "crystarion-science",      1 },
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
+                { "space-science-pack",      1 },
+                { "utility-science-pack",    1 },
+            },
+            time = 30
+        },
+    },
 
 
 })

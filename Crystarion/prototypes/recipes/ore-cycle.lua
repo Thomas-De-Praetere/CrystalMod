@@ -21,14 +21,14 @@ local function crush_crystal_color(color)
     return {
         type = "recipe",
         name = "crystarion-crush-crystal-" .. color,
-        category = "crystarion-crusher-category",
+        categories = {"crystarion-crusher-category"},
         main_product = "crystarion-crushed-crystal",
         icons = helper.icon_1_to_1(helper.icons("crystal_" .. color), helper.icons("crushed_crystal")),
         ingredients = {
             { type = "item", name = "crystarion-crystal-" .. color, amount = 3 }
         },
         results = {
-            { type = "item", name = "crystarion-crushed-crystal", amount = 1, probability = 0.5 }
+            { type = "item", name = "crystarion-crushed-crystal", amount = 1, independent_probability = 0.5 }
         },
         energy_required = 1,
         enabled = false,
@@ -39,7 +39,7 @@ local function neutralize_color(color, result)
     return {
         type = "recipe",
         name = "crystarion-neutralize-" .. color,
-        category = "crystarion-energiser-category",
+        categories = {"crystarion-energiser-category"},
         main_product = result,
         icons = helper.icon_1_to_1(
             helper.icons("crystal_" .. color),
@@ -63,7 +63,7 @@ local function split_crystal_1(name, to_split, result1, result2)
     return {
         type = "recipe",
         name = "crystarion-split-" .. name,
-        category = "crystarion-energiser-category",
+        categories = {"crystarion-energiser-category"},
         main_product = "crystarion-" .. result1,
         icons = helper.icon_1_to_2(
             helper.icons(helper.replace(to_split, "-", "_")),
@@ -88,7 +88,7 @@ local function split_crystal_2(name, to_split, result1, result2)
     return {
         type = "recipe",
         name = "crystarion-split-" .. name,
-        category = "crystarion-energiser-category",
+        categories = {"crystarion-energiser-category"},
         main_product = "crystarion-" .. result1,
         icons = helper.icon_1_to_2(
             helper.icons(helper.replace(to_split, "-", "_")),
@@ -161,7 +161,7 @@ local neutralize_blue = neutralize_color("blue", "iron-ore")
 local neutralize_crystal = {
     type = "recipe",
     name = "crystarion-neutralize-crystal",
-    category = "crystarion-energiser-category",
+    categories = {"crystarion-energiser-category"},
     main_product = "coal",
     icons = helper.icon_1_to_1(
         helper.icons("crystal"),

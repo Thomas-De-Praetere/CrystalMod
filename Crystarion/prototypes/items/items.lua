@@ -159,7 +159,7 @@ crystal_stable.name = "crystarion-crystal-stable"
 crystal_stable.icons = { helper.icons("crystal_stable") }
 crystal_stable.pictures = get_crystal_sprites("crystal_stable", helper.crystal_tint.white)
 
-local science = table.deepcopy(data.raw["tool"]["logistic-science-pack"])
+local science = table.deepcopy(data.raw["item"]["logistic-science-pack"])
 science.name = "crystarion-science"
 science.icons = {
     { icon = "__base__/graphics/icons/space-science-pack.png",    tint = { .5, .5, .5, 0.7 } },
@@ -168,7 +168,7 @@ science.icons = {
 science.spoil_ticks = 90 * helper.minutes()
 science.spoil_result = "crystarion-science-volatile"
 
-local volatile_science = table.deepcopy(data.raw["tool"]["logistic-science-pack"])
+local volatile_science = table.deepcopy(data.raw["item"]["logistic-science-pack"])
 volatile_science.name = "crystarion-science-volatile"
 volatile_science.icons = {
     { icon = "__base__/graphics/icons/space-science-pack.png",    tint = { 1, .5, .5, 0.7 } },

@@ -16,7 +16,7 @@ local function slurry_from_color(name, in_amount, out_amount)
     return {
         type = "recipe",
         name = "crystarion-slurry-from-" .. name .. "-crystal",
-        category = "chemistry",
+        categories = {"chemistry"},
         main_product = "crystarion-" .. name .. "-slurry",
         icons = helper.icon_1_to_1(helper.icons("crystal_" .. name), helper.icons(name .. "_slurry")),
         ingredients = {
@@ -35,7 +35,7 @@ local function denaturize(name, input, input_icon, output)
     return {
         type = "recipe",
         name = "crystarion-denaturize-" .. name,
-        category = "crystarion-energiser-category",
+        categories = {"crystarion-energiser-category"},
         main_product = output,
         icons = helper.icon_1_to_1(
                 helper.icons(input_icon),
@@ -60,7 +60,7 @@ local blue_slurry = slurry_from_color("blue", 10, 20)
 local create_slurry = {
     type = "recipe",
     name = "crystarion-create-slurry",
-    category = "oil-processing",
+    categories = {"oil-processing"},
     main_product = "crystarion-red-slurry",
     icons = helper.icon_3_to_3(
             helper.icons("crystal_red"),
@@ -88,7 +88,7 @@ local create_slurry = {
 local mix_yellow = {
     type = "recipe",
     name = "crystarion-mix-yellow",
-    category = "chemistry",
+    categories = {"chemistry"},
     main_product = "crystarion-yellow-mixture",
     icons = helper.icon_2_to_1(helper.icons("green_slurry"), helper.icons("red_slurry"), helper.icons("yellow_mixture")),
     ingredients = {
@@ -104,7 +104,7 @@ local mix_yellow = {
 local mix_purple = {
     type = "recipe",
     name = "crystarion-mix-purple",
-    category = "chemistry",
+    categories = {"chemistry"},
     main_product = "crystarion-purple-mixture",
     icons = helper.icon_2_to_1(helper.icons("blue_slurry"), helper.icons("red_slurry"), helper.icons("purple_mixture")),
     ingredients = {
@@ -121,7 +121,7 @@ local mix_purple = {
 local crystalise_purple = {
     type = "recipe",
     name = "crystarion-crystalise-purple",
-    category = "chemistry",
+    categories = {"chemistry"},
     main_product = "crystarion-crystal-magenta",
     ingredients = {
         { type = "fluid", name = "crystarion-purple-mixture", amount = 10 }
