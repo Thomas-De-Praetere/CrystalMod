@@ -15,7 +15,6 @@ entity.name = "crystarion-collector"
 entity.surface_conditions = {}
 entity.accepted_seeds = {
     "crystarion-condensation-rod-medium",
-    "crystarion-condensation-rod-big",
     "crystarion-condensation-rod-huge"
 }
 entity.crane.speed.arm.turn_rate = 0.004
