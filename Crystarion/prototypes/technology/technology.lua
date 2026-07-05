@@ -9,6 +9,8 @@
 -- locale technology crystarion-unlock-science-stable
 -- locale technology crystarion-chemistry
 -- locale technology crystarion-unlock-lure-big
+-- locale technology crystarion-unlock-megaccumulator
+-- locale technology crystarion-unlock-high-explosive-ammo
 
 local helper = require("__Crystarion__.helper")
 
@@ -408,4 +410,34 @@ data:extend({
             time = 30
         },
     },
+        {
+            type = "technology",
+            name = "crystarion-unlock-high-explosive-ammo",
+            icons = helper.alternate(
+                { icon = "__space-age__/graphics/icons/lightning-collector.png" },
+                helper.icons("planet")
+            ),
+            essential = false,
+            effects = {
+                {
+                    type = "unlock-recipe",
+                    recipe = "crystarion-crystal-ammo-high-explosive"
+                },
+            },
+            prerequisites = { "crystarion-unlock-science-volatile" },
+            unit = {
+                count = 200,
+                ingredients = {
+                    { "crystarion-science",      1 },
+                    { "automation-science-pack", 1 },
+                    { "logistic-science-pack",   1 },
+                    { "chemical-science-pack",   1 },
+                    { "space-science-pack",      1 },
+                    { "utility-science-pack",    1 },
+                },
+                time = 30
+            },
+        },
+
+
 })
