@@ -28,10 +28,10 @@ function get_graphics()
                             scale = 0.5,
                             frame_count = 24,
                             draw_as_glow = true,
+                            run_mode = "backward",
                         })
                 },
             }
         },
-        run_mode = "backward",
     }
 end
