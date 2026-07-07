@@ -7,7 +7,7 @@ public class Defined {
 
     public static final Map<Category, List<Locale>> DEFINED = Map.of(
             Category.ENTITY, List.of(
-                    new Locale("crystarion-accumulator", "Crystal Power Cell"),
+                    new Locale("crystarion-accumulator", "Megaccumulator"),
                     new Locale("crystarion-collector", "Collector"),
                     new Locale("crystarion-crusher", "Crusher"),
                     new Locale("crystarion-crusher-category", "Crusher"),
@@ -51,6 +51,7 @@ public class Defined {
                     new Locale("crystarion-resource-behemoth", "Huge Crystaline remains")
             ),
             Category.ITEM, List.of(
+                    new Locale("crystarion-crystal-ammo-high-explosive", "High Explosive Crystaline Ammunition"),
                     new Locale("crystarion-science", "Unstable Science"),
                     new Locale("crystarion-science-stable", "Stable Science"),
                     new Locale("crystarion-science-unstable", "Unstable Science"),
@@ -77,7 +78,7 @@ public class Defined {
                     new Locale("crystarion-collector", "Collector"),
                     new Locale("crystarion-land-mine", "Splinter Mine"),
                     new Locale("crystarion-condensation-rod-medium", "Condensation Rod"),
-                    new Locale("crystarion-accumulator", "Crystal Power Cell"),
+                    new Locale("crystarion-accumulator", "Megaccumulator"),
                     new Locale("crystarion-crystal-splinter", "Splinter"),
                     new Locale("crystarion-crystal-splinter-volatile", "Volatile Splinter"),
                     new Locale("crystarion-crystal-volatile", "Volatile Crystal"),
@@ -109,7 +110,7 @@ public class Defined {
                     new Locale("crystarion-crush-crystal-red", "Crush __ITEM__crystarion-crystal-red__"),
                     new Locale("crystarion-crush-crystal-blue", "Crush __ITEM__crystarion-crystal-blue__"),
                     new Locale("crystarion-crush-crystal-green", "Crush __ITEM__crystarion-crystal-green__"),
-                    new Locale("crystarion-crush-crystal-cyan", "Crush __ITEM__crystarion-crystal-cyan"),
+                    new Locale("crystarion-crush-crystal-cyan", "Crush __ITEM__crystarion-crystal-cyan__"),
                     new Locale("crystarion-crush-crystal-magenta", "Crush __ITEM__crystarion-crystal-magenta__"),
                     new Locale("crystarion-crush-crystal-yellow", "Crush __ITEM__crystarion-crystal-yellow__"),
                     new Locale("crystarion-neutralize-red", "Neutralize __ITEM__crystarion-crystal-red__"),
@@ -154,7 +155,8 @@ public class Defined {
                     new Locale("crystarion-science-volatile", "__ITEM__crystarion-science-volatile__"),
                     new Locale("crystarion-crystalise-purple", "Crystalise __ITEM__crystarion-crystal-magenta__"),
                     new Locale("crystarion-create-slurry", "Create Slurry"),
-                    new Locale("crystarion-crystal-ore-splinter-volatile", "Volatile Splitting")
+                    new Locale("crystarion-crystal-ore-splinter-volatile", "Volatile Splitting"),
+                    new Locale("crystarion-crystal-ammo-high-explosive", "__ITEM__crystarion-crystal-ammo-high-explosive__")
             ),
             Category.TECHNOLOGY, List.of(
                     new Locale("crystarion-planet", "Crystarion"),
@@ -162,13 +164,15 @@ public class Defined {
                     new Locale("crystarion-unlock-biter", "Basic Crystaloid Biology"),
                     new Locale("crystarion-unlock-ice", "Basic Crystaline Structures"),
                     new Locale("crystarion-unlock-resource", "Crystal Industry"),
-                    new Locale("crystarion-unlock-rod-big", "Advanced Crystaline Structures"),
-                    new Locale("crystarion-unlock-rod-huge", "Expert Crystaline Structures"),
+                    new Locale("crystarion-unlock-rod-big", "Crystaline Structures"),
+                    new Locale("crystarion-unlock-rod-huge", "Advanced Crystaline Structures"),
                     new Locale("crystarion-unlock-science-volatile", "Volatile Crystal Industry"),
                     new Locale("crystarion-unlock-science-unstable", "Unstable Crystal Industry"),
                     new Locale("crystarion-unlock-science-stable", "Stable Crystal Industry"),
                     new Locale("planet-discovery-crystarion", "Crystarion"),
-                    new Locale("crystarion-unlock-lure-big", "Advanced Crystaloid Biology")
+                    new Locale("crystarion-unlock-lure-big", "Advanced Crystaloid Biology"),
+                    new Locale("crystarion-unlock-high-explosive-ammo", "Advanced Crystaloid Protection"),
+                    new Locale("crystarion-unlock-megaccumulator", "Crystal Energy")
             ),
             Category.FUEL_CATEGORY, List.of(
                     new Locale("crystarion-volatile", "Crystal Power"),

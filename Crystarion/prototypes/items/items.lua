@@ -12,9 +12,9 @@
 -- locale item crystarion-crystal-volatile
 -- locale item crystarion-crystal-unstable
 -- locale item crystarion-crystal-stable
--- locale tool crystarion-science-volatile
--- locale tool crystarion-science
--- locale tool crystarion-science-stable
+-- locale item crystarion-science-volatile
+-- locale item crystarion-science
+-- locale item crystarion-science-stable
 
 local helper = require("__Crystarion__.helper")
 
