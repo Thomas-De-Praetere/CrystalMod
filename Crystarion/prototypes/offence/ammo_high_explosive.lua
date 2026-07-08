@@ -58,13 +58,13 @@ item.ammo_type = {
                             type = "nested-result",
                             action = {
                                 type = "area",
-                                radius = 4.0,
+                                radius = 2.0,
                                 action_delivery = {
                                     type = "instant",
                                     target_effects = {
                                         {
                                             type = "damage",
-                                            damage = { amount = 12, type = "explosion" }
+                                            damage = { amount = 6, type = "explosion" }
                                         }
                                     }
                                 }
