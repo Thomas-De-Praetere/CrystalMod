@@ -7,7 +7,9 @@
 -- locale unit crystarion-big-spitter
 -- locale unit crystarion-behemoth-spitter
 
+require("__Crystarion__.graphics.entity.unit.update-biter-look")
 local helper = require("__Crystarion__.helper")
+local grey_mask = { 0.38, 0.54, 0.81 }
 
 local function create_enemy(size, absorption, type, only_resource, to_spawn_unit, to_spawn_resource)
     local spawn_array = { { 0, 1 }, { 0, -1 } }
@@ -58,6 +60,9 @@ local function create_enemy(size, absorption, type, only_resource, to_spawn_unit
     unit.distraction_cooldown = 300
     unit.min_pursue_time = helper.minutes()
     unit.max_pursue_distance = 100
+
+    make_crystarion_look(unit, grey_mask, grey_mask)
+
     return unit
 end
 
