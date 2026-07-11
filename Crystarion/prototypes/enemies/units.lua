@@ -11,7 +11,7 @@ require("__Crystarion__.graphics.entity.unit.update-biter-look")
 local helper = require("__Crystarion__.helper")
 local grey_mask = { 0.38, 0.54, 0.81 }
 
-local function create_enemy(size, absorption, type, only_resource, to_spawn_unit, to_spawn_resource)
+local function create_enemy(size, absorption, type, only_resource, to_spawn_unit, to_spawn_resource, tint1, tint2)
     local spawn_array = { { 0, 1 }, { 0, -1 } }
 
     local unit = table.deepcopy(data.raw["unit"][size .. "-" .. type])
@@ -61,9 +61,15 @@ local function create_enemy(size, absorption, type, only_resource, to_spawn_unit
     unit.min_pursue_time = helper.minutes()
     unit.max_pursue_distance = 100
 
-    make_crystarion_look(unit, grey_mask, grey_mask)
+    make_crystarion_look(unit, tint1, tint2)
 
-    return unit
+    local corpse = table.deepcopy(data.raw["corpse"][size .. "-" .. type .. "-corpse"])
+    corpse.name = "crystarion-" .. size .. "-" .. type .. "-corpse"
+    make_crystarion_corpse_look(corpse, tint1, tint2)
+
+    unit.corpse = corpse.name
+
+    data:extend({ unit, corpse })
 end
 
 local function create_enemy_boom(size, absorption, type, to_spawn, radius, damage)
@@ -119,22 +125,84 @@ local function create_enemy_boom(size, absorption, type, to_spawn, radius, damag
     unit.distraction_cooldown = 300
     unit.min_pursue_time = helper.minutes()
     unit.max_pursue_distance = 100
-    return unit
+
+    local corpse = table.deepcopy(data.raw["corpse"][size .. "-" .. type .. "-corpse"])
+    corpse.name = "crystarion-" .. size .. "-" .. type .. "-corpse"
+
+    unit.corpse = corpse.name
+
+    data:extend({ unit, corpse })
 end
 
-
-
--- biters multiply
--- spitters do not attack but create worms.
-
-
-data:extend({
-    create_enemy("small", 4, "biter", true, nil, "crystarion-resource-small"),
-    create_enemy("medium", 20, "biter", false, "crystarion-small-biter", "crystarion-resource-medium"),
-    create_enemy("big", 80, "biter", false, "crystarion-medium-biter", "crystarion-resource-big"),
-    create_enemy("behemoth", 400, "biter", false, "crystarion-big-biter", "crystarion-resource-behemoth"),
-    create_enemy_boom("small", 4, "spitter", "crystarion-resource-small", 1, 5),
-    create_enemy_boom("medium", 20, "spitter", "crystarion-resource-medium", 2, 10),
-    create_enemy_boom("big", 80, "spitter", "crystarion-resource-big", 4, 15),
-    create_enemy_boom("behemoth", 400, "spitter", "crystarion-resource-behemoth", 6, 25),
-})
+create_enemy(
+    "small",
+    4,
+    "biter",
+    true,
+    nil,
+    "crystarion-resource-small",
+    grey_mask,
+    helper.crystal_tint.white
+)
+create_enemy(
+    "medium",
+    20,
+    "biter",
+    false,
+    "crystarion-small-biter",
+    "crystarion-resource-medium",
+    grey_mask,
+    helper.crystal_tint.green
+)
+create_enemy(
+    "big",
+    80,
+    "biter",
+    false,
+    "crystarion-medium-biter",
+    "crystarion-resource-big",
+    grey_mask,
+    helper.crystal_tint.yellow
+)
+create_enemy(
+    "behemoth",
+    400,
+    "biter",
+    false,
+    "crystarion-big-biter",
+    "crystarion-resource-behemoth",
+    grey_mask,
+    helper.crystal_tint.red
+)
+create_enemy_boom(
+    "small",
+    4,
+    "spitter",
+    "crystarion-resource-small",
+    1,
+    5
+)
+create_enemy_boom(
+    "medium",
+    20,
+    "spitter",
+    "crystarion-resource-medium",
+    2,
+    10
+)
+create_enemy_boom(
+    "big",
+    80,
+    "spitter",
+    "crystarion-resource-big",
+    4,
+    15
+)
+create_enemy_boom(
+    "behemoth",
+    400,
+    "spitter",
+    "crystarion-resource-behemoth",
+    6,
+    25
+)
