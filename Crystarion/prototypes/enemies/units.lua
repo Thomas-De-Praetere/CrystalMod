@@ -16,6 +16,7 @@ local function create_enemy(size, absorption, type, only_resource, to_spawn_unit
 
     local unit = table.deepcopy(data.raw["unit"][size .. "-" .. type])
     unit.name = "crystarion-" .. size .. "-" .. type
+    unit.buildable_entities = { "crystarion-spawner" }
 
     if only_resource then
         unit.dying_trigger_effect = {
@@ -72,11 +73,13 @@ local function create_enemy(size, absorption, type, only_resource, to_spawn_unit
     data:extend({ unit, corpse })
 end
 
-local function create_enemy_boom(size, absorption, type, to_spawn, radius, damage)
+local function create_enemy_boom(size, absorption, type, to_spawn, radius, damage, tint1, tint2)
     local spawn_array = { { 0, 0 } }
 
     local unit = table.deepcopy(data.raw["unit"][size .. "-" .. type])
     unit.name = "crystarion-" .. size .. "-" .. type
+
+    unit.buildable_entities = { "crystarion-spawner" }
     unit.dying_trigger_effect = {
         type = "nested-result",
         action = {
@@ -126,8 +129,11 @@ local function create_enemy_boom(size, absorption, type, to_spawn, radius, damag
     unit.min_pursue_time = helper.minutes()
     unit.max_pursue_distance = 100
 
+    make_crystarion_spitter_look(unit, tint1, tint2)
+
     local corpse = table.deepcopy(data.raw["corpse"][size .. "-" .. type .. "-corpse"])
     corpse.name = "crystarion-" .. size .. "-" .. type .. "-corpse"
+    make_crystarion_spitter_corpse_look(corpse, tint1, tint2)
 
     unit.corpse = corpse.name
 
@@ -180,7 +186,9 @@ create_enemy_boom(
     "spitter",
     "crystarion-resource-small",
     1,
-    5
+    5,
+    grey_mask,
+    helper.crystal_tint.white
 )
 create_enemy_boom(
     "medium",
@@ -188,7 +196,9 @@ create_enemy_boom(
     "spitter",
     "crystarion-resource-medium",
     2,
-    10
+    10,
+    grey_mask,
+    helper.crystal_tint.green
 )
 create_enemy_boom(
     "big",
@@ -196,7 +206,9 @@ create_enemy_boom(
     "spitter",
     "crystarion-resource-big",
     4,
-    15
+    15,
+    grey_mask,
+    helper.crystal_tint.yellow
 )
 create_enemy_boom(
     "behemoth",
@@ -204,5 +216,7 @@ create_enemy_boom(
     "spitter",
     "crystarion-resource-behemoth",
     6,
-    25
+    25,
+    grey_mask,
+    helper.crystal_tint.red
 )
