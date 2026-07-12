@@ -163,10 +163,10 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-crush-crystal-yellow"
             },
-            --{
-            --    type = "unlock-recipe",
-            --    recipe = "crystarion-crush-crystal-magenta"
-            --},
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crush-crystal-magenta"
+            },
             --{
             --    type = "unlock-recipe",
             --    recipe = "crystarion-crush-crystal-cyan"
