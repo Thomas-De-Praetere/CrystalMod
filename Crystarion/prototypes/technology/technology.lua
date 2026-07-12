@@ -420,6 +420,10 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-crystal-ammo-high-explosive"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-splinter-stable"
+            },
         },
         prerequisites = { "crystarion-unlock-science-volatile", "crystarion-unlock-biter" },
         unit = {

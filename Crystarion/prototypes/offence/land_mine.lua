@@ -7,8 +7,8 @@ local helper = require("__Crystarion__.helper")
 local entity = table.deepcopy(data.raw["land-mine"]["land-mine"])
 entity.name = "crystarion-land-mine"
 entity.icons = helper.alternate(
-        { icon = "__base__/graphics/icons/land-mine.png" },
-        helper.icons("planet")
+    { icon = "__base__/graphics/icons/land-mine.png" },
+    helper.icons("planet")
 )
 entity.flags = {
     "placeable-player",
@@ -59,8 +59,8 @@ entity.action = {
 local item = table.deepcopy(data.raw["item"]["land-mine"])
 item.name = "crystarion-land-mine"
 item.icons = helper.alternate(
-        { icon = "__base__/graphics/icons/land-mine.png" },
-        helper.icons("planet")
+    { icon = "__base__/graphics/icons/land-mine.png" },
+    helper.icons("planet")
 )
 item.place_result = "crystarion-land-mine"
 
@@ -68,6 +68,7 @@ local recipe = {
     type = "recipe",
     name = "crystarion-land-mine",
     main_product = "crystarion-land-mine",
+    categories = { "crafting", "crystarion-energiser-category" },
     ingredients = {
         { type = "item", name = "crystarion-crystal-splinter", amount = 20 }
     },

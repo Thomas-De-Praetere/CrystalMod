@@ -81,9 +81,10 @@ local recipe = {
     type = "recipe",
     name = "crystarion-crystal-ammo-high-explosive",
     main_product = "crystarion-crystal-ammo-high-explosive",
+    categories = { "crafting", "crystarion-energiser-category" },
     ingredients = {
-        { type = "item", name = "crystarion-crystal-splinter-volatile", amount = 10 },
-        { type = "item", name = "crystarion-crystal-ammo", amount = 1 },
+        { type = "item", name = "crystarion-crystal-splinter-stable", amount = 10 },
+        { type = "item", name = "crystarion-crystal-ammo",            amount = 1 },
     },
     results = {
         { type = "item", name = "crystarion-crystal-ammo-high-explosive", amount = 1 }
@@ -92,4 +93,20 @@ local recipe = {
     enabled = false,
 }
 
-data:extend({ item, recipe })
+local recipe_stable = {
+    type = "recipe",
+    name = "crystarion-crystal-splinter-stable",
+    main_product = "crystarion-crystal-splinter-stable",
+    categories = { "crafting-with-fluid", "crystarion-energiser-category" },
+    ingredients = {
+        { type = "item",  name = "crystarion-crystal-splinter-volatile", amount = 2 },
+        { type = "fluid", name = "water",                                amount = 1 },
+    },
+    results = {
+        { type = "item", name = "crystarion-crystal-splinter-stable", amount = 1 }
+    },
+    energy_required = .25,
+    enabled = false,
+}
+
+data:extend({ item, recipe, recipe_stable })

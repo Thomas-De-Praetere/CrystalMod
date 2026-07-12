@@ -8,6 +8,7 @@
 -- locale item crystarion-crystal-cyan
 -- locale item crystarion-crystal-yellow
 -- locale item crystarion-crystal-splinter
+-- locale item crystarion-crystal-splinter-stablised
 -- locale item crystarion-crystal-splinter-volatile
 -- locale item crystarion-crystal-volatile
 -- locale item crystarion-crystal-unstable
@@ -94,11 +95,16 @@ crystal_yellow.pictures = get_crystal_sprites("crystal_shard", helper.crystal_ti
 local crystal_splinter = table.deepcopy(BASE_ITEM)
 crystal_splinter.name = "crystarion-crystal-splinter"
 crystal_splinter.icons = { helper.icons("splinter") }
-crystal_splinter.pictures = get_crystal_sprites("crystal_splinter", helper.crystal_tint.white)
+crystal_splinter.pictures = get_crystal_sprites("crystal_splinter", helper.crystal_tint.blue)
 crystal_splinter.fuel_category = "crystarion-volatile"
 crystal_splinter.fuel_value = "4MJ"
 crystal_splinter.spoil_ticks = 2 * helper.minutes()
 crystal_splinter.spoil_result = "crystarion-crystal-splinter-volatile"
+
+local crystal_splinter_stable = table.deepcopy(BASE_ITEM)
+crystal_splinter_stable.name = "crystarion-crystal-splinter-stable"
+crystal_splinter_stable.icons = { helper.icons("splinter_stable") }
+crystal_splinter_stable.pictures = get_crystal_sprites("crystal_splinter", helper.crystal_tint.white)
 
 local crystal_splinter_volatile = table.deepcopy(BASE_ITEM)
 crystal_splinter_volatile.name = "crystarion-crystal-splinter-volatile"
@@ -225,6 +231,7 @@ data:extend({
     --crystal_cyan,
     crystal_yellow,
     crystal_splinter,
+    crystal_splinter_stable,
     crystal_splinter_volatile,
     --crystal_volatile,
     --crystal_unstable,

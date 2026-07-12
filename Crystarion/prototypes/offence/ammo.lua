@@ -81,6 +81,7 @@ local recipe = {
     type = "recipe",
     name = "crystarion-crystal-ammo",
     main_product = "crystarion-crystal-ammo",
+    categories = { "crafting", "crystarion-energiser-category" },
     ingredients = {
         { type = "item", name = "crystarion-crystal-splinter", amount = 10 }
     },
