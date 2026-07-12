@@ -12,7 +12,7 @@ local helper = require("__Crystarion__.helper")
 local sludge_from_crushed_crystal = {
     type = "recipe",
     name = "crystarion-sludge-from-crushed-crystal",
-    categories = {"chemistry"},
+    categories = { "chemistry" },
     icons = helper.icon_1_to_1(helper.icons("crushed_crystal"), helper.icons("crystal_slurry")),
     main_product = "crystarion-crystal-slurry",
     ingredients = {
@@ -28,7 +28,7 @@ local sludge_from_crushed_crystal = {
 local crush_crystal_ore = {
     type = "recipe",
     name = "crystarion-crush-crystal-ore",
-    categories = {"crystarion-crusher-category"},
+    categories = { "crystarion-crusher-category" },
     main_product = "crystarion-crushed-crystal",
     ingredients = {
         { type = "item", name = "crystarion-crystal-ore", amount = 4 }
@@ -42,7 +42,7 @@ local crush_crystal_ore = {
 local crystal_splinter = {
     type = "recipe",
     name = "crystarion-crystal-ore-splinter",
-    categories = {"crystarion-crusher-category"},
+    categories = { "crystarion-crusher-category" },
     main_product = "crystarion-crystal-splinter",
     ingredients = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
@@ -57,7 +57,7 @@ local crystal_splinter = {
 local crystal_splinter_volatile = {
     type = "recipe",
     name = "crystarion-crystal-ore-splinter-volatile",
-    categories = {"crystarion-crusher-category"},
+    categories = { "crystarion-crusher-category" },
     main_product = "crystarion-crystal-splinter-volatile",
     ingredients = {
         { type = "item", name = "crystarion-crystal", amount = 1 }
@@ -69,11 +69,10 @@ local crystal_splinter_volatile = {
     enabled = false,
 }
 
-
 local crystal_splinter_less = {
     type = "recipe",
     name = "crystarion-crystal-ore-splinter-less",
-    categories = {"crystarion-crusher-category"},
+    categories = { "crystarion-crusher-category" },
     main_product = "crystarion-crystal-splinter",
     ingredients = {
         { type = "item", name = "crystarion-crushed-crystal", amount = 1 }
@@ -87,7 +86,7 @@ local crystal_splinter_less = {
 local crystalise = {
     type = "recipe",
     name = "crystarion-crystalise",
-    categories = {"chemistry"},
+    categories = { "chemistry", "crystarion-energiser-category" },
     main_product = "crystarion-crystal",
     ingredients = {
         { type = "fluid", name = "crystarion-crystal-slurry", amount = 16 }
@@ -102,7 +101,7 @@ local crystalise = {
 local battery = {
     type = "recipe",
     name = "crystarion-battery",
-    categories = {"crafting"},
+    categories = { "crafting", "crystarion-energiser-category" },
     main_product = "battery",
     icons = helper.alternate(
             { icon = "__base__/graphics/icons/battery.png" },
@@ -124,7 +123,7 @@ local battery = {
 local revitalise_coal = {
     type = "recipe",
     name = "crystarion-revitalise-coal",
-    categories = {"crystarion-energiser-category"},
+    categories = { "crystarion-energiser-category" },
     main_product = "wood",
     icons = helper.icon_2_to_1(
             { icon = "__base__/graphics/icons/coal.png" },
@@ -143,7 +142,6 @@ local revitalise_coal = {
     energy_required = 1,
     enabled = false,
 }
-
 
 data:extend({
     sludge_from_crushed_crystal,
