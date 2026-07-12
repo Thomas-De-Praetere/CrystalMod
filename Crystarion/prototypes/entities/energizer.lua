@@ -33,7 +33,8 @@ entity.minable = { mining_time = 0.2, result = "crystarion-energiser" }
 entity.icons = icons
 entity.corpse = "crystarion-energiser-remnants"
 entity.graphics_set = get_graphics(tint)
-
+entity.effect_receiver = { base_effect = { productivity = 0.5 }}
+entity.module_slots = 4
 --Fluid boxes
 --local output = table.deepcopy(entity.fluid_boxes[2])
 --local input = table.deepcopy(entity.fluid_boxes[1])
