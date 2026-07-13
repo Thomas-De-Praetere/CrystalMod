@@ -93,20 +93,5 @@ local recipe = {
     enabled = false,
 }
 
-local recipe_stable = {
-    type = "recipe",
-    name = "crystarion-crystal-splinter-stable",
-    main_product = "crystarion-crystal-splinter-stable",
-    categories = { "crafting-with-fluid", "crystarion-energiser-category" },
-    ingredients = {
-        { type = "item",  name = "crystarion-crystal-splinter-volatile", amount = 2 },
-        { type = "fluid", name = "water",                                amount = 1 },
-    },
-    results = {
-        { type = "item", name = "crystarion-crystal-splinter-stable", amount = 1 }
-    },
-    energy_required = .25,
-    enabled = false,
-}
 
-data:extend({ item, recipe, recipe_stable })
+data:extend({ item, recipe })

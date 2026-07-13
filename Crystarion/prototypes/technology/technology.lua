@@ -424,6 +424,10 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-crystal-splinter-stable"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-explosive"
+            },
         },
         prerequisites = { "crystarion-unlock-science-volatile", "crystarion-unlock-biter" },
         unit = {
