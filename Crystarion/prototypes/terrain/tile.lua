@@ -1,4 +1,5 @@
 local helper = require("__Crystarion__.helper")
+local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
 
 local function create_tile(element)
     local expression = helper.replace(element, "-", "_")
@@ -18,11 +19,7 @@ end
 local ice_smooth = create_tile("ice-smooth")
 local ice_rough = create_tile("ice-rough")
 
-local collision_mask = {
-    layers = {
-        rail = true,
-    }
-}
+local collision_mask = tile_collision_masks.ground()
 
 ice_smooth.collision_mask = collision_mask
 ice_rough.collision_mask = collision_mask
