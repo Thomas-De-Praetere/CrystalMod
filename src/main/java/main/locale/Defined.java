@@ -51,6 +51,7 @@ public class Defined {
                     new Locale("crystarion-resource-behemoth", "Huge Crystaline remains")
             ),
             Category.ITEM, List.of(
+                    new Locale("crystarion-crystal-splinter-stablised","Stable Splinter"),
                     new Locale("crystarion-crystal-ammo-high-explosive", "High Explosive Crystaline Ammunition"),
                     new Locale("crystarion-science", "Unstable Science"),
                     new Locale("crystarion-science-stable", "Stable Science"),
@@ -98,6 +99,8 @@ public class Defined {
                     new Locale("crystarion-planet", "Crystarion")
             ),
             Category.RECIPE, List.of(
+                    new Locale("crystarion-crystal-splinter-stable","__ITEM__crystarion-crystal-splinter-stable__"),
+                    new Locale("crystarion-explosive","Crystalid Explosive"),
                     new Locale("crystarion-sludge-from-crushed-crystal", "__FLUID__crystarion-crystal-slurry__ from __ITEM__crystarion-crushed-crystal__"),
                     new Locale("crystarion-crush-crystal-ore", "Crush __ITEM__crystarion-crystal-ore__"),
                     new Locale("crystarion-crystalise", "Crystalise"),
