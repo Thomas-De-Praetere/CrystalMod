@@ -40,6 +40,7 @@ data:extend({
 -- new recipes
 
 require("__Crystarion__.prototypes.recipes.basic-recipe")
+require("__Crystarion__.prototypes.recipes.advanced-recipe")
 require("__Crystarion__.prototypes.recipes.ore-cycle")
 require("__Crystarion__.prototypes.recipes.fluid-cycle")
 require("__Crystarion__.prototypes.recipes.manual-labor")

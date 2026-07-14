@@ -99,6 +99,7 @@ public class Defined {
                     new Locale("crystarion-planet", "Crystarion")
             ),
             Category.RECIPE, List.of(
+                    new Locale("crystarion-crush-crystal-ore-adv","Advanced Ore Processing"),
                     new Locale("crystarion-crystal-splinter-stable","__ITEM__crystarion-crystal-splinter-stable__"),
                     new Locale("crystarion-explosive","Crystalid Explosive"),
                     new Locale("crystarion-sludge-from-crushed-crystal", "__FLUID__crystarion-crystal-slurry__ from __ITEM__crystarion-crushed-crystal__"),
@@ -162,6 +163,7 @@ public class Defined {
                     new Locale("crystarion-crystal-ammo-high-explosive", "__ITEM__crystarion-crystal-ammo-high-explosive__")
             ),
             Category.TECHNOLOGY, List.of(
+                    new Locale("crystarion-unlock-advanced-processing","Advanced Ore Processing"),
                     new Locale("crystarion-planet", "Crystarion"),
                     new Locale("crystarion-chemistry", "Crystaline Mixtures"),
                     new Locale("crystarion-unlock-biter", "Basic Crystaloid Biology"),

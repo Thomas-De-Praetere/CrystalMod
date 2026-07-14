@@ -11,6 +11,7 @@
 -- locale technology crystarion-unlock-lure-big
 -- locale technology crystarion-unlock-megaccumulator
 -- locale technology crystarion-unlock-high-explosive-ammo
+-- locale technology crystarion-unlock-advanced-processing
 
 local helper = require("__Crystarion__.helper")
 
@@ -45,9 +46,9 @@ data:extend({
             count = 1000,
             ingredients = {
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
-                { "chemical-science-pack",   1 },
-                { "space-science-pack",      1 },
+                { "logistic-science-pack", 1 },
+                { "chemical-science-pack", 1 },
+                { "space-science-pack", 1 },
             },
             time = 60
         },
@@ -58,8 +59,8 @@ data:extend({
         type = "technology",
         name = "crystarion-unlock-ice",
         icons = helper.alternate(
-            { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
-            helper.icons("planet")
+                { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
+                helper.icons("planet")
         ),
         essential = true,
         effects = {
@@ -83,8 +84,8 @@ data:extend({
         type = "technology",
         name = "crystarion-unlock-rod-huge",
         icons = helper.alternate(
-            { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
-            helper.icons("planet")
+                { icon = "__space-age__/graphics/icons/fluid/ice-melting.png" },
+                helper.icons("planet")
         ),
         essential = false,
         effects = {
@@ -97,12 +98,12 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "crystarion-science",      1 },
+                { "crystarion-science", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
-                { "chemical-science-pack",   1 },
-                { "space-science-pack",      1 },
-                { "utility-science-pack",    1 },
+                { "logistic-science-pack", 1 },
+                { "chemical-science-pack", 1 },
+                { "space-science-pack", 1 },
+                { "utility-science-pack", 1 },
             },
             time = 30
         },
@@ -111,8 +112,8 @@ data:extend({
         type = "technology",
         name = "crystarion-unlock-lure-big",
         icons = helper.alternate(
-            { icon = "__space-age__/graphics/icons/lightning-collector.png" },
-            helper.icons("planet")
+                { icon = "__space-age__/graphics/icons/lightning-collector.png" },
+                helper.icons("planet")
         ),
         essential = false,
         effects = {
@@ -125,12 +126,12 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "crystarion-science",      1 },
+                { "crystarion-science", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
-                { "chemical-science-pack",   1 },
-                { "space-science-pack",      1 },
-                { "utility-science-pack",    1 },
+                { "logistic-science-pack", 1 },
+                { "chemical-science-pack", 1 },
+                { "space-science-pack", 1 },
+                { "utility-science-pack", 1 },
             },
             time = 30
         },
@@ -300,6 +301,33 @@ data:extend({
             entities = { "crystarion-resource-small" }
         }
     },
+
+    {
+        type = "technology",
+        name = "crystarion-unlock-advanced-processing",
+        icons = { helper.icons("crystal_ore") },
+        essential = true,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crush-crystal-ore-adv"
+            },
+        },
+        prerequisites = { "crystarion-unlock-biter" },
+        unit = {
+            count = 200,
+            ingredients = {
+                { "crystarion-science", 1 },
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack", 1 },
+                { "chemical-science-pack", 1 },
+                { "space-science-pack", 1 },
+                { "utility-science-pack", 1 },
+            },
+            time = 30
+        },
+    },
+
     {
         type = "technology",
         name = "crystarion-unlock-science-volatile",
@@ -386,8 +414,8 @@ data:extend({
         type = "technology",
         name = "crystarion-unlock-megaccumulator",
         icons = helper.alternate(
-            { icon = "__base__/graphics/icons/accumulator.png" },
-            helper.icons("planet")
+                { icon = "__base__/graphics/icons/accumulator.png" },
+                helper.icons("planet")
         ),
         essential = false,
         effects = {
@@ -400,12 +428,12 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "crystarion-science",      1 },
+                { "crystarion-science", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
-                { "chemical-science-pack",   1 },
-                { "space-science-pack",      1 },
-                { "utility-science-pack",    1 },
+                { "logistic-science-pack", 1 },
+                { "chemical-science-pack", 1 },
+                { "space-science-pack", 1 },
+                { "utility-science-pack", 1 },
             },
             time = 30
         },
@@ -433,12 +461,12 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                { "crystarion-science",      1 },
+                { "crystarion-science", 1 },
                 { "automation-science-pack", 1 },
-                { "logistic-science-pack",   1 },
-                { "chemical-science-pack",   1 },
-                { "space-science-pack",      1 },
-                { "utility-science-pack",    1 },
+                { "logistic-science-pack", 1 },
+                { "chemical-science-pack", 1 },
+                { "space-science-pack", 1 },
+                { "utility-science-pack", 1 },
             },
             time = 30
         },
