@@ -2,399 +2,407 @@
 hide methods
 hide fields
 hide circle
-[crystarion_condensation_rod_medium] AS rec_crystarion_condensation_rod_medium_S0 #lightblue
-[crystarion_crystal_green] AS crystarion_crystal_green_S0
-[ice] AS ice_S0
-[crystarion_condensation_rod_medium] AS crystarion_condensation_rod_medium_S0
-crystarion_crystal_green_S0 --> rec_crystarion_condensation_rod_medium_S0
-ice_S0 --> rec_crystarion_condensation_rod_medium_S0
-rec_crystarion_condensation_rod_medium_S0 --> crystarion_condensation_rod_medium_S0
+[crystarion_accumulator] AS rec_crystarion_accumulator_IT1 #lightblue
+[crystarion_crystal_stable] AS crystarion_crystal_stable_IT1
+[iron_plate] AS iron_plate_IT1
+[battery] AS battery_IT1
+[advanced_circuit] AS advanced_circuit_IT1
+[crystarion_accumulator] AS crystarion_accumulator_IT1
+crystarion_crystal_stable_IT1 --> rec_crystarion_accumulator_IT1
+iron_plate_IT1 --> rec_crystarion_accumulator_IT1
+battery_IT1 --> rec_crystarion_accumulator_IT1
+advanced_circuit_IT1 --> rec_crystarion_accumulator_IT1
+rec_crystarion_accumulator_IT1 --> crystarion_accumulator_IT1
 
-[crystarion_condensation_rod_big] AS rec_crystarion_condensation_rod_big_S1 #lightblue
-[crystarion_crystal_yellow] AS crystarion_crystal_yellow_S1
-[ice] AS ice_S1
-[crystarion_condensation_rod_big] AS crystarion_condensation_rod_big_S1
-crystarion_crystal_yellow_S1 --> rec_crystarion_condensation_rod_big_S1
-ice_S1 --> rec_crystarion_condensation_rod_big_S1
-rec_crystarion_condensation_rod_big_S1 --> crystarion_condensation_rod_big_S1
+[crystarion_battery] AS rec_crystarion_battery_IT2 #lightblue
+[crystarion_crystal] AS crystarion_crystal_IT2
+[iron_plate] AS iron_plate_IT2
+[copper_plate] AS copper_plate_IT2
+[battery] AS battery_IT2
+crystarion_crystal_IT2 --> rec_crystarion_battery_IT2
+iron_plate_IT2 --> rec_crystarion_battery_IT2
+copper_plate_IT2 --> rec_crystarion_battery_IT2
+rec_crystarion_battery_IT2 --> battery_IT2
 
-[crystarion_condensation_rod_huge] AS rec_crystarion_condensation_rod_huge_S2 #lightblue
-[crystarion_crystal] AS crystarion_crystal_S2
-[ice] AS ice_S2
-[crystarion_condensation_rod_huge] AS crystarion_condensation_rod_huge_S2
-crystarion_crystal_S2 --> rec_crystarion_condensation_rod_huge_S2
-ice_S2 --> rec_crystarion_condensation_rod_huge_S2
-rec_crystarion_condensation_rod_huge_S2 --> crystarion_condensation_rod_huge_S2
+[crystarion_collector] AS rec_crystarion_collector_IT3 #lightblue
+[crystarion_crystal] AS crystarion_crystal_IT3
+[iron_plate] AS iron_plate_IT3
+[copper_plate] AS copper_plate_IT3
+[battery] AS battery_IT3
+[electronic_circuit] AS electronic_circuit_IT3
+[crystarion_collector] AS crystarion_collector_IT3
+crystarion_crystal_IT3 --> rec_crystarion_collector_IT3
+iron_plate_IT3 --> rec_crystarion_collector_IT3
+copper_plate_IT3 --> rec_crystarion_collector_IT3
+battery_IT3 --> rec_crystarion_collector_IT3
+electronic_circuit_IT3 --> rec_crystarion_collector_IT3
+rec_crystarion_collector_IT3 --> crystarion_collector_IT3
 
-[crystarion_accumulator] AS rec_crystarion_accumulator_S3 #lightblue
-[iron_plate] AS iron_plate_S3
-[battery] AS battery_S3
-[crystarion_crystal] AS crystarion_crystal_S3
-[crystarion_accumulator] AS crystarion_accumulator_S3
-iron_plate_S3 --> rec_crystarion_accumulator_S3
-battery_S3 --> rec_crystarion_accumulator_S3
-crystarion_crystal_S3 --> rec_crystarion_accumulator_S3
-rec_crystarion_accumulator_S3 --> crystarion_accumulator_S3
+[crystarion_condensation_rod_huge] AS rec_crystarion_condensation_rod_huge_CON #lightblue
+[ice] AS ice_CON
+[crystarion_crystal_stable] AS crystarion_crystal_stable_CON
+[crystarion_condensation_rod_huge] AS crystarion_condensation_rod_huge_CON
+ice_CON --> rec_crystarion_condensation_rod_huge_CON
+crystarion_crystal_stable_CON --> rec_crystarion_condensation_rod_huge_CON
+rec_crystarion_condensation_rod_huge_CON --> crystarion_condensation_rod_huge_CON
 
-[crystarion_crusher] AS rec_crystarion_crusher_S4 #lightblue
-[iron_gear_wheel] AS iron_gear_wheel_S4
-[iron_plate] AS iron_plate_S4
-[crystarion_crusher] AS crystarion_crusher_S4
-iron_gear_wheel_S4 --> rec_crystarion_crusher_S4
-iron_plate_S4 --> rec_crystarion_crusher_S4
-rec_crystarion_crusher_S4 --> crystarion_crusher_S4
+[crystarion_condensation_rod_medium] AS rec_crystarion_condensation_rod_medium_CON #lightblue
+[ice] AS ice_CON
+[crystarion_crystal] AS crystarion_crystal_CON
+[crystarion_condensation_rod_medium] AS crystarion_condensation_rod_medium_CON
+ice_CON --> rec_crystarion_condensation_rod_medium_CON
+crystarion_crystal_CON --> rec_crystarion_condensation_rod_medium_CON
+rec_crystarion_condensation_rod_medium_CON --> crystarion_condensation_rod_medium_CON
 
-[crystarion_empowerer] AS rec_crystarion_empowerer_S5 #lightblue
-[iron_gear_wheel] AS iron_gear_wheel_S5
-[iron_plate] AS iron_plate_S5
-[crystarion_empowerer] AS crystarion_empowerer_S5
-iron_gear_wheel_S5 --> rec_crystarion_empowerer_S5
-iron_plate_S5 --> rec_crystarion_empowerer_S5
-rec_crystarion_empowerer_S5 --> crystarion_empowerer_S5
+[crystarion_create_slurry] AS rec_crystarion_create_slurry_FL #lightblue
+[crystarion_crystal_blue] AS crystarion_crystal_blue_FL
+[crystarion_crystal_green] AS crystarion_crystal_green_FL
+[crystarion_crystal_red] AS crystarion_crystal_red_FL
+[water] AS water_FL
+[crystarion_red_slurry] AS crystarion_red_slurry_FL
+[crystarion_green_slurry] AS crystarion_green_slurry_FL
+[crystarion_blue_slurry] AS crystarion_blue_slurry_FL
+crystarion_crystal_blue_FL --> rec_crystarion_create_slurry_FL
+crystarion_crystal_green_FL --> rec_crystarion_create_slurry_FL
+crystarion_crystal_red_FL --> rec_crystarion_create_slurry_FL
+water_FL --> rec_crystarion_create_slurry_FL
+rec_crystarion_create_slurry_FL --> crystarion_red_slurry_FL
+rec_crystarion_create_slurry_FL --> crystarion_green_slurry_FL
+rec_crystarion_create_slurry_FL --> crystarion_blue_slurry_FL
 
-[crystarion_energiser] AS rec_crystarion_energiser_S6 #lightblue
-[iron_plate] AS iron_plate_S6
-[copper_plate] AS copper_plate_S6
-[copper_cable] AS copper_cable_S6
-[battery] AS battery_S6
-[crystarion_crystal] AS crystarion_crystal_S6
-[crystarion_energiser] AS crystarion_energiser_S6
-iron_plate_S6 --> rec_crystarion_energiser_S6
-copper_plate_S6 --> rec_crystarion_energiser_S6
-copper_cable_S6 --> rec_crystarion_energiser_S6
-battery_S6 --> rec_crystarion_energiser_S6
-crystarion_crystal_S6 --> rec_crystarion_energiser_S6
-rec_crystarion_energiser_S6 --> crystarion_energiser_S6
+[crystarion_crush_crystal_blue] AS rec_crystarion_crush_crystal_blue_CR #lightblue
+[crystarion_crystal_blue] AS crystarion_crystal_blue_CR
+[crystarion_crushed_crystal] AS crystarion_crushed_crystal_CR
+crystarion_crystal_blue_CR --> rec_crystarion_crush_crystal_blue_CR
+rec_crystarion_crush_crystal_blue_CR --> crystarion_crushed_crystal_CR
 
-[crystarion_lure] AS rec_crystarion_lure_L #lightblue
-[copper_plate] AS copper_plate_L
-[copper_cable] AS copper_cable_L
-[electronic_circuit] AS electronic_circuit_L
-[battery] AS battery_L
-[crystarion_lure] AS crystarion_lure_L
-copper_plate_L --> rec_crystarion_lure_L
-copper_cable_L --> rec_crystarion_lure_L
-electronic_circuit_L --> rec_crystarion_lure_L
-battery_L --> rec_crystarion_lure_L
-rec_crystarion_lure_L --> crystarion_lure_L
+[crystarion_crush_crystal_green] AS rec_crystarion_crush_crystal_green_CR #lightblue
+[crystarion_crystal_green] AS crystarion_crystal_green_CR
+[crystarion_crushed_crystal] AS crystarion_crushed_crystal_CR
+crystarion_crystal_green_CR --> rec_crystarion_crush_crystal_green_CR
+rec_crystarion_crush_crystal_green_CR --> crystarion_crushed_crystal_CR
 
-[crystarion_lure_big] AS rec_crystarion_lure_big_L #lightblue
-[copper_cable] AS copper_cable_L
-[crystarion_lure] AS crystarion_lure_L
-[crystarion_lure_big] AS crystarion_lure_big_L
-copper_cable_L --> rec_crystarion_lure_big_L
-crystarion_lure_L --> rec_crystarion_lure_big_L
-rec_crystarion_lure_big_L --> crystarion_lure_big_L
+[crystarion_crush_crystal_magenta] AS rec_crystarion_crush_crystal_magenta_CR #lightblue
+[crystarion_crystal_magenta] AS crystarion_crystal_magenta_CR
+[crystarion_crushed_crystal] AS crystarion_crushed_crystal_CR
+crystarion_crystal_magenta_CR --> rec_crystarion_crush_crystal_magenta_CR
+rec_crystarion_crush_crystal_magenta_CR --> crystarion_crushed_crystal_CR
 
-[crystarion_naturizer] AS rec_crystarion_naturizer_S7 #lightblue
-[iron_plate] AS iron_plate_S7
-[crystarion_crystal] AS crystarion_crystal_S7
-[crystarion_naturizer] AS crystarion_naturizer_S7
-iron_plate_S7 --> rec_crystarion_naturizer_S7
-crystarion_crystal_S7 --> rec_crystarion_naturizer_S7
-rec_crystarion_naturizer_S7 --> crystarion_naturizer_S7
+[crystarion_crush_crystal_ore] AS rec_crystarion_crush_crystal_ore_CR #lightblue
+[crystarion_crystal_ore] AS crystarion_crystal_ore_CR
+[crystarion_crushed_crystal] AS crystarion_crushed_crystal_CR
+crystarion_crystal_ore_CR --> rec_crystarion_crush_crystal_ore_CR
+rec_crystarion_crush_crystal_ore_CR --> crystarion_crushed_crystal_CR
 
-[crystarion_collector] AS rec_crystarion_collector_S8 #lightblue
-[iron_plate] AS iron_plate_S8
-[copper_plate] AS copper_plate_S8
-[electronic_circuit] AS electronic_circuit_S8
-[battery] AS battery_S8
-[crystarion_crystal] AS crystarion_crystal_S8
-[crystarion_collector] AS crystarion_collector_S8
-iron_plate_S8 --> rec_crystarion_collector_S8
-copper_plate_S8 --> rec_crystarion_collector_S8
-electronic_circuit_S8 --> rec_crystarion_collector_S8
-battery_S8 --> rec_crystarion_collector_S8
-crystarion_crystal_S8 --> rec_crystarion_collector_S8
-rec_crystarion_collector_S8 --> crystarion_collector_S8
+[crystarion_crush_crystal_red] AS rec_crystarion_crush_crystal_red_CR #lightblue
+[crystarion_crystal_red] AS crystarion_crystal_red_CR
+[crystarion_crushed_crystal] AS crystarion_crushed_crystal_CR
+crystarion_crystal_red_CR --> rec_crystarion_crush_crystal_red_CR
+rec_crystarion_crush_crystal_red_CR --> crystarion_crushed_crystal_CR
 
-[crystarion_crystal_ammo] AS rec_crystarion_crystal_ammo_M #lightblue
-[crystarion_crystal_splinter] AS crystarion_crystal_splinter_M
-[crystarion_crystal_ammo] AS crystarion_crystal_ammo_M
-crystarion_crystal_splinter_M --> rec_crystarion_crystal_ammo_M
-rec_crystarion_crystal_ammo_M --> crystarion_crystal_ammo_M
+[crystarion_crush_crystal_yellow] AS rec_crystarion_crush_crystal_yellow_CR #lightblue
+[crystarion_crystal_yellow] AS crystarion_crystal_yellow_CR
+[crystarion_crushed_crystal] AS crystarion_crushed_crystal_CR
+crystarion_crystal_yellow_CR --> rec_crystarion_crush_crystal_yellow_CR
+rec_crystarion_crush_crystal_yellow_CR --> crystarion_crushed_crystal_CR
 
-[crystarion_land_mine] AS rec_crystarion_land_mine_M #lightblue
-[crystarion_crystal_splinter] AS crystarion_crystal_splinter_M
-[crystarion_land_mine] AS crystarion_land_mine_M
-crystarion_crystal_splinter_M --> rec_crystarion_land_mine_M
-rec_crystarion_land_mine_M --> crystarion_land_mine_M
+[crystarion_crusher] AS rec_crystarion_crusher_IT4 #lightblue
+[iron_plate] AS iron_plate_IT4
+[iron_gear_wheel] AS iron_gear_wheel_IT4
+[crystarion_crusher] AS crystarion_crusher_IT4
+iron_plate_IT4 --> rec_crystarion_crusher_IT4
+iron_gear_wheel_IT4 --> rec_crystarion_crusher_IT4
+rec_crystarion_crusher_IT4 --> crystarion_crusher_IT4
 
-[crystarion_battery] AS rec_crystarion_battery_S9 #lightblue
-[crystarion_crystal] AS crystarion_crystal_S9
-[iron_plate] AS iron_plate_S9
-[copper_plate] AS copper_plate_S9
-[battery] AS battery_S9
-crystarion_crystal_S9 --> rec_crystarion_battery_S9
-iron_plate_S9 --> rec_crystarion_battery_S9
-copper_plate_S9 --> rec_crystarion_battery_S9
-rec_crystarion_battery_S9 --> battery_S9
+[crystarion_crystal_ammo] AS rec_crystarion_crystal_ammo_COM #lightblue
+[crystarion_crystal_splinter] AS crystarion_crystal_splinter_COM
+[crystarion_crystal_ammo] AS crystarion_crystal_ammo_COM
+crystarion_crystal_splinter_COM --> rec_crystarion_crystal_ammo_COM
+rec_crystarion_crystal_ammo_COM --> crystarion_crystal_ammo_COM
 
-[crystarion_sludge_from_crushed_crystal] AS rec_crystarion_sludge_from_crushed_crystal_1 #lightblue
-[water] AS water_1
-[crystarion_crushed_crystal] AS crystarion_crushed_crystal_1
-[crystarion_crystal_slurry] AS crystarion_crystal_slurry_1
-water_1 --> rec_crystarion_sludge_from_crushed_crystal_1
-crystarion_crushed_crystal_1 --> rec_crystarion_sludge_from_crushed_crystal_1
-rec_crystarion_sludge_from_crushed_crystal_1 --> crystarion_crystal_slurry_1
+[crystarion_crystal_ammo_high_explosive] AS rec_crystarion_crystal_ammo_high_explosive_COM #lightblue
+[crystarion_crystal_splinter_stable] AS crystarion_crystal_splinter_stable_COM
+[crystarion_crystal_ammo] AS crystarion_crystal_ammo_COM
+[crystarion_crystal_ammo_high_explosive] AS crystarion_crystal_ammo_high_explosive_COM
+crystarion_crystal_splinter_stable_COM --> rec_crystarion_crystal_ammo_high_explosive_COM
+crystarion_crystal_ammo_COM --> rec_crystarion_crystal_ammo_high_explosive_COM
+rec_crystarion_crystal_ammo_high_explosive_COM --> crystarion_crystal_ammo_high_explosive_COM
 
-[crystarion_crush_crystal_ore] AS rec_crystarion_crush_crystal_ore_1 #lightblue
-[crystarion_crystal_ore] AS crystarion_crystal_ore_1
-[crystarion_crushed_crystal] AS crystarion_crushed_crystal_1
-crystarion_crystal_ore_1 --> rec_crystarion_crush_crystal_ore_1
-rec_crystarion_crush_crystal_ore_1 --> crystarion_crushed_crystal_1
+[crystarion_crystal_empower_3] AS rec_crystarion_crystal_empower_3_EMP #lightblue
+[crystarion_crystal] AS crystarion_crystal_EMP
+[crystarion_crystal_magenta] AS crystarion_crystal_magenta_EMP
+[crystarion_crystal_yellow] AS crystarion_crystal_yellow_EMP
+[crystarion_crystal_stable] AS crystarion_crystal_stable_EMP
+crystarion_crystal_EMP --> rec_crystarion_crystal_empower_3_EMP
+crystarion_crystal_magenta_EMP --> rec_crystarion_crystal_empower_3_EMP
+crystarion_crystal_yellow_EMP --> rec_crystarion_crystal_empower_3_EMP
+rec_crystarion_crystal_empower_3_EMP --> crystarion_crystal_stable_EMP
 
-[crystarion_crystal_ore_splinter] AS rec_crystarion_crystal_ore_splinter_M #lightblue
-[crystarion_crystal] AS crystarion_crystal_M
-[crystarion_crystal_splinter] AS crystarion_crystal_splinter_M
-crystarion_crystal_M --> rec_crystarion_crystal_ore_splinter_M
-rec_crystarion_crystal_ore_splinter_M --> crystarion_crystal_splinter_M
+[crystarion_crystal_ore_splinter] AS rec_crystarion_crystal_ore_splinter_COM #lightblue
+[crystarion_crystal] AS crystarion_crystal_COM
+[crystarion_crystal_splinter] AS crystarion_crystal_splinter_COM
+crystarion_crystal_COM --> rec_crystarion_crystal_ore_splinter_COM
+rec_crystarion_crystal_ore_splinter_COM --> crystarion_crystal_splinter_COM
 
-[crystarion_crystal_ore_splinter_less] AS rec_crystarion_crystal_ore_splinter_less_M #lightblue
-[crystarion_crushed_crystal] AS crystarion_crushed_crystal_M
-[crystarion_crystal_splinter] AS crystarion_crystal_splinter_M
-crystarion_crushed_crystal_M --> rec_crystarion_crystal_ore_splinter_less_M
-rec_crystarion_crystal_ore_splinter_less_M --> crystarion_crystal_splinter_M
+[crystarion_crystal_ore_splinter_less] AS rec_crystarion_crystal_ore_splinter_less_COM #lightblue
+[crystarion_crushed_crystal] AS crystarion_crushed_crystal_COM
+[crystarion_crystal_splinter] AS crystarion_crystal_splinter_COM
+crystarion_crushed_crystal_COM --> rec_crystarion_crystal_ore_splinter_less_COM
+rec_crystarion_crystal_ore_splinter_less_COM --> crystarion_crystal_splinter_COM
 
-[crystarion_crystalise] AS rec_crystarion_crystalise_1 #lightblue
-[crystarion_crystal_slurry] AS crystarion_crystal_slurry_1
-[crystarion_crystal] AS crystarion_crystal_1
-[crystarion_crushed_crystal] AS crystarion_crushed_crystal_1
-crystarion_crystal_slurry_1 --> rec_crystarion_crystalise_1
-rec_crystarion_crystalise_1 --> crystarion_crystal_1
-rec_crystarion_crystalise_1 --> crystarion_crushed_crystal_1
+[crystarion_crystal_ore_splinter_volatile] AS rec_crystarion_crystal_ore_splinter_volatile_COM #lightblue
+[crystarion_crystal] AS crystarion_crystal_COM
+[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_COM
+crystarion_crystal_COM --> rec_crystarion_crystal_ore_splinter_volatile_COM
+rec_crystarion_crystal_ore_splinter_volatile_COM --> crystarion_crystal_splinter_volatile_COM
 
-[crystarion_revitalise_coal] AS rec_crystarion_revitalise_coal_3 #lightblue
-[crystarion_crystal] AS crystarion_crystal_3
-[coal] AS coal_3
-[water] AS water_3
-[wood] AS wood_3
-[steam] AS steam_3
-crystarion_crystal_3 --> rec_crystarion_revitalise_coal_3
-coal_3 --> rec_crystarion_revitalise_coal_3
-water_3 --> rec_crystarion_revitalise_coal_3
-rec_crystarion_revitalise_coal_3 --> wood_3
-rec_crystarion_revitalise_coal_3 --> steam_3
+[crystarion_crystal_splinter_stable] AS rec_crystarion_crystal_splinter_stable_COM #lightblue
+[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_COM
+[water] AS water_COM
+[crystarion_crystal_splinter_stable] AS crystarion_crystal_splinter_stable_COM
+crystarion_crystal_splinter_volatile_COM --> rec_crystarion_crystal_splinter_stable_COM
+water_COM --> rec_crystarion_crystal_splinter_stable_COM
+rec_crystarion_crystal_splinter_stable_COM --> crystarion_crystal_splinter_stable_COM
 
-[crystarion_slurry_from_red_crystal] AS rec_crystarion_slurry_from_red_crystal_2 #lightblue
-[crystarion_crystal_red] AS crystarion_crystal_red_2
-[water] AS water_2
-[crystarion_red_slurry] AS crystarion_red_slurry_2
-crystarion_crystal_red_2 --> rec_crystarion_slurry_from_red_crystal_2
-water_2 --> rec_crystarion_slurry_from_red_crystal_2
-rec_crystarion_slurry_from_red_crystal_2 --> crystarion_red_slurry_2
+[crystarion_crystalise] AS rec_crystarion_crystalise_CRY #lightblue
+[crystarion_crystal_slurry] AS crystarion_crystal_slurry_CRY
+[crystarion_crystal] AS crystarion_crystal_CRY
+[crystarion_crushed_crystal] AS crystarion_crushed_crystal_CRY
+crystarion_crystal_slurry_CRY --> rec_crystarion_crystalise_CRY
+rec_crystarion_crystalise_CRY --> crystarion_crystal_CRY
+rec_crystarion_crystalise_CRY --> crystarion_crushed_crystal_CRY
 
-[crystarion_denaturize_yellow] AS rec_crystarion_denaturize_yellow_2 #lightblue
-[crystarion_yellow_mixture] AS crystarion_yellow_mixture_2
-[light_oil] AS light_oil_2
-[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_2
-crystarion_yellow_mixture_2 --> rec_crystarion_denaturize_yellow_2
-rec_crystarion_denaturize_yellow_2 --> light_oil_2
-rec_crystarion_denaturize_yellow_2 --> crystarion_crystal_splinter_volatile_2
+[crystarion_crystalise_purple] AS rec_crystarion_crystalise_purple_FL #lightblue
+[crystarion_purple_mixture] AS crystarion_purple_mixture_FL
+[crystarion_crystal_magenta] AS crystarion_crystal_magenta_FL
+[steam] AS steam_FL
+[petroleum_gas] AS petroleum_gas_FL
+crystarion_purple_mixture_FL --> rec_crystarion_crystalise_purple_FL
+rec_crystarion_crystalise_purple_FL --> crystarion_crystal_magenta_FL
+rec_crystarion_crystalise_purple_FL --> steam_FL
+rec_crystarion_crystalise_purple_FL --> petroleum_gas_FL
 
-[crystarion_denaturize_purple] AS rec_crystarion_denaturize_purple_2 #lightblue
-[crystarion_purple_mixture] AS crystarion_purple_mixture_2
-[petroleum_gas] AS petroleum_gas_2
-[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_2
-crystarion_purple_mixture_2 --> rec_crystarion_denaturize_purple_2
-rec_crystarion_denaturize_purple_2 --> petroleum_gas_2
-rec_crystarion_denaturize_purple_2 --> crystarion_crystal_splinter_volatile_2
+[crystarion_denaturize_blue] AS rec_crystarion_denaturize_blue_FL #lightblue
+[crystarion_blue_slurry] AS crystarion_blue_slurry_FL
+[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_FL
+[sulfuric_acid] AS sulfuric_acid_FL
+crystarion_blue_slurry_FL --> rec_crystarion_denaturize_blue_FL
+rec_crystarion_denaturize_blue_FL --> crystarion_crystal_splinter_volatile_FL
+rec_crystarion_denaturize_blue_FL --> sulfuric_acid_FL
 
-[crystarion_denaturize_red] AS rec_crystarion_denaturize_red_2 #lightblue
-[crystarion_red_slurry] AS crystarion_red_slurry_2
-[heavy_oil] AS heavy_oil_2
-[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_2
-crystarion_red_slurry_2 --> rec_crystarion_denaturize_red_2
-rec_crystarion_denaturize_red_2 --> heavy_oil_2
-rec_crystarion_denaturize_red_2 --> crystarion_crystal_splinter_volatile_2
+[crystarion_denaturize_green] AS rec_crystarion_denaturize_green_FL #lightblue
+[crystarion_green_slurry] AS crystarion_green_slurry_FL
+[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_FL
+[lubricant] AS lubricant_FL
+crystarion_green_slurry_FL --> rec_crystarion_denaturize_green_FL
+rec_crystarion_denaturize_green_FL --> crystarion_crystal_splinter_volatile_FL
+rec_crystarion_denaturize_green_FL --> lubricant_FL
 
-[crystarion_denaturize_green] AS rec_crystarion_denaturize_green_2 #lightblue
-[crystarion_green_slurry] AS crystarion_green_slurry_2
-[lubricant] AS lubricant_2
-[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_2
-crystarion_green_slurry_2 --> rec_crystarion_denaturize_green_2
-rec_crystarion_denaturize_green_2 --> lubricant_2
-rec_crystarion_denaturize_green_2 --> crystarion_crystal_splinter_volatile_2
+[crystarion_denaturize_purple] AS rec_crystarion_denaturize_purple_FL #lightblue
+[crystarion_purple_mixture] AS crystarion_purple_mixture_FL
+[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_FL
+[petroleum_gas] AS petroleum_gas_FL
+crystarion_purple_mixture_FL --> rec_crystarion_denaturize_purple_FL
+rec_crystarion_denaturize_purple_FL --> crystarion_crystal_splinter_volatile_FL
+rec_crystarion_denaturize_purple_FL --> petroleum_gas_FL
 
-[crystarion_denaturize_blue] AS rec_crystarion_denaturize_blue_2 #lightblue
-[crystarion_blue_slurry] AS crystarion_blue_slurry_2
-[sulfuric_acid] AS sulfuric_acid_2
-[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_2
-crystarion_blue_slurry_2 --> rec_crystarion_denaturize_blue_2
-rec_crystarion_denaturize_blue_2 --> sulfuric_acid_2
-rec_crystarion_denaturize_blue_2 --> crystarion_crystal_splinter_volatile_2
+[crystarion_denaturize_red] AS rec_crystarion_denaturize_red_FL #lightblue
+[crystarion_red_slurry] AS crystarion_red_slurry_FL
+[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_FL
+[heavy_oil] AS heavy_oil_FL
+crystarion_red_slurry_FL --> rec_crystarion_denaturize_red_FL
+rec_crystarion_denaturize_red_FL --> crystarion_crystal_splinter_volatile_FL
+rec_crystarion_denaturize_red_FL --> heavy_oil_FL
 
-[crystarion_create_slurry] AS rec_crystarion_create_slurry_2 #lightblue
-[crystarion_crystal_red] AS crystarion_crystal_red_2
-[crystarion_crystal_green] AS crystarion_crystal_green_2
-[crystarion_crystal_blue] AS crystarion_crystal_blue_2
-[water] AS water_2
-[crystarion_red_slurry] AS crystarion_red_slurry_2
-[crystarion_green_slurry] AS crystarion_green_slurry_2
-[crystarion_blue_slurry] AS crystarion_blue_slurry_2
-crystarion_crystal_red_2 --> rec_crystarion_create_slurry_2
-crystarion_crystal_green_2 --> rec_crystarion_create_slurry_2
-crystarion_crystal_blue_2 --> rec_crystarion_create_slurry_2
-water_2 --> rec_crystarion_create_slurry_2
-rec_crystarion_create_slurry_2 --> crystarion_red_slurry_2
-rec_crystarion_create_slurry_2 --> crystarion_green_slurry_2
-rec_crystarion_create_slurry_2 --> crystarion_blue_slurry_2
+[crystarion_denaturize_yellow] AS rec_crystarion_denaturize_yellow_FL #lightblue
+[crystarion_yellow_mixture] AS crystarion_yellow_mixture_FL
+[crystarion_crystal_splinter_volatile] AS crystarion_crystal_splinter_volatile_FL
+[light_oil] AS light_oil_FL
+crystarion_yellow_mixture_FL --> rec_crystarion_denaturize_yellow_FL
+rec_crystarion_denaturize_yellow_FL --> crystarion_crystal_splinter_volatile_FL
+rec_crystarion_denaturize_yellow_FL --> light_oil_FL
 
-[crystarion_mix_yellow] AS rec_crystarion_mix_yellow_2 #lightblue
-[crystarion_green_slurry] AS crystarion_green_slurry_2
-[crystarion_red_slurry] AS crystarion_red_slurry_2
-[crystarion_yellow_mixture] AS crystarion_yellow_mixture_2
-crystarion_green_slurry_2 --> rec_crystarion_mix_yellow_2
-crystarion_red_slurry_2 --> rec_crystarion_mix_yellow_2
-rec_crystarion_mix_yellow_2 --> crystarion_yellow_mixture_2
+[crystarion_empowerer] AS rec_crystarion_empowerer_IT5 #lightblue
+[crystarion_crystal] AS crystarion_crystal_IT5
+[iron_plate] AS iron_plate_IT5
+[battery] AS battery_IT5
+[electronic_circuit] AS electronic_circuit_IT5
+[processing_unit] AS processing_unit_IT5
+[crystarion_empowerer] AS crystarion_empowerer_IT5
+crystarion_crystal_IT5 --> rec_crystarion_empowerer_IT5
+iron_plate_IT5 --> rec_crystarion_empowerer_IT5
+battery_IT5 --> rec_crystarion_empowerer_IT5
+electronic_circuit_IT5 --> rec_crystarion_empowerer_IT5
+processing_unit_IT5 --> rec_crystarion_empowerer_IT5
+rec_crystarion_empowerer_IT5 --> crystarion_empowerer_IT5
 
-[crystarion_mix_purple] AS rec_crystarion_mix_purple_2 #lightblue
-[crystarion_blue_slurry] AS crystarion_blue_slurry_2
-[crystarion_red_slurry] AS crystarion_red_slurry_2
-[crystarion_purple_mixture] AS crystarion_purple_mixture_2
-crystarion_blue_slurry_2 --> rec_crystarion_mix_purple_2
-crystarion_red_slurry_2 --> rec_crystarion_mix_purple_2
-rec_crystarion_mix_purple_2 --> crystarion_purple_mixture_2
+[crystarion_energiser] AS rec_crystarion_energiser_IT6 #lightblue
+[crystarion_crystal] AS crystarion_crystal_IT6
+[battery] AS battery_IT6
+[assembling_machine_2] AS assembling_machine_2_IT6
+[crystarion_energiser] AS crystarion_energiser_IT6
+crystarion_crystal_IT6 --> rec_crystarion_energiser_IT6
+battery_IT6 --> rec_crystarion_energiser_IT6
+assembling_machine_2_IT6 --> rec_crystarion_energiser_IT6
+rec_crystarion_energiser_IT6 --> crystarion_energiser_IT6
 
-[crystarion_crystalise_purple] AS rec_crystarion_crystalise_purple_2 #lightblue
-[crystarion_purple_mixture] AS crystarion_purple_mixture_2
-[crystarion_crystal_magenta] AS crystarion_crystal_magenta_2
-[steam] AS steam_2
-[petroleum_gas] AS petroleum_gas_2
-crystarion_purple_mixture_2 --> rec_crystarion_crystalise_purple_2
-rec_crystarion_crystalise_purple_2 --> crystarion_crystal_magenta_2
-rec_crystarion_crystalise_purple_2 --> steam_2
-rec_crystarion_crystalise_purple_2 --> petroleum_gas_2
+[crystarion_explosive] AS rec_crystarion_explosive_COM #lightblue
+[crystarion_crystal_splinter_stable] AS crystarion_crystal_splinter_stable_COM
+[copper_plate] AS copper_plate_COM
+[explosives] AS explosives_COM
+crystarion_crystal_splinter_stable_COM --> rec_crystarion_explosive_COM
+copper_plate_COM --> rec_crystarion_explosive_COM
+rec_crystarion_explosive_COM --> explosives_COM
 
-[crystarion_crush_crystal_red] AS rec_crystarion_crush_crystal_red_3 #lightblue
-[crystarion_crystal_red] AS crystarion_crystal_red_3
-[crystarion_crushed_crystal] AS crystarion_crushed_crystal_3
-crystarion_crystal_red_3 --> rec_crystarion_crush_crystal_red_3
-rec_crystarion_crush_crystal_red_3 --> crystarion_crushed_crystal_3
+[crystarion_land_mine] AS rec_crystarion_land_mine_COM #lightblue
+[crystarion_crystal_splinter] AS crystarion_crystal_splinter_COM
+[crystarion_land_mine] AS crystarion_land_mine_COM
+crystarion_crystal_splinter_COM --> rec_crystarion_land_mine_COM
+rec_crystarion_land_mine_COM --> crystarion_land_mine_COM
 
-[crystarion_crush_crystal_green] AS rec_crystarion_crush_crystal_green_3 #lightblue
-[crystarion_crystal_green] AS crystarion_crystal_green_3
-[crystarion_crushed_crystal] AS crystarion_crushed_crystal_3
-crystarion_crystal_green_3 --> rec_crystarion_crush_crystal_green_3
-rec_crystarion_crush_crystal_green_3 --> crystarion_crushed_crystal_3
+[crystarion_lure] AS rec_crystarion_lure_LU #lightblue
+[copper_plate] AS copper_plate_LU
+[battery] AS battery_LU
+[copper_cable] AS copper_cable_LU
+[electronic_circuit] AS electronic_circuit_LU
+[crystarion_lure] AS crystarion_lure_LU
+copper_plate_LU --> rec_crystarion_lure_LU
+battery_LU --> rec_crystarion_lure_LU
+copper_cable_LU --> rec_crystarion_lure_LU
+electronic_circuit_LU --> rec_crystarion_lure_LU
+rec_crystarion_lure_LU --> crystarion_lure_LU
 
-[crystarion_crush_crystal_blue] AS rec_crystarion_crush_crystal_blue_3 #lightblue
-[crystarion_crystal_blue] AS crystarion_crystal_blue_3
-[crystarion_crushed_crystal] AS crystarion_crushed_crystal_3
-crystarion_crystal_blue_3 --> rec_crystarion_crush_crystal_blue_3
-rec_crystarion_crush_crystal_blue_3 --> crystarion_crushed_crystal_3
+[crystarion_lure_big] AS rec_crystarion_lure_big_LU #lightblue
+[copper_cable] AS copper_cable_LU
+[advanced_circuit] AS advanced_circuit_LU
+[crystarion_lure] AS crystarion_lure_LU
+[crystarion_lure_big] AS crystarion_lure_big_LU
+copper_cable_LU --> rec_crystarion_lure_big_LU
+advanced_circuit_LU --> rec_crystarion_lure_big_LU
+crystarion_lure_LU --> rec_crystarion_lure_big_LU
+rec_crystarion_lure_big_LU --> crystarion_lure_big_LU
 
-[crystarion_crush_crystal_yellow] AS rec_crystarion_crush_crystal_yellow_3 #lightblue
-[crystarion_crystal_yellow] AS crystarion_crystal_yellow_3
-[crystarion_crushed_crystal] AS crystarion_crushed_crystal_3
-crystarion_crystal_yellow_3 --> rec_crystarion_crush_crystal_yellow_3
-rec_crystarion_crush_crystal_yellow_3 --> crystarion_crushed_crystal_3
+[crystarion_mix_purple] AS rec_crystarion_mix_purple_FL #lightblue
+[crystarion_blue_slurry] AS crystarion_blue_slurry_FL
+[crystarion_red_slurry] AS crystarion_red_slurry_FL
+[crystarion_purple_mixture] AS crystarion_purple_mixture_FL
+crystarion_blue_slurry_FL --> rec_crystarion_mix_purple_FL
+crystarion_red_slurry_FL --> rec_crystarion_mix_purple_FL
+rec_crystarion_mix_purple_FL --> crystarion_purple_mixture_FL
 
-[crystarion_crush_crystal_magenta] AS rec_crystarion_crush_crystal_magenta_3 #lightblue
-[crystarion_crystal_magenta] AS crystarion_crystal_magenta_3
-[crystarion_crushed_crystal] AS crystarion_crushed_crystal_3
-crystarion_crystal_magenta_3 --> rec_crystarion_crush_crystal_magenta_3
-rec_crystarion_crush_crystal_magenta_3 --> crystarion_crushed_crystal_3
+[crystarion_mix_yellow] AS rec_crystarion_mix_yellow_FL #lightblue
+[crystarion_green_slurry] AS crystarion_green_slurry_FL
+[crystarion_red_slurry] AS crystarion_red_slurry_FL
+[crystarion_yellow_mixture] AS crystarion_yellow_mixture_FL
+crystarion_green_slurry_FL --> rec_crystarion_mix_yellow_FL
+crystarion_red_slurry_FL --> rec_crystarion_mix_yellow_FL
+rec_crystarion_mix_yellow_FL --> crystarion_yellow_mixture_FL
 
-[crystarion_neutralize_red] AS rec_crystarion_neutralize_red_3 #lightblue
-[crystarion_crystal_red] AS crystarion_crystal_red_3
-[water] AS water_3
-[copper_ore] AS copper_ore_3
-[steam] AS steam_3
-crystarion_crystal_red_3 --> rec_crystarion_neutralize_red_3
-water_3 --> rec_crystarion_neutralize_red_3
-rec_crystarion_neutralize_red_3 --> copper_ore_3
-rec_crystarion_neutralize_red_3 --> steam_3
+[crystarion_naturizer] AS rec_crystarion_naturizer_IT7 #lightblue
+[crystarion_crystal] AS crystarion_crystal_IT7
+[iron_plate] AS iron_plate_IT7
+[crystarion_naturizer] AS crystarion_naturizer_IT7
+crystarion_crystal_IT7 --> rec_crystarion_naturizer_IT7
+iron_plate_IT7 --> rec_crystarion_naturizer_IT7
+rec_crystarion_naturizer_IT7 --> crystarion_naturizer_IT7
 
-[crystarion_neutralize_green] AS rec_crystarion_neutralize_green_3 #lightblue
-[crystarion_crystal_green] AS crystarion_crystal_green_3
-[water] AS water_3
-[stone] AS stone_3
-[steam] AS steam_3
-crystarion_crystal_green_3 --> rec_crystarion_neutralize_green_3
-water_3 --> rec_crystarion_neutralize_green_3
-rec_crystarion_neutralize_green_3 --> stone_3
-rec_crystarion_neutralize_green_3 --> steam_3
+[crystarion_neutralize_blue] AS rec_crystarion_neutralize_blue_CRN #lightblue
+[crystarion_crystal_blue] AS crystarion_crystal_blue_CRN
+[water] AS water_CRN
+[iron_ore] AS iron_ore_CRN
+[steam] AS steam_CRN
+crystarion_crystal_blue_CRN --> rec_crystarion_neutralize_blue_CRN
+water_CRN --> rec_crystarion_neutralize_blue_CRN
+rec_crystarion_neutralize_blue_CRN --> iron_ore_CRN
+rec_crystarion_neutralize_blue_CRN --> steam_CRN
 
-[crystarion_neutralize_blue] AS rec_crystarion_neutralize_blue_3 #lightblue
-[crystarion_crystal_blue] AS crystarion_crystal_blue_3
-[water] AS water_3
-[iron_ore] AS iron_ore_3
-[steam] AS steam_3
-crystarion_crystal_blue_3 --> rec_crystarion_neutralize_blue_3
-water_3 --> rec_crystarion_neutralize_blue_3
-rec_crystarion_neutralize_blue_3 --> iron_ore_3
-rec_crystarion_neutralize_blue_3 --> steam_3
+[crystarion_neutralize_crystal] AS rec_crystarion_neutralize_crystal_CRN #lightblue
+[crystarion_crystal] AS crystarion_crystal_CRN
+[water] AS water_CRN
+[coal] AS coal_CRN
+[steam] AS steam_CRN
+crystarion_crystal_CRN --> rec_crystarion_neutralize_crystal_CRN
+water_CRN --> rec_crystarion_neutralize_crystal_CRN
+rec_crystarion_neutralize_crystal_CRN --> coal_CRN
+rec_crystarion_neutralize_crystal_CRN --> steam_CRN
 
-[crystarion_neutralize_crystal] AS rec_crystarion_neutralize_crystal_3 #lightblue
-[crystarion_crystal] AS crystarion_crystal_3
-[water] AS water_3
-[coal] AS coal_3
-[steam] AS steam_3
-crystarion_crystal_3 --> rec_crystarion_neutralize_crystal_3
-water_3 --> rec_crystarion_neutralize_crystal_3
-rec_crystarion_neutralize_crystal_3 --> coal_3
-rec_crystarion_neutralize_crystal_3 --> steam_3
+[crystarion_neutralize_green] AS rec_crystarion_neutralize_green_CRN #lightblue
+[crystarion_crystal_green] AS crystarion_crystal_green_CRN
+[water] AS water_CRN
+[stone] AS stone_CRN
+[steam] AS steam_CRN
+crystarion_crystal_green_CRN --> rec_crystarion_neutralize_green_CRN
+water_CRN --> rec_crystarion_neutralize_green_CRN
+rec_crystarion_neutralize_green_CRN --> stone_CRN
+rec_crystarion_neutralize_green_CRN --> steam_CRN
 
-[crystarion_split_blue] AS rec_crystarion_split_blue_3 #lightblue
-[crystarion_crystal] AS crystarion_crystal_3
-[ice] AS ice_3
-[crystarion_crystal_blue] AS crystarion_crystal_blue_3
-[crystarion_crystal_yellow] AS crystarion_crystal_yellow_3
-[water] AS water_3
-crystarion_crystal_3 --> rec_crystarion_split_blue_3
-ice_3 --> rec_crystarion_split_blue_3
-rec_crystarion_split_blue_3 --> crystarion_crystal_blue_3
-rec_crystarion_split_blue_3 --> crystarion_crystal_yellow_3
-rec_crystarion_split_blue_3 --> water_3
+[crystarion_neutralize_red] AS rec_crystarion_neutralize_red_CRN #lightblue
+[crystarion_crystal_red] AS crystarion_crystal_red_CRN
+[water] AS water_CRN
+[copper_ore] AS copper_ore_CRN
+[steam] AS steam_CRN
+crystarion_crystal_red_CRN --> rec_crystarion_neutralize_red_CRN
+water_CRN --> rec_crystarion_neutralize_red_CRN
+rec_crystarion_neutralize_red_CRN --> copper_ore_CRN
+rec_crystarion_neutralize_red_CRN --> steam_CRN
 
-[crystarion_split_yellow] AS rec_crystarion_split_yellow_3 #lightblue
-[crystarion_crystal_yellow] AS crystarion_crystal_yellow_3
-[water] AS water_3
-[crystarion_crystal_green] AS crystarion_crystal_green_3
-[crystarion_crystal_red] AS crystarion_crystal_red_3
-[steam] AS steam_3
-crystarion_crystal_yellow_3 --> rec_crystarion_split_yellow_3
-water_3 --> rec_crystarion_split_yellow_3
-rec_crystarion_split_yellow_3 --> crystarion_crystal_green_3
-rec_crystarion_split_yellow_3 --> crystarion_crystal_red_3
-rec_crystarion_split_yellow_3 --> steam_3
+[crystarion_revitalise_coal] AS rec_crystarion_revitalise_coal_REV #lightblue
+[coal] AS coal_REV
+[crystarion_crystal] AS crystarion_crystal_REV
+[water] AS water_REV
+[wood] AS wood_REV
+[steam] AS steam_REV
+coal_REV --> rec_crystarion_revitalise_coal_REV
+crystarion_crystal_REV --> rec_crystarion_revitalise_coal_REV
+water_REV --> rec_crystarion_revitalise_coal_REV
+rec_crystarion_revitalise_coal_REV --> wood_REV
+rec_crystarion_revitalise_coal_REV --> steam_REV
 
-[crystarion_crystal_empower_1] AS rec_crystarion_crystal_empower_1_4 #lightblue
-[crystarion_crystal] AS crystarion_crystal_4
-[crystarion_crystal_volatile] AS crystarion_crystal_volatile_4
-crystarion_crystal_4 --> rec_crystarion_crystal_empower_1_4
-rec_crystarion_crystal_empower_1_4 --> crystarion_crystal_volatile_4
+[crystarion_science] AS rec_crystarion_science_EMP #lightblue
+[crystarion_crystal_stable] AS crystarion_crystal_stable_EMP
+[crystarion_science] AS crystarion_science_EMP
+crystarion_crystal_stable_EMP --> rec_crystarion_science_EMP
+rec_crystarion_science_EMP --> crystarion_science_EMP
 
-[crystarion_crystal_empower_2] AS rec_crystarion_crystal_empower_2_4 #lightblue
-[crystarion_crystal] AS crystarion_crystal_4
-[crystarion_crystal_yellow] AS crystarion_crystal_yellow_4
-[crystarion_crystal_unstable] AS crystarion_crystal_unstable_4
-crystarion_crystal_4 --> rec_crystarion_crystal_empower_2_4
-crystarion_crystal_yellow_4 --> rec_crystarion_crystal_empower_2_4
-rec_crystarion_crystal_empower_2_4 --> crystarion_crystal_unstable_4
+[crystarion_sludge_from_crushed_crystal] AS rec_crystarion_sludge_from_crushed_crystal_CRY #lightblue
+[crystarion_crushed_crystal] AS crystarion_crushed_crystal_CRY
+[water] AS water_CRY
+[crystarion_crystal_slurry] AS crystarion_crystal_slurry_CRY
+crystarion_crushed_crystal_CRY --> rec_crystarion_sludge_from_crushed_crystal_CRY
+water_CRY --> rec_crystarion_sludge_from_crushed_crystal_CRY
+rec_crystarion_sludge_from_crushed_crystal_CRY --> crystarion_crystal_slurry_CRY
 
-[crystarion_crystal_empower_3] AS rec_crystarion_crystal_empower_3_4 #lightblue
-[crystarion_crystal] AS crystarion_crystal_4
-[crystarion_crystal_yellow] AS crystarion_crystal_yellow_4
-[crystarion_crystal_magenta] AS crystarion_crystal_magenta_4
-[crystarion_crystal_stable] AS crystarion_crystal_stable_4
-crystarion_crystal_4 --> rec_crystarion_crystal_empower_3_4
-crystarion_crystal_yellow_4 --> rec_crystarion_crystal_empower_3_4
-crystarion_crystal_magenta_4 --> rec_crystarion_crystal_empower_3_4
-rec_crystarion_crystal_empower_3_4 --> crystarion_crystal_stable_4
+[crystarion_slurry_from_red_crystal] AS rec_crystarion_slurry_from_red_crystal_FL #lightblue
+[crystarion_crystal_red] AS crystarion_crystal_red_FL
+[water] AS water_FL
+[crystarion_red_slurry] AS crystarion_red_slurry_FL
+crystarion_crystal_red_FL --> rec_crystarion_slurry_from_red_crystal_FL
+water_FL --> rec_crystarion_slurry_from_red_crystal_FL
+rec_crystarion_slurry_from_red_crystal_FL --> crystarion_red_slurry_FL
 
-[crystarion_science] AS rec_crystarion_science_4 #lightblue
-[crystarion_crystal] AS crystarion_crystal_4
-[crystarion_crystal_volatile] AS crystarion_crystal_volatile_4
-[crystarion_crystal_unstable] AS crystarion_crystal_unstable_4
-[crystarion_crystal_stable] AS crystarion_crystal_stable_4
-[crystarion_science] AS crystarion_science_4
-crystarion_crystal_4 --> rec_crystarion_science_4
-crystarion_crystal_volatile_4 --> rec_crystarion_science_4
-crystarion_crystal_unstable_4 --> rec_crystarion_science_4
-crystarion_crystal_stable_4 --> rec_crystarion_science_4
-rec_crystarion_science_4 --> crystarion_science_4
+[crystarion_split_blue] AS rec_crystarion_split_blue_CRN #lightblue
+[ice] AS ice_CRN
+[crystarion_crystal] AS crystarion_crystal_CRN
+[crystarion_crystal_blue] AS crystarion_crystal_blue_CRN
+[crystarion_crystal_yellow] AS crystarion_crystal_yellow_CRN
+[water] AS water_CRN
+ice_CRN --> rec_crystarion_split_blue_CRN
+crystarion_crystal_CRN --> rec_crystarion_split_blue_CRN
+rec_crystarion_split_blue_CRN --> crystarion_crystal_blue_CRN
+rec_crystarion_split_blue_CRN --> crystarion_crystal_yellow_CRN
+rec_crystarion_split_blue_CRN --> water_CRN
+
+[crystarion_split_yellow] AS rec_crystarion_split_yellow_CRN #lightblue
+[crystarion_crystal_yellow] AS crystarion_crystal_yellow_CRN
+[water] AS water_CRN
+[crystarion_crystal_green] AS crystarion_crystal_green_CRN
+[crystarion_crystal_red] AS crystarion_crystal_red_CRN
+[steam] AS steam_CRN
+crystarion_crystal_yellow_CRN --> rec_crystarion_split_yellow_CRN
+water_CRN --> rec_crystarion_split_yellow_CRN
+rec_crystarion_split_yellow_CRN --> crystarion_crystal_green_CRN
+rec_crystarion_split_yellow_CRN --> crystarion_crystal_red_CRN
+rec_crystarion_split_yellow_CRN --> steam_CRN
 
 @enduml
 

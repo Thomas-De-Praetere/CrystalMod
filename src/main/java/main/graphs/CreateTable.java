@@ -1,20 +1,57 @@
 package main.graphs;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.List;
 
+
+/**
+ * Use
+ * /c for _,p in  pairs(game.player.force.recipes) do helpers.write_file("test.txt",tostring(helpers.table_to_json({name=p.name,ingr=p.ingredients,pr=p.products})).."\n",true);end
+ * to write all recipes.
+ */
 public class CreateTable {
     public static void main(String[] args) throws IOException {
         new CreateTable().createTable();
     }
 
+
+    // Only the fields we care
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private record JsonRecipe(String tag, String name, List<Entry> ingr, List<Entry> pr) {
+    }
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private record Entry(String name) {
+    }
+
+    public Recipe parse(String json) {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            JsonRecipe r = mapper.readValue(json, JsonRecipe.class);
+            return new Recipe(
+                    r.tag(),
+                    r.name(),
+                    r.ingr().stream()
+                            .map(Entry::name)
+                            .toList(),
+                    r.pr().stream()
+                            .map(Entry::name)
+                            .toList()
+            );
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public void createTable() throws IOException {
-        List<String> list = Files.lines(Path.of("C:\\Mods\\Factorio\\src\\main\\java\\main\\graphs\\recipeOverview"))
-                .map(s -> s.replace("-", "_"))
-                .map(this::of)
+        List<String> list = Files.lines(Path.of("C:\\Modding\\CrystalMod\\src\\main\\java\\main\\graphs\\recipeOverview"))
+                .map(this::parse)
                 .map(Recipe::toPumlRecord)
                 .toList();
         System.out.println("@startuml");
@@ -25,20 +62,17 @@ public class CreateTable {
         System.out.println("@enduml");
     }
 
-    private Recipe of(String line) {
-        String[] split = line.split("#");
-        String tag = split[0];
-        split = split[1].split("\\|");
-        String name = split[0];
-        split = split[1].split(":");
-        List<String> input = Arrays.stream(split[0].split(",")).toList();
-        List<String> output = Arrays.stream(split[1].split(",")).toList();
-        return new Recipe(tag, name, input, output);
-    }
 
     static int COUNTER = 0;
 
     record Recipe(String tag, String name, List<String> inputs, List<String> outputs) {
+
+        Recipe(String tag, String name, List<String> inputs, List<String> outputs) {
+            this.tag = tag.replace("-", "_");
+            this.name = name.replace("-", "_");
+            this.inputs = inputs.stream().map(s -> s.replace("-", "_")).toList();
+            this.outputs = outputs.stream().map(s -> s.replace("-", "_")).toList();
+        }
 
         String toPumlRecord() {
             String i = tag();
