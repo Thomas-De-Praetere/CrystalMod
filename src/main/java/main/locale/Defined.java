@@ -51,7 +51,7 @@ public class Defined {
                     new Locale("crystarion-resource-behemoth", "Huge Crystaline remains")
             ),
             Category.ITEM, List.of(
-                    new Locale("crystarion-crystal-splinter-stablised","Stable Splinter"),
+                    new Locale("crystarion-crystal-splinter-stable","Stable Splinter"),
                     new Locale("crystarion-crystal-ammo-high-explosive", "High Explosive Crystaline Ammunition"),
                     new Locale("crystarion-science", "Unstable Science"),
                     new Locale("crystarion-science-stable", "Stable Science"),
