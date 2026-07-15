@@ -21,7 +21,7 @@ entity.energy_source =
 {
     type = "electric",
     usage_priority = "secondary-input",
-    emissions_per_minute = { crystarion_resonance = 75 },
+    emissions_per_minute = { crystarion_resonance = 1000 },
     drain = "750kW"
 }
 entity.collision_box = {{-1.7, -1.7}, {1.7, 1.7}}
