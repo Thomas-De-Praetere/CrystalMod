@@ -471,6 +471,31 @@ data:extend({
             time = 30
         },
     },
+    {
+        type = "technology",
+        name = "crystarion-unlock-projectile-turret",
+        icon = "__Crystarion__/graphics/items/magazine_high_explosive.png",
+        essential = false,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-projectile-turret"
+            },
+        },
+        prerequisites = { "crystarion-unlock-high-explosive-ammo" },
+        unit = {
+            count = 200,
+            ingredients = {
+                { "crystarion-science", 1 },
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack", 1 },
+                { "chemical-science-pack", 1 },
+                { "space-science-pack", 1 },
+                { "utility-science-pack", 1 },
+            },
+            time = 30
+        },
+    },
 
 
 })

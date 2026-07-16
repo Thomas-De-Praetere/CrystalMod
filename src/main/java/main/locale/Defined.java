@@ -7,6 +7,7 @@ public class Defined {
 
     public static final Map<Category, List<Locale>> DEFINED = Map.of(
             Category.ENTITY, List.of(
+                    new Locale("crystarion-projectile-turret","Cannon"),
                     new Locale("crystarion-accumulator", "Megaccumulator"),
                     new Locale("crystarion-collector", "Collector"),
                     new Locale("crystarion-crusher", "Crusher"),
@@ -51,6 +52,7 @@ public class Defined {
                     new Locale("crystarion-resource-behemoth", "Huge Crystaline remains")
             ),
             Category.ITEM, List.of(
+                    new Locale("crystarion-projectile-turret","Cannon"),
                     new Locale("crystarion-crystal-splinter-stable","Stable Splinter"),
                     new Locale("crystarion-crystal-ammo-high-explosive", "High Explosive Crystaline Ammunition"),
                     new Locale("crystarion-science", "Unstable Science"),
@@ -99,6 +101,7 @@ public class Defined {
                     new Locale("crystarion-planet", "Crystarion")
             ),
             Category.RECIPE, List.of(
+                    new Locale("crystarion-projectile-turret","__ITEM__crystarion-projectile-turret__"),
                     new Locale("crystarion-crush-crystal-ore-adv","Advanced Ore Processing"),
                     new Locale("crystarion-crystal-splinter-stable","__ITEM__crystarion-crystal-splinter-stable__"),
                     new Locale("crystarion-explosive","Crystalid Explosive"),
@@ -177,7 +180,8 @@ public class Defined {
                     new Locale("planet-discovery-crystarion", "Crystarion"),
                     new Locale("crystarion-unlock-lure-big", "Advanced Crystaloid Biology"),
                     new Locale("crystarion-unlock-high-explosive-ammo", "Advanced Crystaloid Protection"),
-                    new Locale("crystarion-unlock-megaccumulator", "Crystal Energy")
+                    new Locale("crystarion-unlock-megaccumulator", "Crystal Energy"),
+                    new Locale("crystarion-unlock-projectile-turret", "Cannon")
             ),
             Category.FUEL_CATEGORY, List.of(
                     new Locale("crystarion-volatile", "Crystal Power"),
