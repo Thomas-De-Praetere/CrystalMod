@@ -12,7 +12,7 @@ local crush_crystal_ore = {
         { type = "fluid", name = "crystarion-crystal-slurry", amount = 8 }
     },
     results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 12 }
+        { type = "item", name = "crystarion-crushed-crystal", amount = 10 }
     },
     energy_required = 2,
     enabled = false,

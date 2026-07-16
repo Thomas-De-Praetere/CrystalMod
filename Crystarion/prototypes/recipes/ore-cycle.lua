@@ -25,7 +25,7 @@ local function crush_crystal_color(color)
         main_product = "crystarion-crushed-crystal",
         icons = helper.icon_1_to_1(helper.icons("crystal_" .. color), helper.icons("crushed_crystal")),
         ingredients = {
-            { type = "item", name = "crystarion-crystal-" .. color, amount = 3 }
+            { type = "item", name = "crystarion-crystal-" .. color, amount = 2 }
         },
         results = {
             { type = "item", name = "crystarion-crushed-crystal", amount = 1, independent_probability = 0.5 }
