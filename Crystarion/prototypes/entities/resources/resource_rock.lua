@@ -5,7 +5,7 @@
 
 helper = require("__Crystarion__.helper")
 
-local function create_resource(size, results, pictures_type, pictures_name)
+local function create_resource(size, results, pictures_type, pictures_name, level_multiplier)
     local resource_ore = table.deepcopy(data.raw["simple-entity"]["big-rock"])
     resource_ore.name = "crystarion-resource-" .. size
     resource_ore.type = "plant"
@@ -22,17 +22,27 @@ local function create_resource(size, results, pictures_type, pictures_name)
     --resource_ore.collision_box = nil
     resource_ore.collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } }
     resource_ore.selection_box = { { -0.7, -0.7 }, { 0.7, 0.7 } }
-    resource_ore.max_health = 100
+    resource_ore.max_health = 10 * level_multiplier
     local grey_mask = { 0.38, 0.54, 0.81 }
 
     resource_ore.pictures = table.deepcopy(data.raw[pictures_type][pictures_name]).pictures
     helper.set_tint(resource_ore.pictures, grey_mask)
+    resource_ore.resistances = {
+        {
+            type = "fire",
+            percent = 100,
+        },
+        {
+            type = "explosion",
+            percent = 100,
+        },
+    }
     return resource_ore
 end
 
 data:extend({
-    create_resource("small", 4, "optimized-decorative", "small-rock"),
-    create_resource("medium", 8, "optimized-decorative", "medium-rock"),
-    create_resource("big", 16, "simple-entity", "big-rock"),
-    create_resource("behemoth", 32, "simple-entity", "huge-rock"),
+    create_resource("small", 4, "optimized-decorative", "small-rock", 1),
+    create_resource("medium", 8, "optimized-decorative", "medium-rock", 2),
+    create_resource("big", 16, "simple-entity", "big-rock", 4),
+    create_resource("behemoth", 32, "simple-entity", "huge-rock", 8),
 })

@@ -105,7 +105,7 @@ local function create_enemy_boom(size, absorption, type, to_spawn, radius, damag
                                     target_effects = {
                                         {
                                             type = "damage",
-                                            damage = { amount = damage, type = "explosion" }
+                                            damage = { amount = damage, type = "physical" }
                                         }
                                     }
                                 }
@@ -186,7 +186,7 @@ create_enemy_boom(
     "spitter",
     "crystarion-resource-small",
     1,
-    5,
+    10,
     grey_mask,
     helper.crystal_tint.white
 )
@@ -196,7 +196,7 @@ create_enemy_boom(
     "spitter",
     "crystarion-resource-medium",
     2,
-    10,
+    20,
     grey_mask,
     helper.crystal_tint.green
 )
@@ -206,7 +206,7 @@ create_enemy_boom(
     "spitter",
     "crystarion-resource-big",
     4,
-    15,
+    40,
     grey_mask,
     helper.crystal_tint.yellow
 )
@@ -216,7 +216,7 @@ create_enemy_boom(
     "spitter",
     "crystarion-resource-behemoth",
     6,
-    25,
+    80,
     grey_mask,
     helper.crystal_tint.red
 )

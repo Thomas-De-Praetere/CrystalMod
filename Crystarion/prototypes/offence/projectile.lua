@@ -10,6 +10,10 @@ local action_delivery = {
     type = "instant",
     target_effects = {
         {
+            type = "damage",
+            damage = { amount = 180, type = "physical" }
+        },
+        {
             type = "create-entity",
             entity_name = "big-explosion"
         },
@@ -64,23 +68,7 @@ local projectile = {
     action = {
         {
             type = "direct",
-            action_delivery = {
-                type = "instant",
-                target_effects = {
-                    {
-                        type = "damage",
-                        damage = { amount = 180, type = "physical" }
-                    },
-                    {
-                        type = "create-entity",
-                        entity_name = "explosion"
-                    }
-                }
-            }
-        },
-        {
-            type = "direct",
-            action_delivery = action_delivery
+            action_delivery = action_delivery,
         },
         {
             type = "cluster",
@@ -94,7 +82,7 @@ local projectile = {
                 starting_speed = 0.5,
                 starting_speed_deviation = 0.5
             }
-        }
+        },
     },
     animation = {
         filename = "__base__/graphics/entity/bullet/bullet.png",

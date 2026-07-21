@@ -13,7 +13,7 @@ entity.minable = { mining_time = 0.2, result = "crystarion-projectile-turret" }
 entity.attack_parameters = {
     type = "projectile",
     ammo_category = "crystarion-cannon-shell",
-    cooldown = 15,
+    cooldown = 30,
     projectile_creation_distance = 1,
     projectile_center = { 0, 0 },
     min_range = 15,
