@@ -2,9 +2,17 @@
 -- locale entity crystarion-projectile-turret
 -- locale recipe crystarion-projectile-turret
 -- locale projectile crystarion-projectile
--- locale ammo crystarion-cannon-shell
+-- locale ammo crystarion-crystal-shell
 -- locale ammo-category crystarion-cannon-shell
+-- locale recipe crystarion-crystal-shell
 -- locale recipe crystarion-cannon-shell
+-- locale recipe crystarion-explosive-cannon-shell
+-- locale recipe crystarion-uranium-cannon-shell
+-- locale recipe crystarion-explosive-uranium-cannon-shell
+-- locale ammo crystarion-cannon-shell
+-- locale ammo crystarion-explosive-cannon-shell
+-- locale ammo crystarion-uranium-cannon-shell
+-- locale ammo crystarion-explosive-uranium-cannon-shell
 
 local item_sounds = require("__base__.prototypes.item_sounds")
 --local helper = require("__Crystarion__.helper")
@@ -154,7 +162,7 @@ local projectile = {
 
 local ammo =  {
     type = "ammo",
-    name = "crystarion-cannon-shell",
+    name = "crystarion-crystal-shell",
     icon = "__base__/graphics/icons/explosive-cannon-shell.png",
     ammo_category = "crystarion-cannon-shell",
     ammo_type =
@@ -196,18 +204,60 @@ local category = {
 
 local recipe_ammo = {
     type = "recipe",
-    name = "crystarion-cannon-shell",
-    main_product = "crystarion-cannon-shell",
+    name = "crystarion-crystal-shell",
+    main_product = "crystarion-crystal-shell",
     categories = { "crafting", "crystarion-energiser-category" },
     ingredients = {
         { type = "item", name = "crystarion-crystal-splinter-stable", amount = 20 },
         { type = "item", name = "steel-plate", amount = 1 },
     },
     results = {
-        { type = "item", name = "crystarion-cannon-shell", amount = 1 }
+        { type = "item", name = "crystarion-crystal-shell", amount = 1 }
     },
     energy_required = 8,
     enabled = false,
 }
+
+-- creates alternate recipe to make cannon shells compatible with the projectile turret. It mainly
+-- removes the explosion on impact
+function create(shell)
+    --Create new item for shell
+    local item = table.deepcopy(data.raw["ammo"][shell])
+    local new_item_name = "crystarion-" .. shell
+    item.name = new_item_name
+    item.ammo_category = "crystarion-cannon-shell"
+
+    --Create the new projectile, but remove the collision_box
+    local old_projectile_name = item.ammo_type.action.action_delivery.projectile
+    local projectile = table.deepcopy(data.raw["projectile"][old_projectile_name])
+    local new_projectile_name = "crystarion-" .. old_projectile_name
+    projectile.name = new_projectile_name
+    projectile.collision_box = nil
+
+    --rewire the new projectile
+    item.ammo_type.action.action_delivery.projectile = new_projectile_name
+
+    --recipe
+    local recipe = {
+        type = "recipe",
+        name = new_item_name,
+        enabled = false,
+        energy_required = 2,
+        ingredients = {
+            { type = "item", name = shell, amount = 1 },
+            { type = "item", name = "electronic-circuit", amount = 1 }
+        },
+        results = { { type = "item", name = new_item_name, amount = 1 } }
+    }
+
+    data:extend({ item, recipe, projectile })
+end
+
+
+--TODO Shells seem to now do any damage, how is that possible?
+create("cannon-shell")
+create("explosive-cannon-shell")
+create("uranium-cannon-shell")
+create("explosive-uranium-cannon-shell")
 
 data:extend({ item, entity, recipe, projectile, ammo, category, recipe_ammo })

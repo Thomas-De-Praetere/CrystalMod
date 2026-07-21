@@ -481,6 +481,26 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "crystarion-projectile-turret"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-crystal-shell"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-cannon-shell"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-explosive-cannon-shell"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-uranium-cannon-shell"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crystarion-explosive-uranium-cannon-shell"
+            },
         },
         prerequisites = { "crystarion-unlock-high-explosive-ammo" },
         unit = {
