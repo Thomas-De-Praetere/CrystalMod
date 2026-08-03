@@ -36,7 +36,7 @@ local crush_crystal_ore = {
         { type = "item", name = "crystarion-crystal-ore", amount = 4 }
     },
     results = {
-        { type = "item", name = "crystarion-crushed-crystal", amount = 3 }
+        { type = "item", name = "crystarion-crushed-crystal", amount = 2 }
     },
     energy_required = 1,
     enabled = false,
