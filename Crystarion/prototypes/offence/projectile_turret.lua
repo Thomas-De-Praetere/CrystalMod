@@ -20,8 +20,17 @@ entity.attack_parameters = {
     range = 36,
     threatening_asteroid_penalty = -20,
     sound = {
-        variations = sound_variations("__space-age__/sound/ammo/rocket-turret-launcher", 7, 0.7, volume_multiplier("main-menu", 1.8)),
-        aggregation = { max_count = 4, remove = true, count_already_playing = true },
+        switch_vibration_data =
+        {
+            filename = "__base__/sound/fight/tank-cannon.bnvib",
+        },
+        game_controller_vibration_data =
+        {
+            low_frequency_vibration_intensity = 0.9,
+            duration = 200
+        },
+        variations = sound_variations("__base__/sound/fight/tank-cannon", 5, 0.57),
+        priority = 64
     },
     projectile_creation_offsets = {
         util.by_pixel(34, 25 - 32),
@@ -41,10 +50,10 @@ local recipe = {
     categories = { "crafting", "crystarion-energiser-category" },
     ingredients = {
         { type = "item", name = "crystarion-crystal-splinter-stable", amount = 10 },
-        { type = "item", name = "crystarion-crystal", amount = 5 },
-        { type = "item", name = "advanced-circuit", amount = 4 },
-        { type = "item", name = "steel-plate", amount = 20 },
-        { type = "item", name = "iron-gear-wheel", amount = 20 }
+        { type = "item", name = "crystarion-crystal",                 amount = 5 },
+        { type = "item", name = "advanced-circuit",                   amount = 4 },
+        { type = "item", name = "steel-plate",                        amount = 20 },
+        { type = "item", name = "iron-gear-wheel",                    amount = 20 }
     },
     results = {
         { type = "item", name = "crystarion-projectile-turret", amount = 1 }
