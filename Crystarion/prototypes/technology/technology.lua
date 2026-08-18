@@ -518,8 +518,8 @@ data:extend({
     },
     {
         type = "technology",
-        name = "crystarion-unlock-projectile-turret",
-        icon = "__Crystarion__/graphics/items/magazine_high_explosive.png",
+        name = "crystarion-unlock-condense-wood",
+        icon = "__base__/graphics/icons/wood.png",
         essential = false,
         effects = {
             {
